@@ -13,6 +13,14 @@ public class GravityChanger : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "RockBridge")
+        {
+            SetGravityToZero();
+        }
+    }
+
     public void SetGravity(float _speed)
     {
         rb.gravityScale = _speed;
