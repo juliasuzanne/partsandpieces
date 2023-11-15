@@ -6,19 +6,35 @@ public class GravityChanger : MonoBehaviour
 {
 
     Rigidbody2D rb;
+    private PlayerMovement _playerMovement;
+    private Animator _animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _animator = GetComponent<Animator>();
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.name == "RockBridge")
+        Debug.Log(other.transform.name);
+        if (other.transform.name == "RockBridge")
         {
-            SetGravityToZero();
+            // _animationController.AnimatorWalking();
+            _animator.SetTrigger("Land");
+            SetGravity(2f);
+
         }
+    }
+
+    public void Fall(float fallSpeed)
+    {
+        _playerMovement.MoveableTrue();
+        _animator.SetTrigger("Fall");
+        SetGravity(fallSpeed);
+
     }
 
     public void SetGravity(float _speed)
