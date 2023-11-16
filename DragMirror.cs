@@ -10,7 +10,7 @@ public class DragMirror : MonoBehaviour
   private float offsetX, offsetY;
   [SerializeField]
   private float zPos = 2f;
-  private float maxX, minX, maxY, minY;
+  public float maxX, minX, maxY, minY;
 
 
   void Start()
@@ -75,9 +75,9 @@ public class DragMirror : MonoBehaviour
 
   }
 
-  public void HMGetMousePositionX()
+  public void HMGetMousePositionX(float _num)
   {
-    float HMPosX = (transform.position.x - minX) * .04f;
+    _num = (transform.position.x - minX) * .04f;
   }
 
   private void OnMouseUp()
