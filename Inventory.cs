@@ -11,15 +11,14 @@ public class Inventory : MonoBehaviour
    public GameObject[] items; // 
    private int count = 0;
    private Text _playerText;
-   private Transform _player;
    private GameObject _dialog;
 
 
    void Start()
    {
-      _player = GameObject.Find("Player").transform;
-      _dialog = _player.GetChild(0).GetChild(0).gameObject;
-      _playerText = GameObject.Find("PlayerSpeech").transform.GetChild(0).GetComponent<Text>();
+      _dialog = transform.GetChild(0).GetChild(0).gameObject;
+      _dialog.SetActive(false);
+      _playerText = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
    }
 
    public void AddItemToInventory(GameObject prefab)
