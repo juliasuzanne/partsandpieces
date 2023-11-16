@@ -75,6 +75,11 @@ public class DragMirror : MonoBehaviour
 
   }
 
+  public void HMGetMousePositionX()
+  {
+    float HMPosX = (transform.position.x - minX) * .04f;
+  }
+
   private void OnMouseUp()
   {
     mouseButtonDown = false;

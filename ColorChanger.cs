@@ -10,7 +10,6 @@ public class ColorChanger : MonoBehaviour
     float m_Red, m_Blue, m_Green;
     private CaveSaveSettings _caveSaveSettings;
 
-
     [SerializeField]
     private GameObject _colorPanel;
     private PlayerMovement _player;
