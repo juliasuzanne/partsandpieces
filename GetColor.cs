@@ -27,9 +27,9 @@ public class GetColor : MonoBehaviour
 
   void Update()
   {
-    _green = (_greenSetter.transform.position.x - _mirrorB.minX) * 0.04f;
-    _red = (_redSetter.transform.position.x - _mirrorB.minX) * 0.04f;
-    _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * 0.04f;
+    _green = (_greenSetter.transform.position.x - _mirrorB.minX) * 0.13f;
+    _red = (_redSetter.transform.position.x - _mirrorB.minX) * 0.13f;
+    _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * 0.13f;
     m_NewColor = new Color(_red, _green, _blue, 1f);
     _image.color = m_NewColor;
     Debug.Log(m_NewColor);

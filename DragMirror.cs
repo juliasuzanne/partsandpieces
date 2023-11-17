@@ -17,9 +17,9 @@ public class DragMirror : MonoBehaviour
   {
     Debug.Log("STARTING MIRROR POS: " + transform.position);
     transform.position = new Vector3(transform.position.x, transform.position.y, zPos);
-    maxX = transform.position.x + 12.05f;
+    maxX = transform.position.x + 3.75f;
     maxY = transform.position.y + 0.5f;
-    minX = transform.position.x - 12.05f;
+    minX = transform.position.x - 3.75f;
     minY = transform.position.y - 0.5f;
 
   }
