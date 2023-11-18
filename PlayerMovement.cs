@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
-        FlipPlayer();
         PlatformerMove();
         PlayerJump();
     }
@@ -81,16 +80,20 @@ public class PlayerMovement : MonoBehaviour
 
     void PlatformerMove()
     {
-        _animator.SetFloat("xInput", Mathf.Abs(xInput));
-        _animator.SetFloat("ySpeed", Mathf.Abs(yInput));
+        _animator.SetFloat("yInput", Mathf.Abs(yInput));
 
         if (moveable == true)
         {
+            FlipPlayer();
+            _animator.SetFloat("xInput", Mathf.Abs(xInput));
+
             rb.velocity = new Vector2(_moveSpeed * xInput, rb.velocity.y);
         }
         else
         {
             Cursor.visible = true;
+            _animator.SetFloat("xInput", xInput);
+
         }
 
     }
