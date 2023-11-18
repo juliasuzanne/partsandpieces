@@ -13,7 +13,6 @@ public class GetColor : MonoBehaviour
 
   private DragMirror _mirrorB, _mirrorM, _mirrorT;
 
-
   private Image _image;
   private Color m_NewColor;
 
@@ -27,9 +26,9 @@ public class GetColor : MonoBehaviour
 
   void Update()
   {
-    _green = (_greenSetter.transform.position.x - _mirrorB.minX) * 0.13f;
-    _red = (_redSetter.transform.position.x - _mirrorB.minX) * 0.13f;
-    _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * 0.13f;
+    _green = (_greenSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
+    _red = (_redSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
+    _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
     m_NewColor = new Color(_red, _green, _blue, 1f);
     _image.color = m_NewColor;
     Debug.Log(m_NewColor);

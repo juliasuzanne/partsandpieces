@@ -10,16 +10,16 @@ public class DragMirror : MonoBehaviour
   private float offsetX, offsetY;
   [SerializeField]
   private float zPos = 2f;
-  public float maxX, minX, maxY, minY;
+  public float maxX, minX, maxY, minY, xRange;
 
 
   void Start()
   {
     Debug.Log("STARTING MIRROR POS: " + transform.position);
     transform.position = new Vector3(transform.position.x, transform.position.y, zPos);
-    maxX = transform.position.x + 3.75f;
+    maxX = transform.position.x + (xRange / 2);
     maxY = transform.position.y + 0.5f;
-    minX = transform.position.x - 3.75f;
+    minX = transform.position.x - (xRange / 2);
     minY = transform.position.y - 0.5f;
 
   }
