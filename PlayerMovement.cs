@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float _jumpForce = 9f;
 
-    float xInput;
+    float xInput, yInput;
 
     void Start()
     {
@@ -28,12 +28,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
         FlipPlayer();
         PlatformerMove();
         PlayerJump();
-
-
-
     }
 
 
@@ -83,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
 
     void PlatformerMove()
     {
-        _animator.SetFloat("xSpeed", Mathf.Abs(xInput));
+        _animator.SetFloat("xInput", Mathf.Abs(xInput));
+        _animator.SetFloat("ySpeed", Mathf.Abs(yInput));
 
         if (moveable == true)
         {

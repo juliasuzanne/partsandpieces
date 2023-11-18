@@ -31,7 +31,6 @@ public class GetColor : MonoBehaviour
     _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
     m_NewColor = new Color(_red, _green, _blue, 1f);
     _image.color = m_NewColor;
-    Debug.Log(m_NewColor);
-    Debug.Log("Blue " + _blue);
+
   }
 }
