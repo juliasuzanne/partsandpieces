@@ -8,12 +8,14 @@ public class GravityChanger : MonoBehaviour
     Rigidbody2D rb;
     private PlayerMovement _playerMovement;
     private Animator _animator;
+    private Animator _robotAnimator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         _playerMovement = GetComponent<PlayerMovement>();
         _animator = GetComponent<Animator>();
+        _robotAnimator = GameObject.Find("RobotArm").GetComponent<Animator>();
 
     }
 
@@ -22,6 +24,7 @@ public class GravityChanger : MonoBehaviour
         Debug.Log(other.transform.name);
         if (other.transform.name == "RockBridge")
         {
+            _robotAnimator.SetTrigger("Open");
             // _animationController.AnimatorWalking();
             _animator.SetTrigger("Land");
             SetGravity(2f);
@@ -32,6 +35,7 @@ public class GravityChanger : MonoBehaviour
     public void Fall(float fallSpeed)
     {
         _playerMovement.MoveableTrue();
+
         _animator.SetTrigger("Fall");
         SetGravity(fallSpeed);
 
