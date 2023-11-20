@@ -11,6 +11,7 @@ public class ChangeSpriteMask : MonoBehaviour
     private float _timeToChange = 5f;
     [SerializeField]
     private Sprite[] _sprites;
+    private int arrCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +29,11 @@ public class ChangeSpriteMask : MonoBehaviour
 
     IEnumerator GetNextSpriteMask()
     {
-
-        yield return new WaitForSeconds(_timeToChange);
-        Debug.Log("SUPPOSED TO CHANGE 1");
-        _spriteMask.sprite = _sprites[1];
-        yield return new WaitForSeconds(_timeToChange);
-        Debug.Log("SUPPOSED TO CHANGE 2");
-        _spriteMask.sprite = _sprites[2];
+        for (int i = 0; i < 15; i++)
+        {
+            yield return new WaitForSeconds(_timeToChange);
+            _spriteMask.sprite = _sprites[i];
+        }
 
     }
 }
