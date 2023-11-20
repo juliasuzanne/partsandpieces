@@ -13,6 +13,11 @@ public abstract class DialogTemplate : MonoBehaviour
     [SerializeField]
     protected Text _playerText;
     [SerializeField]
+    protected Button _playerButton;
+    [SerializeField]
+    protected Button _NPCButton;
+
+    [SerializeField]
     protected Text _NPCText;
     protected bool collided = false;
     protected int _case;
@@ -35,6 +40,8 @@ public abstract class DialogTemplate : MonoBehaviour
     [SerializeField]
     protected Button AButton;
     [SerializeField]
+    protected bool _followPlayer;
+    [SerializeField]
     protected Button BButton;
 
     protected bool runRoutine = true;
@@ -55,38 +62,38 @@ public abstract class DialogTemplate : MonoBehaviour
         collided = true;
     }
 
+    public virtual void OnStarting()
+    {
 
+    }
     public void Start()
     {
         _uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        // playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        // _NPCText = GameObject.Find("NPC").transform.GetChild(0).GetChild(0).gameObject.transform.GetComponent<Text>();
-        _playerText = player.GetChild(0).GetChild(0).gameObject.transform.GetComponent<Text>();
-
-
-        _playerText.gameObject.SetActive(false);
-        _panel = this.gameObject.transform.GetChild(2).gameObject;
-        AButton = _panel.transform.GetChild(0).GetComponent<Button>();
-        BButton = _panel.transform.GetChild(1).GetComponent<Button>();
+        _playerButton.gameObject.SetActive(false);
         _panel.SetActive(false);
-        _NPCText.gameObject.SetActive(true);
-        _AText = this.gameObject.transform.GetChild(2).GetChild(0).GetChild(0).gameObject.transform.GetComponent<TMPro.TextMeshProUGUI>();
-        _BText = this.gameObject.transform.GetChild(2).GetChild(1).GetChild(0).gameObject.transform.GetComponent<TMPro.TextMeshProUGUI>();
-
+        _NPCButton.gameObject.SetActive(true);
+        OnStarting();
 
     }
 
+    public virtual void Init()
+    {
+        if (_followPlayer == true)
+        {
+
+            Vector3 playerPos = new Vector3(player.position.x, player.position.y, player.position.z);
+            _playerText.gameObject.transform.position = playerPos;
+        }
+
+    }
     void Update()
     {
 
-        Vector3 playerPos = new Vector3(player.position.x, player.position.y, player.position.z);
-        _playerText.gameObject.transform.position = playerPos;
-
+        Init();
     }
 
     public void AdvanceCases(int caseNum)
-
     {
         _case = _case + caseNum;
     }
@@ -105,14 +112,14 @@ public abstract class DialogTemplate : MonoBehaviour
 
     public void PlayerTalking()
     {
-        _playerText.gameObject.SetActive(true);
-        _NPCText.gameObject.SetActive(false);
+        _playerButton.gameObject.SetActive(true);
+        _NPCButton.gameObject.SetActive(false);
 
     }
     protected void NPCTalking()
     {
-        _playerText.gameObject.SetActive(false);
-        _NPCText.gameObject.SetActive(true);
+        _playerButton.gameObject.SetActive(false);
+        _NPCButton.gameObject.SetActive(true);
 
     }
 
@@ -132,11 +139,18 @@ public abstract class DialogTemplate : MonoBehaviour
         _playerText.text = PlayerText_string[PlayerString];
     }
 
+    protected void NPCSaySomething(int NPCString)
+    {
+        NPCTalking();
+        _panel.SetActive(false);
+        _NPCText.text = NPCText_string[NPCString];
+    }
+
     protected void EndConversation()
     {
-        _playerText.gameObject.SetActive(false);
+        _playerButton.gameObject.SetActive(false);
         runRoutine = true;
-        _NPCText.gameObject.SetActive(false);
+        _NPCButton.gameObject.SetActive(false);
         _panel.SetActive(false);
         // playerScript.MoveableTrue();
     }
@@ -145,12 +159,16 @@ public abstract class DialogTemplate : MonoBehaviour
     {
         NPCTalking();
         runRoutine = false;
-        _uiManager.HideInventory();
+        // _uiManager.HideInventory();
         // playerScript.MoveableFalse();
+        _panel.SetActive(false);
         _NPCText.text = NPCText_string[0];
         _AText.text = PlayerText_OptionA[0];
         _BText.text = PlayerText_OptionB[0];
     }
+
+
+
     protected virtual IEnumerator MoveThroughDialogue()
     {
         //setup for conversation

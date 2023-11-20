@@ -33,6 +33,10 @@ public class ChangeSpriteMask : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeToChange);
             _spriteMask.sprite = _sprites[i];
+            if (i == 14)
+            {
+                i = -1;
+            }
         }
 
     }

@@ -7,16 +7,21 @@ public class StartPlayer : MonoBehaviour
     private Animator _animator;
     [SerializeField]
     private GameObject startingDialogPanel;
+    private HangingDialogue _hangingDialogue;
     // Start is called before the first frame update
     void Start()
     {
         _animator = GameObject.Find("Player").GetComponent<Animator>();
         startingDialogPanel.SetActive(false);
+        _hangingDialogue = startingDialogPanel.GetComponent<HangingDialogue>();
     }
     void OnMouseDown()
     {
         _animator.SetTrigger("Start");
+
         startingDialogPanel.SetActive(true);
-        Destroy(this.gameObject);
+        _hangingDialogue.StartTalking();
+
+
     }
 }

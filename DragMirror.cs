@@ -12,7 +12,6 @@ public class DragMirror : MonoBehaviour
   private float zPos = 2f;
   public float maxX, minX, maxY, minY, xRange;
 
-
   void Start()
   {
     Debug.Log("STARTING MIRROR POS: " + transform.position);

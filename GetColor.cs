@@ -14,13 +14,17 @@ public class GetColor : MonoBehaviour
   private DragMirror _mirrorB, _mirrorM, _mirrorT;
 
   private Image _image;
+  private SpriteRenderer _sp;
   private Color m_NewColor;
+  [SerializeField]
+  private GameObject _colorChangePanel;
 
   void Start()
   {
     _mirrorT = _redSetter.GetComponent<DragMirror>();
     _mirrorM = _greenSetter.GetComponent<DragMirror>();
     _mirrorB = _blueSetter.GetComponent<DragMirror>();
+    _sp = GetComponent<SpriteRenderer>();
     _image = GetComponent<Image>();
   }
 
@@ -30,7 +34,19 @@ public class GetColor : MonoBehaviour
     _red = (_redSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
     _blue = (_blueSetter.transform.position.x - _mirrorB.minX) * (1 / _mirrorB.xRange);
     m_NewColor = new Color(_red, _green, _blue, 1f);
-    _image.color = m_NewColor;
+    if (_colorChangePanel.activeSelf == true)
+    {
+      if (_image != null)
+      {
+        _image.color = m_NewColor;
+
+      }
+      if (_sp != null)
+      {
+        _sp.color = m_NewColor;
+      }
+    }
+
 
   }
 }
