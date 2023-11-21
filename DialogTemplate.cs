@@ -168,7 +168,6 @@ public abstract class DialogTemplate : MonoBehaviour
     }
 
 
-
     protected virtual IEnumerator MoveThroughDialogue()
     {
         //setup for conversation
