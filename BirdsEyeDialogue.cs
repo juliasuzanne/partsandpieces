@@ -259,6 +259,12 @@ public class BirdsEyeDialogue : DialogTemplate
 
                                 }
                             }
+                            else if (waitForButton.PressedButton == BButton)
+                            {
+                                NPCSaySomething(14);
+                                yield return new WaitForSeconds(2.0f);
+                                EndConversation();
+                            }
 
                         }
                     }
