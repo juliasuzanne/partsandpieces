@@ -7,6 +7,7 @@ public class SaveObject
     public float red;
     public float blue;
     public float green;
-
+    public string rockName;
+    public string sadThing;
 
 }

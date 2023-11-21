@@ -17,6 +17,16 @@ public class CaveSaveSettings : MonoBehaviour
         so.playerName = _name;
     }
 
+    public void ChangeRockName(string _rockName)
+    {
+        so.rockName = _rockName;
+    }
+
+    public void ThinkOfSomethingSad(string _somethingSad)
+    {
+        so.sadThing = _somethingSad;
+    }
+
 
     public void SaveGame()
     {

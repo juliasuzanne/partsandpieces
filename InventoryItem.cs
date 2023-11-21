@@ -38,6 +38,7 @@ public class InventoryItem : MonoBehaviour
         mouseButtonReleased = true;
     }
 
+
     private void StopMoving()
     {
         _inventoryController.MakeItemNull();

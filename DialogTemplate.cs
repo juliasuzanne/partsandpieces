@@ -77,6 +77,15 @@ public abstract class DialogTemplate : MonoBehaviour
 
     }
 
+    protected void ShowTheInventory()
+    {
+        _uiManager.ShowInventory();
+    }
+    protected void HideTheInventory()
+    {
+        _uiManager.HideInventory();
+    }
+
     public virtual void Init()
     {
         if (_followPlayer == true)
@@ -110,20 +119,20 @@ public abstract class DialogTemplate : MonoBehaviour
 
     }
 
-    public void PlayerTalking()
+    public virtual void PlayerTalking()
     {
         _playerButton.gameObject.SetActive(true);
         _NPCButton.gameObject.SetActive(false);
 
     }
-    protected void NPCTalking()
+    protected virtual void NPCTalking()
     {
         _playerButton.gameObject.SetActive(false);
         _NPCButton.gameObject.SetActive(true);
 
     }
 
-    protected void NPCTalkThenPanel(int NPCstring, int AString, int BString)
+    protected virtual void NPCTalkThenPanel(int NPCstring, int AString, int BString)
     {
         NPCTalking();
         _NPCText.text = NPCText_string[NPCstring];
@@ -139,7 +148,7 @@ public abstract class DialogTemplate : MonoBehaviour
         _playerText.text = PlayerText_string[PlayerString];
     }
 
-    protected void NPCSaySomething(int NPCString)
+    protected virtual void NPCSaySomething(int NPCString)
     {
         NPCTalking();
         _panel.SetActive(false);
