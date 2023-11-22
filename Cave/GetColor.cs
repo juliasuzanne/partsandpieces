@@ -18,14 +18,18 @@ public class GetColor : MonoBehaviour
   private Color m_NewColor;
   [SerializeField]
   private GameObject _colorChangePanel;
+  private ColorChanger _colorChanger;
+
 
   void Start()
   {
+    _colorChanger = GameObject.Find("ColorChangePanel").transform.GetChild(5).transform.GetComponent<ColorChanger>();
     _mirrorT = _redSetter.GetComponent<DragMirror>();
     _mirrorM = _greenSetter.GetComponent<DragMirror>();
     _mirrorB = _blueSetter.GetComponent<DragMirror>();
     _sp = GetComponent<SpriteRenderer>();
     _image = GetComponent<Image>();
+
   }
 
   void Update()
@@ -47,6 +51,9 @@ public class GetColor : MonoBehaviour
       }
     }
 
+    _colorChanger.SetColor(_red, _green, _blue);
+
 
   }
+
 }

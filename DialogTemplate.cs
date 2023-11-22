@@ -153,7 +153,7 @@ public abstract class DialogTemplate : MonoBehaviour
         _NPCText.text = NPCText_string[NPCString];
     }
 
-    protected void EndConversation()
+    protected virtual void EndConversation()
     {
         _playerButton.gameObject.SetActive(false);
         runRoutine = true;

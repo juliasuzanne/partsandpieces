@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ColorChangePanel : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject _colorPanel;
+
     [SerializeField]
     private GameObject _rockBridge;
     [SerializeField]
@@ -20,6 +24,7 @@ public class ColorChangePanel : MonoBehaviour
     {
         _afterChangePanel.SetActive(true);
         _rockFace = GameObject.Find("Set_Background").transform.GetChild(3).transform.GetChild(1).gameObject;
+
     }
 
     public void showColorChangePanel()
@@ -33,8 +38,13 @@ public class ColorChangePanel : MonoBehaviour
         _rockFace.SetActive(true);
         _returnPanel.SetActive(true);
         _abovePlayer.SetActive(true);
+        //ADD SCRIPT TO APPLY COLOR TO PLAYER
         _rockBridge.SetActive(false);
         this.gameObject.SetActive(false);
+        // _player.MoveableTrue();
+        _colorPanel.SetActive(false);
+
+
 
     }
 }

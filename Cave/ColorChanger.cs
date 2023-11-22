@@ -17,11 +17,14 @@ public class ColorChanger : MonoBehaviour
     private float posX;
     private float posY;
     [SerializeField]
+    private ApplySavedColor _applyColor;
+
 
 
     void Start()
     {
         _abovePlayer = GameObject.Find("AbovePlayer");
+        _applyColor = _abovePlayer.GetComponent<ApplySavedColor>();
         _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         _sp = GetComponent<SpriteRenderer>();
         _player = transform.GetComponent<PlayerMovement>();
@@ -49,9 +52,9 @@ public class ColorChanger : MonoBehaviour
     public void ResumeGame()
     {
         _abovePlayer.SetActive(true);
-        _player.MoveableTrue();
         _caveSaveSettings.SaveColor(m_Red, m_Green, m_Blue, 1f);
         _caveSaveSettings.SaveGame();
+        _applyColor.ApplyColor();
         _colorPanel.SetActive(false);
 
     }
