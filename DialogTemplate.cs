@@ -88,6 +88,7 @@ public abstract class DialogTemplate : MonoBehaviour
 
     public virtual void Init()
     {
+        _uiManager.PauseGamePlay();
         if (_followPlayer == true)
         {
 
