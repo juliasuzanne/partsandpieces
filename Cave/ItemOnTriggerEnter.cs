@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ItemOnTriggerEnter : MonoBehaviour
 {
-    private AbovePlayer _abovePlayer;
+    private ColorChangePanel _colorChangePanelScript;
+    private GameObject _colorChangePanel;
     private string collisionGameobjectName;
     private Text description_text;
     private GameObject description_object;
@@ -15,7 +16,8 @@ public class ItemOnTriggerEnter : MonoBehaviour
 
     void Start()
     {
-        _abovePlayer = GameObject.Find("AbovePlayer").GetComponent<AbovePlayer>();
+        _colorChangePanel = GameObject.Find("ColorChangePanel");
+        _colorChangePanelScript = GameObject.Find("ColorChangePanel").GetComponent<ColorChangePanel>();
         description_object = this.transform.GetChild(0).gameObject;
         description_text = this.transform.GetChild(0).GetComponent<Text>();
     }
@@ -50,7 +52,8 @@ public class ItemOnTriggerEnter : MonoBehaviour
         {
             if (_onPlayer == true)
             {
-                _abovePlayer.showColorChangePanel();
+                _colorChangePanel.SetActive(true);
+                _colorChangePanelScript.showColorChangePanel();
             }
         }
 
