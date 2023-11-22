@@ -158,6 +158,7 @@ public abstract class DialogTemplate : MonoBehaviour
 
     protected void EndConversation()
     {
+        _uiManager.ResumeGame();
         _playerButton.gameObject.SetActive(false);
         runRoutine = true;
         _NPCButton.gameObject.SetActive(false);
