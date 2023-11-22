@@ -12,13 +12,12 @@ public class ColorChangePanel : MonoBehaviour
     private GameObject _returnPanel;
 
     private GameObject _rockFace;
-
+    [SerializeField]
     private GameObject _abovePlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        _abovePlayer = GameObject.Find("AbovePlayer");
         _afterChangePanel.SetActive(true);
         _rockFace = GameObject.Find("Set_Background").transform.GetChild(3).transform.GetChild(1).gameObject;
     }
@@ -31,6 +30,7 @@ public class ColorChangePanel : MonoBehaviour
 
     public void ResumeGame()
     {
+        _rockFace.SetActive(true);
         _returnPanel.SetActive(true);
         _abovePlayer.SetActive(true);
         _rockBridge.SetActive(false);

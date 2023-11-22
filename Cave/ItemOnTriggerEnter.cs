@@ -6,20 +6,18 @@ using UnityEngine.UI;
 
 public class ItemOnTriggerEnter : MonoBehaviour
 {
-    private ColorChangePanel _colorChangePanelScript;
-    private GameObject _colorChangePanel;
     private string collisionGameobjectName;
     private Text description_text;
     private GameObject description_object;
-
     private bool _onPlayer;
+    private AbovePlayer _abovePlayer;
 
     void Start()
     {
-        _colorChangePanel = GameObject.Find("ColorChangePanel");
-        _colorChangePanelScript = GameObject.Find("ColorChangePanel").GetComponent<ColorChangePanel>();
         description_object = this.transform.GetChild(0).gameObject;
         description_text = this.transform.GetChild(0).GetComponent<Text>();
+        _abovePlayer = GameObject.Find("AbovePlayer").GetComponent<AbovePlayer>();
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +35,6 @@ public class ItemOnTriggerEnter : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-
         collisionGameobjectName = null;
         description_object.SetActive(false);
         description_text.text = "";
@@ -52,8 +49,7 @@ public class ItemOnTriggerEnter : MonoBehaviour
         {
             if (_onPlayer == true)
             {
-                _colorChangePanel.SetActive(true);
-                _colorChangePanelScript.showColorChangePanel();
+                _abovePlayer.showColorChangePanel();
             }
         }
 
