@@ -10,6 +10,7 @@ public class HangingDialogue : DialogTemplate
 
     private GravityChanger _gravity;
 
+
     public override void OnStarting()
     {
         _panel.SetActive(true);
@@ -23,7 +24,6 @@ public class HangingDialogue : DialogTemplate
         yInput = Input.GetAxis("Vertical");
         xInput = Input.GetAxis("Horizontal");
         Debug.Log("XINPUT " + xInput);
-
     }
     // Start is called before the first frame update
     protected override IEnumerator MoveThroughDialogue()

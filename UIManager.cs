@@ -46,7 +46,11 @@ public class UIManager : MonoBehaviour
     {
         _inventoryPanel.SetActive(false);
         _playerMovement.MoveableTrue();
+    }
 
+    public void HideInventoryOnly()
+    {
+        _inventoryPanel.SetActive(false);
     }
 
     public void ShowInventory()

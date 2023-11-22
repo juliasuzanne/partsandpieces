@@ -47,10 +47,7 @@ public abstract class DialogTemplate : MonoBehaviour
     protected bool runRoutine = true;
 
     public GameObject clicked_Object;
-
     protected UIManager _uiManager;
-
-    // protected Player playerScript;
 
     public void CollidedIsFalse()
     {
@@ -68,6 +65,7 @@ public abstract class DialogTemplate : MonoBehaviour
     }
     public void Start()
     {
+
         _uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _playerButton.gameObject.SetActive(false);
@@ -88,7 +86,6 @@ public abstract class DialogTemplate : MonoBehaviour
 
     public virtual void Init()
     {
-        _uiManager.PauseGamePlay();
         if (_followPlayer == true)
         {
 
@@ -158,20 +155,19 @@ public abstract class DialogTemplate : MonoBehaviour
 
     protected void EndConversation()
     {
-        _uiManager.ResumeGame();
         _playerButton.gameObject.SetActive(false);
         runRoutine = true;
         _NPCButton.gameObject.SetActive(false);
         _panel.SetActive(false);
-        // playerScript.MoveableTrue();
+        // _playerScript.MoveableTrue();
     }
 
     protected void SetupConversation()
     {
         NPCTalking();
         runRoutine = false;
-        // _uiManager.HideInventory();
-        // playerScript.MoveableFalse();
+        // _uiManager.HideInventoryOnly();
+        // _playerScript.MoveableFalse();
         _panel.SetActive(false);
         _NPCText.text = NPCText_string[0];
         _AText.text = PlayerText_OptionA[0];

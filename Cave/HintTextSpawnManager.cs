@@ -51,7 +51,7 @@ public class HintTextSpawnManager : MonoBehaviour
     {
         _keepInstantiating = false;
         Debug.Log("INSTANTIATE");
-        Instantiate(textObjectPrefab, new Vector3(_targetPos.position.x, _targetPos.position.y, 0f), Quaternion.identity);
+        Instantiate(textObjectPrefab, new Vector3(_targetPos.position.x, _targetPos.position.y, 0f), Quaternion.Euler(0f, 0f, Random.Range(-30f, 30f)));
         yield return new WaitForSeconds(3f);
         if (_continue == true)
         {

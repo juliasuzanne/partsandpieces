@@ -9,6 +9,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     private float speed = 4.85f;
     [SerializeField]
     private Transform _target;
+    private Vector3 _moveTowardsPos;
+    private bool _hitCeiling;
     void Start()
     {
         Destroy(this.gameObject, 17f);
@@ -17,16 +19,30 @@ public class MoveTowardsPlayer : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(transform.position);
+        Debug.Log(_moveTowardsPos);
         var step = speed * Time.deltaTime; // calculate distance to move
-        if (transform.position.y < -6.7f)
+        if (transform.position.y > _target.position.y)
+        {
+            _hitCeiling = true;
+        }
+        if (_hitCeiling == false)
+        {
             transform.position = Vector3.MoveTowards(transform.position, _target.position, step);
+        }
+
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, _player.position, step);
+            _moveTowardsPos = new Vector3(_player.position.x - 15f, _player.position.y + Random.Range(0f, 3f), _player.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, _moveTowardsPos, step);
         }
-        if (transform.position == _player.position)
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 2f);
         }
     }
 }
