@@ -35,6 +35,7 @@ public class BirdsEyeDialogue : DialogTemplate
     private Animator _animator;
     [SerializeField]
     private GameObject _gatherTears;
+    private StartConversation _conversationManager;
 
 
     public override void OnStarting()
@@ -46,6 +47,7 @@ public class BirdsEyeDialogue : DialogTemplate
         _inputFieldSadThing.SetActive(false);
         _sceneSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         _animator = GameObject.Find("RockFaces").GetComponent<Animator>();
+        _conversationManager = GameObject.Find("RockFaces").GetComponent<StartConversation>();
         _abovePlayerAnimator = GameObject.Find("AbovePlayer").GetComponent<Animator>();
 
 
@@ -54,7 +56,7 @@ public class BirdsEyeDialogue : DialogTemplate
     protected override void EndConversation()
     {
         base.EndConversation();
-        _abovePlayerAnimator.SetBool("Conversate", false);
+        _conversationManager.ComeBackFromConversation();
         _animator.SetBool("Talk", false);
 
     }

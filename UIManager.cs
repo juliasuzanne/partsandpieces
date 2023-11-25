@@ -10,12 +10,15 @@ public class UIManager : MonoBehaviour
     private GameObject _inventoryPanel;
     private PlayerMovement _playerMovement;
     [SerializeField]
+    private GameObject _inventoryButtonObject;
     private InventoryButton _inventoryButton;
+
 
     void Start()
     {
 
         _playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        _inventoryButton = _inventoryButtonObject.GetComponent<InventoryButton>();
 
     }
     void Update()
@@ -56,6 +59,18 @@ public class UIManager : MonoBehaviour
     {
         _inventoryButton.HidingInventory();
         _inventoryPanel.SetActive(false);
+    }
+
+    public void HideInventoryWithButton()
+    {
+        _inventoryButtonObject.SetActive(false);
+        _inventoryPanel.SetActive(false);
+    }
+
+    public void ShowInventoryButton()
+    {
+        _inventoryButtonObject.SetActive(false);
+
     }
 
     public void ShowInventory()

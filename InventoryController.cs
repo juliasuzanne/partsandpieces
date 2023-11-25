@@ -21,6 +21,7 @@ public class InventoryController : MonoBehaviour
 
     if (_item != null)
     {
+
       Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
       Vector3 moveToPos = new Vector3(mousePosition.x, mousePosition.y, 0f);
       _item.transform.position = moveToPos;

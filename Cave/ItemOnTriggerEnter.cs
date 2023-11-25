@@ -62,7 +62,7 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
 
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         description_object.SetActive(false);
         description_text.text = "";
@@ -80,6 +80,7 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
                 _abovePlayer.showColorChangePanel();
                 description_object.SetActive(false);
                 description_text.text = "";
+
             }
 
 

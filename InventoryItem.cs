@@ -37,7 +37,6 @@ public class InventoryItem : MonoBehaviour
     {
         _inventoryController.ChangeItem(this.gameObject);
         mouseButtonReleased = true;
-        _uiManager.HideInventoryOnly();
     }
 
 

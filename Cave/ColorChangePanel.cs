@@ -14,7 +14,7 @@ public class ColorChangePanel : MonoBehaviour
     private GameObject _afterChangePanel;
     [SerializeField]
     private GameObject _returnPanel;
-
+    [SerializeField]
     private GameObject _rockFace;
     [SerializeField]
     private GameObject _abovePlayer;
@@ -24,20 +24,27 @@ public class ColorChangePanel : MonoBehaviour
     private ApplySavedColor _applyColor;
     private ApplySavedColor _applyColor2;
 
+    private UIManager _uiManager;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         _afterChangePanel.SetActive(true);
-        _rockFace = GameObject.Find("Set_Background").transform.GetChild(3).transform.GetChild(1).gameObject;
         _applyColor = _abovePlayer.GetComponent<ApplySavedColor>();
         _applyColor2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ApplySavedColor>();
+        _uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+        if (_uiManager == null)
+        {
+            Debug.Log("UI MANAGER IS NULL ON COLOR PANEL, READING " + _uiManager);
+        }
 
 
     }
 
     public void showColorChangePanel()
     {
+        _uiManager.HideInventoryWithButton();
         _rockFace.SetActive(false);
         _abovePlayer.SetActive(false);
     }
