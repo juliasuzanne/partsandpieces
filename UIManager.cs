@@ -47,13 +47,14 @@ public class UIManager : MonoBehaviour
 
     public void HideInventory()
     {
+        _inventoryButton.HidingInventory();
         _inventoryPanel.SetActive(false);
         _playerMovement.MoveableTrue();
     }
 
     public void HideInventoryOnly()
     {
-        _inventoryButton.HideInventory();
+        _inventoryButton.HidingInventory();
         _inventoryPanel.SetActive(false);
     }
 
@@ -62,6 +63,7 @@ public class UIManager : MonoBehaviour
 
         if (_inventoryPanel.activeSelf == true)
         {
+            _inventoryButton.HidingInventory();
             _inventoryPanel.SetActive(false);
             _playerMovement.MoveableTrue();
 
@@ -69,6 +71,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
+            _inventoryButton.ShowingInventory();
             _inventoryPanel.SetActive(true);
             _playerMovement.MoveableFalse();
 

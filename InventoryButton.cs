@@ -30,9 +30,14 @@ public class InventoryButton : MonoBehaviour
 
   }
 
-  public void HideInventory()
+  public void HidingInventory()
   {
     _sp.sprite = CloseInventory;
+
+  }
+  public void ShowingInventory()
+  {
+    _sp.sprite = OpenInventory;
 
   }
 
