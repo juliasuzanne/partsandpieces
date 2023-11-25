@@ -24,9 +24,9 @@ public abstract class DialogTemplate : MonoBehaviour
     protected int _choice;
 
     [SerializeField]
-    protected TMPro.TextMeshProUGUI _AText;
+    protected Text _AText;
     [SerializeField]
-    protected TMPro.TextMeshProUGUI _BText;
+    protected Text _BText;
     [SerializeField]
     protected string[] NPCText_string;
     [SerializeField]
