@@ -38,7 +38,7 @@ public class InventoryController : MonoBehaviour
 
   public void MakeItemNull()
   {
-    Vector3 posToMove = new Vector3(_item.transform.parent.position.x, _item.transform.parent.position.y, 0f);
+    Vector3 posToMove = new Vector3(_item.transform.parent.position.x, _item.transform.parent.position.y, _item.transform.parent.position.z);
     _item.transform.position = posToMove;
     _item = null;
   }
