@@ -23,7 +23,7 @@ public class HangingDialogue : DialogTemplate
         base.Init();
         yInput = Input.GetAxis("Vertical");
         xInput = Input.GetAxis("Horizontal");
-        Debug.Log("XINPUT " + xInput);
+        // Debug.Log("XINPUT " + xInput);
     }
     // Start is called before the first frame update
     protected override IEnumerator MoveThroughDialogue()

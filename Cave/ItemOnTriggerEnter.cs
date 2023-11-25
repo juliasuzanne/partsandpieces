@@ -4,24 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ItemOnTriggerEnter : MonoBehaviour
+public abstract class ItemOnTriggerEnter : MonoBehaviour
 {
-    private string collisionGameobjectName;
-    private Text description_text;
-    private GameObject description_object;
-    private bool _onPlayer;
-    private AbovePlayer _abovePlayer;
-    private CaveSaveSettings _caveSaveSettings;
+    protected string collisionGameobjectName;
+    protected Text description_text;
+    protected GameObject description_object;
+    protected bool _onPlayer;
+    protected AbovePlayer _abovePlayer;
+    protected CaveSaveSettings _caveSaveSettings;
 
-    private Inventory _inventory;
+    protected Inventory _inventory;
 
-    private InventoryItem _inventoryItem;
+    protected InventoryItem _inventoryItem;
     public string Name = "item";
-
-    private Image _image;
-    private bool _filledWithWater;
     [SerializeField]
-    private Sprite _filled, _empty;
+    protected string _changedName;
+
+    protected Image _image;
+    protected bool _changed = false;
+    [SerializeField]
+    protected Sprite _starting, _completed;
 
     void Start()
     {
@@ -32,34 +34,31 @@ public class ItemOnTriggerEnter : MonoBehaviour
         _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
         _inventoryItem = this.gameObject.GetComponent<InventoryItem>();
         _image = GetComponent<Image>();
-        _image.sprite = _empty;
+        _image.sprite = _starting;
 
     }
 
-    private void FillRocksWithWater()
+    protected void ChangeSprite()
     {
-        _filledWithWater = true;
-        _image.sprite = _filled;
-        Name = "three rocks full of reflective water";
+        _changed = true;
+        _image.sprite = _completed;
+        Name = _changedName;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         INameable hit = other.GetComponent<INameable>();
         if (hit != null)
         {
-            other.GetComponent<ApplySavedColor>().ApplyNameOnly();
             description_object.SetActive(true);
             description_text.text = "Use " + Name + " with " + hit.Name;
             if (other.gameObject.tag == "Player")
             {
                 _onPlayer = true;
             }
-            else if (hit.Name == "tears")
-            {
-                FillRocksWithWater();
-            }
+
         }
+
 
     }
 
@@ -73,7 +72,7 @@ public class ItemOnTriggerEnter : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(_onPlayer);
+        // Debug.Log(_onPlayer);
         if (Input.GetMouseButtonDown(0))
         {
             if (_onPlayer == true)

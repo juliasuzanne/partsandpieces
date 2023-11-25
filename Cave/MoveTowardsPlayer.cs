@@ -19,8 +19,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(transform.position);
-        Debug.Log(_moveTowardsPos);
+        // Debug.Log(transform.position);
+        // Debug.Log(_moveTowardsPos);
         var step = speed * Time.deltaTime; // calculate distance to move
         if (transform.position.y > _target.position.y)
         {

@@ -14,7 +14,7 @@ public class DragMirror : MonoBehaviour
 
   void Start()
   {
-    Debug.Log("STARTING MIRROR POS: " + transform.position);
+    // Debug.Log("STARTING MIRROR POS: " + transform.position);
     transform.position = new Vector3(transform.position.x, transform.position.y, zPos);
     maxX = transform.position.x + (xRange / 2);
     maxY = transform.position.y + 0.5f;
@@ -25,8 +25,8 @@ public class DragMirror : MonoBehaviour
 
   void Update()
   {
-    Debug.Log("mousePosition");
-    Debug.Log("CURRENT MIRROR POS: " + transform.position);
+    // Debug.Log("mousePosition");
+    // Debug.Log("CURRENT MIRROR POS: " + transform.position);
 
   }
   void OnMouseDown()
