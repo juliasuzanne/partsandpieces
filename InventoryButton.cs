@@ -30,6 +30,12 @@ public class InventoryButton : MonoBehaviour
 
   }
 
+  public void HideInventory()
+  {
+    _sp.sprite = CloseInventory;
+
+  }
+
   void OnMouseDown()
   {
     _inventory.CheckItemLocation();
