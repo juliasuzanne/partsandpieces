@@ -55,6 +55,7 @@ public class BirdsEyeDialogue : DialogTemplate
     {
         base.EndConversation();
         _abovePlayerAnimator.SetBool("Conversate", false);
+        _animator.SetBool("Talk", false);
 
     }
 
@@ -248,6 +249,8 @@ public class BirdsEyeDialogue : DialogTemplate
                         _animator.SetTrigger("RemoveRocks");
                         yield return new WaitForSeconds(2.0f);
                         HideTheInventory();
+                        _animator.SetBool("RocksRemoved", true);
+
                         NPCTalkThenPanel(11, 5, 5);
                         yield return waitForButton.Reset();
                         if (waitForButton.PressedButton == AButton || waitForButton.PressedButton == BButton)

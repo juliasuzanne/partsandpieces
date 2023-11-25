@@ -29,7 +29,7 @@ public class ChangeSpriteMask : MonoBehaviour
 
     IEnumerator GetNextSpriteMask()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < _sprites.Length; i++)
         {
             yield return new WaitForSeconds(_timeToChange);
             _spriteMask.sprite = _sprites[i];
