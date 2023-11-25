@@ -101,6 +101,7 @@ public class BirdsEyeDialogue : DialogTemplate
                         NPCSaySomething(5);
                         _chosenName = true;
 
+
                     }
                     else
                     {
@@ -186,8 +187,10 @@ public class BirdsEyeDialogue : DialogTemplate
                     if (waitForButton.PressedButton == AButton)
                     {
                         NPCText_string[5] = "Hello, " + _sceneSaveSettings.so.playerName + ".";
+                        _sceneSaveSettings.SaveGame();
                         NPCSaySomething(5);
                         _chosenName = true;
+
 
 
                     }

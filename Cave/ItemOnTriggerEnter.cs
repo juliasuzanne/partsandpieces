@@ -16,6 +16,12 @@ public class ItemOnTriggerEnter : MonoBehaviour
     private Inventory _inventory;
 
     private InventoryItem _inventoryItem;
+    public string Name = "item";
+
+    private Image _image;
+    private bool _filledWithWater;
+    [SerializeField]
+    private Sprite _filled, _empty;
 
     void Start()
     {
@@ -25,25 +31,40 @@ public class ItemOnTriggerEnter : MonoBehaviour
         _abovePlayer = GameObject.Find("AbovePlayer").GetComponent<AbovePlayer>();
         _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
         _inventoryItem = this.gameObject.GetComponent<InventoryItem>();
-
+        _image = GetComponent<Image>();
+        _image.sprite = _empty;
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void FillRocksWithWater()
     {
-        collisionGameobjectName = collision.gameObject.name;
-        description_object.SetActive(true);
-        description_text.text = "Use " + gameObject.name + " with " + collisionGameobjectName;
-        if (collision.gameObject.tag == "Player")
+        _filledWithWater = true;
+        _image.sprite = _filled;
+        Name = "three rocks full of reflective water";
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        INameable hit = other.GetComponent<INameable>();
+        if (hit != null)
         {
-            _onPlayer = true;
+            other.GetComponent<ApplySavedColor>().ApplyNameOnly();
+            description_object.SetActive(true);
+            description_text.text = "Use " + Name + " with " + hit.Name;
+            if (other.gameObject.tag == "Player")
+            {
+                _onPlayer = true;
+            }
+            else if (hit.Name == "tears")
+            {
+                FillRocksWithWater();
+            }
         }
 
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        collisionGameobjectName = null;
         description_object.SetActive(false);
         description_text.text = "";
         _onPlayer = false;
