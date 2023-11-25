@@ -10,6 +10,8 @@ public class HintTextSpawnManager : MonoBehaviour
     private bool _keepInstantiating = false;
     private bool _continue = true;
     private Transform _targetPos;
+    [SerializeField]
+    private float _secondsBetweenSpawn = 1f;
     void Start()
     {
         _player = GameObject.Find("Player").transform;
@@ -41,10 +43,9 @@ public class HintTextSpawnManager : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("PLAYER EXIT");
             _continue = false;
-
         }
-
     }
 
     IEnumerator CreateText()
@@ -52,7 +53,7 @@ public class HintTextSpawnManager : MonoBehaviour
         _keepInstantiating = false;
         Debug.Log("INSTANTIATE");
         Instantiate(textObjectPrefab, new Vector3(_targetPos.position.x, _targetPos.position.y, 0f), Quaternion.Euler(0f, 0f, Random.Range(-30f, 30f)));
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(_secondsBetweenSpawn);
         if (_continue == true)
         {
             _keepInstantiating = true;
