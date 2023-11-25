@@ -33,7 +33,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 
         else
         {
-            _moveTowardsPos = new Vector3(_player.position.x - 15f, _player.position.y + Random.Range(0f, 3f), _player.position.z);
+            _moveTowardsPos = new Vector3(_player.position.x, _player.position.y + Random.Range(0f, 3f), _player.position.z);
             transform.position = Vector3.MoveTowards(transform.position, _moveTowardsPos, step);
         }
     }

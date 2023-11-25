@@ -12,7 +12,6 @@ public class ColorChanger : MonoBehaviour
     [SerializeField]
     private GameObject _colorPanel;
     private GameObject _abovePlayer;
-    [SerializeField]
     private ApplySavedColor _applyColor;
     private ApplySavedColor _applyColor2;
 

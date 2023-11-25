@@ -18,12 +18,21 @@ public class ColorChangePanel : MonoBehaviour
     private GameObject _rockFace;
     [SerializeField]
     private GameObject _abovePlayer;
+    private float m_Red, m_Blue, m_Green;
+    private CaveSaveSettings _caveSaveSettings;
+
+    private ApplySavedColor _applyColor;
+    private ApplySavedColor _applyColor2;
 
     // Start is called before the first frame update
     void Start()
     {
+        _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         _afterChangePanel.SetActive(true);
         _rockFace = GameObject.Find("Set_Background").transform.GetChild(3).transform.GetChild(1).gameObject;
+        _applyColor = _abovePlayer.GetComponent<ApplySavedColor>();
+        _applyColor2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ApplySavedColor>();
+
 
     }
 
@@ -38,13 +47,32 @@ public class ColorChangePanel : MonoBehaviour
         _rockFace.SetActive(true);
         _returnPanel.SetActive(true);
         _abovePlayer.SetActive(true);
+        _caveSaveSettings.SaveGame();
+        SaveColor();
+        _applyColor.ApplyColor();
+        _applyColor2.ApplyColor();
+        _applyColor.ApplyColor();
+        _applyColor2.ApplyColor();
         //ADD SCRIPT TO APPLY COLOR TO PLAYER
         _rockBridge.SetActive(false);
         this.gameObject.SetActive(false);
         // _player.MoveableTrue();
         _colorPanel.SetActive(false);
 
+    }
 
+    public void SetColor(float red_m, float green_m, float blue_m)
+    {
+        m_Blue = blue_m;
+        m_Green = green_m;
+        m_Red = red_m;
+    }
 
+    public void SaveColor()
+    {
+        _caveSaveSettings.SaveColor(m_Red, m_Green, m_Blue, 1f);
+        _caveSaveSettings.SaveGame();
+        _applyColor.ApplyColor();
+        _applyColor2.ApplyColor();
     }
 }

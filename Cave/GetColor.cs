@@ -18,12 +18,12 @@ public class GetColor : MonoBehaviour
   private Color m_NewColor;
   [SerializeField]
   private GameObject _colorChangePanel;
-  private ColorChanger _colorChanger;
+  private ColorChangePanel _colorChanger;
 
 
   void Start()
   {
-    _colorChanger = GameObject.Find("ColorChangePanel").transform.GetChild(5).transform.GetComponent<ColorChanger>();
+    _colorChanger = _colorChangePanel.GetComponent<ColorChangePanel>();
     _mirrorT = _redSetter.GetComponent<DragMirror>();
     _mirrorM = _greenSetter.GetComponent<DragMirror>();
     _mirrorB = _blueSetter.GetComponent<DragMirror>();
