@@ -9,6 +9,8 @@ public class InventoryButton : MonoBehaviour
   private Sprite OpenInventory;
   [SerializeField]
   private Sprite CloseInventory;
+
+  private Inventory _inventory;
   private UIManager _uiManager;
 
 
@@ -16,6 +18,7 @@ public class InventoryButton : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+    _inventory = GameObject.Find("Player").GetComponent<Inventory>();
     _sp = transform.GetComponent<SpriteRenderer>();
     _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
@@ -29,6 +32,8 @@ public class InventoryButton : MonoBehaviour
 
   void OnMouseDown()
   {
+    _inventory.CheckItemLocation();
+
     if (_sp.sprite == CloseInventory)
     {
       _sp.sprite = OpenInventory;

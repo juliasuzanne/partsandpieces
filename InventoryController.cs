@@ -6,7 +6,8 @@ public class InventoryController : MonoBehaviour
 {
   private Inventory _inventory;
   private Vector3 _startingPos;
-  private Transform _item;
+  private Vector3 _moveToPos;
+  private GameObject _item;
   // Start is called before the first frame update
   void Start()
   {
@@ -17,26 +18,28 @@ public class InventoryController : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+
     if (_item != null)
     {
       Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      mousePosition.z = 99f;
-      _item.position = mousePosition;
+      Vector3 moveToPos = new Vector3(mousePosition.x, mousePosition.y, 0f);
+      _item.transform.position = moveToPos;
+
     }
 
   }
 
 
-  public void ChangeItem(Transform item, Vector3 startingPos)
+  public void ChangeItem(GameObject item)
   {
     _item = item;
-    _startingPos = startingPos;
 
   }
 
   public void MakeItemNull()
   {
-    _item.position = _startingPos;
+    Vector3 posToMove = new Vector3(_item.transform.parent.position.x, _item.transform.parent.position.y, 0f);
+    _item.transform.position = posToMove;
     _item = null;
   }
 }

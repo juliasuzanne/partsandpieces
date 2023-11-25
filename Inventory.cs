@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
             Instantiate(prefab, slotPos, Quaternion.identity, slots[count].transform);
             break;
          }
+
          else
          {
             if (count == slots.Length - 1)
@@ -50,11 +51,28 @@ public class Inventory : MonoBehaviour
       }
    }
 
+   public void CheckItemLocation()
+   {
+      count = 0;
+      foreach (bool full in isFull)
+      {
+         if (full == true)
+         {
+            Vector3 slotPos = new Vector3(slots[count].transform.position.x, slots[count].transform.position.y, 0f);
+            items[count].transform.position = slotPos;
+            break;
+         }
+         count = count + 1;
+      }
+   }
+
+
    public void RemoveItemFromInventory(int slotNum)
    {
       isFull[slotNum] = false;
       items[slotNum] = null;
    }
+
 
    IEnumerator PlayerSays()
    {
