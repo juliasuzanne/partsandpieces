@@ -112,8 +112,11 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
             else if (_onRocks == true && _changed == false)
             {
                 _birdsEyeDialogue.RubRocks();
-                _playerText.text = "I need to make these reflective somehow...";
-                _playerTextBubble.SetActive(true);
+                description_object.SetActive(false);
+                description_text.text = "";
+                _playerText.text = "";
+                // _playerText.text = "I need to make these reflective somehow...";
+                _playerTextBubble.SetActive(false);
             }
             else
             {

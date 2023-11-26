@@ -50,14 +50,14 @@ public class UIManager : MonoBehaviour
 
     public void HideInventory()
     {
-        _inventoryButton.HidingInventory();
+        _inventoryButton.ShowingInventory();
         _inventoryPanel.SetActive(false);
         _playerMovement.MoveableTrue();
     }
 
     public void HideInventoryOnly()
     {
-        _inventoryButton.HidingInventory();
+        _inventoryButton.ShowingInventory();
         _inventoryPanel.SetActive(false);
     }
 
