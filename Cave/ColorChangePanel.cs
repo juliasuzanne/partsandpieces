@@ -25,11 +25,13 @@ public class ColorChangePanel : MonoBehaviour
     private ApplySavedColor _applyColor2;
 
     private UIManager _uiManager;
+    private BirdsEyeDialogue _birdEyePanel;
 
     // Start is called before the first frame update
     void Awake()
     {
         _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
+        _birdEyePanel = GameObject.Find("BirdsEyePanel").GetComponent<BirdsEyeDialogue>();
         _afterChangePanel.SetActive(true);
         _applyColor = _abovePlayer.GetComponent<ApplySavedColor>();
         _applyColor2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ApplySavedColor>();
@@ -65,6 +67,7 @@ public class ColorChangePanel : MonoBehaviour
         this.gameObject.SetActive(false);
         // _player.MoveableTrue();
         _colorPanel.SetActive(false);
+        _birdEyePanel.LeaveOpening();
 
     }
 
