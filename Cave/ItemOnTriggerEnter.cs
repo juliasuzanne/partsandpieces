@@ -9,7 +9,9 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
     protected string collisionGameobjectName;
     protected Text description_text;
     protected GameObject description_object;
-    protected bool _onPlayer;
+    protected bool _onPlayer = false;
+    protected bool _onRocks = false;
+
     protected AbovePlayer _abovePlayer;
     protected CaveSaveSettings _caveSaveSettings;
 
@@ -24,9 +26,15 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
     protected bool _changed = false;
     [SerializeField]
     protected Sprite _starting, _completed;
+    protected Text _playerText;
+    protected GameObject _playerTextBubble;
 
-    void Start()
+
+    protected virtual void Init()
     {
+        _playerTextBubble = GameObject.Find("AbovePlayer").transform.GetChild(0).gameObject;
+        _playerTextBubble.SetActive(false);
+        _playerText = GameObject.Find("AbovePlayer").transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
         _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         description_object = this.transform.GetChild(0).gameObject;
         description_text = this.transform.GetChild(0).GetComponent<Text>();
@@ -36,6 +44,10 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
         _image = GetComponent<Image>();
         _image.sprite = _starting;
 
+    }
+    void Start()
+    {
+        Init();
     }
 
     protected void ChangeSprite()
@@ -75,17 +87,51 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
         // Debug.Log(_onPlayer);
         if (Input.GetMouseButtonDown(0))
         {
-            if (_onPlayer == true)
+            if (_onPlayer == true && _changed == false)
+            {
+                description_object.SetActive(false);
+                description_text.text = "";
+                _playerText.text = "Ouch! This isn't doing anything good with me yet.";
+                _playerTextBubble.SetActive(true);
+            }
+            else if (_onPlayer == true && _changed == true)
             {
                 _abovePlayer.showColorChangePanel();
                 description_object.SetActive(false);
                 description_text.text = "";
+                _playerText.text = "";
+                _playerTextBubble.SetActive(false);
 
+
+            }
+
+
+            else if (_onRocks == true && _changed == true)
+            {
+                _playerText.text = _caveSaveSettings.so.rockName + " said I'd gain a new perspective once I filled these up...";
+                _playerTextBubble.SetActive(true);
+
+
+            }
+            else if (_onRocks == true && _changed == false)
+            {
+                _playerText.text = "I need to make these reflective somehow...";
+                _playerTextBubble.SetActive(true);
+
+
+
+            }
+            else
+            {
+                _playerTextBubble.SetActive(false);
+                _playerText.text = "";
             }
 
 
         }
 
     }
+
+
 
 }

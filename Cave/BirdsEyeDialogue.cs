@@ -7,6 +7,8 @@ using TMPro;
 public class BirdsEyeDialogue : DialogTemplate
 {
     private bool _chosenName = false;
+    private bool _gotRocks = false;
+
     [SerializeField]
     private TMP_InputField _input;
     [SerializeField]
@@ -245,48 +247,59 @@ public class BirdsEyeDialogue : DialogTemplate
                         if (waitForButton.PressedButton == AButton)
                         {
                             NPCSaySomething(9);
+                            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                            _giveRocksToPlayer.SetActive(true);
+                            _inventory.AddItemToInventory(_rocksPrefab);
+                            _animator.SetTrigger("RemoveRocks");
+                            _gotRocks = true;
                         }
                         else if (waitForButton.PressedButton == BButton)
                         {
                             NPCSaySomething(10);
+                            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                            _giveRocksToPlayer.SetActive(true);
+                            _inventory.AddItemToInventory(_rocksPrefab);
+                            _animator.SetTrigger("RemoveRocks");
+                            _gotRocks = true;
                         }
 
-                        _giveRocksToPlayer.SetActive(true);
-                        _inventory.AddItemToInventory(_rocksPrefab);
-                        _animator.SetTrigger("RemoveRocks");
 
-                        NPCTalkThenPanel(11, 5, 5);
-                        yield return waitForButton.Reset();
-                        if (waitForButton.PressedButton == AButton || waitForButton.PressedButton == BButton)
-                        {
-                            NPCTalkThenPanel(12, 6, 6);
-                            yield return waitForButton.Reset();
-                            if (waitForButton.PressedButton == AButton)
-                            {
-                                NPCSaySomething(13);
-                                yield return new WaitForSeconds(2.0f);
-                                _inputFieldSadThing.SetActive(true);
-                                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
-                                {
-                                    _sceneSaveSettings.ThinkOfSomethingSad(_inputSadThing.text);
-                                    _inputFieldSadThing.SetActive(false);
-                                    NPCText_string[15] = _sceneSaveSettings.so.sadThing + ", oh, that is so very, very sad.";
-                                    NPCSaySomething(15);
-                                    yield return new WaitForSeconds(2.0f);
-                                    _gatherTears.SetActive(true); EndConversation();
-
-                                }
-                            }
-                            else if (waitForButton.PressedButton == BButton)
-                            {
-                                NPCSaySomething(14);
-                                yield return new WaitForSeconds(2.0f);
-                                EndConversation();
-                            }
-
-                        }
                     }
                 }
+            }
+        }
+        if (_gotRocks == true)
+        {
+
+            NPCTalkThenPanel(11, 5, 5);
+            yield return waitForButton.Reset();
+            if (waitForButton.PressedButton == AButton || waitForButton.PressedButton == BButton)
+            {
+                NPCTalkThenPanel(12, 6, 6);
+                yield return waitForButton.Reset();
+                if (waitForButton.PressedButton == AButton)
+                {
+                    NPCSaySomething(13);
+                    yield return new WaitForSeconds(2.0f);
+                    _inputFieldSadThing.SetActive(true);
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                    {
+                        _sceneSaveSettings.ThinkOfSomethingSad(_inputSadThing.text);
+                        _inputFieldSadThing.SetActive(false);
+                        NPCText_string[15] = _sceneSaveSettings.so.sadThing + ", oh, that is so very, very sad.";
+                        NPCSaySomething(15);
+                        yield return new WaitForSeconds(2.0f);
+                        _gatherTears.SetActive(true); EndConversation();
+
+                    }
+                }
+                else if (waitForButton.PressedButton == BButton)
+                {
+                    NPCSaySomething(14);
+                    yield return new WaitForSeconds(2.0f);
+                    EndConversation();
+                }
+
             }
         }
     }

@@ -14,21 +14,21 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
     if (hit != null)
     {
 
-      if (other.gameObject.tag == "Player" && _changed == true)
+      if (other.gameObject.tag == "Player")
       {
         other.GetComponent<ApplySavedColor>().ApplyNameOnly();
         description_object.SetActive(true);
         description_text.text = "Use " + Name + " with " + hit.Name;
         _onPlayer = true;
       }
-      else if (other.gameObject.tag == "Player" && _changed == false)
+      else if (other.gameObject.name == "RockFaces")
       {
-        Debug.Log("Message to collect tears");
-        other.GetComponent<ApplySavedColor>().ApplyNameOnly();
         description_object.SetActive(true);
         description_text.text = "Use " + Name + " with " + hit.Name;
+        _onRocks = true;
 
       }
+
       else
       {
         description_object.SetActive(true);
@@ -36,10 +36,10 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
       }
 
 
-
     }
     if (other.gameObject.name == "Tear")
     {
+      description_object.SetActive(true);
       Debug.Log("HIT TEAR");
       if (_count < 3)
       {
@@ -57,7 +57,6 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
       }
     }
 
-
   }
 
   protected override void OnTriggerExit2D(Collider2D collision)
@@ -66,11 +65,16 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
     {
       description_object.SetActive(false);
       description_text.text = "";
+    }
+    else
+    {
+      _onRocks = false;
       _onPlayer = false;
     }
 
 
   }
+
 
 
 }
