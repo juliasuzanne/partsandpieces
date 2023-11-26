@@ -24,6 +24,8 @@ public class BirdsEyeDialogue : DialogTemplate
     [SerializeField]
     private TMP_InputField _inputSadThing;
     private Animator _abovePlayerAnimator;
+    [SerializeField]
+    private GameObject _getInventoryButtonCut;
 
 
 
@@ -238,7 +240,8 @@ public class BirdsEyeDialogue : DialogTemplate
                     _inputFieldRock.SetActive(false);
                     NPCText_string[7] = _sceneSaveSettings.so.rockName + ", I like it. Let me give you something in return.";
                     NPCTalkThenPanel(7, 4, 3);
-                    _inventoryButton.SetActive(true);
+                    _getInventoryButtonCut.SetActive(true);
+                    // _inventoryButton.SetActive(true);
                     yield return waitForButton.Reset();
                     if (waitForButton.PressedButton == AButton || waitForButton.PressedButton == BButton)
                     {
