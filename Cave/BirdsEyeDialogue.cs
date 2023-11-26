@@ -252,7 +252,7 @@ public class BirdsEyeDialogue : DialogTemplate
                         _inventory.AddItemToInventory(_rocksPrefab);
                         _animator.SetTrigger("RemoveRocks");
                         yield return new WaitForSeconds(2.0f);
-                        HideTheInventory();
+                        ShowTheInventory();
                         _animator.SetBool("RocksRemoved", true);
 
                         NPCTalkThenPanel(11, 5, 5);

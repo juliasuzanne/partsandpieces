@@ -44,17 +44,6 @@ public class InventoryButton : MonoBehaviour
   void OnMouseDown()
   {
     _inventory.CheckItemLocation();
-
-    if (_sp.sprite == CloseInventory)
-    {
-      _sp.sprite = OpenInventory;
-      _uiManager.ShowInventory();
-    }
-    else
-    {
-      _sp.sprite = CloseInventory;
-      _uiManager.ShowInventory();
-
-    }
+    _uiManager.ShowInventory();
   }
 }

@@ -41,8 +41,10 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
     if (other.gameObject.name == "Tear")
     {
       Debug.Log("HIT TEAR");
-      if (_count < 4)
+      if (_count < 3)
       {
+        other.GetComponent<Animator>().SetTrigger("Splash");
+        other.GetComponent<FallingObject>().Splashed();
         description_object.SetActive(true);
         description_text.text = _count + "/3 rocks filled";
         _count += 1;
