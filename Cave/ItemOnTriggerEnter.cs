@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public abstract class ItemOnTriggerEnter : MonoBehaviour
 {
     protected string collisionGameobjectName;
+    protected BirdsEyeDialogue _birdsEyeDialogue;
     protected Text description_text;
     protected GameObject description_object;
     protected bool _onPlayer = false;
@@ -32,6 +33,7 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
 
     protected virtual void Init()
     {
+        _birdsEyeDialogue = GameObject.Find("BirdsEyePanel").GetComponent<BirdsEyeDialogue>();
         _playerTextBubble = GameObject.Find("AbovePlayer").transform.GetChild(0).gameObject;
         _playerTextBubble.SetActive(false);
         _playerText = GameObject.Find("AbovePlayer").transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
@@ -101,25 +103,17 @@ public abstract class ItemOnTriggerEnter : MonoBehaviour
                 description_text.text = "";
                 _playerText.text = "";
                 _playerTextBubble.SetActive(false);
-
-
             }
-
-
             else if (_onRocks == true && _changed == true)
             {
                 _playerText.text = _caveSaveSettings.so.rockName + " said I'd gain a new perspective once I filled these up...";
                 _playerTextBubble.SetActive(true);
-
-
             }
             else if (_onRocks == true && _changed == false)
             {
+                _birdsEyeDialogue.RubRocks();
                 _playerText.text = "I need to make these reflective somehow...";
                 _playerTextBubble.SetActive(true);
-
-
-
             }
             else
             {

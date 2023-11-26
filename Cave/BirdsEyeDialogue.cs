@@ -8,6 +8,8 @@ public class BirdsEyeDialogue : DialogTemplate
 {
     private bool _chosenName = false;
     private bool _gotRocks = false;
+    private bool _hitRock = false;
+
 
     [SerializeField]
     private TMP_InputField _input;
@@ -59,6 +61,14 @@ public class BirdsEyeDialogue : DialogTemplate
 
     }
 
+    public void RubRocks()
+    {
+        if (runRoutine == true)
+        {
+            StartCoroutine("RockOnRock");
+        }
+    }
+
     protected override void EndConversation()
     {
         base.EndConversation();
@@ -72,6 +82,20 @@ public class BirdsEyeDialogue : DialogTemplate
         StartTalking();
     }
 
+    protected IEnumerator RockOnRock()
+    {
+        runRoutine = false;
+        NPCTalking();
+        _panel.SetActive(false);
+        _NPCText.text = NPCText_string[16];
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        _NPCText.text = NPCText_string[17];
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        _NPCText.text = NPCText_string[18];
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        _gatherTears.SetActive(true); EndConversation();
+
+    }
 
 
     protected override IEnumerator MoveThroughDialogue()
@@ -305,5 +329,7 @@ public class BirdsEyeDialogue : DialogTemplate
 
             }
         }
+
+
     }
 }
