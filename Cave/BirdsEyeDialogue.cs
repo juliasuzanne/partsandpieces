@@ -14,6 +14,8 @@ public class BirdsEyeDialogue : DialogTemplate
     [SerializeField]
     private GameObject _inputField;
     [SerializeField]
+    private GameObject _giveRocksToPlayer;
+    [SerializeField]
     private GameObject _inputFieldRock;
     [SerializeField]
     private GameObject _inputFieldSadThing;
@@ -248,12 +250,10 @@ public class BirdsEyeDialogue : DialogTemplate
                         {
                             NPCSaySomething(10);
                         }
-                        ShowTheInventory();
+
+                        _giveRocksToPlayer.SetActive(true);
                         _inventory.AddItemToInventory(_rocksPrefab);
                         _animator.SetTrigger("RemoveRocks");
-                        yield return new WaitForSeconds(2.0f);
-                        ShowTheInventory();
-                        _animator.SetBool("RocksRemoved", true);
 
                         NPCTalkThenPanel(11, 5, 5);
                         yield return waitForButton.Reset();
