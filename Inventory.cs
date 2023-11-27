@@ -71,6 +71,8 @@ public class Inventory : MonoBehaviour
    {
       isFull[slotNum] = false;
       items[slotNum] = null;
+      Destroy(slots[slotNum].transform.GetChild(0).gameObject);
+
    }
 
 
