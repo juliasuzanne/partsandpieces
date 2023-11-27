@@ -13,6 +13,7 @@ public class StartPlayer : MonoBehaviour
     {
         _animator = GameObject.Find("Player").GetComponent<Animator>();
         startingDialogPanel.SetActive(false);
+
         _hangingDialogue = startingDialogPanel.GetComponent<HangingDialogue>();
     }
     void OnMouseDown()

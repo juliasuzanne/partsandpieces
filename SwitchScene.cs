@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private CaveSaveSettings _saver;
     void Start()
     {
-
+        _saver = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CaveFall()
     {
-
+        _saver.SaveGame();
+        SceneManager.LoadScene(2);
+        _saver.LoadGame();
     }
+
 
 
 }
