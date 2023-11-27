@@ -70,7 +70,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowInventoryButton()
     {
-        _inventoryButtonObject.SetActive(false);
+        _inventoryButtonObject.SetActive(true);
+        _inventoryButton.ShowingInventory();
 
     }
 

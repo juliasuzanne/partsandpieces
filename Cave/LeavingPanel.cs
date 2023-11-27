@@ -17,7 +17,7 @@ public class LeavingPanel : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (count < strings.Length)
+        if (count < strings.Length - 1)
         {
             count = count + 1;
             _text.text = strings[count];
@@ -27,6 +27,7 @@ public class LeavingPanel : MonoBehaviour
         else
         {
             _text.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 

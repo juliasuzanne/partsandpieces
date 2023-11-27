@@ -33,7 +33,7 @@ public class ChangeSpriteMask : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeToChange);
             _spriteMask.sprite = _sprites[i];
-            if (i == 14)
+            if (i == _sprites.Length - 1)
             {
                 i = -1;
             }

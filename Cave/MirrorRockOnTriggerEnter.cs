@@ -66,11 +66,9 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
       description_object.SetActive(false);
       description_text.text = "";
     }
-    else
-    {
-      _onRocks = false;
-      _onPlayer = false;
-    }
+
+    _onRocks = false;
+    _onPlayer = false;
 
 
   }

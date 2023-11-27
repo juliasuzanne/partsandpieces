@@ -13,6 +13,8 @@ public class ColorChangePanel : MonoBehaviour
     [SerializeField]
     private GameObject _afterChangePanel;
     [SerializeField]
+    private GameObject _lastPanel;
+    [SerializeField]
     private GameObject _returnPanel;
     [SerializeField]
     private GameObject _rockFace;
@@ -61,9 +63,13 @@ public class ColorChangePanel : MonoBehaviour
         _applyColor2.ApplyColor();
         //ADD SCRIPT TO APPLY COLOR TO PLAYER
         _rockBridge.SetActive(false);
-        this.gameObject.SetActive(false);
         // _player.MoveableTrue();
+        _lastPanel.SetActive(true);
+        _uiManager.ShowInventoryButton();
         _colorPanel.SetActive(false);
+
+        this.gameObject.SetActive(false);
+
 
     }
 
