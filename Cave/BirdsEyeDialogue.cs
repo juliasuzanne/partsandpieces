@@ -149,6 +149,7 @@ public class BirdsEyeDialogue : DialogTemplate
                         NPCText_string[5] = "Okay, make sure you get it right this time.";
                         NPCSaySomething(5);
                         _inputField.SetActive(true);
+
                         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                         {
                             _sceneSaveSettings.ChangeUserName(_input.text);
@@ -176,6 +177,7 @@ public class BirdsEyeDialogue : DialogTemplate
             {
                 //GET NAME
                 _inputField.SetActive(true);
+
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                 {
                     _sceneSaveSettings.ChangeUserName(_input.text);
@@ -196,6 +198,7 @@ public class BirdsEyeDialogue : DialogTemplate
                         NPCText_string[5] = "Okay, make sure you get it right this time.";
                         NPCSaySomething(5);
                         _inputField.SetActive(true);
+
                         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                         {
                             _sceneSaveSettings.ChangeUserName(_input.text);
@@ -218,6 +221,7 @@ public class BirdsEyeDialogue : DialogTemplate
                 yield return new WaitForSeconds(2.0f);
                 //GET NAME
                 _inputField.SetActive(true);
+
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                 {
                     _sceneSaveSettings.ChangeUserName(_input.text);
@@ -239,6 +243,7 @@ public class BirdsEyeDialogue : DialogTemplate
                         NPCText_string[5] = "Okay, make sure you get it right this time.";
                         NPCSaySomething(5);
                         _inputField.SetActive(true);
+
                         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                         {
                             _sceneSaveSettings.ChangeUserName(_input.text);
@@ -271,6 +276,7 @@ public class BirdsEyeDialogue : DialogTemplate
                 {
                     _sceneSaveSettings.ChangeRockName(_inputRock.text);
                     _inputFieldRock.SetActive(false);
+
                     NPCText_string[7] = _sceneSaveSettings.so.rockName + ", I like it. Let me give you something in return.";
                     NPCTalkThenPanel(7, 4, 3);
                     _getInventoryButtonCut.SetActive(true);
@@ -286,6 +292,7 @@ public class BirdsEyeDialogue : DialogTemplate
                             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
                             _giveRocksToPlayer.SetActive(true);
                             _inventory.AddItemToInventory(_rocksPrefab);
+                            // _uiManager.HideInventoryOnly();
                             _animator.SetTrigger("RemoveRocks");
                             _gotRocks = true;
                         }
@@ -318,6 +325,7 @@ public class BirdsEyeDialogue : DialogTemplate
                     NPCSaySomething(13);
                     yield return new WaitForSeconds(2.0f);
                     _inputFieldSadThing.SetActive(true);
+
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                     {
                         _sceneSaveSettings.ThinkOfSomethingSad(_inputSadThing.text);
