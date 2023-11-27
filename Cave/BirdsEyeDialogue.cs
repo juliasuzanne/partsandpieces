@@ -8,8 +8,6 @@ public class BirdsEyeDialogue : DialogTemplate
 {
     private bool _chosenName = false;
     private bool _gotRocks = false;
-    private bool _leaving = false;
-
     private bool _rubRocks = false;
 
 
@@ -30,8 +28,6 @@ public class BirdsEyeDialogue : DialogTemplate
     private Animator _abovePlayerAnimator;
     [SerializeField]
     private GameObject _getInventoryButtonCut;
-
-
 
     private Inventory _inventory;
 
@@ -69,32 +65,6 @@ public class BirdsEyeDialogue : DialogTemplate
         {
             StartCoroutine("RockOnRock");
         }
-    }
-
-    public void LeaveOpening()
-    {
-        if (runRoutine == true && _leaving == false)
-        {
-            StartCoroutine("SayGoodbye");
-        }
-    }
-
-
-    protected IEnumerator SayGoodbye()
-    {
-        runRoutine = false;
-        _leaving = true;
-        _panel.SetActive(false);
-        _uiManager.HideInventoryOnly();
-        for (int i = 19; i < 29; i += 4)
-        {
-            Debug.Log(i);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            NPCSaySomething(i);
-            i = i - 3;
-        }
-
-        EndConversation();
     }
 
 
