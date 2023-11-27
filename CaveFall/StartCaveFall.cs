@@ -6,13 +6,22 @@ public class StartCaveFall : MonoBehaviour
 {
     private ApplySavedColor _applySave;
     private CaveSaveSettings _saveSettings;
+    private PlayerMovement _playerMovement;
+    private Animator _playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
+        _playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         _applySave = GameObject.Find("Player").GetComponent<ApplySavedColor>();
+        _playerAnim = GameObject.Find("Player").GetComponent<Animator>();
         _saveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
         _saveSettings.LoadGame();
         _applySave.ApplyColor();
+        _playerAnim.SetTrigger("Start");
+        _playerAnim.SetTrigger("Fall");
+
+        _playerMovement.MoveableTrue();
 
     }
 
