@@ -9,14 +9,38 @@ public class SwitchScene : MonoBehaviour
     void Start()
     {
         _saver = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
+
     }
 
     public void CaveFall()
     {
         _saver.SaveGame();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         _saver.LoadGame();
     }
+
+    public void FirstScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Return()
+    {
+        _saver.LoadGame();
+        SceneManager.LoadScene(_saver.so.playerLevel);
+    }
+
+    public void About()
+    {
+        _saver.SaveGame();
+        SceneManager.LoadScene(2);
+    }
+
+    public void Finish()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 
 
 
