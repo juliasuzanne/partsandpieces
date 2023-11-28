@@ -41,7 +41,7 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
     {
       description_object.SetActive(true);
       Debug.Log("HIT TEAR");
-      if (_count < 3)
+      if (_count < 2)
       {
         other.GetComponent<Animator>().SetTrigger("Splash");
         other.GetComponent<FallingObject>().Splashed();

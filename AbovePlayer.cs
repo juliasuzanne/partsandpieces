@@ -23,6 +23,7 @@ public class AbovePlayer : MonoBehaviour
     this.gameObject.SetActive(false);
     _rockFaces.SetActive(false);
     _colorChangePanel.SetActive(true);
+    Cursor.visible = false;
     _colorChangePanelScript.showColorChangePanel();
   }
 

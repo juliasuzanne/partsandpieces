@@ -63,6 +63,7 @@ public class ColorChangePanel : MonoBehaviour
         //ADD SCRIPT TO APPLY COLOR TO PLAYER
         _rockBridge.SetActive(false);
         // _player.MoveableTrue();
+        Cursor.visible = true;
         _lastPanel.SetActive(true);
         _uiManager.ShowInventoryButton();
         _colorPanel.SetActive(false);
