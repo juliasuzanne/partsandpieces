@@ -12,6 +12,8 @@ public class List : MonoBehaviour
     private SpawnManager _spawnManager;
     private GravityChanger _gravityChanger;
     private Animator _playerAnim;
+    private Animator _backgroundAnim;
+    private GameObject _platform;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,9 @@ public class List : MonoBehaviour
         _spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         _gravityChanger = GameObject.Find("Player").GetComponent<GravityChanger>();
         _playerAnim = GameObject.Find("Player").GetComponent<Animator>();
-
+        _backgroundAnim = GameObject.Find("Set_Background").GetComponent<Animator>();
+        _platform = GameObject.Find("Platform");
+        _platform.SetActive(false);
 
 
     }
@@ -36,8 +40,11 @@ public class List : MonoBehaviour
         if (_obj1 == true && _obj2 == true && _obj3 == true)
         {
             _playerAnim.SetTrigger("Land");
-            _gravityChanger.SetGravity(2f);
+            _backgroundAnim.SetTrigger("Land");
+            _platform.SetActive(true);
+            _gravityChanger.SetGravity(1f);
             _spawnManager.OnPlayerLand();
+            this.gameObject.SetActive(false);
         }
 
     }

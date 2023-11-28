@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ApplySavedColor : MonoBehaviour, INameable
 {
+    [SerializeField]
     private CaveSaveSettings _caveSaveSettings;
+    [SerializeField]
     private SpriteRenderer _sp;
     public string Name { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        _caveSaveSettings = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
-        _sp = GetComponent<SpriteRenderer>();
 
     }
 

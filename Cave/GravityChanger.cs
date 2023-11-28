@@ -15,7 +15,11 @@ public class GravityChanger : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         _playerMovement = GetComponent<PlayerMovement>();
         _animator = GetComponent<Animator>();
-        _robotAnimator = GameObject.Find("RobotArm").GetComponent<Animator>();
+        if (GameObject.Find("RobotArm") != null)
+        {
+            _robotAnimator = GameObject.Find("RobotArm").GetComponent<Animator>();
+
+        }
 
     }
 

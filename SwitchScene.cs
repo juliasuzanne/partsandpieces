@@ -15,8 +15,8 @@ public class SwitchScene : MonoBehaviour
     public void CaveFall()
     {
         _saver.SaveGame();
+        Debug.Log("CAVE FALL SAVED GAME");
         SceneManager.LoadScene(1);
-        _saver.LoadGame();
     }
 
     public void FirstScene()
@@ -33,8 +33,8 @@ public class SwitchScene : MonoBehaviour
 
     public void About()
     {
-        _saver.SaveGame();
-        SceneManager.LoadScene(2);
+        // _saver.SaveGame();
+        // SceneManager.LoadScene(2);
     }
 
     public void Finish()

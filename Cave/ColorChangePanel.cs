@@ -55,7 +55,6 @@ public class ColorChangePanel : MonoBehaviour
         _rockFace.SetActive(true);
         _returnPanel.SetActive(true);
         _abovePlayer.SetActive(true);
-        _caveSaveSettings.SaveGame();
         SaveColor();
         _applyColor.ApplyColor();
         _applyColor2.ApplyColor();
@@ -67,7 +66,6 @@ public class ColorChangePanel : MonoBehaviour
         _lastPanel.SetActive(true);
         _uiManager.ShowInventoryButton();
         _colorPanel.SetActive(false);
-
         this.gameObject.SetActive(false);
 
 

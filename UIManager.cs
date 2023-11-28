@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
     public void PauseGameMenu()
     {
         _pausePanel.SetActive(true);
-        _playerMovement.MoveableFalse();
+        // _playerMovement.MoveableFalse();
     }
 
     public void PauseGamePlay()
@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
     public void ResumeGame()
     {
         _pausePanel.SetActive(false);
-        _playerMovement.MoveableTrue();
+        // _playerMovement.MoveableTrue();
     }
 
 

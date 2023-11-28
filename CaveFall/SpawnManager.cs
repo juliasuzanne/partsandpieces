@@ -38,7 +38,14 @@ public class SpawnManager : MonoBehaviour
     public void OnPlayerLand()
     {
         _stopSpawning = true;
+
+
+    }
+
+    public void FinishGame()
+    {
         _switchScene.Finish();
+
     }
 
 
