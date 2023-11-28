@@ -9,6 +9,8 @@ public class HangingDialogue : DialogTemplate
     private GameObject _start;
 
     private GravityChanger _gravity;
+    [SerializeField]
+    private GameObject _speechBubble;
 
 
     public override void OnStarting()
@@ -16,6 +18,15 @@ public class HangingDialogue : DialogTemplate
         _panel.SetActive(true);
         _gravity = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<GravityChanger>();
         _start.SetActive(false);
+        _speechBubble.SetActive(true);
+    }
+
+    protected override void EndConversation()
+    {
+        base.EndConversation();
+        Cursor.visible = true;
+        _speechBubble.SetActive(false);
+
     }
 
     public override void Init()

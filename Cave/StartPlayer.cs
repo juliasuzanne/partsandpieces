@@ -18,7 +18,7 @@ public class StartPlayer : MonoBehaviour
     void OnMouseDown()
     {
         _animator.SetTrigger("Start");
-
+        Cursor.visible = false;
         startingDialogPanel.SetActive(true);
         _hangingDialogue.StartTalking();
 
