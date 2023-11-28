@@ -41,7 +41,7 @@ public class FallingItem : MonoBehaviour
         //when we leave the screen, destroy this object
         transform.Translate(new Vector3(0, _speed, 0) * Time.deltaTime);
 
-        if (transform.position.y > 8)
+        if (transform.position.y > 15)
         {
             //
             Destroy(this.gameObject);
@@ -60,26 +60,27 @@ public class FallingItem : MonoBehaviour
             switch (_powerupID)
             {
                 case 0:
-                    _list.ChangeObj1();
-                    _list.CheckObjs();
+                    _list.ChangeObj1(prefab1);
                     Debug.Log("add band to inventory");
                     powerup1.ChangeTheSprite();
-                    _inventory.AddItemToInventory(prefab1);
+                    _list.CheckObjs();
+
                     Destroy(this.gameObject);
+
                     break;
                 case 1:
-                    _list.ChangeObj2();
-                    _list.CheckObjs();
+                    _list.ChangeObj2(prefab2);
                     powerup2.ChangeTheSprite();
-                    _inventory.AddItemToInventory(prefab2);
                     Destroy(this.gameObject);
+                    _list.CheckObjs();
+
                     break;
                 case 2:
-                    _list.ChangeObj3();
-                    _list.CheckObjs();
+                    _list.ChangeObj3(prefab3);
                     powerup3.ChangeTheSprite();
-                    _inventory.AddItemToInventory(prefab3);
+                    _list.CheckObjs();
                     Destroy(this.gameObject);
+
                     break;
             }
 
