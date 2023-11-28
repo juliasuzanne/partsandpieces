@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
 {
-  protected int _count = 0;
+  protected float _count = 0.5f;
 
 
   protected override void OnTriggerEnter2D(Collider2D other)
@@ -41,13 +41,19 @@ public class MirrorRockOnTriggerEnter : ItemOnTriggerEnter
     {
       description_object.SetActive(true);
       Debug.Log("HIT TEAR");
-      if (_count < 2)
+      if (_count < 3f)
       {
+        _count += 0.5f;
         other.GetComponent<Animator>().SetTrigger("Splash");
         other.GetComponent<FallingObject>().Splashed();
         description_object.SetActive(true);
         description_text.text = _count + "/3 rocks filled";
-        _count += 1;
+        if (_count == 3f)
+        {
+          description_object.SetActive(false);
+          ChangeSprite();
+          Destroy(other.gameObject);
+        }
       }
       else
       {
