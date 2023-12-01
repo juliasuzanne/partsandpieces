@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class DialogueNode
+namespace Dialogue
 {
+    [System.Serializable]
+    public class DialogueNode
+    {
+        public string uniqueID;
+        public string speech;
+        public string[] children;
+    }
 
 }
