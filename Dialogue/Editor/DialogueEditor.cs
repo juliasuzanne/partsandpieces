@@ -20,11 +20,12 @@ namespace Dialogue.Editor
             Dialogue dialogue = EditorUtility.InstanceIDToObject(instanceID) as Dialogue;
             if (dialogue != null)
             {
-                Debug.Log("Dialogue opened");
+                ShowEditorWindow();
                 return true;
             }
             return false;
+
         }
     }
-
 }
+
