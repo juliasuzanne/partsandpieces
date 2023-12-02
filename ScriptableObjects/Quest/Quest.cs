@@ -7,10 +7,12 @@ using UnityEngine;
 public class Quest : ScriptableObject
 {
     [SerializeField]
-    string[] tasks;
+    List<string> tasks;
 
-    public string[] GetTask()
+    public IEnumerable<string> GetTask()
     {
-        return tasks;
+        yield return "Task 1";
+        Debug.Log("Do some work");
+        yield return "Task 2";
     }
 }
