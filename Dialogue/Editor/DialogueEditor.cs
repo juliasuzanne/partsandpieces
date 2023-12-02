@@ -29,7 +29,10 @@ namespace Dialogue.Editor
 
         private void OnGUI()
         {
-            EditorGUI.LabelField(new Rect(10, 10, 200, 200), "Hello World");
+            EditorGUILayout.LabelField("Hello World");
+            EditorGUILayout.LabelField("Hello World");
+            EditorGUILayout.LabelField("Hello World");
+
         }
     }
 }
