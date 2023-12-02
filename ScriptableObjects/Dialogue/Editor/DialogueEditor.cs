@@ -137,6 +137,12 @@ namespace Dialogue.Editor
 
             }
 
+            foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
+            {
+                EditorGUILayout.LabelField(childNode.speech);
+
+            }
+
             GUILayout.EndArea();
         }
     }

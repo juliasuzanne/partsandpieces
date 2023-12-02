@@ -10,9 +10,12 @@ namespace Dialogue
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
 
+        Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+
 #if UNITY_EDITOR
         private void Awake()
         {
+            OnValidate();
             if (nodes.Count == 0)
             {
                 nodes.Add(new DialogueNode());
@@ -20,6 +23,14 @@ namespace Dialogue
 
         }
 #endif
+        private void OnValidate()
+        {
+            nodeLookup.Clear();
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                nodeLookup[node.uniqueID] = node;
+            }
+        }
         public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
@@ -28,6 +39,15 @@ namespace Dialogue
         {
             return nodes[0];
 
+        }
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        {
+            List<DialogueNode> result = new List<DialogueNode>();
+            foreach (string childID in parentNode.children)
+            {
+                result.Add(nodeLookup[childID]);
+            }
+            return result;
         }
 
     }
