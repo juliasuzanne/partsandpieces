@@ -15,12 +15,15 @@ MonoBehaviour:
   nodes:
   - uniqueID: a
     speech: what
+    greeting: GREETING
     children:
     - b
     - c
   - uniqueID: b
     speech: TEST
+    greeting: 
     children: []
   - uniqueID: c
     speech: am testing
+    greeting: 
     children: []

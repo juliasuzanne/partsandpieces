@@ -64,17 +64,23 @@ namespace Dialogue.Editor
             {
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
+                    EditorGUI.BeginChangeCheck();
+
+                    EditorGUILayout.LabelField("Node: ");
                     string newText = EditorGUILayout.TextField(node.speech);
-                    if (newText != node.speech)
+                    string newID = EditorGUILayout.TextField(node.uniqueID);
+
+
+                    if (EditorGUI.EndChangeCheck())
                     {
+                        Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
+                        node.uniqueID = newID;
                         node.speech = newText;
-                        EditorUtility.SetDirty(selectedDialogue);
 
                     }
                 }
 
             }
-            EditorGUILayout.LabelField("Hello World");
 
         }
     }
