@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor.Callbacks;
 
 namespace Dialogue.Editor
@@ -63,8 +64,13 @@ namespace Dialogue.Editor
             {
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    node.speech = EditorGUILayout.TextField(node.speech);
+                    string newText = EditorGUILayout.TextField(node.speech);
+                    if (newText != node.speech)
+                    {
+                        node.speech = newText;
+                        EditorUtility.SetDirty(selectedDialogue);
 
+                    }
                 }
 
             }

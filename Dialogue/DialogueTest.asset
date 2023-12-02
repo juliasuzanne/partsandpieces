@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - uniqueID: a
-    speech: Hello
+    speech: what
     children:
     - b
     - c
   - uniqueID: b
-    speech: Yes, Hello
+    speech: TEST
     children: []
   - uniqueID: c
-    speech: No!!!
+    speech: am testing
     children: []
