@@ -137,6 +137,11 @@ namespace Dialogue.Editor
                 node.speech = newText;
 
             }
+
+            if (GUILayout.Button("+"))
+            {
+                Debug.Log("Create new node");
+            }
             GUILayout.EndArea();
         }
 
