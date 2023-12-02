@@ -12,6 +12,7 @@ namespace Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+        Vector2 draggingOffset;
         GUIStyle nodeStyle;
         DialogueNode draggingNode = null;
 
@@ -85,11 +86,15 @@ namespace Dialogue.Editor
             if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
                 draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                if (draggingNode != null)
+                {
+                    draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
                 Undo.RecordObject(selectedDialogue, "Update Node Pos");
-                draggingNode.rect.position = Event.current.mousePosition;
+                draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
                 GUI.changed = true;
 
             }

@@ -18,27 +18,27 @@ MonoBehaviour:
     children:
     - b
     - c
-    position:
+    rect:
       serializedVersion: 2
-      x: 10
-      y: 10
+      x: 430
+      y: -1
       width: 200
       height: 100
   - uniqueID: b
     speech: TEST
     children: []
-    position:
+    rect:
       serializedVersion: 2
-      x: 10
-      y: 110
+      x: 73
+      y: 15
       width: 200
       height: 100
   - uniqueID: c
     speech: am testing
     children: []
-    position:
+    rect:
       serializedVersion: 2
-      x: 10
-      y: 210
+      x: 72
+      y: 117
       width: 200
       height: 100
