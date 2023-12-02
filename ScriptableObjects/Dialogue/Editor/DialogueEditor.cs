@@ -142,12 +142,20 @@ namespace Dialogue.Editor
 
         private void DrawConnections(DialogueNode node)
         {
+            Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
+
+
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
-                Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
                 Vector2 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.center.y);
+                Vector2 controlPointOffset = endPosition - startPosition;
+                controlPointOffset.y = 0;
+                controlPointOffset.x *= 0.8f;
 
-                Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, 4f);
+                Handles.DrawBezier(startPosition, endPosition,
+                startPosition + controlPointOffset,
+                endPosition - controlPointOffset,
+                Color.white, null, 4f);
             }
         }
     }
