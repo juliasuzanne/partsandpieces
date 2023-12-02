@@ -73,8 +73,13 @@ namespace Dialogue.Editor
                 ProcessEvents();
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    DrawNode(node);
                     DrawConnections(node);
+
+                }
+                foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+                {
+                    DrawNode(node);
+
                 }
 
             }
