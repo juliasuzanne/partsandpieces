@@ -61,7 +61,12 @@ namespace Dialogue.Editor
             }
             else
             {
-                EditorGUILayout.LabelField(selectedDialogue.name);
+                foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+                {
+                    node.speech = EditorGUILayout.TextField(node.speech);
+
+                }
+
             }
             EditorGUILayout.LabelField("Hello World");
 
