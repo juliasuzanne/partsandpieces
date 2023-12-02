@@ -144,8 +144,8 @@ namespace Dialogue.Editor
         {
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
-                Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.yMax / 2);
-                Vector2 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.yMax / 2);
+                Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
+                Vector2 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.center.y);
 
                 Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, 4f);
             }
