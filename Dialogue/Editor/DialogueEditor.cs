@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor.Callbacks;
@@ -11,6 +12,7 @@ namespace Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+        GUIStyle nodeStyle;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -36,6 +38,10 @@ namespace Dialogue.Editor
             //allows us to have a nonstatic function
 
             Selection.selectionChanged += OnSelectionChanged;
+            nodeStyle = new GUIStyle();
+            nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
+            nodeStyle.padding = new RectOffset(20, 20, 20, 20);
+            nodeStyle.border = new RectOffset(12, 12, 12, 12);
         }
 
         private void OnSelectionChanged()
@@ -64,24 +70,33 @@ namespace Dialogue.Editor
             {
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUI.BeginChangeCheck();
-
-                    EditorGUILayout.LabelField("Node: ");
-                    string newText = EditorGUILayout.TextField(node.speech);
-                    string newID = EditorGUILayout.TextField(node.uniqueID);
-
-
-                    if (EditorGUI.EndChangeCheck())
-                    {
-                        Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
-                        node.uniqueID = newID;
-                        node.speech = newText;
-
-                    }
+                    OnGUINode(node);
                 }
 
             }
 
+        }
+
+        private void OnGUINode(DialogueNode node)
+        {
+
+            GUILayout.BeginArea(node.position, nodeStyle);
+            EditorGUI.BeginChangeCheck();
+
+            EditorGUILayout.LabelField("Node: ");
+            string newText = EditorGUILayout.TextField(node.speech);
+            string newID = EditorGUILayout.TextField(node.uniqueID);
+
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
+                node.uniqueID = newID;
+                node.speech = newText;
+
+            }
+
+            GUILayout.EndArea();
         }
     }
 }

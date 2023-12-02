@@ -10,6 +10,7 @@ namespace Dialogue
         public string uniqueID;
         public string speech;
         public string[] children;
+        public Rect position;
     }
 
 }
