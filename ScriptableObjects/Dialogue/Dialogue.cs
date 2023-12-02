@@ -18,7 +18,9 @@ namespace Dialogue
             OnValidate();
             if (nodes.Count == 0)
             {
-                nodes.Add(new DialogueNode());
+                DialogueNode rootNode = new DialogueNode();
+                rootNode.uniqueID = System.Guid.NewGuid().ToString();
+                nodes.Add(rootNode);
             }
 
         }

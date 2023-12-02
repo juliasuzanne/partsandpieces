@@ -129,16 +129,11 @@ namespace Dialogue.Editor
 
             GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
-
-            EditorGUILayout.LabelField("Node: ");
             string newText = EditorGUILayout.TextField(node.speech);
-            string newID = EditorGUILayout.TextField(node.uniqueID);
-
 
             if (EditorGUI.EndChangeCheck())
             {
                 Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
-                node.uniqueID = newID;
                 node.speech = newText;
 
             }
