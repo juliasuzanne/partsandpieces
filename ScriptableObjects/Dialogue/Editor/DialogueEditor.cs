@@ -73,7 +73,8 @@ namespace Dialogue.Editor
                 ProcessEvents();
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    OnGUINode(node);
+                    DrawNode(node);
+                    DrawConnections(node);
                 }
 
             }
@@ -118,7 +119,7 @@ namespace Dialogue.Editor
             return foundNode;
         }
 
-        private void OnGUINode(DialogueNode node)
+        private void DrawNode(DialogueNode node)
         {
 
             GUILayout.BeginArea(node.rect, nodeStyle);
@@ -136,14 +137,18 @@ namespace Dialogue.Editor
                 node.speech = newText;
 
             }
+            GUILayout.EndArea();
+        }
 
+        private void DrawConnections(DialogueNode node)
+        {
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
-                EditorGUILayout.LabelField(childNode.speech);
+                Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.yMax / 2);
+                Vector2 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.yMax / 2);
 
+                Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, 4f);
             }
-
-            GUILayout.EndArea();
         }
     }
 }
