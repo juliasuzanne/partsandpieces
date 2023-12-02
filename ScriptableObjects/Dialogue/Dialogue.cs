@@ -53,5 +53,14 @@ namespace Dialogue
             }
         }
 
+        public void CreateNode(DialogueNode parent)
+        {
+            DialogueNode newNode = new DialogueNode();
+            newNode.uniqueID = System.Guid.NewGuid().ToString();
+            parent.children.Add(newNode.uniqueID);
+            nodes.Add(newNode);
+            OnValidate();
+        }
+
     }
 }
