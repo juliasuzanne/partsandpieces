@@ -42,12 +42,13 @@ namespace Dialogue
         }
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
-            List<DialogueNode> result = new List<DialogueNode>();
             foreach (string childID in parentNode.children)
             {
-                result.Add(nodeLookup[childID]);
+                if (nodeLookup.ContainsKey(childID))
+                {
+                    yield return nodeLookup[childID];
+                }
             }
-            return result;
         }
 
     }
