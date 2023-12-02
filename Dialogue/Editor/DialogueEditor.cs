@@ -101,14 +101,16 @@ namespace Dialogue.Editor
 
         private DialogueNode GetNodeAtPoint(Vector2 point)
         {
+            DialogueNode foundNode = null;
             foreach (DialogueNode node in selectedDialogue.GetAllNodes())
             {
                 if (node.rect.Contains(point))
                 {
-                    return node;
+                    foundNode = node;
                 }
+
             }
-            return null;
+            return foundNode;
         }
 
         private void OnGUINode(DialogueNode node)
