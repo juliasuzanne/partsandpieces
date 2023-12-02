@@ -26,6 +26,11 @@ namespace Dialogue.Editor
             return false;
 
         }
+
+        private void OnGUI()
+        {
+            EditorGUI.LabelField(new Rect(10, 10, 200, 200), "Hello World");
+        }
     }
 }
 
