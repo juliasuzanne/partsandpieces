@@ -205,6 +205,7 @@ namespace Dialogue.Editor
                 {
                     if (GUILayout.Button("remove child"))
                     {
+                        Undo.RecordObject(selectedDialogue, "Remove link");
                         linkingNode.children.Remove(node.uniqueID);
                         linkingNode = null;
 
@@ -214,6 +215,7 @@ namespace Dialogue.Editor
                 {
                     if (GUILayout.Button("add child"))
                     {
+                        Undo.RecordObject(selectedDialogue, "Add link");
                         linkingNode.children.Add(node.uniqueID);
                         linkingNode = null;
 
