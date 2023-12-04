@@ -21,8 +21,10 @@ namespace Dialogue.Editor
         [System.NonSerialized]
         DialogueNode creatingNode = null;
         [System.NonSerialized]
-
         DialogueNode deletingNode = null;
+        [System.NonSerialized]
+        DialogueNode linkingNode = null;
+
 
 
         [MenuItem("Window/Dialogue Editor")]
@@ -103,6 +105,7 @@ namespace Dialogue.Editor
                     deletingNode = null;
                 }
 
+
             }
 
 
@@ -164,6 +167,45 @@ namespace Dialogue.Editor
             if (GUILayout.Button("+"))
             {
                 creatingNode = node;
+            }
+            if (linkingNode == null)
+            {
+                if (GUILayout.Button("link"))
+                {
+                    linkingNode = node;
+                }
+
+            }
+            else
+            {
+                Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
+                if (linkingNode == node)
+                {
+                    if (GUILayout.Button("cancel"))
+                    {
+                        linkingNode = null;
+
+                    }
+                }
+                else if (linkingNode.children.Contains(node.uniqueID))
+                {
+                    if (GUILayout.Button("remove child"))
+                    {
+                        linkingNode.children.Remove(node.uniqueID);
+                        linkingNode = null;
+
+                    }
+                }
+                else
+                {
+                    if (GUILayout.Button("add child"))
+                    {
+                        linkingNode.children.Add(node.uniqueID);
+                        linkingNode = null;
+
+                    }
+
+                }
             }
 
             if (GUILayout.Button("-"))
