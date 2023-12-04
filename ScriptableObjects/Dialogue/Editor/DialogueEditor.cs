@@ -168,6 +168,20 @@ namespace Dialogue.Editor
             {
                 creatingNode = node;
             }
+
+            DrawLinkButtons(node);
+
+            if (GUILayout.Button("-"))
+            {
+                deletingNode = node;
+            }
+            GUILayout.EndHorizontal();
+
+            GUILayout.EndArea();
+        }
+
+        private void DrawLinkButtons(DialogueNode node)
+        {
             if (linkingNode == null)
             {
                 if (GUILayout.Button("link"))
@@ -207,14 +221,6 @@ namespace Dialogue.Editor
 
                 }
             }
-
-            if (GUILayout.Button("-"))
-            {
-                deletingNode = node;
-            }
-            GUILayout.EndHorizontal();
-
-            GUILayout.EndArea();
         }
 
         private void DrawConnections(DialogueNode node)
