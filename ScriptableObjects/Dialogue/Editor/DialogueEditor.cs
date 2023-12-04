@@ -25,7 +25,10 @@ namespace Dialogue.Editor
         DialogueNode deletingNode = null;
         [System.NonSerialized]
         DialogueNode linkingNode = null;
-
+        [System.NonSerialized]
+        bool draggingCanvas = false;
+        [System.NonSerialized]
+        Vector2 draggingCanvasOffset;
 
 
         [MenuItem("Window/Dialogue Editor")]
@@ -119,14 +122,17 @@ namespace Dialogue.Editor
 
         private void ProcessEvents()
         {
-            Debug.Log("SCROLL " + scrollPosition);
-            Debug.Log("MOUSE POS " + Event.current.mousePosition);
             if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
                 draggingNode = GetNodeAtPoint(Event.current.mousePosition + scrollPosition);
                 if (draggingNode != null)
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                }
+                else
+                {
+                    draggingCanvasOffset = scrollPosition + Event.current.mousePosition;
+                    draggingCanvas = true;
                 }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
@@ -136,9 +142,18 @@ namespace Dialogue.Editor
                 GUI.changed = true;
 
             }
+            else if (Event.current.type == EventType.MouseUp && draggingCanvas)
+            {
+                scrollPosition = draggingCanvasOffset - Event.current.mousePosition;
+                GUI.changed = true;
+            }
             else if (Event.current.type == EventType.MouseUp && draggingNode != null)
             {
                 draggingNode = null;
+            }
+            else if (Event.current.type == EventType.MouseUp && draggingCanvas)
+            {
+                draggingCanvas = false;
             }
         }
 
