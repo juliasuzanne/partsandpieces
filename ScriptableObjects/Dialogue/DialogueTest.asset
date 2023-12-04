@@ -30,16 +30,36 @@ MonoBehaviour:
     - 
     rect:
       serializedVersion: 2
-      x: 295
-      y: -48
+      x: 270
+      y: 38
       width: 200
       height: 150
   - uniqueID: c
     speech: am testing
+    children:
+    - 4e46eb38-ff85-4c42-bb44-7b1986632b10
+    - 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 198
+      width: 200
+      height: 150
+  - uniqueID: 4e46eb38-ff85-4c42-bb44-7b1986632b10
+    speech: 
     children: []
     rect:
       serializedVersion: 2
-      x: 308
-      y: 106
+      x: 523
+      y: 267
       width: 200
-      height: 150
+      height: 100
+  - uniqueID: 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    speech: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 162
+      width: 200
+      height: 100

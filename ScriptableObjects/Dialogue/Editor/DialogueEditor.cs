@@ -159,6 +159,8 @@ namespace Dialogue.Editor
 
             }
 
+            GUILayout.BeginHorizontal();
+
             if (GUILayout.Button("+"))
             {
                 creatingNode = node;
@@ -168,6 +170,7 @@ namespace Dialogue.Editor
             {
                 deletingNode = node;
             }
+            GUILayout.EndHorizontal();
 
             GUILayout.EndArea();
         }
