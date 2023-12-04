@@ -62,5 +62,10 @@ namespace Dialogue
             OnValidate();
         }
 
+        public void DeleteNode(DialogueNode nodeToDelete)
+        {
+
+        }
+
     }
 }
