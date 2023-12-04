@@ -84,7 +84,6 @@ namespace Dialogue.Editor
             {
                 ProcessEvents();
                 scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
-
                 GUILayoutUtility.GetRect(4000, 4000);
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
@@ -120,9 +119,11 @@ namespace Dialogue.Editor
 
         private void ProcessEvents()
         {
+            Debug.Log("SCROLL " + scrollPosition);
+            Debug.Log("MOUSE POS " + Event.current.mousePosition);
             if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
-                draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                draggingNode = GetNodeAtPoint(Event.current.mousePosition + scrollPosition);
                 if (draggingNode != null)
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;

@@ -20,29 +20,30 @@ MonoBehaviour:
     - c
     rect:
       serializedVersion: 2
-      x: 28
-      y: 23
+      x: -59.174896
+      y: 92
       width: 200
       height: 150
   - uniqueID: b
     speech: TEST
     children:
     - 
+    - 5fe7e1da-e130-4777-94fc-e5b3689043e5
     rect:
       serializedVersion: 2
-      x: 270
-      y: 38
+      x: 269.47556
+      y: 19
       width: 200
       height: 150
   - uniqueID: c
     speech: am testing
     children:
-    - 4e46eb38-ff85-4c42-bb44-7b1986632b10
     - 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    - 4e46eb38-ff85-4c42-bb44-7b1986632b10
     rect:
       serializedVersion: 2
-      x: 256
-      y: 198
+      x: 239
+      y: 200
       width: 200
       height: 150
   - uniqueID: 4e46eb38-ff85-4c42-bb44-7b1986632b10
@@ -50,8 +51,8 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 523
-      y: 267
+      x: 588
+      y: 312
       width: 200
       height: 100
   - uniqueID: 5fe7e1da-e130-4777-94fc-e5b3689043e5
@@ -59,7 +60,7 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 512
-      y: 162
+      x: 553
+      y: 122
       width: 200
       height: 100
