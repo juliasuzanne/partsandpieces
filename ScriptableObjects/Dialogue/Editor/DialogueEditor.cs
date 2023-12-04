@@ -20,6 +20,10 @@ namespace Dialogue.Editor
         DialogueNode draggingNode = null;
         [System.NonSerialized]
         DialogueNode creatingNode = null;
+        [System.NonSerialized]
+
+        DialogueNode deletingNode = null;
+
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -92,6 +96,12 @@ namespace Dialogue.Editor
                     selectedDialogue.CreateNode(creatingNode);
                     creatingNode = null;
                 }
+                if (deletingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Removed Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
+                }
 
             }
 
@@ -153,6 +163,12 @@ namespace Dialogue.Editor
             {
                 creatingNode = node;
             }
+
+            if (GUILayout.Button("-"))
+            {
+                deletingNode = node;
+            }
+
             GUILayout.EndArea();
         }
 
