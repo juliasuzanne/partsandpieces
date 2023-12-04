@@ -12,6 +12,7 @@ namespace Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+        Vector2 scrollPosition;
         [System.NonSerialized]
         Vector2 draggingOffset;
         [System.NonSerialized]
@@ -82,6 +83,9 @@ namespace Dialogue.Editor
             else
             {
                 ProcessEvents();
+                scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+                GUILayoutUtility.GetRect(4000, 4000);
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
                     DrawConnections(node);
@@ -92,6 +96,9 @@ namespace Dialogue.Editor
                     DrawNode(node);
 
                 }
+
+                EditorGUILayout.EndScrollView();
+
                 if (creatingNode != null)
                 {
                     Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
