@@ -6,7 +6,7 @@ using UnityEditor;
 namespace Dialogue
 {
     [CreateAssetMenu(fileName = "Dialogue", menuName = "Dialogue Object", order = 0)]
-    public class Dialogue : ScriptableObject
+    public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
@@ -62,6 +62,7 @@ namespace Dialogue
                 parent.children.Add(newNode.name);
             }
             nodes.Add(newNode);
+            // AssetDatabase.AddObjectToAsset(newNode, this);
             OnValidate();
         }
 
@@ -79,6 +80,24 @@ namespace Dialogue
             {
                 node.children.Remove(nodeToDelete.name);
             }
+        }
+
+        public void OnBeforeSerialize()
+        {
+            if (AssetDatabase.GetAssetPath(this) != "")
+            {
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if (AssetDatabase.GetAssetPath(node) == "")
+                    {
+                        AssetDatabase.AddObjectToAsset(node, this);
+                    }
+                }
+            }
+
+        }
+        public void OnAfterDeserialize()
+        {
         }
     }
 }
