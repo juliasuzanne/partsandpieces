@@ -18,7 +18,9 @@ namespace Dialogue
             OnValidate();
             if (nodes.Count == 0)
             {
-                CreateNode(null);
+                DialogueNode rootNode = new DialogueNode();
+                rootNode.uniqueID = System.Guid.NewGuid().ToString();
+                nodes.Add(rootNode);
             }
 
         }
@@ -53,13 +55,9 @@ namespace Dialogue
 
         public void CreateNode(DialogueNode parent)
         {
-            DialogueNode newNode = CreateInstance<DialogueNode>();
+            DialogueNode newNode = new DialogueNode();
             newNode.uniqueID = System.Guid.NewGuid().ToString();
-            if (parent != null)
-            {
-                parent.children.Add(newNode.uniqueID);
-
-            }
+            parent.children.Add(newNode.uniqueID);
             nodes.Add(newNode);
             OnValidate();
         }
