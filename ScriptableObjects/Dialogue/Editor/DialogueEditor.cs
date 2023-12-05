@@ -235,12 +235,12 @@ namespace Dialogue.Editor
 
                     }
                 }
-                else if (linkingNode.children.Contains(node.uniqueID))
+                else if (linkingNode.children.Contains(node.name))
                 {
                     if (GUILayout.Button("remove child"))
                     {
                         Undo.RecordObject(selectedDialogue, "Remove link");
-                        linkingNode.children.Remove(node.uniqueID);
+                        linkingNode.children.Remove(node.name);
                         linkingNode = null;
 
                     }
@@ -250,7 +250,7 @@ namespace Dialogue.Editor
                     if (GUILayout.Button("add child"))
                     {
                         Undo.RecordObject(selectedDialogue, "Add link");
-                        linkingNode.children.Add(node.uniqueID);
+                        linkingNode.children.Add(node.name);
                         linkingNode = null;
 
                     }

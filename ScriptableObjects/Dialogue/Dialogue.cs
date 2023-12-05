@@ -29,7 +29,7 @@ namespace Dialogue
             nodeLookup.Clear();
             foreach (DialogueNode node in GetAllNodes())
             {
-                nodeLookup[node.uniqueID] = node;
+                nodeLookup[node.name] = node;
             }
         }
         public IEnumerable<DialogueNode> GetAllNodes()
@@ -55,11 +55,11 @@ namespace Dialogue
         public void CreateNode(DialogueNode parent)
         {
             DialogueNode newNode = CreateInstance<DialogueNode>();
-            newNode.uniqueID = System.Guid.NewGuid().ToString();
+            newNode.name = System.Guid.NewGuid().ToString();
             Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
             if (parent != null)
             {
-                parent.children.Add(newNode.uniqueID);
+                parent.children.Add(newNode.name);
             }
             nodes.Add(newNode);
             OnValidate();
@@ -71,14 +71,13 @@ namespace Dialogue
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
             Undo.DestroyObjectImmediate(nodeToDelete);
-
         }
 
         private void CleanDanglingChildren(DialogueNode nodeToDelete)
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.uniqueID);
+                node.children.Remove(nodeToDelete.name);
             }
         }
     }
