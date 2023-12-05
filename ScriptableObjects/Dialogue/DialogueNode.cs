@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Dialogue
 {
-    [System.Serializable]
-    public class DialogueNode
+    public class DialogueNode : ScriptableObject
     {
+
         public string uniqueID;
         public string speech;
         public List<string> children = new List<string>();

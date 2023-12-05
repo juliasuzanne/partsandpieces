@@ -13,12 +13,4 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: 0a698158-4918-4814-9c60-28320879a671
-    speech: 
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 200
-      height: 100
+  - {fileID: 0}
