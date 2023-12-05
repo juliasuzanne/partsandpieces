@@ -141,11 +141,7 @@ namespace Dialogue.Editor
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
                 }
-                else
-                {
-                    draggingCanvasOffset = scrollPosition + Event.current.mousePosition;
-                    draggingCanvas = true;
-                }
+
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
@@ -156,17 +152,14 @@ namespace Dialogue.Editor
             }
             else if (Event.current.type == EventType.MouseUp && draggingCanvas)
             {
-                scrollPosition = draggingCanvasOffset - Event.current.mousePosition;
                 GUI.changed = true;
             }
+
             else if (Event.current.type == EventType.MouseUp && draggingNode != null)
             {
                 draggingNode = null;
             }
-            else if (Event.current.type == EventType.MouseUp && draggingCanvas)
-            {
-                draggingCanvas = false;
-            }
+
         }
 
         private DialogueNode GetNodeAtPoint(Vector2 point)
