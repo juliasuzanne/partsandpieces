@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: DialogueTest
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: a
+    speech: what
+    children:
+    - b
+    - c
+    rect:
+      serializedVersion: 2
+      x: -59.174896
+      y: 92
+      width: 200
+      height: 150
+  - uniqueID: b
+    speech: TEST
+    children:
+    - 
+    - 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    rect:
+      serializedVersion: 2
+      x: 240.47556
+      y: 99
+      width: 200
+      height: 150
+  - uniqueID: c
+    speech: am testing
+    children:
+    - 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    - 4e46eb38-ff85-4c42-bb44-7b1986632b10
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 260
+      width: 200
+      height: 150
+  - uniqueID: 4e46eb38-ff85-4c42-bb44-7b1986632b10
+    speech: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 523
+      y: 327
+      width: 200
+      height: 100
+  - uniqueID: 5fe7e1da-e130-4777-94fc-e5b3689043e5
+    speech: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 519
+      y: 147
+      width: 200
+      height: 100
