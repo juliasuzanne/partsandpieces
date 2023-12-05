@@ -16,11 +16,6 @@ namespace Dialogue
 #if UNITY_EDITOR
         private void Awake()
         {
-            OnValidate();
-            if (nodes.Count == 0)
-            {
-                CreateNode(null);
-            }
 
         }
 #endif
@@ -31,6 +26,7 @@ namespace Dialogue
             {
                 nodeLookup[node.name] = node;
             }
+
         }
         public IEnumerable<DialogueNode> GetAllNodes()
         {
@@ -84,6 +80,11 @@ namespace Dialogue
 
         public void OnBeforeSerialize()
         {
+            if (nodes.Count == 0)
+            {
+                CreateNode(null);
+            }
+
             if (AssetDatabase.GetAssetPath(this) != "")
             {
                 foreach (DialogueNode node in GetAllNodes())
