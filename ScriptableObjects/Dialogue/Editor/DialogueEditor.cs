@@ -140,6 +140,12 @@ namespace Dialogue.Editor
                 if (draggingNode != null)
                 {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                    Selection.activeObject = draggingNode;
+                }
+                else
+                {
+                    Selection.activeObject = selectedDialogue;
+
                 }
 
             }
