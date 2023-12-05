@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace Dialogue
 {
@@ -55,6 +56,7 @@ namespace Dialogue
         {
             DialogueNode newNode = CreateInstance<DialogueNode>();
             newNode.uniqueID = System.Guid.NewGuid().ToString();
+            Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
             if (parent != null)
             {
                 parent.children.Add(newNode.uniqueID);
@@ -68,6 +70,8 @@ namespace Dialogue
             nodes.Remove(nodeToDelete);
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
+            Undo.DestroyObjectImmediate(nodeToDelete);
+
         }
 
         private void CleanDanglingChildren(DialogueNode nodeToDelete)
