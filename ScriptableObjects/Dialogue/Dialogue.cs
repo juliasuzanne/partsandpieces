@@ -57,13 +57,14 @@ namespace Dialogue
             {
                 parent.children.Add(newNode.name);
             }
+            Undo.RecordObject(this, "Add Dialogue Node");
             nodes.Add(newNode);
-            // AssetDatabase.AddObjectToAsset(newNode, this);
             OnValidate();
         }
 
         public void DeleteNode(DialogueNode nodeToDelete)
         {
+            Undo.RecordObject(this, "Removed Dialogue Node");
             nodes.Remove(nodeToDelete);
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
