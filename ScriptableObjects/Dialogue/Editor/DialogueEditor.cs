@@ -11,10 +11,13 @@ namespace Dialogue.Editor
 
     public class DialogueEditor : EditorWindow
     {
+
         Dialogue selectedDialogue = null;
         Vector2 scrollPosition;
         [System.NonSerialized]
         Vector2 draggingOffset;
+        [System.NonSerialized]
+        GUIStyle playerNodeStyle;
         [System.NonSerialized]
         GUIStyle nodeStyle;
         [System.NonSerialized]
@@ -56,12 +59,17 @@ namespace Dialogue.Editor
         {
             //selection changed event is a list of functions that something in unity will call this list of functions when this selection changes. Add a function to that list of things. 
             //allows us to have a nonstatic function
-
             Selection.selectionChanged += OnSelectionChanged;
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
             nodeStyle.padding = new RectOffset(20, 20, 20, 20);
             nodeStyle.border = new RectOffset(12, 12, 12, 12);
+
+            Selection.selectionChanged += OnSelectionChanged;
+            playerNodeStyle = new GUIStyle();
+            playerNodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
+            playerNodeStyle.padding = new RectOffset(20, 20, 20, 20);
+            playerNodeStyle.border = new RectOffset(12, 12, 12, 12);
         }
 
         private void OnSelectionChanged()
@@ -182,7 +190,12 @@ namespace Dialogue.Editor
         private void DrawNode(DialogueNode node)
         {
 
-            GUILayout.BeginArea(node.GetRect(), nodeStyle);
+            GUIStyle style = nodeStyle;
+            if (node.IsPlayerSpeaking())
+            {
+                style = playerNodeStyle;
+            }
+            GUILayout.BeginArea(node.GetRect(), style);
             node.SetSpeech(EditorGUILayout.TextField(node.GetSpeech()));
 
             GUILayout.BeginHorizontal();

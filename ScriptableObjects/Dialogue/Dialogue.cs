@@ -61,6 +61,7 @@ namespace Dialogue
             if (parent != null)
             {
                 parent.AddChild(newNode.name);
+                newNode.SetPlayerSpeaking( !parent.IsPlayerSpeaking());
             }
             return newNode;
         }
