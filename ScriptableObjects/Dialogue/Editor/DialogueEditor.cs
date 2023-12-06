@@ -137,7 +137,7 @@ namespace Dialogue.Editor
                 draggingNode = GetNodeAtPoint(Event.current.mousePosition + scrollPosition);
                 if (draggingNode != null)
                 {
-                    draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                    draggingOffset = draggingNode.GetRect().position - Event.current.mousePosition;
                     Selection.activeObject = draggingNode;
                 }
                 else
@@ -149,8 +149,7 @@ namespace Dialogue.Editor
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null)
             {
-                Undo.RecordObject(selectedDialogue, "Update Node Pos");
-                draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
+                draggingNode.SetPosition(Event.current.mousePosition + draggingOffset);
                 GUI.changed = true;
 
             }
@@ -171,7 +170,7 @@ namespace Dialogue.Editor
             DialogueNode foundNode = null;
             foreach (DialogueNode node in selectedDialogue.GetAllNodes())
             {
-                if (node.rect.Contains(point))
+                if (node.GetRect().Contains(point))
                 {
                     foundNode = node;
                 }
@@ -183,16 +182,8 @@ namespace Dialogue.Editor
         private void DrawNode(DialogueNode node)
         {
 
-            GUILayout.BeginArea(node.rect, nodeStyle);
-            EditorGUI.BeginChangeCheck();
-            string newText = EditorGUILayout.TextField(node.speech);
-
-            if (EditorGUI.EndChangeCheck())
-            {
-                Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
-                node.speech = newText;
-
-            }
+            GUILayout.BeginArea(node.GetRect(), nodeStyle);
+            node.SetSpeech(EditorGUILayout.TextField(node.GetSpeech()));
 
             GUILayout.BeginHorizontal();
 
@@ -233,12 +224,11 @@ namespace Dialogue.Editor
 
                     }
                 }
-                else if (linkingNode.children.Contains(node.name))
+                else if (linkingNode.GetChildren().Contains(node.name))
                 {
                     if (GUILayout.Button("remove child"))
                     {
-                        Undo.RecordObject(selectedDialogue, "Remove link");
-                        linkingNode.children.Remove(node.name);
+                        linkingNode.RemoveChild(node.name)
                         linkingNode = null;
 
                     }
@@ -247,8 +237,7 @@ namespace Dialogue.Editor
                 {
                     if (GUILayout.Button("add child"))
                     {
-                        Undo.RecordObject(selectedDialogue, "Add link");
-                        linkingNode.children.Add(node.name);
+                        linkingNode.AddChild(node.name);
                         linkingNode = null;
 
                     }
@@ -259,12 +248,12 @@ namespace Dialogue.Editor
 
         private void DrawConnections(DialogueNode node)
         {
-            Vector2 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
+            Vector2 startPosition = new Vector2(node.GetRect().xMax, node.GetRect().center.y);
 
 
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {
-                Vector2 endPosition = new Vector2(childNode.rect.xMin, childNode.rect.center.y);
+                Vector2 endPosition = new Vector2(childNode.GetRect().xMin, childNode.GetRect().center.y);
                 Vector2 controlPointOffset = endPosition - startPosition;
                 controlPointOffset.y = 0;
                 controlPointOffset.x *= 0.8f;

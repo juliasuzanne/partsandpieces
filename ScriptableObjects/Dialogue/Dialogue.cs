@@ -12,13 +12,6 @@ namespace Dialogue
         List<DialogueNode> nodes = new List<DialogueNode>();
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
-
-#if UNITY_EDITOR
-        private void Awake()
-        {
-
-        }
-#endif
         private void OnValidate()
         {
             nodeLookup.Clear();
@@ -47,6 +40,7 @@ namespace Dialogue
                 }
             }
         }
+#if UNITY_EDITOR
 
         public void CreateNode(DialogueNode parent)
         {
@@ -78,9 +72,12 @@ namespace Dialogue
                 node.children.Remove(nodeToDelete.name);
             }
         }
+#endif
+
 
         public void OnBeforeSerialize()
         {
+#if UNITY_EDITOR
             if (nodes.Count == 0)
             {
                 CreateNode(null);
@@ -96,10 +93,12 @@ namespace Dialogue
                     }
                 }
             }
+#endif
 
         }
         public void OnAfterDeserialize()
         {
         }
+
     }
 }
