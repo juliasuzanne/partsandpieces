@@ -44,17 +44,29 @@ namespace Dialogue
 
         public void CreateNode(DialogueNode parent)
         {
+            DialogueNode newNode = MakeNode(parent);
+            Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
+            Undo.RecordObject(this, "Add Dialogue Node");
+            AddNode(newNode);
+        }
+
+        private void AddNode(DialogueNode newNode){
+            nodes.Add(newNode);
+            OnValidate();
+        }
+
+        private static DialogueNode MakeNode(DialogueNode parent){
             DialogueNode newNode = CreateInstance<DialogueNode>();
             newNode.name = System.Guid.NewGuid().ToString();
-            Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
             if (parent != null)
             {
                 parent.AddChild(newNode.name);
             }
-            Undo.RecordObject(this, "Add Dialogue Node");
-            nodes.Add(newNode);
-            OnValidate();
+            return newNode;
         }
+           
+
+
 
         public void DeleteNode(DialogueNode nodeToDelete)
         {
@@ -80,7 +92,8 @@ namespace Dialogue
 #if UNITY_EDITOR
             if (nodes.Count == 0)
             {
-                CreateNode(null);
+                DialogueNode newNode = MakeNode(null);
+                AddNode(newNode);
             }
 
             if (AssetDatabase.GetAssetPath(this) != "")
