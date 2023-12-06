@@ -32,7 +32,7 @@ namespace Dialogue
         }
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
-            foreach (string childID in parentNode.children)
+            foreach (string childID in parentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
@@ -49,7 +49,7 @@ namespace Dialogue
             Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
             if (parent != null)
             {
-                parent.children.Add(newNode.name);
+                parent.AddChild(newNode.name);
             }
             Undo.RecordObject(this, "Add Dialogue Node");
             nodes.Add(newNode);
@@ -59,7 +59,7 @@ namespace Dialogue
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             Undo.RecordObject(this, "Removed Dialogue Node");
-            nodes.Remove(nodeToDelete);
+            nodes.RemoveChild(nodeToDelete);
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
             Undo.DestroyObjectImmediate(nodeToDelete);
@@ -69,7 +69,7 @@ namespace Dialogue
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.name);
+                node.RemoveChild(nodeToDelete.name);
             }
         }
 #endif
