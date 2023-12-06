@@ -59,7 +59,7 @@ namespace Dialogue
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             Undo.RecordObject(this, "Removed Dialogue Node");
-            nodes.RemoveChild(nodeToDelete);
+            nodes.Remove(nodeToDelete);
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
             Undo.DestroyObjectImmediate(nodeToDelete);

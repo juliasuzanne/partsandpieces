@@ -228,7 +228,7 @@ namespace Dialogue.Editor
                 {
                     if (GUILayout.Button("remove child"))
                     {
-                        linkingNode.RemoveChild(node.name)
+                        linkingNode.RemoveChild(node.name);
                         linkingNode = null;
 
                     }

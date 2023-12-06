@@ -13,24 +13,4 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 6133342887727465654}
---- !u!114 &6133342887727465654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: f89352cf-8fc4-4b68-bb14-a07900b84b38
-  m_EditorClassIdentifier: 
-  speech: 
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 55
-    y: 5
-    width: 200
-    height: 100
+  - {fileID: 0}

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+
 
 namespace Dialogue
 {
@@ -33,7 +35,8 @@ namespace Dialogue
             Undo.RecordObject(this, "Update Node Pos");
             rect.position = newPos;
         }
-        public void SetText(string newSpeech)
+
+        public void SetSpeech(string newSpeech)
         {
             if (newSpeech != speech)
             {
@@ -48,7 +51,7 @@ namespace Dialogue
             children.Add(childID);
         }
 
-          public void RemoveChild(string childID)
+        public void RemoveChild(string childID)
         {
             Undo.RecordObject(this, "Remove link");
             children.Remove(childID);
