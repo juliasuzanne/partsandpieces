@@ -34,6 +34,7 @@ namespace Dialogue
         {
             Undo.RecordObject(this, "Update Node Pos");
             rect.position = newPos;
+            EditorUtility.SetDirty(this);
         }
 
         public void SetSpeech(string newSpeech)
@@ -42,6 +43,8 @@ namespace Dialogue
             {
                 Undo.RecordObject(this, "Update Dialogue Text");
                 speech = newSpeech;
+                EditorUtility.SetDirty(this);
+
             }
         }
 
@@ -49,12 +52,16 @@ namespace Dialogue
         {
             Undo.RecordObject(this, "Add link");
             children.Add(childID);
+            EditorUtility.SetDirty(this);
+
         }
 
         public void RemoveChild(string childID)
         {
             Undo.RecordObject(this, "Remove link");
             children.Remove(childID);
+            EditorUtility.SetDirty(this);
+
         }
 
 #endif
