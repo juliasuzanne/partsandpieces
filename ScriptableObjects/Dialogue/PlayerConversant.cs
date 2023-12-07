@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Dialogue
 {
@@ -9,24 +10,33 @@ namespace Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         [SerializeField] Dialogue currentDialogue;
-        // Start is called before the first frame update
-        void Start()
+        DialogueNode currentNode = null;
+
+        private void Awake()
         {
+            currentNode = currentDialogue.GetRootNode();
         }
 
+        public void Next()
+        {
+            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            currentNode = children[0];
+        }
 
+        public bool HasNext()
+        {
+            return true;
+        }
 
         public string GetText()
         {
-            if (currentDialogue == null)
+            if (currentNode == null)
             {
-                Debug.Log("Current Dialogue is NULL");
                 return "";
             }
             else
             {
-                return currentDialogue.GetRootNode().GetSpeech();
-
+                return currentNode.GetSpeech();
             }
 
         }

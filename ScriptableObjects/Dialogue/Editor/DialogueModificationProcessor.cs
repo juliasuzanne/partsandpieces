@@ -16,7 +16,7 @@ namespace Dialogue.Editor
             {
                 return AssetMoveResult.DidNotMove;
             }
-            if (Path.GetDirectoryName(sourcePath) != sourcePath.GetDirectoryName(destinationPath))
+            if (Path.GetDirectoryName(sourcePath) != Path.GetDirectoryName(destinationPath))
             {
                 return AssetMoveResult.DidNotMove;
             }
