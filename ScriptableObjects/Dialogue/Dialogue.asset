@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
   m_Name: 5cf410d4-264b-4d78-a986-7258e4507cee
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Yes
+  isPlayerSpeaking: 1
+  speech: Hello, what is your name?
   children:
   - 834688fd-9e58-47d4-b292-7cd787d394ad
   - 70d0d8aa-8895-472c-9710-2b1e60b1e5fe
@@ -35,13 +35,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
   m_Name: 5684ef12-f345-4b1f-a852-5c87a698117e
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: 
+  isPlayerSpeaking: 1
+  speech: Julia Grimes
   children: []
   rect:
     serializedVersion: 2
-    x: 789
-    y: 20
+    x: 746
+    y: 30
     width: 200
     height: 100
 --- !u!114 &-3252302355532390770
@@ -60,10 +60,11 @@ MonoBehaviour:
   speech: Hello
   children:
   - 5cf410d4-264b-4d78-a986-7258e4507cee
+  - 51eee06e-92b6-4989-bdf7-89f0b3783db1
   rect:
     serializedVersion: 2
-    x: 64
-    y: 37
+    x: 62
+    y: 117
     width: 200
     height: 100
 --- !u!114 &-1939967671845020437
@@ -78,13 +79,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
   m_Name: 70d0d8aa-8895-472c-9710-2b1e60b1e5fe
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Blue for AI response
-  children: []
+  isPlayerSpeaking: 0
+  speech: Will you tell me yours?
+  children:
+  - 5684ef12-f345-4b1f-a852-5c87a698117e
   rect:
     serializedVersion: 2
-    x: 550
-    y: 146
+    x: 527
+    y: 125
     width: 200
     height: 100
 --- !u!114 &11400000
@@ -105,6 +107,7 @@ MonoBehaviour:
   - {fileID: 34194322322596703}
   - {fileID: -7756512824622030528}
   - {fileID: -1939967671845020437}
+  - {fileID: 7563301655589225402}
   newNodeOffset: {x: 200, y: 0}
 --- !u!114 &34194322322596703
 MonoBehaviour:
@@ -118,13 +121,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
   m_Name: 834688fd-9e58-47d4-b292-7cd787d394ad
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: 
-  children:
-  - 5684ef12-f345-4b1f-a852-5c87a698117e
+  isPlayerSpeaking: 0
+  speech: I can't tell you that.
+  children: []
   rect:
     serializedVersion: 2
-    x: 542
-    y: 5
+    x: 524
+    y: 4
+    width: 200
+    height: 100
+--- !u!114 &7563301655589225402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 51eee06e-92b6-4989-bdf7-89f0b3783db1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Please don't talk to me.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 293
+    y: 182
     width: 200
     height: 100
