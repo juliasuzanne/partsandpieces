@@ -20,12 +20,12 @@ namespace Dialogue
         public void Next()
         {
             DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
-            currentNode = children[0];
+            currentNode = children[Random.Range(0, children.Count())];
         }
 
         public bool HasNext()
         {
-            return true;
+            return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
         }
 
         public string GetText()

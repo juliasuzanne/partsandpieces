@@ -31,7 +31,7 @@ namespace UI
         void UpdateUI()
         {
             AIText.text = playerConversant.GetText();
-
+            nextButton.gameObject.SetActive(playerConversant.HasNext());
         }
 
     }
