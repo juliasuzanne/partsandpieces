@@ -18,8 +18,17 @@ namespace Dialogue
 
         public string GetText()
         {
+            if (currentDialogue == null)
+            {
+                Debug.Log("Current Dialogue is NULL");
+                return "";
+            }
+            else
+            {
+                return currentDialogue.GetRootNode().GetSpeech();
 
-            return currentDialogue.GetRootNode().GetSpeech();
+            }
+
         }
 
         // Update is called once per frame
