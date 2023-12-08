@@ -29,6 +29,9 @@ namespace UI
             UpdateUI();
 
         }
+
+
+
         void UpdateUI()
         {
 
@@ -37,16 +40,7 @@ namespace UI
 
             if (playerConversant.IsChoosing())
             {
-                foreach (Transform item in choiceRoot)
-                {
-                    Destroy(item.gameObject);
-                }
-                foreach (DialogueNode choice in playerConversant.GetChoices())
-                {
-                    GameObject currentChoicePrefab = Instantiate(choicePrefab, choiceRoot);
-                    currentChoicePrefab.GetComponentInChildren<Text>().text = choice.GetSpeech();
-
-                }
+                BuildChoiceList();
             }
             else
             {
@@ -54,6 +48,26 @@ namespace UI
                 nextButton.gameObject.SetActive(playerConversant.HasNext());
             }
 
+        }
+
+        void BuildChoiceList()
+        {
+            foreach (Transform item in choiceRoot)
+            {
+                Destroy(item.gameObject);
+            }
+            foreach (DialogueNode choice in playerConversant.GetChoices())
+            {
+                GameObject currentChoicePrefab = Instantiate(choicePrefab, choiceRoot);
+                currentChoicePrefab.GetComponentInChildren<Text>().text = choice.GetSpeech();
+                Button button = currentChoicePrefab.GetComponentInChildren<Button>();
+                button.onClick.AddListener(() =>
+                {
+                    playerConversant.SelectChoice(choice);
+                    UpdateUI();
+                });
+
+            }
         }
 
     }

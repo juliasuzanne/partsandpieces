@@ -45,6 +45,13 @@ namespace Dialogue
             return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
         }
 
+        public void SelectChoice(DialogueNode chosenNode)
+        {
+            currentNode = chosenNode;
+            isChoosing = false;
+            Next();
+        }
+
         public string GetText()
         {
             if (currentNode == null)
