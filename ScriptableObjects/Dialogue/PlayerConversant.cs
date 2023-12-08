@@ -19,11 +19,11 @@ namespace Dialogue
         public event Action onConversationUpdated;
 
 
-        IEnumerator Start()
-        {
-            yield return new WaitForSeconds(2f);
-            StartDialogue(testDialogue);
-        }
+        // IEnumerator Start()
+        // {
+        //     yield return new WaitForSeconds(2f);
+        //     StartDialogue(testDialogue);
+        // }
 
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
