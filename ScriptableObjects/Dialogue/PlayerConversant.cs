@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 namespace Dialogue
 {
@@ -9,14 +10,32 @@ namespace Dialogue
 
     public class PlayerConversant : MonoBehaviour
     {
-        [SerializeField] Dialogue currentDialogue;
+        Dialogue currentDialogue;
+        [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
 
-        private void Awake()
+        public event Action onConversationUpdated;
+
+
+        IEnumerator Start()
         {
-            currentNode = currentDialogue.GetRootNode();
+            yield return new WaitForSeconds(2f);
+            StartDialogue(testDialogue);
         }
+
+        public void StartDialogue(Dialogue newDialogue)
+        {
+            currentDialogue = newDialogue;
+            currentNode = currentDialogue.GetRootNode();
+            onConversationUpdated();
+        }
+
+        public bool IsActive()
+        {
+            return currentDialogue != null;
+        }
+
 
         public bool IsChoosing()
         {
@@ -29,10 +48,13 @@ namespace Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                onConversationUpdated();
                 return;
             }
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
-            currentNode = children[Random.Range(0, children.Count())];
+            currentNode = children[UnityEngine.Random.Range(0, children.Count())];
+            onConversationUpdated();
+
         }
 
         public IEnumerable<DialogueNode> GetChoices()
