@@ -23,6 +23,12 @@ namespace Dialogue
             currentNode = children[Random.Range(0, children.Count())];
         }
 
+        public IEnumerable<string> GetChoices()
+        {
+            yield return "I've lived here all my life!";
+            yield return "I came here from Newton";
+        }
+
         public bool HasNext()
         {
             return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
