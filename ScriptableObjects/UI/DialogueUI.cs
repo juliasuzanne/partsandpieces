@@ -33,6 +33,7 @@ namespace UI
 
         void UpdateUI()
         {
+            gameObject.SetActive(playerConversant.IsActive());
 
             if (!playerConversant.IsActive())
             {
