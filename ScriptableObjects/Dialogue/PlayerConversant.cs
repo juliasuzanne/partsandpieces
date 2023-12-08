@@ -92,5 +92,13 @@ namespace Dialogue
         {
 
         }
+
+        public void Quit()
+        {
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
+            onConversationUpdated();
+        }
     }
 }
