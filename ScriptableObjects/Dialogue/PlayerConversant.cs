@@ -11,6 +11,7 @@ namespace Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         Dialogue currentDialogue;
+        AIConversant currentConversant = null;
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
@@ -24,15 +25,18 @@ namespace Dialogue
             StartDialogue(testDialogue);
         }
 
-        public void StartDialogue(Dialogue newDialogue)
+        public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            currentConversant = newConversant;
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            TriggerEnterAction();
             onConversationUpdated();
         }
 
         public bool IsActive()
         {
+            TriggerExitAction();
             return currentDialogue != null;
         }
 
@@ -48,11 +52,14 @@ namespace Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                TriggerExitAction();
                 onConversationUpdated();
                 return;
             }
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            TriggerExitAction();
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
+            TriggerEnterAction();
             onConversationUpdated();
 
         }
@@ -70,6 +77,7 @@ namespace Dialogue
         public void SelectChoice(DialogueNode chosenNode)
         {
             currentNode = chosenNode;
+            TriggerEnterAction();
             isChoosing = false;
             Next();
         }
@@ -96,9 +104,29 @@ namespace Dialogue
         public void Quit()
         {
             currentDialogue = null;
+            currentConversant = null;
             currentNode = null;
             isChoosing = false;
             onConversationUpdated();
+        }
+
+        private void TriggerEnterAction()
+        {
+            if (currentNode != null && currentNode.GetOnEnterAction() != "")
+            {
+                Debug.Log(currentNode.GetOnEnterAction());
+            }
+
+        }
+
+        private void TriggerExitAction()
+        {
+            if (currentNode != null && currentNode.GetOnExitAction() != "")
+            {
+                Debug.Log(currentNode.GetOnExitAction());
+            }
+
+
         }
     }
 }

@@ -23,6 +23,8 @@ MonoBehaviour:
     y: 68
     width: 200
     height: 100
+  onEnterAction: Test Selection What is your name
+  onExitAction: 
 --- !u!114 &-7756512824622030528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,7 +37,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
   m_Name: 5684ef12-f345-4b1f-a852-5c87a698117e
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
+  isPlayerSpeaking: 0
   speech: Julia Grimes
   children: []
   rect:
@@ -44,6 +46,8 @@ MonoBehaviour:
     y: 30
     width: 200
     height: 100
+  onEnterAction: Test enter last
+  onExitAction: ' Test exit last'
 --- !u!114 &-3252302355532390770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +71,8 @@ MonoBehaviour:
     y: 117
     width: 200
     height: 100
+  onEnterAction: Test Root Entry
+  onExitAction: 
 --- !u!114 &-1939967671845020437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +95,8 @@ MonoBehaviour:
     y: 125
     width: 200
     height: 100
+  onEnterAction: 
+  onExitAction: Test exit selection Will you tell me
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +138,8 @@ MonoBehaviour:
     y: 4
     width: 200
     height: 100
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &7563301655589225402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +157,9 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 304
-    y: 169
+    x: 301
+    y: 178
     width: 200
     height: 100
+  onEnterAction: 
+  onExitAction: 
