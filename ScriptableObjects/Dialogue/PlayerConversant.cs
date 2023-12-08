@@ -104,6 +104,7 @@ namespace Dialogue
         public void Quit()
         {
             currentDialogue = null;
+            TriggerExitAction();
             currentConversant = null;
             currentNode = null;
             isChoosing = false;
@@ -112,20 +113,31 @@ namespace Dialogue
 
         private void TriggerEnterAction()
         {
-            if (currentNode != null && currentNode.GetOnEnterAction() != "")
+            if (currentNode != null)
             {
-                Debug.Log(currentNode.GetOnEnterAction());
+                TriggerAction(currentNode.GetOnEnterAction());
             }
 
         }
 
         private void TriggerExitAction()
         {
-            if (currentNode != null && currentNode.GetOnExitAction() != "")
+            if (currentNode != null)
             {
-                Debug.Log(currentNode.GetOnExitAction());
+                TriggerAction(currentNode.GetOnExitAction());
             }
 
+
+        }
+
+        private void TriggerAction(string action)
+        {
+            if (action == "")
+            {
+                return;
+            }
+
+            currentConversant.GetComponent<DialogueTrigger>().Trigger(action);
 
         }
     }
