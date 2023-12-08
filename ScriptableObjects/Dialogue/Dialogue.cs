@@ -42,6 +42,29 @@ namespace Dialogue
                 }
             }
         }
+
+        public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode parentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(parentNode))
+            {
+                if (node.IsPlayerSpeaking() == true)
+                {
+                    yield return node;
+                }
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode parentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(parentNode))
+            {
+                if (node.IsPlayerSpeaking() == false)
+                {
+                    yield return node;
+                }
+            }
+        }
+
 #if UNITY_EDITOR
 
         public void CreateNode(DialogueNode parent)

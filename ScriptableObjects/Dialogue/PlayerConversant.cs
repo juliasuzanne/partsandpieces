@@ -11,22 +11,33 @@ namespace Dialogue
     {
         [SerializeField] Dialogue currentDialogue;
         DialogueNode currentNode = null;
+        bool isChoosing = false;
 
         private void Awake()
         {
             currentNode = currentDialogue.GetRootNode();
         }
 
+        public bool IsChoosing()
+        {
+            return isChoosing;
+        }
+
         public void Next()
         {
-            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            if (numPlayerResponses > 0)
+            {
+                isChoosing = true;
+                return;
+            }
+            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             currentNode = children[Random.Range(0, children.Count())];
         }
 
-        public IEnumerable<string> GetChoices()
+        public IEnumerable<DialogueNode> GetChoices()
         {
-            yield return "I've lived here all my life!";
-            yield return "I came here from Newton";
+            return currentDialogue.GetPlayerChildren(currentNode);
         }
 
         public bool HasNext()
