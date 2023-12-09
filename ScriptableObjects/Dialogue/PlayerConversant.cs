@@ -15,6 +15,7 @@ namespace Dialogue
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
+        [SerializeField] string playerName;
 
         public event Action onConversationUpdated;
 
@@ -140,5 +141,18 @@ namespace Dialogue
             currentConversant.GetComponent<DialogueTrigger>().Trigger(action);
 
         }
+
+        public string GetCurrentConversantName()
+        {
+            if (isChoosing == true)
+            {
+                return playerName;
+            }
+            else
+            {
+                return currentConversant.GetConversantName();
+            }
+        }
+
     }
 }

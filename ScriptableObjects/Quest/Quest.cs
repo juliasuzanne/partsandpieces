@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "Quest", menuName = "Quest", order = 0)]
-public class Quest : ScriptableObject
+namespace Quests
 {
-    [SerializeField]
-    List<string> tasks;
-
-    public IEnumerable<string> GetTask()
+    [CreateAssetMenu(fileName = "Quest", menuName = "Quest", order = 0)]
+    public class Quest : ScriptableObject
     {
-        yield return "Task 1";
-        Debug.Log("Do some work");
-        yield return "Task 2";
+        [SerializeField] List<string> tasks;
+
+        public IEnumerable<string> GetTask()
+        {
+            yield return "Task 1";
+            Debug.Log("Do some work");
+            yield return "Task 2";
+        }
     }
 }
