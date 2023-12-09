@@ -10,13 +10,11 @@ public class QuestListUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.DetachChildren();
         foreach (Quest quest in tempQuest)
         {
-            foreach (string task in quest.GetTask())
-            {
-                Debug.Log($"Has task {task}");
-
-            }
+            QuestItemUI uiInstance = Instantiate<QuestItemUI>(questPrefab, transform);
+            uiInstance.Setup(quest);
         }
 
     }

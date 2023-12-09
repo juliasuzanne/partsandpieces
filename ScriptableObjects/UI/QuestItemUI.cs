@@ -10,6 +10,8 @@ public class QuestItemUI : MonoBehaviour
     [SerializeField] Text progress;
     public void Setup(Quest quest)
     {
+        title.text = quest.GetTitle();
+        progress.text = "0/" + quest.GetObjectiveCount();
 
     }
 }
