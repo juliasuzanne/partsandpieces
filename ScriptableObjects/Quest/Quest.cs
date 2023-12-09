@@ -12,7 +12,6 @@ namespace Quests
         public IEnumerable<string> GetTask()
         {
             yield return "Task 1";
-            Debug.Log("Do some work");
             yield return "Task 2";
         }
     }
