@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1919142a23c3c4505ad99c71b5992b66, type: 3}
   m_Name: Quest1
   m_EditorClassIdentifier: 
-  objectives: []
+  objectives:
+  - Look around
+  - Move

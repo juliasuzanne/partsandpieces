@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5311394507230835216}
   - component: {fileID: 5311394507230835215}
+  - component: {fileID: 8619443347568590263}
   - component: {fileID: 5502149094589647313}
   m_Layer: 5
   m_Name: QuestUI
@@ -146,6 +147,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8619443347568590263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311394507230835217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ffd626d742b4216a7178089dbe482c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipPrefab: {fileID: 7184225613711889983, guid: 6f5bb4ca0efca422a967854263dcd162, type: 3}
 --- !u!114 &5502149094589647313
 MonoBehaviour:
   m_ObjectHideFlags: 0
