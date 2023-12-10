@@ -20,6 +20,11 @@ namespace Quests
         {
             return completedObjectives.Count;
         }
+
+        public bool IsObjectiveComplete(string objective)
+        {
+            return completedObjectives.Contains(objective);
+        }
     }
 
 }

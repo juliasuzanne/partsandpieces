@@ -11,6 +11,7 @@ namespace Quests
         [SerializeField] Text title;
         [SerializeField] Transform objectiveContainer;
         [SerializeField] GameObject objectivePrefab;
+        [SerializeField] GameObject objectiveIncompletePrefab;
         // Start is called before the first frame update
         public void Setup(QuestStatus status)
         {
@@ -19,7 +20,12 @@ namespace Quests
             objectiveContainer.DetachChildren();
             foreach (string objective in quest.GetObjectives())
             {
-                GameObject objectiveInstance = Instantiate(objectivePrefab, objectiveContainer);
+                GameObject prefab = objectiveIncompletePrefab;
+                if (status.IsObjectiveComplete(objective) == true)
+                {
+                    prefab = objectivePrefab;
+                }
+                GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
                 Text objectiveText = objectiveInstance.GetComponentInChildren<Text>();
                 objectiveText.text = objective;
             }

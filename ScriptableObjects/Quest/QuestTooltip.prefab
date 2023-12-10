@@ -745,6 +745,7 @@ MonoBehaviour:
   title: {fileID: 2719445563040606334}
   objectiveContainer: {fileID: 564166044997865486}
   objectivePrefab: {fileID: 1966578871935023933, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+  objectiveIncompletePrefab: {fileID: 2432696407444699513, guid: 25fe30be01c4047d5a5745c979ac5f62, type: 3}
 --- !u!1 &9012911474925524939
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +876,30 @@ PrefabInstance:
     - target: {fileID: 5177198916727366049, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
       propertyPath: m_Text
       value: Objective
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322175300439094945, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5354776627689056555, guid: 8a82c0b133a424cd78caf31e85d80ee4, type: 3}
       propertyPath: m_Pivot.x
