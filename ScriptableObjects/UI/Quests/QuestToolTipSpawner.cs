@@ -5,15 +5,14 @@ using GameDevTV.Core.UI.Tooltips;
 
 public class QuestToolTipSpawner : TooltipSpawner
 {
-    // Start is called before the first frame update
-    void Start()
+    public override bool CanCreateTooltip()
+    {
+        return true;
+    }
+
+    public override void UpdateTooltip(GameObject tooltip)
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
