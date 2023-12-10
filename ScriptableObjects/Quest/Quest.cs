@@ -17,10 +17,10 @@ namespace Quests
             return objectives.Count;
         }
 
-        public IEnumerable<string> GetObjective()
+        public IEnumerable<string> GetObjectives()
         {
-            yield return "Task 1";
-            yield return "Task 2";
+            return objectives;
         }
+
     }
 }

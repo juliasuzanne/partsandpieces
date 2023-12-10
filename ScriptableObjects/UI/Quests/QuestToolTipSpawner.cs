@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Quests;
 using GameDevTV.Core.UI.Tooltips;
 
-public class QuestToolTipSpawner : TooltipSpawner
+namespace Quests
 {
-    public override bool CanCreateTooltip()
+    public class QuestToolTipSpawner : TooltipSpawner
     {
-        return true;
-    }
+        public override bool CanCreateTooltip()
+        {
+            return true;
+        }
 
-    public override void UpdateTooltip(GameObject tooltip)
-    {
+        public override void UpdateTooltip(GameObject tooltip)
+        {
+            Quest quest = GetComponent<QuestItemUI>().GetQuest();
+            tooltip.GetComponent<QuestTooltipUI>().Setup(quest);
+        }
 
     }
 
