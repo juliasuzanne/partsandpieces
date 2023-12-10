@@ -7,17 +7,12 @@ namespace Quests
     public class QuestList : MonoBehaviour
     {
         [SerializeField] QuestStatus[] statuses;
-        // Start is called before the first frame update
-        void Start()
-        {
 
+        public IEnumerable<QuestStatus> GetStatuses()
+        {
+            return statuses;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }
 

@@ -11,16 +11,14 @@ namespace Quests
         [SerializeField] Quest quest;
         [SerializeField] List<string> completedObjectives;
 
-        // Start is called before the first frame update
-        void Start()
+        public Quest GetQuest()
         {
-
+            return quest;
         }
 
-        // Update is called once per frame
-        void Update()
+        public int GetCompletedCount()
         {
-
+            return completedObjectives.Count;
         }
     }
 

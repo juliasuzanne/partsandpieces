@@ -12,8 +12,9 @@ namespace Quests
         [SerializeField] Transform objectiveContainer;
         [SerializeField] GameObject objectivePrefab;
         // Start is called before the first frame update
-        public void Setup(Quest quest)
+        public void Setup(QuestStatus status)
         {
+            Quest quest = status.GetQuest();
             title.text = quest.GetTitle();
             objectiveContainer.DetachChildren();
             foreach (string objective in quest.GetObjectives())
