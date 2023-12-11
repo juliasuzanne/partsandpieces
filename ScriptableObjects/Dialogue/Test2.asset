@@ -19,11 +19,11 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 291
-    y: 68
+    y: 67
     width: 200
     height: 100
-  onEnterAction: Name
-  onExitAction: 
+  onEnterAction: quest
+  onExitAction: Name
 --- !u!114 &-7756512824622030528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,4 +137,4 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: 
+  onExitAction: GiveQuest
