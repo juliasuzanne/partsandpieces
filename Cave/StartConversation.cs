@@ -12,6 +12,19 @@ public class StartConversation : MonoBehaviour, INameable
     private CaveSaveSettings _caveSaveSettings;
     // Start is called before the first frame update
 
+    string itemName = "rock pile";
+    bool combinable = true;
+
+    void Use()
+    {
+
+    }
+
+    void Combine()
+    {
+
+    }
+
     void Start()
     {
         _abovePlayerAnimator = GameObject.Find("AbovePlayer").GetComponent<Animator>();

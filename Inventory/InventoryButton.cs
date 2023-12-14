@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryButton : MonoBehaviour
 {
-  [SerializeField]
-  private Sprite OpenInventory;
-  [SerializeField]
-  private Sprite CloseInventory;
-
+  [SerializeField] private Sprite OpenInventory;
+  [SerializeField] private Sprite CloseInventory;
   private Inventory _inventory;
   private UIManager _uiManager;
 
@@ -46,4 +43,5 @@ public class InventoryButton : MonoBehaviour
     _inventory.CheckItemLocation();
     _uiManager.ShowInventory();
   }
+
 }
