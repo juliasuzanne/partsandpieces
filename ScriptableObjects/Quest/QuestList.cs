@@ -44,6 +44,11 @@ namespace Quests
             }
         }
 
+        public void CompleteObjective(Quest quest, string objective)
+        {
+
+        }
+
 
     }
 }

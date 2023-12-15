@@ -6,16 +6,13 @@ namespace RPG.Quests
 {
     public class QuestCompletion : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] Quest quest;
+        [SerializeField] string objective;
+
+        public void CompleteObjective()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
+            questList.CompleteObjective(quest, objective);
         }
     }
 
