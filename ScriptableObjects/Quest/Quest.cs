@@ -7,7 +7,7 @@ namespace Quests
     [CreateAssetMenu(fileName = "Quest", menuName = "Quest", order = 0)]
     public class Quest : ScriptableObject
     {
-        [SerializeField] List<string> objectives;
+        [SerializeField] List<string> objectives = new List<string>();
         public string GetTitle()
         {
             return name;
@@ -20,6 +20,11 @@ namespace Quests
         public IEnumerable<string> GetObjectives()
         {
             return objectives;
+        }
+
+        public bool HasObjective(string objective)
+        {
+            return objectives.Contains(objective);
         }
 
     }

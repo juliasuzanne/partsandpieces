@@ -29,6 +29,15 @@ namespace Quests
         {
             this.quest = quest;
         }
+
+        public void CompleteObjective(string objective)
+        {
+            if (quest.HasObjective(objective))
+            {
+                completedObjectives.Add(objective);
+
+            }
+        }
     }
 
 }
