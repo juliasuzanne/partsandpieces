@@ -9,5 +9,6 @@ public class SaveObject
     public float green;
     public string rockName;
     public string sadThing;
+    public string currentQuest;
 
 }

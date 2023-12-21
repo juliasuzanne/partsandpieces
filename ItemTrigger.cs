@@ -14,6 +14,21 @@ public class ItemTrigger : MonoBehaviour
     {
       onTrigger.Invoke();
     }
+
   }
+  public bool CheckMatch(string currentItemName)
+  {
+    if (itemName == currentItemName)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+
+  }
+
+
 
 }

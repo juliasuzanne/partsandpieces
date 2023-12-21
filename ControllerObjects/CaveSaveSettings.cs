@@ -39,5 +39,11 @@ public class CaveSaveSettings : MonoBehaviour
 
     }
 
+    public void ChangeQuest(string _newQuest)
+    {
+        so.currentQuest = _newQuest;
+
+    }
+
 
 }

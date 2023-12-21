@@ -42,12 +42,20 @@ public class InventoryItem : MonoBehaviour
                 }
                 else
                 {
-                    currentTransform.GetComponent<ItemTrigger>().TriggerItem(Name);
-                    if (consumable == true)
+                    ItemTrigger[] triggers = currentTransform.GetComponentsInChildren<ItemTrigger>();
+
+                    foreach (ItemTrigger trigger in triggers)
                     {
-                        _inventory.RemoveItemFromInventory(slotNum);
-                        Destroy(this.gameObject);
+                        trigger.TriggerItem(Name);
+
+
+                        if (consumable == true && trigger.CheckMatch(Name) == true)
+                        {
+                            _inventory.RemoveItemFromInventory(slotNum);
+                            Destroy(this.gameObject);
+                        }
                     }
+
                 }
             }
         }
