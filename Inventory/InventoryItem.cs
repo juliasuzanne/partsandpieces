@@ -42,7 +42,6 @@ public class InventoryItem : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("USE ITEM: " + Name);
                     currentTransform.GetComponent<ItemTrigger>().TriggerItem(Name);
                     if (consumable == true)
                     {
@@ -51,6 +50,11 @@ public class InventoryItem : MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            description_object.SetActive(false);
+
         }
     }
 
@@ -69,10 +73,6 @@ public class InventoryItem : MonoBehaviour
         {
             description_text.text = "Use " + Name + " with " + hit.Name;
         }
-        else
-        {
-            description_text.text = "Use " + Name + " with... ";
-        }
 
     }
 
@@ -88,7 +88,6 @@ public class InventoryItem : MonoBehaviour
     {
         description_object.SetActive(true);
         _inventoryController.ChangeItem(this.gameObject);
-        description_text.text = "Use " + Name + " with... ";
         mouseButtonReleased = true;
     }
 
