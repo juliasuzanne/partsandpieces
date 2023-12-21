@@ -6,6 +6,4 @@ public interface INameable
 {
   string Name { get; set; }
 
-  public void UsingItem(string itemName);
-
 }

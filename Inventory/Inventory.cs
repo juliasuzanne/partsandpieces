@@ -34,6 +34,7 @@ public class Inventory : MonoBehaviour
             items[count] = prefab;
             isFull[count] = true;
             Instantiate(prefab, slotPos, Quaternion.identity, slots[count].transform);
+            prefab.GetComponent<InventoryItem>().SetSlotPos(count);
             break;
          }
 
@@ -60,7 +61,6 @@ public class Inventory : MonoBehaviour
          {
             Vector3 slotPos = new Vector3(slots[count].transform.position.x, slots[count].transform.position.y, 0f);
             items[count].transform.position = slotPos;
-            break;
          }
          count = count + 1;
       }
