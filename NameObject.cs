@@ -15,14 +15,6 @@ public class NameObject : MonoBehaviour, INameable
         }
     }
 
-    public void UsingItem(string itemName)
-    {
-        if (itemName == "needle and thread")
-        {
-            Debug.Log("I like to sew");
-        }
-    }
-
 
 
 }

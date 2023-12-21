@@ -22,7 +22,7 @@ MonoBehaviour:
     y: 50
     width: 200
     height: 100
-  onEnterAction: GivePickaxe
+  onEnterAction: 
   onExitAction: 
 --- !u!114 &-7756512824622030528
 MonoBehaviour:
@@ -42,7 +42,7 @@ MonoBehaviour:
   - f8ed02b9-1864-4e53-bf6d-b372041e73c0
   rect:
     serializedVersion: 2
-    x: 746
+    x: 747
     y: 15
     width: 200
     height: 100
@@ -92,7 +92,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 506
-    y: 17
+    y: 18
     width: 200
     height: 100
   onEnterAction: 
