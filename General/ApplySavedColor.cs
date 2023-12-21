@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ApplySavedColor : MonoBehaviour, INameable
+public class ApplySavedColor : MonoBehaviour
 {
     [SerializeField]
     private CaveSaveSettings _caveSaveSettings;

@@ -18,12 +18,12 @@ MonoBehaviour:
   - 70d0d8aa-8895-472c-9710-2b1e60b1e5fe
   rect:
     serializedVersion: 2
-    x: 291
-    y: 67
+    x: 290
+    y: 50
     width: 200
     height: 100
-  onEnterAction: quest
-  onExitAction: Name
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &-7756512824622030528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,15 +38,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   speech: Julia Grimes
-  children: []
+  children:
+  - f8ed02b9-1864-4e53-bf6d-b372041e73c0
   rect:
     serializedVersion: 2
     x: 746
-    y: 30
+    y: 15
     width: 200
     height: 100
-  onEnterAction: Test enter last
-  onExitAction: ' Test exit last'
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &-3252302355532390770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +68,10 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 61
-    y: 117
+    y: 118
     width: 200
     height: 100
-  onEnterAction: Test Root Entry
+  onEnterAction: 
   onExitAction: 
 --- !u!114 &-1939967671845020437
 MonoBehaviour:
@@ -90,12 +91,12 @@ MonoBehaviour:
   - 5684ef12-f345-4b1f-a852-5c87a698117e
   rect:
     serializedVersion: 2
-    x: 527
-    y: 125
+    x: 506
+    y: 17
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: Test exit selection Will you tell me
+  onExitAction: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +115,56 @@ MonoBehaviour:
   - {fileID: -7756512824622030528}
   - {fileID: -1939967671845020437}
   - {fileID: 7563301655589225402}
+  - {fileID: 5206794342611125607}
+  - {fileID: 2789323481166763928}
   newNodeOffset: {x: 200, y: 0}
+--- !u!114 &2789323481166763928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 012dbc90-3ed6-4560-a78c-7451de6ab151
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1161
+    y: 30
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5206794342611125607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f8ed02b9-1864-4e53-bf6d-b372041e73c0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes
+  children:
+  - 012dbc90-3ed6-4560-a78c-7451de6ab151
+  rect:
+    serializedVersion: 2
+    x: 958
+    y: 25
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &7563301655589225402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,4 +187,4 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: GiveQuest
+  onExitAction: 

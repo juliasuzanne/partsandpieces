@@ -38,8 +38,15 @@ namespace Quests
 
         public void CompleteObjective(Quest quest, string objective)
         {
+            Debug.Log("Complete quest");
             QuestStatus status = GetQuestStatus(quest);
             status.CompleteObjective(objective);
+            if (onQuestsUpdated != null)
+            {
+
+                onQuestsUpdated();
+
+            }
 
         }
 
@@ -49,7 +56,7 @@ namespace Quests
             {
                 if (status.GetQuest() == quest)
                 {
-                    return true;
+                    return status;
                 }
 
             }

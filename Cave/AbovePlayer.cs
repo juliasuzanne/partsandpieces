@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbovePlayer : MonoBehaviour
+public class AbovePlayer : MonoBehaviour, INameable
+
 {
   private GameObject _rockFaces;
   [SerializeField]
   private ColorChangePanel _colorChangePanelScript;
 
-  [SerializeField]
 
-  private GameObject _colorChangePanel;
+  [SerializeField] private GameObject _colorChangePanel;
+  [SerializeField] public string Name { get; set; }
 
   void Start()
   {

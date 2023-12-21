@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.Quests
+namespace Quests
 {
     public class QuestCompletion : MonoBehaviour
     {

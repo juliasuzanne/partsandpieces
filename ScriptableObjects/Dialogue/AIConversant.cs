@@ -24,7 +24,9 @@ namespace Dialogue
         {
             if (dialogue == null)
             {
+                Debug.Log("AI Conversant dialogue is NULL");
             }
+
             else
             {
                 playerConversant.StartDialogue(this, dialogue);

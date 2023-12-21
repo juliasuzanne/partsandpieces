@@ -4,11 +4,6 @@ using UnityEngine;
 
 public interface INameable
 {
-  string itemName;
-  bool combinable;
-
-  void Use();
-
-  void Combine();
+  string Name { get; set; }
 
 }

@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float _moveSpeed = 2f;
-    private bool moveable = false;
+    private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
     Rigidbody2D rb;
