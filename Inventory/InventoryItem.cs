@@ -34,15 +34,23 @@ public class InventoryItem : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                ReturnToInventory();
+                if (hit == null)
+                {
+                    ReturnToInventory();
+                }
+                else
+                {
+                    Debug.Log("USE ITEM: " + Name);
+                    hit.UsingItem(Name);
+                }
             }
-
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         hit = other.GetComponent<INameable>();
+
         Debug.Log("HIT: " + hit.Name);
         if (hit != null)
         {

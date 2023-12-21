@@ -6,14 +6,23 @@ public class NameObject : MonoBehaviour, INameable
 {
     public string Name { get; set; }
     [SerializeField] private string _defaultName;
+
     void Start()
     {
-        Name = _defaultName;
+        if (Name == null)
+        {
+            Name = _defaultName;
+        }
     }
 
-    public void ChangeName(string name)
+    public void UsingItem(string itemName)
     {
-        Name = name;
+        if (itemName == "needle and thread")
+        {
+            Debug.Log("I like to sew");
+        }
     }
+
+
 
 }

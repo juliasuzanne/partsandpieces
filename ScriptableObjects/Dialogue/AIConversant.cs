@@ -4,24 +4,22 @@ using UnityEngine;
 
 namespace Dialogue
 {
-    public class AIConversant : MonoBehaviour, INameable
+    public class AIConversant : MonoBehaviour
     {
         [SerializeField] Dialogue dialogue = null;
         private PlayerConversant playerConversant;
-
-        public string Name { get; set; }
-        [SerializeField] private string _defaultName;
-
-        public void ChangeName(string name)
-        {
-            Name = name;
-        }
+        [SerializeField] private string Name;
 
         void Start()
         {
-            Name = _defaultName;
-
+            // _nameObject.onNameUpdated += UpdateName();
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+        }
+
+        public void UpdateName(string name)
+        {
+            Name = name;
+
         }
 
         public string GetConversantName()
