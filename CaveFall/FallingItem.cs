@@ -20,5 +20,11 @@ public class FallingItem : MonoBehaviour
         _inventory.AddItemToInventory(prefab);
         Destroy(this.gameObject);
     }
+
+    public void GiveItem()
+    {
+        _inventory.AddItemToInventory(prefab);
+        Destroy(this.gameObject);
+    }
 }
 

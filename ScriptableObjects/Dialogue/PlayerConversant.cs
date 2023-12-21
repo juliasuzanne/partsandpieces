@@ -8,16 +8,27 @@ namespace Dialogue
 {
 
 
-    public class PlayerConversant : MonoBehaviour
+    public class PlayerConversant : MonoBehaviour, INameable
     {
         Dialogue currentDialogue;
         AIConversant currentConversant = null;
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
-        [SerializeField] string playerName;
-
         public event Action onConversationUpdated;
+
+        public string Name { get; set; }
+        [SerializeField] private string _defaultName;
+
+        public void ChangeName(string name)
+        {
+            Name = name;
+        }
+
+        void Start()
+        {
+            Name = _defaultName;
+        }
 
 
         // IEnumerator Start()
@@ -146,7 +157,7 @@ namespace Dialogue
         {
             if (isChoosing == true)
             {
-                return playerName;
+                return Name;
             }
             else
             {

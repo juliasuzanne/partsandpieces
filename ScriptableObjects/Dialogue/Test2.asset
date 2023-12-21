@@ -22,7 +22,7 @@ MonoBehaviour:
     y: 50
     width: 200
     height: 100
-  onEnterAction: 
+  onEnterAction: GivePickaxe
   onExitAction: 
 --- !u!114 &-7756512824622030528
 MonoBehaviour:
@@ -187,4 +187,4 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: 
+  onExitAction: GivePickaxe
