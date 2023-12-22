@@ -42,6 +42,15 @@ namespace Dialogue
 
         }
 
+        public CursorType GetCursorType()
+        {
+
+        }
+        public bool HandleRaycast(PlayerController callingController)
+        {
+
+        }
+
 
     }
 }
