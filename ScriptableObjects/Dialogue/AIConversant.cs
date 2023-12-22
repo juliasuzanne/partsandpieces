@@ -44,7 +44,7 @@ namespace Dialogue
 
         public CursorType GetCursorType()
         {
-
+            return GetCursorType.Dialogue;
         }
         public bool HandleRaycast(PlayerController callingController)
         {
