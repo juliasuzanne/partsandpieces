@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Control;
 using UnityEngine;
 
 namespace Dialogue
 {
-    public class AIConversant : MonoBehaviour
+    public class AIConversant : MonoBehaviour, IRaycastable
     {
         [SerializeField] Dialogue dialogue = null;
         private PlayerConversant playerConversant;
