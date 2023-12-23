@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using Control;
 using UnityEngine;
 
 namespace Dialogue
 {
-    public class AIConversant : MonoBehaviour, IRaycastable
+    public class AIConversant : MonoBehaviour
     {
         [SerializeField] Dialogue dialogue = null;
         private PlayerConversant playerConversant;
@@ -42,14 +41,7 @@ namespace Dialogue
 
         }
 
-        public CursorType GetCursorType()
-        {
-            return GetCursorType.Dialogue;
-        }
-        public bool HandleRaycast(PlayerController callingController)
-        {
 
-        }
 
 
     }
