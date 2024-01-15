@@ -34,9 +34,12 @@ public class SlidePuzzlePiece : MonoBehaviour
 
     void CheckSpacesAround()
     {
-        if (transform.position.x + 1 == emptyPos.x)
+        if (Mathf.Abs(transform.position.x - emptyPos.x) <= 1 && Mathf.Abs(transform.position.y - emptyPos.y) <= 1)
         {
-            Debug.Log(transform.position.x + 1);
+            Vector2 newPos = transform.position;
+            transform.position = emptyPos;
+            emptyPos = newPos;
         }
+
     }
 }
