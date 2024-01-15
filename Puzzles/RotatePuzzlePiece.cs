@@ -6,7 +6,6 @@ public class RotatePuzzlePiece : MonoBehaviour
 {
     private float xRotate;
     private float yRotate;
-    private IPlaceable hit;
     [SerializeField] private Transform currentPiece;
     [SerializeField] private float _rotateSpeed;
     // Start is called before the first frame update
@@ -31,18 +30,7 @@ public class RotatePuzzlePiece : MonoBehaviour
         currentPiece.Rotate(0f, 0f, _rotateSpeed * (xRotate), Space.Self);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        hit = other.GetComponent<IPlaceable>();
-        if (hit != null)
-        {
-            if (hit.puzzleID == currentPiece.GetComponent<SelectPuzzlePiece>().puzzleID)
-            {
 
-            }
-        }
-
-    }
 
 
 }
