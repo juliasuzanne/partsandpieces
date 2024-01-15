@@ -22,12 +22,22 @@ public class RotatePuzzlePiece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xRotate = Input.GetAxis("Horizontal");
-        yRotate = Input.GetAxis("Vertical");
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-        currentPiece.position = mousePos2D;
-        currentPiece.Rotate(0f, 0f, _rotateSpeed * (xRotate), Space.Self);
+        if (currentPiece != null)
+        {
+            xRotate = Input.GetAxis("Horizontal");
+            yRotate = Input.GetAxis("Vertical");
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+            currentPiece.position = mousePos2D;
+            currentPiece.Rotate(0f, 0f, _rotateSpeed * (xRotate), Space.Self);
+        }
+        // else
+        // {
+        //     if (Input.GetMouseButtonDown(0))
+        //     {
+        //         currentPiece = null;
+        //     }
+        // }
     }
 
 

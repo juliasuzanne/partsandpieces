@@ -8,18 +8,32 @@ public class FindPuzzlePiecePos : MonoBehaviour
     [SerializeField] private int puzzleIdentifier;
     [SerializeField] private GameObject placedPiece;
 
+    void Update()
+    {
+        if (hit != null)
+        {
+            Debug.Log("CheckingPlacement");
+            CheckPlacement();
+        }
+    }
+
+    void CheckPlacement()
+    {
+        if (hit.puzzleID == puzzleIdentifier && Mathf.Abs(this.transform.parent.rotation.z) < 0.1f)
+        {
+            placedPiece.SetActive(true);
+            Destroy(this.transform.parent.gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         hit = other.GetComponent<IPlaceable>();
-        if (hit != null)
-        {
-            if (hit.puzzleID == puzzleIdentifier)
-            {
-                placedPiece.SetActive(true);
-                Destroy(this.transform.parent.gameObject);
-            }
-        }
+    }
 
+    void OnTriggerExit2D()
+    {
+        hit = null;
     }
 
 }
