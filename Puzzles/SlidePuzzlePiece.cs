@@ -5,7 +5,9 @@ using UnityEngine;
 public class SlidePuzzlePiece : MonoBehaviour
 {
     [SerializeField] private SlideEmptyPiece controlPiece;
-    // [SerializeField] private Vector2 oneone = new Vector2(0, 0);
+    [SerializeField] private int correctNum;
+    [SerializeField] private Vector2 correctPos;
+
     // [SerializeField] private Vector2 onetwo = new Vector2(1, 0);
     // [SerializeField] private Vector2 onethree = new Vector2(2, 0);
     // [SerializeField] private Vector2 twoone = new Vector2(0, -1);
@@ -31,6 +33,18 @@ public class SlidePuzzlePiece : MonoBehaviour
     void OnMouseDown()
     {
         controlPiece.CheckSpacesAround(transform);
+    }
+
+    public void CheckPosition()
+    {
+        if (correctPos.x == transform.position.x && correctPos.y == transform.position.y)
+        {
+            controlPiece.AdjustTrue(correctNum);
+        }
+        else
+        {
+            controlPiece.AdjustFalse(correctNum);
+        }
     }
 
 
