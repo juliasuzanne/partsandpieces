@@ -12,7 +12,6 @@ public class FindPuzzlePiecePos : MonoBehaviour
     {
         if (hit != null)
         {
-            Debug.Log("CheckingPlacement");
             CheckPlacement();
         }
     }
