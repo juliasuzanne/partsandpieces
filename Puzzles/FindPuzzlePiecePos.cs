@@ -7,6 +7,7 @@ public class FindPuzzlePiecePos : MonoBehaviour
     private IPlaceable hit;
     [SerializeField] private int puzzleIdentifier;
     [SerializeField] private GameObject placedPiece;
+    [SerializeField] private CheckPuzzleComplete checkPuzzle;
 
     void Update()
     {
@@ -21,6 +22,7 @@ public class FindPuzzlePiecePos : MonoBehaviour
         if (hit.puzzleID == puzzleIdentifier && Mathf.Abs(this.transform.parent.rotation.z) < 0.1f)
         {
             placedPiece.SetActive(true);
+            checkPuzzle.AdjustTrue(puzzleIdentifier);
             Destroy(this.transform.parent.gameObject);
         }
     }
