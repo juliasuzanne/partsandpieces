@@ -8,6 +8,7 @@ public class UnearthSpawner : MonoBehaviour
     private Vector2 posToSpawn;
     private SpriteRenderer _sp;
     [SerializeField] private GameObject[] _items;
+    [SerializeField] private Sprite _clickedSprite;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class UnearthSpawner : MonoBehaviour
 
     void OnMouseDown()
     {
-
+        _sp.sprite = _clickedSprite;
         posToSpawn = new Vector2(transform.position.x + 2f, transform.position.y);
         GameObject newItem = Instantiate(_items[Random.Range(0, _items.Length)], posToSpawn, Quaternion.identity);
 
