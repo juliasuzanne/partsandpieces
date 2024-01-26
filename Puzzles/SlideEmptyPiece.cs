@@ -9,11 +9,12 @@ public class SlideEmptyPiece : MonoBehaviour
     private bool correct = false;
     void Start()
     {
+        emptyPos = new Vector2(transform.position.x, transform.position.y);
 
     }
     public void CheckSpacesAround(Transform currentPiece)
     {
-        if (Mathf.Abs(currentPiece.position.x - emptyPos.x) <= 1 && Mathf.Abs(currentPiece.position.y - emptyPos.y) == 0 || Mathf.Abs(currentPiece.position.x - emptyPos.x) == 0 && Mathf.Abs(currentPiece.position.y - emptyPos.y) <= 1)
+        if (Mathf.Abs(currentPiece.position.x - emptyPos.x) <= 1 * transform.localScale.x && Mathf.Abs(currentPiece.position.y - emptyPos.y) == 0 || Mathf.Abs(currentPiece.position.x - emptyPos.x) == 0 && Mathf.Abs(currentPiece.position.y - emptyPos.y) <= 1 * transform.localScale.y)
         {
             Vector2 newPos = currentPiece.position;
             currentPiece.position = emptyPos;

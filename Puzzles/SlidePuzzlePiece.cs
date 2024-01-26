@@ -7,10 +7,12 @@ public class SlidePuzzlePiece : MonoBehaviour
     [SerializeField] private SlideEmptyPiece controlPiece;
     [SerializeField] private int correctNum;
     [SerializeField] private Vector2 correctPos;
+    [SerializeField] private Vector2 scaledCorrectPos;
 
     void Start()
     {
         controlPiece = transform.parent.GetComponent<SlideEmptyPiece>();
+        scaledCorrectPos = new Vector2(correctPos.x * controlPiece.transform.localScale.x, correctPos.y * controlPiece.transform.localScale.y);
     }
 
     void Update()
@@ -25,12 +27,13 @@ public class SlidePuzzlePiece : MonoBehaviour
 
     public void CheckPosition()
     {
-        if (correctPos.x == transform.position.x && correctPos.y == transform.position.y)
+        if (scaledCorrectPos.x + transform.parent.position.x == transform.position.x && scaledCorrectPos.y + transform.parent.position.y == transform.position.y)
         {
             controlPiece.AdjustTrue(correctNum);
         }
         else
         {
+            Debug.Log(transform.position.x);
             controlPiece.AdjustFalse(correctNum);
         }
     }
