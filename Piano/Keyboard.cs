@@ -17,8 +17,8 @@ public class Keyboard : MonoBehaviour
     [SerializeField]
     private AudioSource _audioSource;
 
-    private float xPos = -5.9f;
-    private float yPos = 3.74f;
+    private float xPos = -1f;
+    private float yPos = -1f;
     [SerializeField]
     private float xStep = 2f;
     [SerializeField]
@@ -47,15 +47,14 @@ public class Keyboard : MonoBehaviour
     // }
 
 
-
     void PlaySound(int note)
     {
         if (_typing == true)
         {
-            // Vector3 posToSpawn = new Vector3(xPos, yPos, 0);
+            Vector3 posToSpawn = new Vector3(xPos, yPos, 0);
             _audioSource.clip = notes[note];
             _audioSource.Play();
-            // GameObject newChar = Instantiate(_playerNotes[note], posToSpawn, Quaternion.identity);
+            GameObject newChar = Instantiate(_playerNotes[note], posToSpawn, Quaternion.identity);
         }
         else
         {
@@ -100,10 +99,10 @@ public class Keyboard : MonoBehaviour
             PlaySound(7);
         }
 
-        // else
-        // {
-        //     PlaySound(8);
-        // }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlaySound(8);
+        }
 
 
 
