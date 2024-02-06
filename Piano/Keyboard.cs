@@ -7,6 +7,7 @@ public class Keyboard : MonoBehaviour
     public AudioClip[] notes;
     [SerializeField] private GameObject[] _playerNotes;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private float _speed;
     private float xPos = -1f;
     private float yPos = -1f;
     [SerializeField] private float xStep = 2f;
@@ -42,6 +43,8 @@ public class Keyboard : MonoBehaviour
     void Update()
     {
         PlaySoundOnKeyDown();
+        transform.Translate(new Vector3((_speed), 0, 0) * Time.deltaTime);
+
     }
 
     public void PlaySoundOnKeyDown()

@@ -33,7 +33,7 @@ public class CheckNote : MonoBehaviour
         Debug.Log("CAN NOT PLAY : " + canNotPlay);
         if (_isMoving == true)
         {
-            transform.Translate(new Vector3(0, (_speed), 0) * Time.deltaTime);
+            // transform.Translate(new Vector3(0, (_speed), 0) * Time.deltaTime);
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 // StartOver();
