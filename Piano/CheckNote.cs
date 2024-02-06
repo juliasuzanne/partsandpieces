@@ -12,7 +12,7 @@ public class CheckNote : MonoBehaviour
     [SerializeField] private float xMax = 9f;
     [SerializeField] private Text _messageText;
     [SerializeField] private Text _successCount;
-    private INoteable hit;
+    private INoteable hit = null;
 
     [SerializeField] private float yMin = -3.9f;
     [SerializeField] private float xStart = -1f;
@@ -22,7 +22,7 @@ public class CheckNote : MonoBehaviour
     private bool wasPlayed = false;
     private int successfulNotes = 0;
     private bool _isMoving = false;
-    private bool collided = false;
+    private bool canNotPlay = true;
 
     void Update()
     {
@@ -51,26 +51,36 @@ public class CheckNote : MonoBehaviour
                 }
 
             }
+            // if (hit == null && currentKey != null)
+            // {
+            //     TakeAwayAPoint();
+            // }
 
 
         }
         _successCount.text = "Successful Notes: " + successfulNotes + " PLAYING: " + currentKey;
     }
 
+
     void OnGUI()
     {
         Event e = Event.current;
         if (e.type == EventType.KeyDown && e.keyCode.ToString().Length == 1 && char.IsLetter(e.keyCode.ToString()[0]))
         {
-
             currentKey = e.keyCode.ToString();
+            if (hit == null && canNotPlay == true)
+            {
+                _messageText.text = "Note played out of time";
+                currentKey = null;
+                successfulNotes--;
 
+            }
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        canNotPlay = false;
         Debug.Log("Hit " + other.name);
         INoteable hit = other.GetComponent<INoteable>();
         if (hit != null)
@@ -102,6 +112,8 @@ public class CheckNote : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        canNotPlay = true;
+
         INoteable hit = other.GetComponent<INoteable>();
         Debug.Log("Exit " + hit.GetNote());
         if (hit != null)
