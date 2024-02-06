@@ -4,67 +4,47 @@ using UnityEngine;
 
 public class Keyboard : MonoBehaviour
 {
-
     public AudioClip[] notes;
-
-    [SerializeField]
-    private GameObject[] _playerNotes;
-
-    [SerializeField]
-    private GameObject _cursor;
-
-
-    [SerializeField]
-    private AudioSource _audioSource;
-
+    [SerializeField] private GameObject[] _playerNotes;
+    [SerializeField] private AudioSource _audioSource;
     private float xPos = -1f;
     private float yPos = -1f;
-    [SerializeField]
-    private float xStep = 2f;
-    [SerializeField]
-    private float yStep = 2f;
-
+    [SerializeField] private float xStep = 2f;
+    [SerializeField] private float yStep = 2f;
+    [SerializeField] private CheckNote _conductor;
     private bool _typing = true;
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = notes[0];
-        _audioSource.Play();
 
     }
-
-    // public void ToggleType()
-    // {
-    //     if (_typing == false)
-    //     {
-    //         _typing = true;
-    //     }
-    //     else
-    //     {
-    //         _typing = false;
-    //     }
-    // }
-
 
     void PlaySound(int note)
     {
         if (_typing == true)
         {
-            Vector3 posToSpawn = new Vector3(xPos, yPos, 0);
+            Vector2 posToSpawn = _conductor.GetConductorPos();
+            // Debug.Log("Typing, conductor pos: " + posToSpawn);
             _audioSource.clip = notes[note];
             _audioSource.Play();
-            GameObject newChar = Instantiate(_playerNotes[note], posToSpawn, Quaternion.identity);
+            // GameObject newChar = Instantiate(_playerNotes[note], posToSpawn, Quaternion.identity);
         }
         else
         {
-            _audioSource.clip = notes[note];
-            _audioSource.Play();
+            // _audioSource.clip = notes[note];
+            // _audioSource.Play();
         }
     }
 
     // Update is called once per frame
     void Update()
+    {
+        PlaySoundOnKeyDown();
+    }
+
+    public void PlaySoundOnKeyDown()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -103,9 +83,5 @@ public class Keyboard : MonoBehaviour
         {
             PlaySound(8);
         }
-
-
-
-
     }
 }

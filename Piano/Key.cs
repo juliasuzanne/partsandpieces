@@ -2,48 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key : MonoBehaviour, INoteable
 {
-    public AudioClip note;
     [SerializeField] private string _noteType;
-    [SerializeField] private float _outOfBoundsY;
-    [SerializeField] private float _moveSpeed;
-
-    [SerializeField] private Vector2 posToSpawn;
 
 
-    [SerializeField] private AudioSource _audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        _audioSource = GameObject.Find("Keyboard").GetComponent<AudioSource>();
     }
+
 
     public string GetNote()
     {
         return _noteType;
     }
 
-    public Vector2 GetSpawnPos()
+    public void SuccessNote()
     {
-        return posToSpawn;
+        Debug.Log("SUCCESS");
+    }
+    public void WrongNote()
+    {
+        Debug.Log("WRONG");
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AfterExit()
     {
-        transform.position += transform.up * _moveSpeed *
-                    Time.deltaTime;
-        if (transform.position.y > _outOfBoundsY)
-        {
-            Destroy(this.gameObject);
-        }
+        transform.localScale -= new Vector3(1.2f, 1.2f, 1.2f);
+        GetComponent<CircleCollider2D>().enabled = false;
+
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void AfterEnter()
     {
-        _audioSource.clip = note;
-        _audioSource.Play();
+        transform.localScale += new Vector3(1.2f, 1.2f, 1.2f);
     }
+
+
+
+
+
+
+
+
+
 
 }
