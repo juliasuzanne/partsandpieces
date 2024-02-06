@@ -98,6 +98,7 @@ public class CheckNote : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         canNotPlay = false;
+        INoteable hit = other.GetComponent<INoteable>();
 
         // Debug.Log("CURRENT KEY: " + currentKey);
         // Debug.Log("COLLIDED NOTE: " + _collidedNote);
@@ -107,6 +108,8 @@ public class CheckNote : MonoBehaviour
             {
                 _messageText.text = currentKey.ToString() + "EQUALS " + _collidedNote;
                 wasPlayed = true;
+                hit.AfterExit();
+
 
             }
             else
@@ -124,7 +127,6 @@ public class CheckNote : MonoBehaviour
         // Debug.Log("Exit " + hit.GetNote());
         if (hit != null)
         {
-            hit.AfterExit();
             hit = null;
         }
         if (wasPlayed == true)
@@ -133,6 +135,7 @@ public class CheckNote : MonoBehaviour
         }
         else if (wasPlayed == false)
         {
+            hit.AfterExit();
             successfulNotes--;
         }
         wasPlayed = false;
