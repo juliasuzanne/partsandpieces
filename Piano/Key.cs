@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour, INoteable
 {
     [SerializeField] private string _noteType;
+    [SerializeField] private bool _endingNote;
 
 
 
@@ -41,7 +42,13 @@ public class Key : MonoBehaviour, INoteable
         transform.localScale += new Vector3(1.2f, 1.2f, 1.2f);
     }
 
+    public void CheckIfEnd()
+    {
+        if (_endingNote == true)
+        {
 
+        }
+    }
 
 
 

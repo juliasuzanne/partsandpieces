@@ -9,6 +9,7 @@ public interface INoteable
   public void WrongNote();
   public void AfterEnter();
   public void AfterExit();
+  public void CheckIfEnd();
 
 
 

@@ -30,7 +30,7 @@ public class CheckNote : MonoBehaviour
         // Debug.Log("WASPLAYED IS: " + wasPlayed);
         // Debug.Log("CURRENT KEY: " + currentKey);
         // Debug.Log("SUCCESSFUL NOTES: " + successfulNotes);
-
+        Debug.Log("CAN NOT PLAY : " + canNotPlay);
         if (_isMoving == true)
         {
             transform.Translate(new Vector3(0, (_speed), 0) * Time.deltaTime);
@@ -50,11 +50,8 @@ public class CheckNote : MonoBehaviour
                     transform.position = new Vector3(xStart, transform.position.y - yStep, 0);
                 }
 
+
             }
-            // if (hit == null && currentKey != null)
-            // {
-            //     TakeAwayAPoint();
-            // }
 
 
         }
@@ -68,54 +65,63 @@ public class CheckNote : MonoBehaviour
         if (e.type == EventType.KeyDown && e.keyCode.ToString().Length == 1 && char.IsLetter(e.keyCode.ToString()[0]))
         {
             currentKey = e.keyCode.ToString();
-            if (hit == null && canNotPlay == true)
+            if (canNotPlay == true)
             {
                 _messageText.text = "Note played out of time";
-                currentKey = null;
                 successfulNotes--;
-
+                currentKey = null;
             }
+
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         canNotPlay = false;
-        Debug.Log("Hit " + other.name);
+        // Debug.Log("Hit " + other.name);
         INoteable hit = other.GetComponent<INoteable>();
         if (hit != null)
         {
             hit.AfterEnter();
+            _collidedNote = hit.GetNote();
+            _messageText.text = "PLAY " + _collidedNote;
+
         }
-        _collidedNote = hit.GetNote();
-        _messageText.text = "PLAY " + _collidedNote;
+        else
+        {
+            Debug.Log("hit is null");
+        }
 
 
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        _collidedNote = other.GetComponent<Key>().GetNote();
-        if (currentKey.Equals(_collidedNote))
-        {
-            _messageText.text = currentKey.ToString() + "EQUALS " + other.GetComponent<Key>().GetNote();
-            wasPlayed = true;
+        canNotPlay = false;
 
-        }
-        else
+        // Debug.Log("CURRENT KEY: " + currentKey);
+        // Debug.Log("COLLIDED NOTE: " + _collidedNote);
+        if (currentKey != null)
         {
-            _messageText.text = "WRONG";
-            Debug.Log("SAYING " + currentKey + "DOES NOT EQUAL " + _collidedNote);
+            if (currentKey.Equals(_collidedNote))
+            {
+                _messageText.text = currentKey.ToString() + "EQUALS " + _collidedNote;
+                wasPlayed = true;
+
+            }
+            else
+            {
+                _messageText.text = "WRONG";
+                // Debug.Log("SAYING " + currentKey + "DOES NOT EQUAL " + _collidedNote);
+            }
         }
     }
 
 
     void OnTriggerExit2D(Collider2D other)
     {
-        canNotPlay = true;
-
         INoteable hit = other.GetComponent<INoteable>();
-        Debug.Log("Exit " + hit.GetNote());
+        // Debug.Log("Exit " + hit.GetNote());
         if (hit != null)
         {
             hit.AfterExit();
@@ -131,7 +137,7 @@ public class CheckNote : MonoBehaviour
         }
         wasPlayed = false;
         currentKey = null;
-
+        canNotPlay = true;
     }
 
 
@@ -139,7 +145,7 @@ public class CheckNote : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        Debug.Log("Mouse Down on play");
+        // Debug.Log("Mouse Down on play");
         _isMoving = true;
     }
 
