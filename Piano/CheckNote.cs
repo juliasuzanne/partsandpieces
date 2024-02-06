@@ -124,11 +124,7 @@ public class CheckNote : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         INoteable hit = other.GetComponent<INoteable>();
-        // Debug.Log("Exit " + hit.GetNote());
-        if (hit != null)
-        {
-            hit = null;
-        }
+
         if (wasPlayed == true)
         {
             successfulNotes++;
@@ -141,6 +137,7 @@ public class CheckNote : MonoBehaviour
         wasPlayed = false;
         currentKey = null;
         canNotPlay = true;
+        hit = null;
     }
 
 

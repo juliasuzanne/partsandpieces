@@ -32,14 +32,14 @@ public class Key : MonoBehaviour, INoteable
 
     public void AfterExit()
     {
-        transform.localScale -= new Vector3(1.2f, 1.2f, 1.2f);
+        transform.localScale -= new Vector3(.69f, .69f, .69f);
         GetComponent<CircleCollider2D>().enabled = false;
 
     }
 
     public void AfterEnter()
     {
-        transform.localScale += new Vector3(1.2f, 1.2f, 1.2f);
+        transform.localScale += new Vector3(.69f, .69f, .9f);
     }
 
     public void CheckIfEnd()
