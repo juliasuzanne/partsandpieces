@@ -44,6 +44,11 @@ public class Keyboard : MonoBehaviour
     {
         PlaySoundOnKeyDown();
         transform.Translate(new Vector3((_speed), 0, 0) * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            transform.position = new Vector2(0, 0);
+
+        }
 
     }
 

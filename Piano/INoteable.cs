@@ -10,6 +10,7 @@ public interface INoteable
   public void AfterEnter();
   public void AfterExit();
   public void CheckIfEnd();
+  public AudioClip GetClip();
 
 
 

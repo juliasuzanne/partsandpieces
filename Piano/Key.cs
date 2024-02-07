@@ -6,6 +6,8 @@ public class Key : MonoBehaviour, INoteable
 {
     [SerializeField] private string _noteType;
     [SerializeField] private bool _endingNote;
+    [SerializeField] private AudioClip _note;
+
 
 
 
@@ -20,6 +22,10 @@ public class Key : MonoBehaviour, INoteable
         return _noteType;
     }
 
+    public AudioClip GetClip()
+    {
+        return _note;
+    }
     public void SuccessNote()
     {
         Debug.Log("SUCCESS");

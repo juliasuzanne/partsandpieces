@@ -13,7 +13,7 @@ public class CheckNote : MonoBehaviour
     [SerializeField] private Text _messageText;
     [SerializeField] private Text _successCount;
     private INoteable hit = null;
-
+    [SerializeField] private AudioSource _defaultAudio;
     [SerializeField] private float yMin = -3.9f;
     [SerializeField] private float xStart = -1f;
     [SerializeField] private float _speed = 1f;
@@ -84,6 +84,8 @@ public class CheckNote : MonoBehaviour
         {
             hit.AfterEnter();
             _collidedNote = hit.GetNote();
+            _defaultAudio.clip = hit.GetClip();
+            _defaultAudio.Play();
             _messageText.text = "PLAY " + _collidedNote;
 
         }
