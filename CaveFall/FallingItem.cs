@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallingItem : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
-    private Inventory _inventory;
+    [SerializeField] private Inventory _inventory;
 
     // Start is called before the first frame update
     void Start()
