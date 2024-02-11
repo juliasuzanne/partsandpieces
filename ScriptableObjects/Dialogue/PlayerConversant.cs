@@ -51,6 +51,10 @@ namespace Dialogue
 
         public void Next()
         {
+            if (HasNext() == false)
+            {
+                Quit();
+            }
             int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
             if (numPlayerResponses > 0)
             {
@@ -64,6 +68,7 @@ namespace Dialogue
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
             TriggerEnterAction();
             onConversationUpdated();
+
 
         }
 
