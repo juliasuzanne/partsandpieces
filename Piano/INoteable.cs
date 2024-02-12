@@ -12,6 +12,8 @@ public interface INoteable
   public void CheckIfEnd();
   public AudioClip GetClip();
 
+  public float GetOffset();
+
 
 
 }

@@ -55,7 +55,9 @@ public class CheckNote : MonoBehaviour
 
 
         }
+
         _successCount.text = "Successful Notes: " + successfulNotes + " PLAYING: " + currentKey;
+
     }
 
 
@@ -65,6 +67,7 @@ public class CheckNote : MonoBehaviour
         if (e.type == EventType.KeyDown && e.keyCode.ToString().Length == 1 && char.IsLetter(e.keyCode.ToString()[0]))
         {
             currentKey = e.keyCode.ToString();
+
             if (canNotPlay == true)
             {
                 _messageText.text = "Note played out of time";

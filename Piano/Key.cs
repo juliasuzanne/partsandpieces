@@ -7,6 +7,7 @@ public class Key : MonoBehaviour, INoteable
     [SerializeField] private string _noteType;
     [SerializeField] private bool _endingNote;
     [SerializeField] private AudioClip _note;
+    [SerializeField] private float yOffset;
 
 
 
@@ -20,6 +21,10 @@ public class Key : MonoBehaviour, INoteable
     public string GetNote()
     {
         return _noteType;
+    }
+    public float GetOffset()
+    {
+        return yOffset;
     }
 
     public AudioClip GetClip()

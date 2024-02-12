@@ -9,13 +9,15 @@ public class SongCreator : MonoBehaviour
     [SerializeField] private float _pause = 0.75f;
     [SerializeField] private float currentX = -2.8f;
     [SerializeField] private float currentY = 0.54f;
+    [SerializeField] private float yToAdd = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < order.Length; i++)
         {
-            GameObject currentNote = Instantiate(notes[order[i]], new Vector2(currentX, currentY), Quaternion.identity);
+            GameObject currentNote = Instantiate(notes[order[i]], new Vector2(currentX, currentY + notes[order[i]].GetComponent<INoteable>().GetOffset()), Quaternion.identity);
+
             currentX += _pause;
             currentNote.transform.parent = this.transform;
         }
