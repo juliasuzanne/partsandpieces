@@ -10,14 +10,29 @@ public class TimeManager : MonoBehaviour
     public float dayDuration = 30f;
     public Text message;
 
+    [SerializeField] private int day = 1;
+    [SerializeField] private string month = "Fall";
+
     float totalTime = 0;
     float currentTime = 0;
 
+    void Start()
+    {
+        month = "Fall";
+        totalTime = dayDuration;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        day = Mathf.FloorToInt(totalTime / dayDuration);
+        if (day > 29)
+        {
+            totalTime = dayDuration;
+            ChangeMonth();
+        }
         totalTime += Time.deltaTime;
+
         currentTime = totalTime % dayDuration;
         if (Mathf.FloorToInt(GetHour()) == 1)
         {
@@ -28,6 +43,34 @@ public class TimeManager : MonoBehaviour
             message.text = "Nothing doing ...";
         }
 
+    }
+
+    public void ChangeMonth()
+    {
+        int chancesToGetWeirdWeather = Random.Range(0, 100);
+        if (chancesToGetWeirdWeather == 99)
+        {
+            Debug.Log("GET WEIRD WEATHER");
+        }
+
+        if (month == "Fall")
+        {
+            month = "Winter";
+        }
+        else if (month == "Winter")
+        {
+            month = "Spring";
+        }
+        else if (month == "Spring")
+        {
+            month = "Fall";
+        }
+    }
+
+
+    public int GetDay()
+    {
+        return day;
     }
 
     public float GetHour()
@@ -57,9 +100,8 @@ public class TimeManager : MonoBehaviour
             hour -= 12;
         }
 
+
         if (hour == 0) hour = 12;
-
-
 
         return hour.ToString("00") + ":" + Mathf.FloorToInt(GetMinutes()).ToString("00") + " " + abbreviation;
     }
