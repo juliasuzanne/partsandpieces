@@ -17,6 +17,7 @@ namespace UI
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
         [SerializeField] Text conversantName;
+        [SerializeField] Image conversantImage;
         // Start is called before the first frame update
         void Start()
         {
@@ -37,11 +38,16 @@ namespace UI
                 return;
             }
             string speakerName = playerConversant.GetCurrentConversantName();
+            Sprite speakerImage = playerConversant.GetCurrentConversantImage();
+
             if (speakerName == null)
             {
                 speakerName = "Speaker";
             }
+
             conversantName.text = speakerName;
+            conversantImage.sprite = speakerImage;
+
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 

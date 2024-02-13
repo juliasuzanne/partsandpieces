@@ -9,6 +9,8 @@ namespace Dialogue
         [SerializeField] Dialogue dialogue = null;
         private PlayerConversant playerConversant;
         [SerializeField] private string Name;
+        [SerializeField] private string objectThatTriggers;
+        [SerializeField] private Sprite conversantImage;
 
         void Start()
         {
@@ -27,6 +29,12 @@ namespace Dialogue
             return Name;
         }
 
+
+        public Sprite GetConversantImage()
+        {
+            return conversantImage;
+        }
+
         private void OnMouseDown()
         {
             if (dialogue == null)
@@ -40,6 +48,24 @@ namespace Dialogue
             }
 
         }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.name == objectThatTriggers)
+            {
+                if (dialogue == null)
+                {
+                    Debug.Log("AI Conversant dialogue is NULL");
+                }
+
+                else
+                {
+                    playerConversant.StartDialogue(this, dialogue);
+                }
+            }
+
+        }
+
 
 
 

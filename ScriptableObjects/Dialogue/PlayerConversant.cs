@@ -12,6 +12,7 @@ namespace Dialogue
     {
         Dialogue currentDialogue;
         AIConversant currentConversant = null;
+        [SerializeField] private Sprite myImage;
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
@@ -158,6 +159,18 @@ namespace Dialogue
             else
             {
                 return currentConversant.GetConversantName();
+            }
+        }
+
+        public Sprite GetCurrentConversantImage()
+        {
+            if (isChoosing == true)
+            {
+                return myImage;
+            }
+            else
+            {
+                return currentConversant.GetConversantImage();
             }
         }
 
