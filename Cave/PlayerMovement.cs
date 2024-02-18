@@ -61,15 +61,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (xInput < -0.0001f)
         {
-            _umbrella.GetComponent<SpriteRenderer>().flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
 
-            sp.flipX = false;
 
         }
         else if (xInput > 0.0001f)
         {
-            _umbrella.GetComponent<SpriteRenderer>().flipX = true;
-            sp.flipX = true;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+
 
         }
     }
