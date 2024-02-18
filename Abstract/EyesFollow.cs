@@ -5,6 +5,8 @@ using UnityEngine;
 public class EyesFollow : MonoBehaviour
 {
     private float _originalX, _originalY, _distanceX, _distanceY, _parentX, _parentY, _newPosX, _newPosY;
+    [SerializeField]
+    private Transform followObject;
 
     [SerializeField]
     private float _yScaler, _xScaler, _xMin, _xMax, _yMin, _yMax;
@@ -26,7 +28,16 @@ public class EyesFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (followObject == null)
+        {
+            _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+        else
+        {
+            _mousePos = new Vector2(followObject.position.x, followObject.position.y);
+        }
+
 
         _distanceX = _mousePos.x - _originalX;
         _distanceY = _mousePos.y - _originalY;

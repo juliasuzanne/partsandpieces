@@ -46,15 +46,15 @@ public class InventoryItem : MonoBehaviour
 
                     foreach (ItemTrigger trigger in triggers)
                     {
+                        // if (consumable == true && currentTransform.GetComponent<ItemTrigger>().CheckMatch(Name) == true)
+                        // {
+                        //     _inventory.RemoveItemFromInventory(slotNum);
+                        //     Destroy(this.gameObject);
+                        // }
                         trigger.TriggerItem(Name);
 
-
-                        if (consumable == true && trigger.CheckMatch(Name) == true)
-                        {
-                            _inventory.RemoveItemFromInventory(slotNum);
-                            Destroy(this.gameObject);
-                        }
                     }
+
 
                 }
             }

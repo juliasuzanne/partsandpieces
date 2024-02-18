@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sp;
     private Animator _animator;
+    [SerializeField] private GameObject _umbrella;
     [SerializeField]
     float _jumpForce = 9f;
 
@@ -60,11 +61,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (xInput < -0.0001f)
         {
+            _umbrella.GetComponent<SpriteRenderer>().flipX = false;
+
             sp.flipX = false;
+
         }
         else if (xInput > 0.0001f)
         {
+            _umbrella.GetComponent<SpriteRenderer>().flipX = true;
             sp.flipX = true;
+
         }
     }
 
@@ -78,6 +84,20 @@ public class PlayerMovement : MonoBehaviour
         moveable = true;
     }
 
+    public void GiveUmbrella()
+    {
+        _animator.SetBool("Umbrella", true);
+        Debug.Log("got umbrella");
+        _umbrella.SetActive(true);
+    }
+
+    public void RemoveUmbrella()
+    {
+        _animator.SetBool("Umbrella", false);
+        _umbrella.SetActive(false);
+
+    }
+
     void PlatformerMove()
     {
         _animator.SetFloat("yInput", Mathf.Abs(yInput));
@@ -86,13 +106,12 @@ public class PlayerMovement : MonoBehaviour
         {
             FlipPlayer();
             _animator.SetFloat("xInput", Mathf.Abs(xInput));
-
             rb.velocity = new Vector2(_moveSpeed * xInput, rb.velocity.y);
         }
         else
         {
             Cursor.visible = true;
-            _animator.SetFloat("xInput", xInput);
+            // _animator.SetFloat("xInput", xInput);
 
         }
 
