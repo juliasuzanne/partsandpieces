@@ -11,6 +11,8 @@ public class EyesFollow : MonoBehaviour
     [SerializeField]
     private float _yScaler, _xScaler, _xMin, _xMax, _yMin, _yMax;
     private Vector2 _newPos, _mousePos;
+
+    [SerializeField] private bool _uiObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +20,20 @@ public class EyesFollow : MonoBehaviour
         _parentY = transform.parent.position.y;
         _originalX = transform.position.x;
         _originalY = transform.position.y;
+
         _xMin = _originalX + _xMin;
         _xMax = _originalX + _xMax;
         _yMin = _originalY + _yMin;
         _yMax = _originalY + _yMax;
+
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
 
         if (followObject == null)
         {
@@ -38,14 +44,19 @@ public class EyesFollow : MonoBehaviour
             _mousePos = new Vector2(followObject.position.x, followObject.position.y);
         }
 
+        if (_uiObject)
+        {
+            _newPosX = _mousePos.x * _xScaler - _originalX;
+            _newPosY = _mousePos.y * _yScaler - _originalY;
+        }
+        else
+        {
+            _distanceX = _mousePos.x - _originalX;
+            _distanceY = _mousePos.y - _originalY;
+            _newPosX = _parentX + _distanceX * _xScaler;
+            _newPosY = _parentY + _distanceY * _yScaler;
 
-        _distanceX = _mousePos.x - _originalX;
-        _distanceY = _mousePos.y - _originalY;
-        Debug.Log(_distanceX + " " + _distanceY);
-
-        _newPosX = _parentX + _distanceX * _xScaler;
-        _newPosY = _parentY + _distanceY * _yScaler;
-
+        }
 
         if (_newPosX < _xMin)
         {
@@ -66,10 +77,11 @@ public class EyesFollow : MonoBehaviour
         }
 
 
+
         transform.position = new Vector2(_newPosX, _newPosY);
 
 
 
-
     }
+
 }

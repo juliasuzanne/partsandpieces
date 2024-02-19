@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
-    Rigidbody2D rb;
-    SpriteRenderer sp;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] SpriteRenderer sp;
     private Animator _animator;
     [SerializeField] private GameObject _umbrella;
     [SerializeField]
@@ -21,15 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        _animator = transform.GetComponent<Animator>();
-        sp = GetComponent<SpriteRenderer>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        _animator = transform.GetChild(0).GetComponent<Animator>();
+        sp = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        // xInput = Input.GetAxis("Horizontal");
+        // yInput = Input.GetAxis("Vertical");
         PlatformerMove();
         PlayerJump();
     }
@@ -57,21 +57,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void FlipPlayer()
-    {
-        if (xInput < -0.0001f)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+    // void FlipPlayer()
+    // {
+    //     if (xInput < -0.0001f)
+    //     {
+    //         transform.eulerAngles = new Vector3(0, 0, 0);
 
 
-        }
-        else if (xInput > 0.0001f)
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+    //     }
+    //     else if (xInput > 0.0001f)
+    //     {
+    //         transform.eulerAngles = new Vector3(0, 180, 0);
 
 
-        }
-    }
+    //     }
+    // }
 
     public void MoveableFalse()
     {
@@ -99,21 +99,53 @@ public class PlayerMovement : MonoBehaviour
 
     void PlatformerMove()
     {
-        _animator.SetFloat("yInput", Mathf.Abs(yInput));
+        // _animator.SetFloat("yInput", Mathf.Abs(yInput));
 
-        if (moveable == true)
-        {
-            FlipPlayer();
-            _animator.SetFloat("xInput", Mathf.Abs(xInput));
-            rb.velocity = new Vector2(_moveSpeed * xInput, rb.velocity.y);
-        }
-        else
-        {
-            Cursor.visible = true;
-            // _animator.SetFloat("xInput", xInput);
+        // if (moveable == true)
+        // {
+        //     FlipPlayer();
+        //     _animator.SetFloat("xInput", Mathf.Abs(xInput));
+        //     rb.velocity = new Vector2(_moveSpeed * xInput, rb.velocity.y);
+        // }
+        // else
+        // {
+        //     Cursor.visible = true;
+        //     // _animator.SetFloat("xInput", xInput);
 
-        }
+        // }
+        float horizontal = Input.GetAxisRaw("Horizontal"); //provides inputs, raw makes binary not float
+        FlipPlayer();
+
+        rb.velocity = new Vector2(horizontal * _moveSpeed, rb.velocity.y);
+
+        // if (Input.GetKeyDown(KeyCode.Space) && _grounded == true)
+        // {
+        //     Debug.Log("space key down");
+        //     rb.velocity = new Vector2(rb.velocity.x * _moveSpeed, _jumpForce);
+        // }
+
+        _animator.SetFloat("xInput", Mathf.Abs(horizontal));
 
     }
+
+    void FlipPlayer()
+    {
+
+
+        if (rb.velocity.x > 0.1f)
+        {
+            sp.flipX = true;
+
+        }
+        else if (rb.velocity.x < -0.1f)
+        {
+            sp.flipX = false;
+
+
+
+        }
+    }
+
+
 
 }

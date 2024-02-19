@@ -17,6 +17,7 @@ namespace Dialogue
         DialogueNode currentNode = null;
         bool isChoosing = false;
         [SerializeField] private string Name;
+        [SerializeField] private GameObject DialogueUi;
         public event Action onConversationUpdated;
 
         public void UpdateName(string name)
