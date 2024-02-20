@@ -135,11 +135,14 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x > 0.1f)
         {
             sp.flipX = true;
+            _umbrella.GetComponent<SpriteRenderer>().flipX = true;
 
         }
         else if (rb.velocity.x < -0.1f)
         {
             sp.flipX = false;
+            _umbrella.GetComponent<SpriteRenderer>().flipX = false;
+
 
 
 
