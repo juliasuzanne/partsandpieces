@@ -66,25 +66,25 @@ public abstract class Enemy : MonoBehaviour
 
         if (animator.GetBool("InCombat") == true && direction.x > 0)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            this.transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
         else if (animator.GetBool("InCombat") && direction.x < 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            this.transform.eulerAngles = new Vector3(0, 180, 0);
 
         }
 
         //ai movement path
         if (currentTarget == pointA.position)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            this.transform.eulerAngles = new Vector3(0, 180, 0);
 
         }
 
         else if (currentTarget == pointB.position)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            this.transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
         if (transform.position == pointA.position)

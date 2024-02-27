@@ -10,7 +10,7 @@ public class Diamond : MonoBehaviour
 
     void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("PlayerPlayer").GetComponent<PlatformerPlayer>();
+        _player = GameObject.FindGameObjectWithTag("PlatformerPlayer").GetComponent<PlatformerPlayer>();
 
     }
 
