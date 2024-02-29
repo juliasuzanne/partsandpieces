@@ -45,7 +45,6 @@ public class Keyboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         PlaySoundOnKeyDown();
         transform.Translate(new Vector3((_speed), 0, 0) * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Tab))
