@@ -7,7 +7,7 @@ public class SongCreator : MonoBehaviour
     [SerializeField] private GameObject[] notes;
     [SerializeField] private int playerNum = 0;
     private int[] currentSongArray;
-
+    [SerializeField] private CaveSaveSettings _saveSettings;
     [SerializeField] private int[] order;
     [SerializeField] private int[] playerOrder;
     [SerializeField] private float _pause = 0.75f;
@@ -19,6 +19,9 @@ public class SongCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        _saveSettings.LoadGame();
+        playerOrder = _saveSettings.GetSong();
         currentSongArray = order;
     }
 
@@ -29,6 +32,8 @@ public class SongCreator : MonoBehaviour
         {
             CreateSong();
         }
+
+
 
     }
 
@@ -69,13 +74,15 @@ public class SongCreator : MonoBehaviour
 
     public void AddToPlayerOrder(int key)
     {
-        if (playerNum < 50)
+        if (playerNum < 39)
         {
             playerOrder[playerNum] = key;
             playerNum = playerNum + 1;
         }
         else
         {
+            playerOrder[40] = 9;
+            _saveSettings.SaveSong(playerOrder);
             Debug.Log("Done filling song");
         }
 

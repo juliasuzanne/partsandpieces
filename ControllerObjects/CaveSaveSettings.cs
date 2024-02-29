@@ -45,5 +45,16 @@ public class CaveSaveSettings : MonoBehaviour
 
     }
 
+    public void SaveSong(int[] newSongArray)
+    {
+        so.playerSong = newSongArray;
+        SaveGame();
+    }
+
+    public int[] GetSong()
+    {
+        return so.playerSong;
+    }
+
 
 }

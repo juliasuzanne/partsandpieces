@@ -10,5 +10,6 @@ public class SaveObject
     public string rockName;
     public string sadThing;
     public string currentQuest;
+    public int[] playerSong;
 
 }
