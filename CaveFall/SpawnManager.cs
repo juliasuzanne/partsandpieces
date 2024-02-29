@@ -10,6 +10,14 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject[] _items;
     private SwitchScene _switchScene;
+    [SerializeField] private float timeToWait;
+
+    [SerializeField] private float xMin = -5f;
+
+    [SerializeField]
+    private float xMax = 2.5f;
+    [SerializeField] private float yMax = -5f;
+    [SerializeField] private float zPos = 100;
 
     void Start()
     {
@@ -26,13 +34,20 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnRoutine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(timeToWait);
         while (_stopSpawning == false)
         {
-            Vector3 posToSpawnPowerUp = new Vector3(Random.Range(-5f, 2.5f), -5, 100);
+            Vector3 posToSpawnPowerUp = new Vector3(Random.Range(xMin, xMax), yMax, zPos);
             GameObject newPowerUp = Instantiate(_items[Random.Range(0, _items.Length)], posToSpawnPowerUp, Quaternion.identity);
             yield return new WaitForSeconds(3f);
         }
+    }
+
+    public void StopSpawning()
+    {
+        _stopSpawning = true;
+
+
     }
 
     public void OnPlayerLand()
@@ -41,6 +56,7 @@ public class SpawnManager : MonoBehaviour
 
 
     }
+
 
     public void FinishGame()
     {
