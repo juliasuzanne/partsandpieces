@@ -28,6 +28,18 @@ public class FallingSandwich : MonoBehaviour
 
     }
 
+    public void ChangeRotateSpeed(float newSpeed)
+    {
+        rotateSpeed = newSpeed;
+    }
+
+    public void DropItem()
+    {
+        posToMoveTowards = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+
+    }
+
     void OnMouseDown()
     {
         Debug.Log("clicked " + transform.gameObject.name);

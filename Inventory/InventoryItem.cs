@@ -25,8 +25,12 @@ public class InventoryItem : MonoBehaviour
         _uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         _inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
         _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
-        description_object = this.transform.GetChild(0).gameObject;
-        description_text = this.transform.GetChild(0).GetComponent<Text>();
+        if (this.transform.GetChild(0) != null)
+        {
+            description_object = this.transform.GetChild(0).gameObject;
+            description_text = this.transform.GetChild(0).GetComponent<Text>();
+        }
+
     }
 
     void Update()
@@ -62,7 +66,10 @@ public class InventoryItem : MonoBehaviour
         }
         else
         {
-            description_object.SetActive(false);
+            if (description_object != null)
+            {
+                description_object.SetActive(false);
+            }
 
         }
     }
