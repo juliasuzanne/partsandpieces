@@ -19,6 +19,7 @@ public class FallingSandwich : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.position = Vector2.MoveTowards(transform.position, posToMoveTowards, step);
         transform.Rotate(0, 0, Time.deltaTime * rotateSpeed);
         if (transform.position.y == yMin)
@@ -35,7 +36,7 @@ public class FallingSandwich : MonoBehaviour
 
     public void DropItem()
     {
-        posToMoveTowards = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        posToMoveTowards = new Vector2(transform.position.x, transform.position.y);
 
 
     }

@@ -31,21 +31,28 @@ public class UseableItem : MonoBehaviour
 
   void Update()
   {
-
-    if (Input.GetMouseButtonDown(0))
+    if (mouseButtonReleased = true)
     {
-      Debug.Log("REGISTER BUTTON DOWN");
-      if (hit == null)
+
+      if (Input.GetMouseButtonDown(0))
       {
-      }
-      else if (hit.Name == "plate")
-      {
-        Debug.Log("HIT PLATE TRIGGER");
+        Debug.Log("REGISTER BUTTON DOWN");
+        if (hit == null)
+        {
+        }
+        else if (hit.Name == "plate")
+        {
+          Debug.Log("HIT PLATE TRIGGER");
 
-        ItemTrigger trigger = transform.GetComponent<ItemTrigger>();
-        trigger.TriggerItem("plate");
+          ItemTrigger trigger = transform.GetComponent<ItemTrigger>();
+          trigger.TriggerItem("plate");
+          _inventoryController.DropItem();
+          hit = null;
+          mouseButtonReleased = false;
+          currentTransform = null;
 
 
+        }
 
       }
     }
@@ -78,7 +85,7 @@ public class UseableItem : MonoBehaviour
   void OnTriggerExit2D(Collider2D other)
   {
     hit = null;
-    // description_text.text = "Use " + Name + " with... ";
+    mouseButtonReleased = false;
     currentTransform = null;
   }
 

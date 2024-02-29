@@ -42,6 +42,12 @@ public class InventoryController : MonoBehaviour
 
   }
 
+  public void DropItem()
+  {
+    _item = null;
+
+  }
+
   public void MakeItemNull()
   {
     if (_item != null)
@@ -54,4 +60,7 @@ public class InventoryController : MonoBehaviour
 
 
   }
+
+
+
 }
