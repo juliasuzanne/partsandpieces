@@ -24,6 +24,8 @@ public class CheckNote : MonoBehaviour
     private bool _isMoving = false;
     private bool canNotPlay = true;
 
+    private bool isSongPlaying = false;
+
     void Update()
     {
         // Update is called once per frame
@@ -80,6 +82,7 @@ public class CheckNote : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        isSongPlaying = true;
         canNotPlay = false;
         // Debug.Log("Hit " + other.name);
         INoteable hit = other.GetComponent<INoteable>();
@@ -87,6 +90,11 @@ public class CheckNote : MonoBehaviour
         {
             hit.AfterEnter();
             _collidedNote = hit.GetNote();
+            if (_collidedNote == "END")
+            {
+                Debug.Log("END SONG");
+                isSongPlaying = false;
+            }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();
             _messageText.text = "PLAY " + _collidedNote;
@@ -100,6 +108,15 @@ public class CheckNote : MonoBehaviour
 
     }
 
+    public void SongIsPlaying()
+    {
+        isSongPlaying = true;
+    }
+
+    public bool IsSongPlaying()
+    {
+        return isSongPlaying;
+    }
     void OnTriggerStay2D(Collider2D other)
     {
         canNotPlay = false;

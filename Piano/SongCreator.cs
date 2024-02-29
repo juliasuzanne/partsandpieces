@@ -5,6 +5,8 @@ using UnityEngine;
 public class SongCreator : MonoBehaviour
 {
     [SerializeField] private GameObject[] notes;
+    [SerializeField] private int playerNum = 0;
+
     [SerializeField] private int[] order;
     [SerializeField] private int[] playerOrder;
     [SerializeField] private float _pause = 0.75f;
@@ -40,11 +42,30 @@ public class SongCreator : MonoBehaviour
 
             currentX += _pause;
             currentNote.transform.parent = this.transform;
+
         }
+
     }
 
     public void MakeSongActive()
     {
         songActive = true;
+    }
+
+
+
+    public void AddToPlayerOrder(int key)
+    {
+        if (playerNum < 50)
+        {
+            playerOrder[playerNum] = key;
+            playerNum = playerNum + 1;
+        }
+        else
+        {
+            Debug.Log("Done filling song");
+        }
+
+
     }
 }

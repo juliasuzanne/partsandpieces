@@ -15,6 +15,7 @@ public class Keyboard : MonoBehaviour
     [SerializeField] private float xStep = 2f;
     [SerializeField] private float yStep = 2f;
     [SerializeField] private CheckNote _conductor;
+    [SerializeField] private SongCreator song;
     private bool _typing = true;
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,14 @@ public class Keyboard : MonoBehaviour
 
     public void MakeKeyActive(int keyNum)
     {
+        if (_conductor.IsSongPlaying())
+        {
+
+        }
+        else
+        {
+            song.AddToPlayerOrder(keyNum);
+        }
         StartCoroutine(PlayNote(keyNum));
     }
 
