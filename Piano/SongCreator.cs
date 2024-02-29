@@ -54,6 +54,17 @@ public class SongCreator : MonoBehaviour
         songActive = true;
     }
 
+    public void SwitchToPlayerSong()
+    {
+        currentSongArray = playerOrder;
+    }
+
+    public void SwitchToHeartAndSoul()
+    {
+        currentSongArray = order;
+    }
+
+
 
 
     public void AddToPlayerOrder(int key)
