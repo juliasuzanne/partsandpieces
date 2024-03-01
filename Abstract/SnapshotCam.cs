@@ -6,8 +6,8 @@ using UnityEngine;
 public class SnapshotCam : MonoBehaviour
 {
     Camera snapCam;
-    int resWidth = 256;
-    int resHeight = 256;
+    int resWidth = 512;
+    int resHeight = 512;
     void Awake()
     {
         snapCam = GetComponent<Camera>();
@@ -36,11 +36,11 @@ public class SnapshotCam : MonoBehaviour
         //create texture, applying render to texture, turn into file and save
         if (snapCam.gameObject.activeInHierarchy)
         {
-            Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
+            Texture2D snapshot = new Texture2D(resWidth, resHeight, TextureFormat.RGBA32, false);
             snapCam.Render();
             RenderTexture.active = snapCam.targetTexture;
             snapshot.ReadPixels(new Rect(0, 0, resWidth, resHeight), 0, 0);
-            byte[] bytes = snapshot.EncodeToPNG();
+            byte[] bytes = ImageConversion.EncodeToPNG(snapshot);
             string fileName = SnapshotName();
             System.IO.File.WriteAllBytes(fileName, bytes);
             Debug.Log("Snapshot taken!");
