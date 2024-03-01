@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent(typeof(Camera))]
 public class SnapshotCam : MonoBehaviour
 {
     Camera snapCam;
+    [SerializeField] private CaveSaveSettings _saveSettings;
+    string newestFileName;
     int resWidth = 512;
     int resHeight = 512;
     void Awake()
@@ -43,16 +46,24 @@ public class SnapshotCam : MonoBehaviour
             byte[] bytes = ImageConversion.EncodeToPNG(snapshot);
             string fileName = SnapshotName();
             System.IO.File.WriteAllBytes(fileName, bytes);
+            Debug.Log(fileName);
+            AssetDatabase.Refresh();
+            _saveSettings.SaveSandwichPath1(fileName);
             Debug.Log("Snapshot taken!");
             snapCam.gameObject.SetActive(false);
         }
 
     }
 
+    public string GetFileName()
+    {
+        return newestFileName;
+    }
+
     string SnapshotName()
     // string fullPath = Application.persistentDataPath + directory + fileName;
     {
-        return string.Format("{0}/Snapshots/snap_{1}x{2}_{3}.png",
+        return string.Format("{0}/Resources/Snapshots/snap_{1}x{2}_{3}.png",
         Application.dataPath,
         resWidth,
         resHeight,

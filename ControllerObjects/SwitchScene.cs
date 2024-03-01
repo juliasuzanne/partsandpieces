@@ -21,6 +21,7 @@ public class SwitchScene : MonoBehaviour
 
     public void LoadScene(int scene)
     {
+        _saver.LoadGame();
         SceneManager.LoadScene(scene);
     }
 

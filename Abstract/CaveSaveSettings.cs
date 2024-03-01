@@ -53,8 +53,24 @@ public class CaveSaveSettings : MonoBehaviour
 
     public int[] GetSong()
     {
+        LoadGame();
         return so.playerSong;
     }
 
+    public void SaveSandwichPath1(string newPath)
+    {
+        string pathToRemove = Application.dataPath + "/Resources/";
+        newPath = newPath.Replace(pathToRemove, "");
+        string removeExtension = ".png";
+        newPath = newPath.Replace(removeExtension, "");
+        so.sandwichpath1 = newPath;
+        SaveGame();
+    }
+
+    public string SandwichPath1()
+    {
+        LoadGame();
+        return so.sandwichpath1;
+    }
 
 }
