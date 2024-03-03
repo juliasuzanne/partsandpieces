@@ -5,6 +5,7 @@ using UnityEngine;
 public class Keyboard : MonoBehaviour
 {
     public AudioClip[] notes;
+    private bool record = false;
     [SerializeField] private GameObject[] _playerNotes;
     [SerializeField] private Sprite[] _keyDowns;
     [SerializeField] private AudioSource _audioSource;
@@ -64,9 +65,18 @@ public class Keyboard : MonoBehaviour
         }
         else
         {
-            song.AddToPlayerOrder(keyNum);
+            if (record == true)
+            {
+                song.AddToPlayerOrder(keyNum);
+
+            }
         }
         StartCoroutine(PlayNote(keyNum));
+    }
+
+    public void Record()
+    {
+        record = true;
     }
 
     IEnumerator PlayNote(int keyNum)

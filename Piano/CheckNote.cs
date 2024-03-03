@@ -12,6 +12,7 @@ public class CheckNote : MonoBehaviour
     [SerializeField] private float xMax = 9f;
     [SerializeField] private Text _messageText;
     [SerializeField] private Text _successCount;
+    [SerializeField] private SwitchScene _switchScene;
     private INoteable hit = null;
     [SerializeField] private AudioSource _defaultAudio;
     [SerializeField] private float yMin = -3.9f;
@@ -94,6 +95,7 @@ public class CheckNote : MonoBehaviour
             {
                 Debug.Log("END SONG");
                 isSongPlaying = false;
+                _switchScene.LoadScene(2);
             }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();
@@ -113,10 +115,17 @@ public class CheckNote : MonoBehaviour
         isSongPlaying = true;
     }
 
+    public void SongIsNotPlaying()
+    {
+        isSongPlaying = false;
+    }
+
+
     public bool IsSongPlaying()
     {
         return isSongPlaying;
     }
+
     void OnTriggerStay2D(Collider2D other)
     {
         canNotPlay = false;

@@ -19,9 +19,13 @@ public class SongCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerNum = 0;
         _saveSettings.LoadGame();
-        playerOrder = _saveSettings.GetSong();
+        // playerOrder = _saveSettings.GetSong();
+        // if (playerOrder.length == 0)
+        // {
+        //     playerOrder.length = 40;
+        // }
         currentSongArray = order;
     }
 
@@ -74,18 +78,23 @@ public class SongCreator : MonoBehaviour
 
     public void AddToPlayerOrder(int key)
     {
-        if (playerNum < 39)
+        if (playerNum < 40)
         {
             playerOrder[playerNum] = key;
             playerNum = playerNum + 1;
         }
         else
         {
-            playerOrder[40] = 9;
-            _saveSettings.SaveSong(playerOrder);
-            Debug.Log("Done filling song");
+            Debug.Log("That's the maximum");
         }
 
+
+    }
+
+    public void FinishSong()
+    {
+        playerOrder[playerNum] = 9;
+        _saveSettings.SaveSong(playerOrder);
 
     }
 }

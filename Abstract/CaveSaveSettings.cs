@@ -73,4 +73,16 @@ public class CaveSaveSettings : MonoBehaviour
         return so.sandwichpath1;
     }
 
+    public void ChangeStateOfMeatPiano(string newState)
+    {
+        so.stateOfMeatPiano = newState;
+        SaveGame();
+    }
+
+    public string GetStateOfMeatPiano()
+    {
+        LoadGame();
+        return so.stateOfMeatPiano;
+    }
+
 }

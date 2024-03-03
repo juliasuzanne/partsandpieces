@@ -12,5 +12,6 @@ public class SaveObject
     public string currentQuest;
     public int[] playerSong;
     public string sandwichpath1;
+    public string stateOfMeatPiano;
 
 }

@@ -65,6 +65,7 @@ namespace Dialogue
                 onConversationUpdated();
                 return;
             }
+
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             TriggerExitAction();
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
