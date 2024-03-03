@@ -7,12 +7,16 @@ using System;
 public class CheckNote : MonoBehaviour
 {
     [SerializeField] private GameObject[] _playerNotes;
+    [SerializeField] private SongCreator _songCreator;
     [SerializeField] private float yStart;
     [SerializeField] private float yStep;
     [SerializeField] private float xMax = 9f;
     [SerializeField] private Text _messageText;
     [SerializeField] private Text _successCount;
     [SerializeField] private SwitchScene _switchScene;
+    [SerializeField] private CaveSaveSettings _saveManager;
+    private int totalNotes;
+    private string currentSong;
     private INoteable hit = null;
     [SerializeField] private AudioSource _defaultAudio;
     [SerializeField] private float yMin = -3.9f;
@@ -95,6 +99,10 @@ public class CheckNote : MonoBehaviour
             {
                 Debug.Log("END SONG");
                 isSongPlaying = false;
+                if (successfulNotes > totalNotes - 3)
+                {
+                    _saveManager.ChangeStateOfMeatPiano("successful" + currentSong);
+                }
                 _switchScene.LoadScene(2);
             }
             _defaultAudio.clip = hit.GetClip();
@@ -118,6 +126,19 @@ public class CheckNote : MonoBehaviour
     public void SongIsNotPlaying()
     {
         isSongPlaying = false;
+    }
+
+    public void ChangeCurrentSong(string newSong)
+    {
+        currentSong = newSong;
+        if (currentSong == "custom")
+        {
+            totalNotes = 10;
+        }
+        else
+        {
+            totalNotes = 40;
+        }
     }
 
 

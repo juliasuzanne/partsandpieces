@@ -56,8 +56,6 @@ public class SongCreator : MonoBehaviour
 
     }
 
-
-
     public void MakeSongActive()
     {
         songActive = true;
