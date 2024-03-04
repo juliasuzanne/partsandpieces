@@ -18,6 +18,11 @@ namespace Dialogue
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
         }
 
+        public void ChangeDialogue(Dialogue newDialogue)
+        {
+            dialogue = newDialogue;
+        }
+
         public void UpdateName(string name)
         {
             Name = name;

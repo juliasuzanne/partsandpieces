@@ -21,12 +21,16 @@ public class SongCreator : MonoBehaviour
     {
         playerNum = 0;
         _saveSettings.LoadGame();
+        if (_saveSettings.GetSong().Length > 1)
+        {
+            playerOrder = _saveSettings.GetSong();
+        }
         // playerOrder = _saveSettings.GetSong();
         // if (playerOrder.length == 0)
         // {
         //     playerOrder.length = 40;
         // }
-        currentSongArray = order;
+        currentSongArray = playerOrder;
     }
 
     // Update is called once per frame
@@ -61,6 +65,8 @@ public class SongCreator : MonoBehaviour
         songActive = true;
     }
 
+
+
     public void SwitchToPlayerSong()
     {
         currentSongArray = playerOrder;
@@ -70,8 +76,6 @@ public class SongCreator : MonoBehaviour
     {
         currentSongArray = order;
     }
-
-
 
 
     public void AddToPlayerOrder(int key)
@@ -95,4 +99,6 @@ public class SongCreator : MonoBehaviour
         _saveSettings.SaveSong(playerOrder);
 
     }
+
+
 }

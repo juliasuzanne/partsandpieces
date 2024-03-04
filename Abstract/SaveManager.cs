@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public static class SaveManager 
-   {
+public static class SaveManager
+{
     public static string directory = "/SaveData/";
     public static string fileName = "MyData.txt";
 
@@ -12,7 +12,7 @@ public static class SaveManager
     {
         string dir = Application.persistentDataPath + directory;
 
-        if(!Directory.Exists(dir))
+        if (!Directory.Exists(dir))
         {
             Directory.CreateDirectory(dir);
         }
@@ -26,7 +26,7 @@ public static class SaveManager
         string fullPath = Application.persistentDataPath + directory + fileName;
         SaveObject so = new SaveObject();
 
-        if(File.Exists(fullPath))
+        if (File.Exists(fullPath))
         {
             string json = File.ReadAllText(fullPath);
             so = JsonUtility.FromJson<SaveObject>(json);

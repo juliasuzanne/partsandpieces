@@ -103,7 +103,11 @@ public class CheckNote : MonoBehaviour
                 {
                     _saveManager.ChangeStateOfMeatPiano("successful" + currentSong);
                 }
-                _switchScene.LoadScene(2);
+                else
+                {
+                    _saveManager.ChangeStateOfMeatPiano("failed");
+                }
+                _switchScene.LoadScene(0);
             }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();
@@ -137,8 +141,13 @@ public class CheckNote : MonoBehaviour
         }
         else
         {
-            totalNotes = 40;
+            totalNotes = 10;
         }
+    }
+
+    public void ChangeSuccessfulNotes()
+    {
+        successfulNotes = 0;
     }
 
 
