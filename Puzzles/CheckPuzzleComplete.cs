@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class CheckPuzzleComplete : MonoBehaviour
 {
     [SerializeField] private bool[] correctPieces;
+    [SerializeField] UnityEvent onTrigger;
+
     private bool correct = false;
 
     public void AdjustTrue(int num)
@@ -31,6 +35,7 @@ public class CheckPuzzleComplete : MonoBehaviour
         if (correct == true)
         {
             Debug.Log("CORRECT!");
+            onTrigger.Invoke();
         }
     }
 }

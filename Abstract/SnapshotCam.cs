@@ -47,7 +47,7 @@ public class SnapshotCam : MonoBehaviour
             string fileName = SnapshotName();
             System.IO.File.WriteAllBytes(fileName, bytes);
             Debug.Log(fileName);
-            // AssetDatabase.Refresh();
+            AssetDatabase.Refresh();
             _saveSettings.SaveSandwichPath1(fileName);
             Debug.Log("Snapshot taken!");
             snapCam.gameObject.SetActive(false);
