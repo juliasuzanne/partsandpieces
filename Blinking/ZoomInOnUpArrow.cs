@@ -50,22 +50,28 @@ public class ZoomInOnUpArrow : MonoBehaviour
     {
         float vertical = Input.GetAxisRaw("Vertical") * scaler; //provides inputs, raw makes binary not float
 
+        Debug.Log(vertical);
         if (vertical > 0)
         {
-            transform.localScale += new Vector3(vertical, vertical, vertical);
-            if (transform.localScale.x >= 22)
+            if (transform.localScale.x >= 2.5)
             {
-                Debug.Log("ChangeScene");
-                onTrigger.Invoke();
+                Debug.Log("over 2.5");
+                // onTrigger.Invoke();
 
+
+            }
+            else
+            {
+                transform.localScale += new Vector3(vertical, vertical, vertical);
 
             }
 
         }
         else if (vertical < 0)
         {
-            if (transform.localScale.x <= 0)
+            if (transform.localScale.x <= .75)
             {
+                Debug.Log("less than .75");
 
             }
             else

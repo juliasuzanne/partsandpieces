@@ -7,14 +7,14 @@ public class InventoryButton : MonoBehaviour
 {
   [SerializeField] private Sprite OpenInventory;
   [SerializeField] private Sprite CloseInventory;
-  private Inventory _inventory;
+  [SerializeField] private Inventory _inventory;
   private UIManager _uiManager;
   private SpriteRenderer _sp;
 
 
   void Start()
   {
-    _inventory = GameObject.Find("Player").GetComponent<Inventory>();
+    _inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     _sp = transform.GetComponent<SpriteRenderer>();
     _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 

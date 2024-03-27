@@ -97,6 +97,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void SpeedUp(int newSpeed)
+    {
+        _moveSpeed = newSpeed;
+    }
+
     void PlatformerMove()
     {
         // _animator.SetFloat("yInput", Mathf.Abs(yInput));
@@ -114,9 +119,10 @@ public class PlayerMovement : MonoBehaviour
 
         // }
         float horizontal = Input.GetAxisRaw("Horizontal"); //provides inputs, raw makes binary not float
+        float vertical = Input.GetAxisRaw("Vertical");
         FlipPlayer();
 
-        rb.velocity = new Vector2(horizontal * _moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * _moveSpeed, vertical * _moveSpeed);
 
         // if (Input.GetKeyDown(KeyCode.Space) && _grounded == true)
         // {
@@ -125,6 +131,8 @@ public class PlayerMovement : MonoBehaviour
         // }
 
         _animator.SetFloat("xInput", Mathf.Abs(horizontal));
+        _animator.SetFloat("yInput", vertical);
+
 
     }
 

@@ -11,7 +11,7 @@ public class InventoryController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
+    _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
 
   }
 

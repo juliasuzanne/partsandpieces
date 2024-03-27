@@ -11,14 +11,13 @@ public class UIManager : MonoBehaviour
     private PlayerMovement _playerMovement;
     [SerializeField]
     private GameObject _inventoryButtonObject;
-    private InventoryButton _inventoryButton;
+    [SerializeField] private InventoryButton _inventoryButton;
 
 
     void Start()
     {
 
         _playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
-        _inventoryButton = _inventoryButtonObject.GetComponent<InventoryButton>();
 
     }
     void Update()
