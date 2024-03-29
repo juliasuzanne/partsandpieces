@@ -8,12 +8,12 @@ public class SetTriggerOnExit : MonoBehaviour
 
     [SerializeField] UnityEvent onTrigger;
     [SerializeField] private bool consumable;
-    [SerializeField] private Collider2D targetCollider;
+    [SerializeField] private string targetColliderName;
 
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log(other);
-        if (other == targetCollider)
+        if (other.name == targetColliderName)
         {
             onTrigger.Invoke();
             if (consumable == true)

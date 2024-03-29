@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class InventoryItem : MonoBehaviour
 
 {
+    [SerializeField] UnityEvent onReturnToInventory;
+
     [SerializeField] bool consumable = false;
     private int slotNum;
     private Vector2 mousePosition;
@@ -87,7 +91,11 @@ public class InventoryItem : MonoBehaviour
         Debug.Log("HIT: " + hit.Name);
         if (hit != null)
         {
-            description_text.text = "Use " + Name + " with " + hit.Name;
+            if (description_text != null)
+            {
+                description_text.text = "Use " + Name + " with " + hit.Name;
+
+            }
         }
 
     }
@@ -95,14 +103,24 @@ public class InventoryItem : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         hit = null;
-        description_text.text = "Use " + Name + " with... ";
+        if (description_text != null)
+        {
+            description_text.text = "Use " + Name + " with... ";
+
+        }
+        onReturnToInventory.Invoke();
+
         currentTransform = null;
     }
 
 
     public void UseItem()
     {
-        description_object.SetActive(true);
+        if (description_object != null)
+        {
+            description_object.SetActive(true);
+
+        }
         _inventoryController.ChangeItem(this.gameObject);
         mouseButtonReleased = true;
     }
@@ -110,7 +128,12 @@ public class InventoryItem : MonoBehaviour
 
     public void ReturnToInventory()
     {
-        description_object.SetActive(false);
+        onReturnToInventory.Invoke();
+        if (description_object != null)
+        {
+            description_object.SetActive(false);
+
+        }
         _inventoryController.MakeItemNull();
         mouseButtonReleased = false;
     }
