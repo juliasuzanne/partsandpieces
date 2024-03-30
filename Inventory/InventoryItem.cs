@@ -109,7 +109,6 @@ public class InventoryItem : MonoBehaviour
 
         }
         onReturnToInventory.Invoke();
-
         currentTransform = null;
     }
 
@@ -132,7 +131,6 @@ public class InventoryItem : MonoBehaviour
         if (description_object != null)
         {
             description_object.SetActive(false);
-
         }
         _inventoryController.MakeItemNull();
         mouseButtonReleased = false;

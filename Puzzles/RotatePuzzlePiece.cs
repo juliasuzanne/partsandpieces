@@ -14,6 +14,8 @@ public class RotatePuzzlePiece : MonoBehaviour
 
     }
 
+
+
     public void ChangeCurrentPiece(Transform newTransform)
     {
         currentPiece = newTransform;
@@ -22,6 +24,7 @@ public class RotatePuzzlePiece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (currentPiece != null)
         {
             xRotate = Input.GetAxis("Horizontal");
@@ -30,7 +33,11 @@ public class RotatePuzzlePiece : MonoBehaviour
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
             currentPiece.position = mousePos2D;
             currentPiece.Rotate(0f, 0f, _rotateSpeed * (xRotate), Space.Self);
+
+
         }
+
+
         // else
         // {
         //     if (Input.GetMouseButtonDown(0))
@@ -40,6 +47,9 @@ public class RotatePuzzlePiece : MonoBehaviour
         // }
     }
 
+
+
+    //maybe if mouse down and no interface hit, release
 
 
 
