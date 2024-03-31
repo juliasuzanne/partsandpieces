@@ -41,7 +41,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
             Debug.Log("The sprite renderer is NULL");
         }
         FlipPlayer();
-        currencyText.text = "CURRENCY: " + diamonds;
+        // currencyText.text = "CURRENCY: " + diamonds;
 
 
 
@@ -137,7 +137,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
     public void RemoveDiamonds(int diamondsToRemove)
     {
         diamonds -= diamondsToRemove;
-        currencyText.text = "CURRENCY: " + diamonds;
+        // currencyText.text = "CURRENCY: " + diamonds;
 
     }
 

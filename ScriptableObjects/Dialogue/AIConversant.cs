@@ -54,6 +54,11 @@ namespace Dialogue
 
         }
 
+        public void StartConversation()
+        {
+            playerConversant.StartDialogue(this, dialogue);
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.name == objectThatTriggers)

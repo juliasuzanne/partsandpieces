@@ -55,6 +55,7 @@ namespace Dialogue
         {
             if (HasNext() == false)
             {
+                isChoosing = false;
                 Quit();
             }
             int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
@@ -147,8 +148,16 @@ namespace Dialogue
             {
                 return;
             }
+            else
+            {
+                // foreach (DialogueTrigger trigger in currentConversant.GetComponentsInChildren<DialogueTrigger>())
+                // {
+                //     trigger.Trigger(action);
+                // }
+                currentConversant.GetComponent<DialogueTrigger>().Trigger(action);
 
-            currentConversant.GetComponent<DialogueTrigger>().Trigger(action);
+            }
+
 
         }
 
