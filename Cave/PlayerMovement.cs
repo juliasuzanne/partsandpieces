@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float _moveSpeed = 2f;
+    [SerializeField] private bool moveVertical;
     private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
@@ -120,6 +121,15 @@ public class PlayerMovement : MonoBehaviour
         // }
         float horizontal = Input.GetAxisRaw("Horizontal"); //provides inputs, raw makes binary not float
         float vertical = Input.GetAxisRaw("Vertical");
+        if (moveVertical == true)
+        {
+            vertical = Input.GetAxisRaw("Vertical");
+
+        }
+        else
+        {
+            vertical = 0;
+        }
         FlipPlayer();
 
         rb.velocity = new Vector2(horizontal * _moveSpeed, vertical * _moveSpeed);
