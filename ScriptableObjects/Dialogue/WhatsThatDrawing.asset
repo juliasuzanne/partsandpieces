@@ -67,7 +67,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 309
-    y: 26
+    y: 27
     width: 200
     height: 100
   onEnterAction: 
@@ -86,7 +86,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   speech: No, dummy, the reflection. Does that look like either of us?
-  children: []
+  children:
+  - a52a293a-da1e-4e79-911d-8170d9cc1bbb
+  - 6e013111-3a75-44c8-961d-e29033bc8664
   rect:
     serializedVersion: 2
     x: 566
@@ -131,7 +133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   speech: No, I can see the eye without the loupe.
-  children: []
+  children:
+  - a52a293a-da1e-4e79-911d-8170d9cc1bbb
+  - e780aa84-de63-4c3c-80f5-16eea690ebb8
   rect:
     serializedVersion: 2
     x: 568

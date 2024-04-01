@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sp;
     private Animator _animator;
-    [SerializeField] private GameObject _umbrella;
+    // [SerializeField] private GameObject _umbrella;
     [SerializeField]
     float _jumpForce = 9f;
 
@@ -84,19 +84,19 @@ public class PlayerMovement : MonoBehaviour
         moveable = true;
     }
 
-    public void GiveUmbrella()
-    {
-        _animator.SetBool("Umbrella", true);
-        Debug.Log("got umbrella");
-        _umbrella.SetActive(true);
-    }
+    // public void GiveUmbrella()
+    // {
+    //     _animator.SetBool("Umbrella", true);
+    //     Debug.Log("got umbrella");
+    //     _umbrella.SetActive(true);
+    // }
 
-    public void RemoveUmbrella()
-    {
-        _animator.SetBool("Umbrella", false);
-        _umbrella.SetActive(false);
+    // public void RemoveUmbrella()
+    // {
+    //     _animator.SetBool("Umbrella", false);
+    //     _umbrella.SetActive(false);
 
-    }
+    // }
 
     public void SpeedUp(int newSpeed)
     {
@@ -153,13 +153,13 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x > 0.1f)
         {
             sp.flipX = true;
-            _umbrella.GetComponent<SpriteRenderer>().flipX = true;
+            // _umbrella.GetComponent<SpriteRenderer>().flipX = true;
 
         }
         else if (rb.velocity.x < -0.1f)
         {
             sp.flipX = false;
-            _umbrella.GetComponent<SpriteRenderer>().flipX = false;
+            // _umbrella.GetComponent<SpriteRenderer>().flipX = false;
 
 
 

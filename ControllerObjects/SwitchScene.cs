@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SwitchScene : MonoBehaviour
 {
     private CaveSaveSettings _saver;
+    private float delay;
     void Start()
     {
         _saver = GameObject.Find("SceneSaveSettings").GetComponent<CaveSaveSettings>();
@@ -19,11 +20,28 @@ public class SwitchScene : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ChangeDelayTime(float newDelay)
+    {
+        delay = newDelay;
+    }
     public void LoadScene(int scene)
     {
         _saver.LoadGame();
         SceneManager.LoadScene(scene);
     }
+
+    public void LoadSceneWithDelay(int scene)
+    {
+        StartCoroutine(LoadSceneCoRoutine(scene));
+    }
+
+    IEnumerator LoadSceneCoRoutine(int scene)
+    {
+        yield return new WaitForSeconds(delay);
+        // _saver.LoadGame();
+        SceneManager.LoadScene(scene);
+    }
+
 
     public void FirstScene()
     {

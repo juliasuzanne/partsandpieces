@@ -67,7 +67,8 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
 
     void CheckGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1.0f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 0.5f);
+        Debug.Log("Grounded hit collider = " + hit);
         Debug.DrawRay(transform.position, -Vector2.up, Color.green);
 
         if (hit.collider != null)
