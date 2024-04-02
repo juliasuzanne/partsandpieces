@@ -31,7 +31,7 @@ public class UseableItem : MonoBehaviour
 
   void Update()
   {
-    if (mouseButtonReleased = true)
+    if (mouseButtonReleased == true)
     {
 
       if (Input.GetMouseButtonDown(0))

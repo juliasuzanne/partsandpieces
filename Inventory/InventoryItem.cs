@@ -39,43 +39,58 @@ public class InventoryItem : MonoBehaviour
 
     void Update()
     {
-
-        if (mouseButtonReleased == true)
+        if (this.gameObject == _inventoryController.GetCurrentItem())
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (hit == null)
-                {
-                    ReturnToInventory();
-                }
-                else
-                {
-                    ItemTrigger[] triggers = currentTransform.GetComponentsInChildren<ItemTrigger>();
+            Debug.Log("current Transform" + currentTransform.name);
 
-                    foreach (ItemTrigger trigger in triggers)
+            if (mouseButtonReleased == true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (hit == null)
                     {
-                        trigger.TriggerItem(Name);
-                        if (consumable == true && trigger.CheckMatch(Name) == true)
+                        ReturnToInventory();
+                    }
+                    else
+                    {
+                        ItemTrigger[] triggers = currentTransform.GetComponentsInChildren<ItemTrigger>();
+
+
+                        foreach (ItemTrigger trigger in triggers)
                         {
-                            Debug.Log("CheckMatch is true");
-                            _inventory.RemoveItemFromInventory(slotNum);
-                            Destroy(this.gameObject);
+
+                            trigger.TriggerItem(this.Name);
+
+
+                            if (consumable == true && trigger.CheckMatch(Name) == true)
+                            {
+                                Debug.Log("CheckMatch is true");
+                                _inventory.RemoveItemFromInventory(slotNum);
+                                Destroy(this.gameObject);
+                            }
+
                         }
+                        ReturnToInventory();
+
+
 
                     }
-
-
                 }
             }
-        }
-        else
-        {
-            if (description_object != null)
+            else
             {
-                description_object.SetActive(false);
-            }
+                if (description_object != null)
+                {
+                    description_object.SetActive(false);
+                }
 
+            }
         }
+        if (description_object != null)
+        {
+            description_object.SetActive(false);
+        }
+
     }
 
     public void SetSlotPos(int num)
@@ -103,13 +118,14 @@ public class InventoryItem : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         hit = null;
+        currentTransform = null;
+
         if (description_text != null)
         {
             description_text.text = "Use " + Name + " with... ";
 
         }
         onReturnToInventory.Invoke();
-        currentTransform = null;
     }
 
 

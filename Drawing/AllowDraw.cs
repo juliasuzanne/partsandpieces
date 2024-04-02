@@ -35,7 +35,9 @@ public class AllowDraw : MonoBehaviour
 
         if (spriteMask.alphaCutoff == 0)
         {
+            Debug.Log("DRAWINGCOMPLETE");
             onComplete.Invoke();
+
 
         }
 
