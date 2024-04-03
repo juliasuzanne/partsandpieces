@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using UnityEngine;
+
 
 [System.Serializable]
 
@@ -17,5 +19,11 @@ public class SaveObject
     public string sandwichpath1;
     public string stateOfMeatPiano;
     public List<string> inventoryitems = new List<string>();
+    public Color bootColor;
+    public Color gloveColor;
+    public Color skinColor;
+    public Color skirtColor;
+    public Color shirtColor;
+
 
 }

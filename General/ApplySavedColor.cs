@@ -6,6 +6,7 @@ public class ApplySavedColor : MonoBehaviour
 {
     [SerializeField]
     private CaveSaveSettings _caveSaveSettings;
+
     [SerializeField]
     private SpriteRenderer _sp;
     public string Name { get; set; }
