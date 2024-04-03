@@ -24,6 +24,7 @@ public class SaveObject
     public Color skinColor;
     public Color skirtColor;
     public Color shirtColor;
+    public Color lipColor;
 
 
 }

@@ -11,6 +11,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] List<SpriteRenderer> skirtColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> skinColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> gloveColor = new List<SpriteRenderer>();
+    [SerializeField] SpriteRenderer lipColor;
 
 
 
@@ -35,6 +36,8 @@ public class StartConditions : MonoBehaviour
             }
 
         }
+
+        lipColor.color = _saveSettings.so.lipColor;
 
         foreach (SpriteRenderer sprite in bootColor)
         {
@@ -62,6 +65,8 @@ public class StartConditions : MonoBehaviour
         {
             sprite.color = _saveSettings.so.skinColor;
         }
+
+
 
     }
 
