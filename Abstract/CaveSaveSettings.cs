@@ -85,4 +85,14 @@ public class CaveSaveSettings : MonoBehaviour
         return so.stateOfMeatPiano;
     }
 
+    public void SaveItemInInventory(string newItem)
+    {
+        so.inventoryitems.Add(newItem);
+    }
+
+    public void RemoveItemInInventory(string newItem)
+    {
+        so.inventoryitems.Remove(newItem);
+    }
+
 }

@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
    private int count = 0;
    private Text _playerText;
    private GameObject _dialog;
+   [SerializeField] private CaveSaveSettings saveSettings;
 
 
    void Start()
@@ -35,6 +36,12 @@ public class Inventory : MonoBehaviour
             isFull[count] = true;
             Instantiate(prefab, slotPos, Quaternion.identity, slots[count].transform);
             prefab.GetComponent<InventoryItem>().SetSlotPos(count);
+            if (!saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
+            {
+               saveSettings.SaveItemInInventory(prefab.GetComponent<InventoryItem>().GetName());
+
+            }
+
             break;
          }
 
@@ -61,6 +68,7 @@ public class Inventory : MonoBehaviour
          {
             Vector3 slotPos = new Vector3(slots[count].transform.position.x, slots[count].transform.position.y, 0f);
             items[count].transform.position = slotPos;
+
          }
          count = count + 1;
       }
@@ -71,6 +79,7 @@ public class Inventory : MonoBehaviour
    {
       isFull[slotNum] = false;
       items[slotNum] = null;
+      saveSettings.RemoveItemInInventory(slots[slotNum].transform.GetChild(0).GetComponent<InventoryItem>().GetName());
       Destroy(slots[slotNum].transform.GetChild(0).gameObject);
 
    }
