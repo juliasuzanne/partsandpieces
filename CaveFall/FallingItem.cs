@@ -11,7 +11,7 @@ public class FallingItem : MonoBehaviour
     void Start()
     {
 
-        _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
+        _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
 
     }
 

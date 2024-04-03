@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class StartConditions : MonoBehaviour
 {
-    [SerializeField] GameObject prefab1;
-    [SerializeField] GameObject prefab2;
-    [SerializeField] GameObject prefab3;
+    [SerializeField] List<GameObject> prefabs = new List<GameObject>();
+    private List<string> _savedObjects = new List<string>();
+    private int count;
+    [SerializeField] private CaveSaveSettings _saveSettings;
 
     [SerializeField] Inventory inventory;
     [SerializeField] UnityEvent onTrigger;
@@ -15,20 +16,14 @@ public class StartConditions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _savedObjects = _saveSettings.so.inventoryitems;
         onTrigger.Invoke();
-        if (prefab1 != null)
+        foreach (GameObject item in prefabs)
         {
-            inventory.AddItemToInventory(prefab1);
-
-        }
-        if (prefab2 != null)
-        {
-            inventory.AddItemToInventory(prefab2);
-
-        }
-        if (prefab3 != null)
-        {
-            inventory.AddItemToInventory(prefab3);
+            if (_savedObjects.Contains(item.GetComponent<InventoryItem>().GetName()))
+            {
+                inventory.AddItemToInventory(item);
+            }
 
         }
 

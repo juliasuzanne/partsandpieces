@@ -25,8 +25,8 @@ public class GloveController : MonoBehaviour
         {
             textMeshPro.SetActive(true);
 
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 moveToPos = new Vector3(mousePosition.x, mousePosition.y, _currentGlove.transform.position.z);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
             _currentGlove.transform.position = moveToPos;
 
         }
@@ -70,7 +70,7 @@ public class GloveController : MonoBehaviour
     {
         if (_currentGlove != null)
         {
-            Vector3 posToMove = new Vector3(_currentGlove.transform.position.x, _currentGlove.transform.position.y, _currentGlove.transform.position.z);
+            Vector2 posToMove = new Vector2(_currentGlove.transform.position.x, _currentGlove.transform.position.y);
             _currentGlove.transform.position = posToMove;
             _currentGlove = null;
 

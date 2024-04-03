@@ -10,6 +10,7 @@ public class InventoryButton : MonoBehaviour
   [SerializeField] private Inventory _inventory;
   private UIManager _uiManager;
   private SpriteRenderer _sp;
+  [SerializeField] bool usingPockets = true;
 
 
   void Start()
@@ -38,8 +39,12 @@ public class InventoryButton : MonoBehaviour
 
   void OnMouseDown()
   {
-    _inventory.CheckItemLocation();
-    _uiManager.ShowInventory();
+    if (!usingPockets)
+    {
+      _inventory.CheckItemLocation();
+      _uiManager.ShowInventory();
+    }
+
   }
 
 }

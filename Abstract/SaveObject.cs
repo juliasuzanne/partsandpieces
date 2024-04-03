@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+
 [System.Serializable]
+
 
 public class SaveObject
 {
@@ -13,5 +16,6 @@ public class SaveObject
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;
+    public List<string> inventoryitems = new List<string>();
 
 }

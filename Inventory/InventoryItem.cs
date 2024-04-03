@@ -41,7 +41,10 @@ public class InventoryItem : MonoBehaviour
     {
         if (this.gameObject == _inventoryController.GetCurrentItem())
         {
-            Debug.Log("current Transform" + currentTransform.name);
+            if (currentTransform != null)
+            {
+                Debug.Log("current Transform" + currentTransform.name);
+            }
 
             if (mouseButtonReleased == true)
             {
@@ -128,6 +131,10 @@ public class InventoryItem : MonoBehaviour
         onReturnToInventory.Invoke();
     }
 
+    public string GetName()
+    {
+        return Name;
+    }
 
     public void UseItem()
     {
