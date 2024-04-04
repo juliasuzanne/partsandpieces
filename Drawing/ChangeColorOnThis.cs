@@ -33,6 +33,11 @@ public class ChangeColorOnThis : MonoBehaviour, IChangeColor
           _saveSettings.so.shirtColor = new Color(m_red, m_blue, m_green);
           break;
         }
+      case "boot":
+        {
+          _saveSettings.so.bootColor = new Color(m_red, m_blue, m_green);
+          break;
+        }
     }
   }
 
