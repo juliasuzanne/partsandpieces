@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 2f;
     [SerializeField] private bool moveVertical;
+    [SerializeField]
     private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
@@ -31,8 +32,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // xInput = Input.GetAxis("Horizontal");
         // yInput = Input.GetAxis("Vertical");
-        PlatformerMove();
-        PlayerJump();
+        if (moveable == true)
+        {
+            PlatformerMove();
+            PlayerJump();
+        }
+
     }
 
 

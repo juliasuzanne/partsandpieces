@@ -13,6 +13,7 @@ public class InventoryButton : MonoBehaviour
   private SpriteRenderer _sp;
   [SerializeField] UnityEvent onTrigger;
   [SerializeField] bool usingPockets = true;
+  [SerializeField] private PlayerMovement playerMovement;
 
 
 
@@ -32,11 +33,14 @@ public class InventoryButton : MonoBehaviour
   public void HidingInventory()
   {
     _sp.sprite = CloseInventory;
+    playerMovement.MoveableFalse();
 
   }
   public void ShowingInventory()
   {
     _sp.sprite = OpenInventory;
+    playerMovement.MoveableTrue();
+
 
   }
 
