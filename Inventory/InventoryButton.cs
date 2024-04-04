@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class InventoryButton : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class InventoryButton : MonoBehaviour
   [SerializeField] private Inventory _inventory;
   private UIManager _uiManager;
   private SpriteRenderer _sp;
+  [SerializeField] UnityEvent onTrigger;
   [SerializeField] bool usingPockets = true;
+
 
 
   void Start()
@@ -41,6 +44,7 @@ public class InventoryButton : MonoBehaviour
   {
     if (!usingPockets)
     {
+      onTrigger.Invoke();
       _inventory.CheckItemLocation();
       _uiManager.ShowInventory();
     }

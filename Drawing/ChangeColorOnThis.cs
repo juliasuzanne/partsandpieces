@@ -33,9 +33,24 @@ public class ChangeColorOnThis : MonoBehaviour, IChangeColor
           _saveSettings.so.shirtColor = new Color(m_red, m_blue, m_green);
           break;
         }
-      case "boot":
+      case "boots":
         {
           _saveSettings.so.bootColor = new Color(m_red, m_blue, m_green);
+          break;
+        }
+      case "lips":
+        {
+          _saveSettings.so.lipColor = new Color(m_red, m_blue, m_green);
+          break;
+        }
+      case "gloves":
+        {
+          _saveSettings.so.gloveColor = new Color(m_red, m_blue, m_green);
+          break;
+        }
+      case "skin":
+        {
+          _saveSettings.so.skinColor = new Color(m_red, m_blue, m_green);
           break;
         }
     }

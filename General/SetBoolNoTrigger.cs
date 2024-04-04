@@ -12,6 +12,19 @@ public class SetBoolNoTrigger : MonoBehaviour
 
     }
 
+    public void ToggleAnimBool()
+    {
+        if (anim.GetBool(animName))
+        {
+            anim.SetBool(animName, false);
+        }
+        else if (!anim.GetBool(animName))
+        {
+            anim.SetBool(animName, true);
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
