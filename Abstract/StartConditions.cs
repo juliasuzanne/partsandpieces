@@ -26,6 +26,7 @@ public class StartConditions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _saveSettings.LoadGame();
         _savedObjects = _saveSettings.so.inventoryitems;
         onTrigger.Invoke();
         foreach (GameObject item in prefabs)
