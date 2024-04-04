@@ -7,19 +7,26 @@ public class ColoredPencil : MonoBehaviour
 {
   private IChangeColor hit;
   private SpriteRenderer sp;
+  private SpriteRenderer selfSp;
   private Color updateColor;
 
   void Start()
   {
+    selfSp = GetComponent<SpriteRenderer>();
 
+  }
+
+  public void ChangeColor(SpriteRenderer other)
+  {
+    selfSp.color = other.color;
+    updateColor = other.color;
   }
 
   void OnTriggerEnter2D(Collider2D other)
   {
     sp = other.GetComponent<SpriteRenderer>();
     hit = other.GetComponent<IChangeColor>();
-
-
+    Debug.Log("hit" + hit);
   }
 
   void OnTriggerExit2D(Collider2D other)
@@ -29,7 +36,17 @@ public class ColoredPencil : MonoBehaviour
 
   void OnMouseDown()
   {
-    sp.color = new Color(0, 0, 0);
+    if (hit != null)
+    {
+      if (!hit.changer)
+        sp.color = updateColor;
+      else if (hit.changer)
+      {
+        selfSp.color = sp.color;
+        updateColor = sp.color;
+      }
+
+    }
   }
 
 

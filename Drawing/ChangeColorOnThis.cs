@@ -7,10 +7,12 @@ public class ChangeColorOnThis : MonoBehaviour, IChangeColor
 {
   public string PartToApplyTo { get; set; }
   [SerializeField] private CaveSaveSettings _saveSettings;
+  public bool changer { get; set; }
+  [SerializeField] bool changing;
 
   void Start()
   {
-
+    changer = changing;
   }
 
   void Update()
