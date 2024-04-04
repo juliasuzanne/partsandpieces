@@ -39,7 +39,10 @@ public class ColoredPencil : MonoBehaviour
     if (hit != null)
     {
       if (!hit.changer)
+      {
         sp.color = updateColor;
+        hit.UpdateColor(sp.color.r, sp.color.g, sp.color.b);
+      }
       else if (hit.changer)
       {
         selfSp.color = sp.color;

@@ -5,10 +5,8 @@ using UnityEngine;
 public interface IChangeColor
 {
     string PartToApplyTo { get; set; }
+    Color newColor { get; set; }
     bool changer { get; set; }
-    void ChangeBlue();
-    void ChangeWhite();
-    void ChangeBlack();
-    void ChangeRed();
-    void ChangeGreen();
+    void UpdateColor(float m_red, float m_blue, float m_green);
+
 }
