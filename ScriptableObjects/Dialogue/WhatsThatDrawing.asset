@@ -118,7 +118,31 @@ MonoBehaviour:
   - {fileID: 3306040042697553181}
   - {fileID: -2162491773761721809}
   - {fileID: 4976615176271499356}
+  - {fileID: 2646385813130798943}
   newNodeOffset: {x: 200, y: 0}
+--- !u!114 &2646385813130798943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e11608b9-48d8-4376-8a2d-b96de0359ef5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 996
+    y: 213
+    width: 200
+    height: 100
+  onEnterAction: SwitchScene
+  onExitAction: 
 --- !u!114 &3306040042697553181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,11 +182,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   speech: Okay, transport me.
-  children: []
+  children:
+  - e11608b9-48d8-4376-8a2d-b96de0359ef5
   rect:
     serializedVersion: 2
-    x: 795
-    y: 212
+    x: 796
+    y: 213
     width: 200
     height: 100
   onEnterAction: 

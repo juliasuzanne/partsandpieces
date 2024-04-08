@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 2f;
     [SerializeField] private bool moveVertical;
-    [SerializeField]
     private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sp;
+    [SerializeField] Transform frontTransform;
+    [SerializeField] Transform sideTransform;
+
     private Animator _animator;
     // [SerializeField] private GameObject _umbrella;
     [SerializeField]
@@ -155,21 +157,27 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (rb.velocity.x > 0.1f)
+        if (rb.velocity.x > 0.01f)
         {
-            sp.flipX = true;
+
+            _animator.SetBool("Flip", true);
+            // sp.flipX = true;
+
             // _umbrella.GetComponent<SpriteRenderer>().flipX = true;
 
         }
-        else if (rb.velocity.x < -0.1f)
+        else if (rb.velocity.x < -0.01f)
         {
-            sp.flipX = false;
+            _animator.SetBool("Flip", false);
+
+            // sp.flipX = false;
             // _umbrella.GetComponent<SpriteRenderer>().flipX = false;
 
 
 
 
         }
+
     }
 
 

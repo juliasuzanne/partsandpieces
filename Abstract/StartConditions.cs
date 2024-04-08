@@ -11,7 +11,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] List<SpriteRenderer> skirtColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> skinColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> gloveColor = new List<SpriteRenderer>();
-    [SerializeField] SpriteRenderer lipColor;
+    [SerializeField] List<SpriteRenderer> lipColor = new List<SpriteRenderer>();
 
 
 
@@ -24,7 +24,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] UnityEvent onTrigger;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _saveSettings.LoadGame();
         _savedObjects = _saveSettings.so.inventoryitems;
@@ -38,11 +38,15 @@ public class StartConditions : MonoBehaviour
 
         }
 
-        lipColor.color = _saveSettings.so.lipColor;
 
         foreach (SpriteRenderer sprite in bootColor)
         {
             sprite.color = _saveSettings.so.bootColor;
+        }
+
+        foreach (SpriteRenderer sprite in lipColor)
+        {
+            sprite.color = _saveSettings.so.lipColor;
         }
 
         foreach (SpriteRenderer sprite in gloveColor)

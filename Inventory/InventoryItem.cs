@@ -106,9 +106,10 @@ public class InventoryItem : MonoBehaviour
         hit = other.GetComponent<INameable>();
         currentTransform = other.transform;
 
-        Debug.Log("HIT: " + hit.Name);
         if (hit != null)
         {
+            Debug.Log("HIT: " + hit.Name);
+
             if (description_text != null)
             {
                 description_text.text = "Use " + Name + " with " + hit.Name;

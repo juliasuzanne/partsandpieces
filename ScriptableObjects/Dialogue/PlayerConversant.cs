@@ -58,6 +58,7 @@ namespace Dialogue
                 isChoosing = false;
                 Quit();
             }
+
             int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
             if (numPlayerResponses > 0)
             {
@@ -66,6 +67,8 @@ namespace Dialogue
                 onConversationUpdated();
                 return;
             }
+
+
 
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             TriggerExitAction();
