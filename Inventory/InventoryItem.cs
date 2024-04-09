@@ -84,15 +84,15 @@ public class InventoryItem : MonoBehaviour
             {
                 if (description_object != null)
                 {
-                    description_object.SetActive(false);
+                    description_object.SetActive(true);
                 }
 
             }
         }
-        if (description_object != null)
-        {
-            description_object.SetActive(false);
-        }
+        // if (description_object != null)
+        // {
+        //     description_object.SetActive(false);
+        // }
 
     }
 

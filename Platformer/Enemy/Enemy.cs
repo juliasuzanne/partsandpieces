@@ -29,7 +29,16 @@ public abstract class Enemy : MonoBehaviour
     {
         transform.position = pointA.position;
         animator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("PlatformerPlayer").transform;
+        if (GameObject.FindGameObjectWithTag("Player").transform != null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        }
+        else if (GameObject.FindGameObjectWithTag("PlatformerPlayer").transform != null)
+        {
+            player = GameObject.FindGameObjectWithTag("PlatformerPlayer").transform;
+
+        }
         sp = GetComponent<SpriteRenderer>();
     }
     public virtual void Attack() //virtual keyword allows for functino to be rewritten
