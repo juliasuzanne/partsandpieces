@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class StartConditions : MonoBehaviour
 {
     [SerializeField] List<GameObject> prefabs = new List<GameObject>();
+
     [SerializeField] List<SpriteRenderer> bootColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> shirtColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> skirtColor = new List<SpriteRenderer>();
@@ -37,6 +38,7 @@ public class StartConditions : MonoBehaviour
             }
 
         }
+
 
 
         foreach (SpriteRenderer sprite in bootColor)

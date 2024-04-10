@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 2f;
     [SerializeField] private bool moveVertical;
-    private bool moveable = true;
+    [SerializeField] private bool moveable = true;
     [SerializeField]
     private bool grounded = false;
     [SerializeField] Rigidbody2D rb;
@@ -81,8 +81,25 @@ public class PlayerMovement : MonoBehaviour
     //     }
     // }
 
+    public void MoveVerticalTrue()
+    {
+        moveVertical = true;
+    }
+    public void MoveVerticalFalse()
+    {
+        moveVertical = false;
+    }
+
+    public void ChangePos(Transform transformPos)
+    {
+        transform.position = new Vector2(transformPos.position.x, transformPos.position.y);
+    }
+
     public void MoveableFalse()
     {
+
+        _animator.SetFloat("xInput", 0);
+        _animator.SetFloat("yInput", 0);
         moveable = false;
     }
 

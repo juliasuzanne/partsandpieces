@@ -55,29 +55,29 @@ namespace Dialogue
             if (currentState == "successfulcustom")
             {
                 _conversant.ChangeDialogue(dialogueSuccessCustom);
-                playCustomSongPanel.SetActive(true);
-                songPlayer.SwitchToPlayerSong();
-                songPlayer.MakeSongActive();
+                // playCustomSongPanel.SetActive(true);
+                // songPlayer.SwitchToPlayerSong();
+                // songPlayer.MakeSongActive();
             }
             else if (currentState == "successfulheart")
             {
                 _conversant.ChangeDialogue(dialogueSuccessHeart);
-                playSongPanel.SetActive(true);
-                _heartAudioSource.clip = _heartAndSoulClip;
-                _heartAudioSource.Play();
+                // playSongPanel.SetActive(true);
+                // _heartAudioSource.clip = _heartAndSoulClip;
+                // _heartAudioSource.Play();
             }
             else if (currentState == "failed")
             {
                 _conversant.ChangeDialogue(dialogueFail);
-                failPanel.SetActive(true);
-                _heartAudioSource.clip = _failClip;
-                _heartAudioSource.Play();
+                // failPanel.SetActive(true);
+                // _heartAudioSource.clip = _failClip;
+                // _heartAudioSource.Play();
 
             }
             else if (currentState == "entryscroll")
             {
                 scrolls.SetActive(true);
-                _conversant.ChangeDialogue(dialogueEntry);
+                // _conversant.ChangeDialogue(dialogueEntry);
 
             }
             else if (currentState == "entry")

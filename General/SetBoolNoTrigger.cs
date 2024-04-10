@@ -31,6 +31,11 @@ public class SetBoolNoTrigger : MonoBehaviour
 
     }
 
+    public void SetAnimTrigger(string animTriggerName)
+    {
+        anim.SetTrigger(animTriggerName);
+    }
+
     public void SetAnimBoolTrue()
     {
         {
