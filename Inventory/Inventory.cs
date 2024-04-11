@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
    public GameObject[] slots; // this to place items in the center of each slot, or drop
    public GameObject[] items; // 
    private int count = 0;
-   private Text _playerText;
+   [SerializeField] private Text _playerText;
    private GameObject _dialog;
    [SerializeField] private CaveSaveSettings saveSettings;
 
@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
    {
       _dialog = transform.GetChild(0).GetChild(0).gameObject;
       _dialog.SetActive(false);
-      _playerText = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
+
    }
 
    public void AddItemToInventory(GameObject prefab)

@@ -10,12 +10,17 @@ namespace Dialogue
         [SerializeField] private Dialogue dialogueEntry;
         [SerializeField] private Dialogue dialogueFalling;
         [SerializeField] private string currentState;
-        [SerializeField] private GameObject _meat;
+        [SerializeField] private GameObject _mazeSetup;
+        [SerializeField] private GameObject _citySetup;
+
         [SerializeField] private CaveSaveSettings _saveManager;
+        private string stateOfExterior;
+
 
         // Start is called before the first frame update
         void Start()
         {
+            stateOfExterior = _saveSettings.so.exteriorLoc;
             _saveManager.LoadGame();
             currentState = _saveManager.so.stateOfLab;
             SetUpState();
@@ -48,6 +53,20 @@ namespace Dialogue
                 // playSongPanel.SetActive(true);
                 // _heartAudioSource.clip = _heartAndSoulClip;
                 // _heartAudioSource.Play();
+            }
+
+            if (stateOfExterior == "city")
+            {
+                _mazeSetup.SetActive(false);
+                _citySetup.SetActive(true);
+
+            }
+            else
+            {
+                _mazeSetup.SetActive(true);
+                _citySetup.SetActive(false);
+
+
             }
 
         }

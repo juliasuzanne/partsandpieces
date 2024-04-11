@@ -22,6 +22,7 @@ public class SaveObject
     public string stateOfMaze;
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
+    public string exteriorLoc;
     public Color bootColor;
     public Color gloveColor;
     public Color skinColor;

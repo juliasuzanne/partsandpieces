@@ -93,6 +93,13 @@ public class CaveSaveSettings : MonoBehaviour
     public void RemoveItemInInventory(string newItem)
     {
         so.inventoryitems.Remove(newItem);
+
+    }
+
+    public void ChangeExteriorLocation(string newLoc)
+    {
+        so.exteriorLoc = newLoc;
+        SaveGame();
     }
 
 }
