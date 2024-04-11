@@ -53,13 +53,24 @@ namespace Dialogue
 
         public void Next()
         {
+            Debug.Log("HAS NEXT IS " + HasNext());
             if (HasNext() == false)
             {
                 isChoosing = false;
                 Quit();
+                return;
+            }
+            int numPlayerResponses;
+            if (currentDialogue != null)
+            {
+                numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+
+            }
+            else
+            {
+                numPlayerResponses = 0;
             }
 
-            int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
@@ -69,12 +80,13 @@ namespace Dialogue
             }
 
 
-
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             TriggerExitAction();
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
             TriggerEnterAction();
             onConversationUpdated();
+
+
 
 
         }

@@ -39,7 +39,6 @@ public class Inventory : MonoBehaviour
             if (!saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
             {
                saveSettings.SaveItemInInventory(prefab.GetComponent<InventoryItem>().GetName());
-
             }
 
             break;
