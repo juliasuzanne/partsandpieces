@@ -54,6 +54,11 @@ public class InventoryItem : MonoBehaviour
                     {
                         ReturnToInventory();
                     }
+                    else if (hit.Name == "trashbin")
+                    {
+                        _inventory.RemoveItemFromInventory(slotNum);
+                        Destroy(this.gameObject);
+                    }
                     else
                     {
                         ItemTrigger[] triggers = currentTransform.GetComponentsInChildren<ItemTrigger>();
@@ -94,6 +99,12 @@ public class InventoryItem : MonoBehaviour
         //     description_object.SetActive(false);
         // }
 
+    }
+
+    public void RemoveThisItem()
+    {
+        _inventory.RemoveItemFromInventory(slotNum);
+        Destroy(this.gameObject);
     }
 
     public void SetSlotPos(int num)

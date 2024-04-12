@@ -20,6 +20,7 @@ public class SaveObject
     public string stateOfMeatPiano;
     public string stateOfLab;
     public string stateOfMaze;
+    public string stateOfFace;
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
     public string exteriorLoc;

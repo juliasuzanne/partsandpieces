@@ -31,6 +31,7 @@ public class ColoredPencil : MonoBehaviour
 
   void OnTriggerExit2D(Collider2D other)
   {
+    hit = null;
 
   }
 

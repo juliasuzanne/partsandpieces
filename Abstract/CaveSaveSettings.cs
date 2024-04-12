@@ -102,4 +102,10 @@ public class CaveSaveSettings : MonoBehaviour
         SaveGame();
     }
 
+    public void ChangeFaceState(string newState)
+    {
+        so.stateOfFace = newState;
+        SaveGame();
+    }
+
 }

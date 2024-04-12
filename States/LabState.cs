@@ -20,7 +20,7 @@ namespace Dialogue
         // Start is called before the first frame update
         void Start()
         {
-            stateOfExterior = _saveSettings.so.exteriorLoc;
+            stateOfExterior = _saveManager.so.exteriorLoc;
             _saveManager.LoadGame();
             currentState = _saveManager.so.stateOfLab;
             SetUpState();
@@ -53,6 +53,11 @@ namespace Dialogue
                 // playSongPanel.SetActive(true);
                 // _heartAudioSource.clip = _heartAndSoulClip;
                 // _heartAudioSource.Play();
+            }
+            else
+            {
+                _conversant.ChangeDialogue(dialogueEntry);
+
             }
 
             if (stateOfExterior == "city")
