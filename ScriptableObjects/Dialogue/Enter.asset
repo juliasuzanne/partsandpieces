@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8679643040197619845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8c194237-0a9a-4093-bf8e-b7adf8bdc959
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What are we doing again?
+  children:
+  - 50bece90-1ded-4551-a0bc-3df2846070a0
+  rect:
+    serializedVersion: 2
+    x: 360
+    y: 261
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8582287451521593760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8c723734-be26-4329-97d8-e24880dc2d73
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: The one in the bed?
+  children:
+  - fcc7bede-afb5-4628-9b8c-ad757024fa94
+  rect:
+    serializedVersion: 2
+    x: 832
+    y: 224
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2152003150531158615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2f5d598b-35b9-4281-8041-4c087f70e01d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes?
+  children:
+  - 71d7929d-2255-4b0b-9772-2cc794e554ea
+  - 8c194237-0a9a-4093-bf8e-b7adf8bdc959
+  rect:
+    serializedVersion: 2
+    x: 103
+    y: 179
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: Enter
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2152003150531158615}
+  - {fileID: 2498529475248455971}
+  - {fileID: -8679643040197619845}
+  - {fileID: 3446771704491941444}
+  - {fileID: -8582287451521593760}
+  - {fileID: 8520951759340503738}
+  - {fileID: 4673184498834896679}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &2498529475248455971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 71d7929d-2255-4b0b-9772-2cc794e554ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: ...
+  children:
+  - 2f5d598b-35b9-4281-8041-4c087f70e01d
+  rect:
+    serializedVersion: 2
+    x: 456
+    y: 11
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3446771704491941444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 50bece90-1ded-4551-a0bc-3df2846070a0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: We're going to search for clues about this young woman.
+  children:
+  - 8c723734-be26-4329-97d8-e24880dc2d73
+  rect:
+    serializedVersion: 2
+    x: 611
+    y: 198
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4673184498834896679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3f103824-2eda-42a4-b238-8087cc1a764b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Ready.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1247
+    y: 203
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: StartSurgery
+--- !u!114 &8520951759340503738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fcc7bede-afb5-4628-9b8c-ad757024fa94
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes, there is no body there. But I have a way to make her talk. Ready to
+    start surgery?
+  children:
+  - 3f103824-2eda-42a4-b238-8087cc1a764b
+  rect:
+    serializedVersion: 2
+    x: 1047
+    y: 202
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

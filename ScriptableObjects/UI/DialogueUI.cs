@@ -9,7 +9,7 @@ namespace UI
 {
     public class DialogueUI : MonoBehaviour
     {
-        PlayerConversant playerConversant;
+        [SerializeField] PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
         [SerializeField] Button quitButton;
@@ -21,7 +21,6 @@ namespace UI
         // Start is called before the first frame update
         void Start()
         {
-            playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(() => playerConversant.Next());
             quitButton.onClick.AddListener(() => playerConversant.Quit());
@@ -58,7 +57,7 @@ namespace UI
             else
             {
                 AIText.text = playerConversant.GetText();
-                // nextButton.gameObject.SetActive(playerConversant.HasNext());
+                nextButton.gameObject.SetActive(playerConversant.HasNext());
             }
 
         }

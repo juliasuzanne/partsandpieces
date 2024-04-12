@@ -56,7 +56,15 @@ namespace Dialogue
 
         public void StartConversation()
         {
-            playerConversant.StartDialogue(this, dialogue);
+            if (dialogue == null)
+            {
+                Debug.Log("AI Conversant dialogue is NULL");
+            }
+
+            else
+            {
+                playerConversant.StartDialogue(this, dialogue);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)

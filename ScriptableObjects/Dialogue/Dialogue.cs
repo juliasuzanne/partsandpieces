@@ -14,6 +14,13 @@ namespace Dialogue
         Vector2 newNodeOffset = new Vector2(200, 0);
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+
+        private void Awake()
+        {
+            OnValidate();
+        }
+
+
         private void OnValidate()
         {
             nodeLookup.Clear();

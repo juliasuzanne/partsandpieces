@@ -11,6 +11,7 @@ namespace Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         Dialogue currentDialogue;
+        private string debugMessage;
         AIConversant currentConversant = null;
         [SerializeField] private Sprite myImage;
         [SerializeField] Dialogue testDialogue;
@@ -51,28 +52,58 @@ namespace Dialogue
             return isChoosing;
         }
 
+        public string CurrentDialogue()
+        {
+            if (currentDialogue != null)
+            {
+                return currentDialogue.ToString();
+
+            }
+            else
+            {
+                return "null";
+            }
+        }
+
+        public string HasAnother()
+        {
+            return HasNext().ToString();
+        }
+
+        public string GetDebugMessage()
+        {
+            return debugMessage;
+        }
+
+
         public void Next()
         {
             Debug.Log("HAS NEXT IS " + HasNext());
             if (HasNext() == false)
             {
                 isChoosing = false;
+                debugMessage = "has next is false, quitting";
                 Quit();
                 return;
             }
             int numPlayerResponses;
             if (currentDialogue != null)
             {
+                debugMessage = "getting num player responses, " + currentDialogue.GetPlayerChildren(currentNode).Count().ToString();
+
                 numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
             }
 
             else
             {
+                debugMessage = "setting num player responses to zero";
                 numPlayerResponses = 0;
             }
 
             if (numPlayerResponses > 0)
             {
+                debugMessage = "player responses good, setting is choosing, trigger exit, update conversation";
+
                 isChoosing = true;
                 TriggerExitAction();
                 onConversationUpdated();
@@ -80,7 +111,7 @@ namespace Dialogue
             }
 
 
-            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             TriggerExitAction();
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
             TriggerEnterAction();
@@ -100,11 +131,15 @@ namespace Dialogue
         {
             if (currentDialogue != null)
             {
+                debugMessage = "current dialogue not null, returning get all children, current Node is " + currentNode.ToString() + "count of children of current node is " + currentDialogue.GetAllChildren(currentNode).Count().ToString();
+
+
                 return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
 
             }
             else
             {
+                debugMessage = "current dialogue null, returning false has next";
                 return false;
             }
         }
