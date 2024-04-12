@@ -85,6 +85,23 @@ public class CaveSaveSettings : MonoBehaviour
         return so.stateOfMeatPiano;
     }
 
+    public void AddItemToWindowSill(string newItem)
+    {
+        if (!so.windowsillitems.Contains(newItem))
+        {
+            so.windowsillitems.Add(newItem);
+        }
+        else
+        {
+        }
+
+    }
+
+    public void RemoveItemFromWindowSill(string itemName)
+    {
+        so.windowsillitems.Remove(itemName);
+    }
+
     public void SaveItemInInventory(string newItem)
     {
         so.inventoryitems.Add(newItem);
@@ -102,9 +119,42 @@ public class CaveSaveSettings : MonoBehaviour
         SaveGame();
     }
 
+    public void ChangeStateOfLab(string labState)
+    {
+        so.stateOfLab = labState;
+        SaveGame();
+    }
+
+
     public void ChangeFaceState(string newState)
     {
         so.stateOfFace = newState;
+        SaveGame();
+    }
+
+    public void ChangePianoState(string newState)
+    {
+        so.stateOfPiano = newState;
+        SaveGame();
+    }
+
+    public void Reset()
+    {
+        so.stateOfLab = "entry";
+        so.stateOfMaze = "entry";
+        so.stateOfFace = "entry";
+        so.exteriorLoc = "maze";
+        so.bootColor = Color.white;
+        so.lipColor = Color.white;
+        so.shirtColor = Color.white;
+        so.gloveColor = Color.white;
+        so.skirtColor = Color.white;
+        so.skinColor = Color.white;
+        so.inventoryitems = new List<string>();
+        so.mazeitems = new List<string>();
+        so.playerName = "Self";
+        so.stateOfMeatPiano = "entry";
+
         SaveGame();
     }
 

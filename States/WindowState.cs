@@ -12,8 +12,13 @@ namespace Dialogue
         [SerializeField] private Sprite _mazeDrawing;
         [SerializeField] private Sprite _cityDrawing;
 
+        [SerializeField] private GameObject _mud;
+        [SerializeField] private GameObject _water;
+        [SerializeField] private GameObject _berry;
+
         [SerializeField] private SpriteRenderer sp_panel;
         [SerializeField] private SpriteRenderer sp_wall;
+        private List<string> windowsillitems = new List<string>();
 
 
         [SerializeField] private CaveSaveSettings _saveManager;
@@ -42,6 +47,7 @@ namespace Dialogue
         public void SetUpState()
         {
             stateOfExterior = _saveManager.so.exteriorLoc;
+            windowsillitems = _saveManager.so.windowsillitems;
 
             if (stateOfExterior == "city")
             {
@@ -62,6 +68,25 @@ namespace Dialogue
                 sp_panel.sprite = _mazeDrawing;
 
 
+            }
+
+            if (windowsillitems.Contains("mud"))
+            {
+                _mud.SetActive(true);
+            }
+            else
+            {
+                _mud.SetActive(false);
+
+            }
+            if (windowsillitems.Contains("water"))
+            {
+                _water.SetActive(true);
+
+            }
+            else
+            {
+                _water.SetActive(false);
             }
 
         }

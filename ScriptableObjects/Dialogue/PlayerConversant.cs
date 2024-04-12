@@ -64,8 +64,8 @@ namespace Dialogue
             if (currentDialogue != null)
             {
                 numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
-
             }
+
             else
             {
                 numPlayerResponses = 0;
@@ -80,7 +80,7 @@ namespace Dialogue
             }
 
 
-            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
             TriggerExitAction();
             currentNode = children[UnityEngine.Random.Range(0, children.Count())];
             TriggerEnterAction();
@@ -98,7 +98,15 @@ namespace Dialogue
 
         public bool HasNext()
         {
-            return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
+            if (currentDialogue != null)
+            {
+                return (currentDialogue.GetAllChildren(currentNode).Count() > 0);
+
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void SelectChoice(DialogueNode chosenNode)

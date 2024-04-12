@@ -58,7 +58,7 @@ namespace UI
             else
             {
                 AIText.text = playerConversant.GetText();
-                nextButton.gameObject.SetActive(playerConversant.HasNext());
+                // nextButton.gameObject.SetActive(playerConversant.HasNext());
             }
 
         }

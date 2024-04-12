@@ -2,17 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PianoState : MonoBehaviour
+namespace Dialogue
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PianoState : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] private GameObject _heartAndSoul;
+        [SerializeField] private GameObject _blankSheet;
+
+        [SerializeField] private CaveSaveSettings _saveManager;
+        private string pianoState;
+
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            _saveManager.LoadGame();
+            SetUpState();
+
+        }
+
+        public void StopPlaying()
+        {
+            // _audioSource.Stop();
+        }
+
+        // public void ChangeStateDebug(string newState)
+        // {
+        //     currentState = newState;
+        //     SetUpState();
+        // }
+
+        public void SetUpState()
+        {
+            pianoState = _saveManager.so.stateOfPiano;
+
+            if (pianoState == "heartandsoul")
+            {
+                Debug.Log("heartandsoul");
+                _heartAndSoul.SetActive(true);
+                _blankSheet.SetActive(false);
+
+            }
+
+            else
+            {
+
+
+            }
+
+        }
+
+
     }
 }
