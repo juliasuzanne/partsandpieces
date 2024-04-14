@@ -6,6 +6,9 @@ using UnityEngine.Events;
 public class ChangeColorOnThis : MonoBehaviour, IChangeColor
 {
   public string PartToApplyTo { get; set; }
+
+  [SerializeField] string name;
+  private int slotNum;
   [SerializeField] private CaveSaveSettings _saveSettings;
   public bool changer { get; set; }
   public Color newColor { get; set; }
@@ -17,6 +20,11 @@ public class ChangeColorOnThis : MonoBehaviour, IChangeColor
   {
     PartToApplyTo = whichColorToChange;
     changer = changing;
+  }
+
+  public string GetName()
+  {
+    return name;
   }
 
   public void UpdateColor(float m_red, float m_blue, float m_green)
@@ -56,6 +64,10 @@ public class ChangeColorOnThis : MonoBehaviour, IChangeColor
     }
   }
 
+  public void SetSlotPos(int num)
+  {
+    slotNum = num;
+  }
 
 
   void Update()

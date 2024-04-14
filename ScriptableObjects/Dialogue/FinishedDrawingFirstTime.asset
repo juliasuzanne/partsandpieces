@@ -735,12 +735,12 @@ MonoBehaviour:
   - 523b3278-1fc2-4275-8a27-dc62ea0233e5
   rect:
     serializedVersion: 2
-    x: 333
-    y: 135
+    x: 334
+    y: 136
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: 
+  onExitAction: AddDrawingToInventory
 --- !u!114 &8498700530007549590
 MonoBehaviour:
   m_ObjectHideFlags: 0

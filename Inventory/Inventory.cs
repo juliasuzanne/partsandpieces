@@ -80,7 +80,6 @@ public class Inventory : MonoBehaviour
       items[slotNum] = null;
       saveSettings.RemoveItemInInventory(slots[slotNum].transform.GetChild(0).GetComponent<InventoryItem>().GetName());
       Destroy(slots[slotNum].transform.GetChild(0).gameObject);
-
    }
 
 
