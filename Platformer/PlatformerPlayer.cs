@@ -24,6 +24,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
     [SerializeField]
     private SpriteRenderer _playersprite;
     private Transform _hitBox;
+    private Animator _anim;
 
 
 
@@ -31,6 +32,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
     void Start()
     {
         //assign handle of rigidbody
+        _anim = transform.GetChild(0).GetComponent<Animator>();
         _rigb = gameObject.GetComponent<Rigidbody2D>();
         _playeranim = gameObject.GetComponent<PlayerAnimation>();
         _hitBox = this.gameObject.transform.GetChild(0).transform;
@@ -54,8 +56,11 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
         PlayerMove();
         if (_grounded == true && Input.GetMouseButtonDown(0) == true)
         {
-            Attack();
+            // Attack();
+            // 
         }
+
+
         //if left click, attack
 
         //instead of transform translate, modify velocity of player
@@ -67,7 +72,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
 
     void CheckGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 0.5f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1.5f);
         Debug.Log("Grounded hit collider = " + hit);
         Debug.DrawRay(transform.position, -Vector2.up, Color.green);
 
@@ -76,55 +81,110 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
             // Debug.Log("distance " + distance);
             _grounded = true;
-            _playeranim.Jump(_grounded);
+            // _playeranim.Jump(_grounded);
 
         }
         else
         {
             _grounded = false;
-            _playeranim.Jump(_grounded);
+            // _playeranim.Jump(_grounded);
 
         }
     }
 
+    // void PlayerMove()
+    // {
+    //     float horizontal = Input.GetAxisRaw("Horizontal"); //provides inputs, raw makes binary not float
+    //     FlipPlayer();
+
+    //     Debug.Log(horizontal);
+
+    //     _rigb.velocity = new Vector2(horizontal * h_speed, _rigb.velocity.y);
+
+    //     if (Input.GetKeyDown(KeyCode.Space) && _grounded == true)
+    //     {
+    //         Debug.Log("space key down");
+    //         _rigb.velocity = new Vector2(_rigb.velocity.x * h_speed, _jumpForce);
+    //     }
+
+    //     _playeranim.Move(horizontal);
+    // }
+
+
     void PlayerMove()
     {
         float horizontal = Input.GetAxisRaw("Horizontal"); //provides inputs, raw makes binary not float
+        // float vertical = Input.GetAxisRaw("Vertical");
+        // if (moveVertical == true)
+        // {
+        //     vertical = Input.GetAxisRaw("Vertical");
+
+        // }
+        // else
+        // {
+        //     vertical = 0;
+        // }
         FlipPlayer();
 
-        Debug.Log(horizontal);
-
         _rigb.velocity = new Vector2(horizontal * h_speed, _rigb.velocity.y);
-
         if (Input.GetKeyDown(KeyCode.Space) && _grounded == true)
         {
             Debug.Log("space key down");
             _rigb.velocity = new Vector2(_rigb.velocity.x * h_speed, _jumpForce);
         }
+        _anim.SetFloat("xInput", Mathf.Abs(horizontal));
+        // _anim.SetFloat("yInput", vertical);
 
-        _playeranim.Move(horizontal);
+
     }
 
     void FlipPlayer()
     {
-        Debug.Log(_hitBox.name);
 
-        if (_rigb.velocity.x > 0.1f)
-        {
-            // _playersprite.flipX = false;
-            // Debug.Log("not flipped");
-            _hitBox.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if (_rigb.velocity.x < -0.1f)
-        {
-            // _playersprite.X = true;
-            // Debug.Log("flipped");
-            // _hitBox.eulerAngles = new Vector3(0, 0, 0);
-            _hitBox.eulerAngles = new Vector3(0, 0, 0);
 
+        if (_rigb.velocity.x > 0.01f)
+        {
+
+            _anim.SetBool("Flip", true);
+            // sp.flipX = true;
+
+            // _umbrella.GetComponent<SpriteRenderer>().flipX = true;
 
         }
+        else if (_rigb.velocity.x < -0.01f)
+        {
+            _anim.SetBool("Flip", false);
+
+            // sp.flipX = false;
+            // _umbrella.GetComponent<SpriteRenderer>().flipX = false;
+
+
+
+
+        }
+
     }
+
+    // void FlipPlayer()
+    // {
+    //     Debug.Log(_hitBox.name);
+
+    //     if (_rigb.velocity.x > 0.1f)
+    //     {
+    //         // _playersprite.flipX = false;
+    //         // Debug.Log("not flipped");
+    //         _hitBox.eulerAngles = new Vector3(0, 180, 0);
+    //     }
+    //     else if (_rigb.velocity.x < -0.1f)
+    //     {
+    //         // _playersprite.X = true;
+    //         // Debug.Log("flipped");
+    //         // _hitBox.eulerAngles = new Vector3(0, 0, 0);
+    //         _hitBox.eulerAngles = new Vector3(0, 0, 0);
+
+
+    //     }
+    // }
 
 
 
@@ -144,7 +204,7 @@ public class PlatformerPlayer : MonoBehaviour, IDamageable
 
     private void Attack()
     {
-        _playeranim.Attack();
+        // _playeranim.Attack();
 
     }
 

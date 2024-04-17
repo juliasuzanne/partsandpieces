@@ -8,6 +8,10 @@ using TMPro;
 public class CaveSaveSettings : MonoBehaviour
 {
     public SaveObject so;
+
+
+
+
     public void SaveColor(float Red, float Green, float Blue, float Alpha)
     {
         so.red = Red;
@@ -155,6 +159,11 @@ public class CaveSaveSettings : MonoBehaviour
     public void AddWish(TMP_InputField newWish)
     {
         so.wishes.Add(newWish.text);
+    }
+
+    public void ChangeTime(float newTime)
+    {
+        so.time = newTime;
     }
 
 

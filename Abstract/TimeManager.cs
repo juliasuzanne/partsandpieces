@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
-
+    [SerializeField] private CaveSaveSettings saveSettings;
     public float dayDuration = 30f;
     public Text message;
 
@@ -16,7 +16,26 @@ public class TimeManager : MonoBehaviour
     float totalTime = 0;
     float currentTime = 0;
 
+    float startTime = 0;
+
     void Start()
+    {
+        Debug.Log("before equation " + currentTime);
+        if (saveSettings.so.time != null)
+        {
+            startTime = saveSettings.so.time;
+            totalTime = startTime;
+        }
+
+        Debug.Log("after equation " + currentTime);
+    }
+
+    public void SaveTime()
+    {
+        saveSettings.ChangeTime(GetTime());
+    }
+
+    public void Setup()
     {
         month = "Fall";
         totalTime = dayDuration;
@@ -82,6 +101,13 @@ public class TimeManager : MonoBehaviour
     {
         return (currentTime * hoursInDay * minutesInHour / dayDuration) % minutesInHour;
     }
+
+    public float GetTime()
+    {
+        return currentTime;
+    }
+
+
 
     public string Clock24Hour()
     {

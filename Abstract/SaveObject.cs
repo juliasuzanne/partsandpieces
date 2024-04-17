@@ -33,6 +33,7 @@ public class SaveObject
     public Color skirtColor;
     public Color shirtColor;
     public Color lipColor;
+    public float time;
 
 
 }
