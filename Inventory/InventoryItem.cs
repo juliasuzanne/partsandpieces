@@ -56,8 +56,7 @@ public class InventoryItem : MonoBehaviour
                     }
                     else if (hit.Name == "trashbin")
                     {
-                        _inventory.RemoveItemFromInventory(slotNum);
-                        Destroy(this.gameObject);
+                        RemoveThisItem();
                     }
                     else
                     {

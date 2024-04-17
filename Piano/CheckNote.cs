@@ -107,7 +107,7 @@ public class CheckNote : MonoBehaviour
                 {
                     _saveManager.ChangeStateOfMeatPiano("failed");
                 }
-                _switchScene.LoadScene(7);
+                _switchScene.LoadScene(12);
             }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();

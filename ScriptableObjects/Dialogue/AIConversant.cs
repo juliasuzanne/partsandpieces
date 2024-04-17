@@ -7,7 +7,7 @@ namespace Dialogue
     public class AIConversant : MonoBehaviour
     {
         [SerializeField] Dialogue dialogue = null;
-        private PlayerConversant playerConversant;
+        [SerializeField] private PlayerConversant playerConversant;
         [SerializeField] private string Name;
         [SerializeField] private string objectThatTriggers;
         [SerializeField] private Sprite conversantImage;

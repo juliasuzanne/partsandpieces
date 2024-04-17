@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class CaveSaveSettings : MonoBehaviour
 {
@@ -97,6 +100,7 @@ public class CaveSaveSettings : MonoBehaviour
 
     }
 
+
     public void RemoveItemFromWindowSill(string itemName)
     {
         so.windowsillitems.Remove(itemName);
@@ -119,6 +123,16 @@ public class CaveSaveSettings : MonoBehaviour
         SaveGame();
     }
 
+    public void ChangeMazeState(string newState)
+    {
+        so.stateOfMaze = newState;
+    }
+
+    public string GetMazeState()
+    {
+        return so.stateOfMaze;
+    }
+
     public void ChangeStateOfLab(string labState)
     {
         so.stateOfLab = labState;
@@ -137,6 +151,12 @@ public class CaveSaveSettings : MonoBehaviour
         so.stateOfPiano = newState;
         SaveGame();
     }
+
+    public void AddWish(TMP_InputField newWish)
+    {
+        so.wishes.Add(newWish.text);
+    }
+
 
     public void Reset()
     {

@@ -24,14 +24,20 @@ public class ColoredPencil : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    sp = other.GetComponent<SpriteRenderer>();
     hit = other.GetComponent<IChangeColor>();
-    Debug.Log("hit" + hit);
+
+    if (hit != null)
+    {
+      sp = other.GetComponent<SpriteRenderer>();
+      Debug.Log("hit" + hit);
+
+    }
+
   }
 
   void OnTriggerExit2D(Collider2D other)
   {
-    hit = null;
+    // hit = null;
 
   }
 

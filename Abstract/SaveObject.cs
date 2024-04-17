@@ -25,6 +25,7 @@ public class SaveObject
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
     public List<string> windowsillitems = new List<string>();
+    public List<string> wishes = new List<string>();
     public string exteriorLoc;
     public Color bootColor;
     public Color gloveColor;
