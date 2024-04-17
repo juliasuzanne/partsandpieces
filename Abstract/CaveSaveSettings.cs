@@ -7,8 +7,14 @@ using TMPro;
 
 public class CaveSaveSettings : MonoBehaviour
 {
+    [SerializeField] private TimeManager timeManager;
     public SaveObject so;
 
+    void Start()
+    {
+        timeManager = FindObjectOfType<TimeManager>();
+
+    }
 
 
 
@@ -37,6 +43,7 @@ public class CaveSaveSettings : MonoBehaviour
 
     public void SaveGame()
     {
+        timeManager.SaveTime();
         SaveManager.Save(so);
     }
 
@@ -184,8 +191,9 @@ public class CaveSaveSettings : MonoBehaviour
         so.mazeitems = new List<string>();
         so.playerName = "Self";
         so.stateOfMeatPiano = "entry";
-
         SaveGame();
+        so.time = 0;
+
     }
 
 }
