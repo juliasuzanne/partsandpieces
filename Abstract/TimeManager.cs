@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using System;
+
 
 public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
     [SerializeField] private CaveSaveSettings saveSettings;
+    [SerializeField] private RawImage nightPanel;
+    [SerializeField] private Animator anim;
     public float dayDuration = 30f;
     public Text message;
-
+    public event Action onHourChanged;
     [SerializeField] private int day = 1;
     [SerializeField] private string month = "Fall";
 
@@ -49,7 +54,7 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentTime);
+        // Debug.Log(currentTime);
         day = Mathf.FloorToInt(totalTime / dayDuration);
         if (day > 29)
         {
@@ -61,13 +66,34 @@ public class TimeManager : MonoBehaviour
         currentTime = totalTime % dayDuration;
 
         message.text = Mathf.FloorToInt(GetHour()).ToString();
+        if (nightPanel != null)
+        {
+            if (Mathf.FloorToInt(GetHour()) == 22)
+            {
 
+                if (anim != null)
+                {
+                    anim.SetBool("Night", true);
+                }
+
+                nightPanel.color = new Color(255f, 255f, 255f, GetMinutes() * 0.025f);
+            }
+            if (Mathf.FloorToInt(GetHour()) == 4)
+            {
+
+                if (anim != null)
+                {
+                    anim.SetBool("Night", false);
+                }
+                nightPanel.color = new Color(255f, 255f, 255f, ((60f - GetMinutes()) * 0.025f));
+            }
+        }
 
     }
 
     public void ChangeMonth()
     {
-        int chancesToGetWeirdWeather = Random.Range(0, 100);
+        int chancesToGetWeirdWeather = UnityEngine.Random.Range(0, 100);
         if (chancesToGetWeirdWeather == 99)
         {
             Debug.Log("GET WEIRD WEATHER");
