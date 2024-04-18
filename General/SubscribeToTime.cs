@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System;
+
 
 
 
 public class SubscribeToTime : MonoBehaviour
 {
     [SerializeField] private TimeManager timeManager;
-    [SerializeField] private int hour;
+    private int hour;
     [SerializeField] private int targetHour;
     [SerializeField] private UnityEvent onTrigger;
 
@@ -17,14 +19,14 @@ public class SubscribeToTime : MonoBehaviour
     void Start()
     {
         timeManager = FindObjectOfType<TimeManager>();
-
+        timeManager.onHourChanged += UpdateHour;
+        UpdateHour();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeManager.onHourChanged += UpdateHour;
 
     }
 

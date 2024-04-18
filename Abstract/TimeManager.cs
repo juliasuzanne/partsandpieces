@@ -13,6 +13,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private RawImage nightPanel;
     [SerializeField] private Animator anim;
     public float dayDuration = 30f;
+
     public Text message;
     public event Action onHourChanged;
     [SerializeField] private int day = 1;
@@ -35,6 +36,9 @@ public class TimeManager : MonoBehaviour
         }
 
         Debug.Log("after equation " + currentTime);
+
+
+
     }
 
     public void SaveTime()
@@ -48,6 +52,7 @@ public class TimeManager : MonoBehaviour
         currentTime = 0;
         totalTime = dayDuration;
         saveSettings.so.time = 0;
+
 
     }
 
@@ -65,7 +70,16 @@ public class TimeManager : MonoBehaviour
 
         currentTime = totalTime % dayDuration;
 
+        if (Mathf.FloorToInt(GetMinutes()) == 0)
+        {
+            onHourChanged();
+            Debug.Log("HOUR CHANGED");
+        }
+
+
         message.text = Mathf.FloorToInt(GetHour()).ToString();
+
+
         if (nightPanel != null)
         {
             if (Mathf.FloorToInt(GetHour()) == 22)
