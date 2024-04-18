@@ -20,8 +20,8 @@ public class AnalogClock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hourHand.rotation = Quaternion.Euler(0, 0, -tm.GetHour() * hoursToDegrees);
-        minuteHand.rotation = Quaternion.Euler(0, 0, -tm.GetMinutes() * minutesToDegrees);
+        hourHand.rotation = Quaternion.Euler(0, 0, (-tm.GetHour() * hoursToDegrees) + 111);
+        minuteHand.rotation = Quaternion.Euler(0, 0, (-tm.GetMinutes() * minutesToDegrees) + 280);
 
     }
 }

@@ -47,6 +47,13 @@ public class CaveSaveSettings : MonoBehaviour
         SaveManager.Save(so);
     }
 
+    public void SaveGameNoTime()
+    {
+        timeManager.Setup();
+        so.time = 0f;
+        SaveManager.Save(so);
+    }
+
     public void LoadGame()
     {
         so = SaveManager.Load();
@@ -191,9 +198,8 @@ public class CaveSaveSettings : MonoBehaviour
         so.mazeitems = new List<string>();
         so.playerName = "Self";
         so.stateOfMeatPiano = "entry";
-        SaveGame();
-        so.time = 0;
-
+        SaveGameNoTime();
+        LoadGame();
     }
 
 }

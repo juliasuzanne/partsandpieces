@@ -18,6 +18,8 @@ public class TimeManager : MonoBehaviour
 
     float startTime = 0;
 
+
+
     void Start()
     {
         Debug.Log("before equation " + currentTime);
@@ -38,12 +40,16 @@ public class TimeManager : MonoBehaviour
     public void Setup()
     {
         month = "Fall";
+        currentTime = 0;
         totalTime = dayDuration;
+        saveSettings.so.time = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(currentTime);
         day = Mathf.FloorToInt(totalTime / dayDuration);
         if (day > 29)
         {
@@ -53,14 +59,9 @@ public class TimeManager : MonoBehaviour
         totalTime += Time.deltaTime;
 
         currentTime = totalTime % dayDuration;
-        if (Mathf.FloorToInt(GetHour()) == 1)
-        {
-            message.text = "It's 1 something!";
-        }
-        else
-        {
-            message.text = "Nothing doing ...";
-        }
+
+        message.text = Mathf.FloorToInt(GetHour()).ToString();
+
 
     }
 
