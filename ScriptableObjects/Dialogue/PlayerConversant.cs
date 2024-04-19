@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 using System.Linq;
 using System;
 
@@ -17,6 +19,7 @@ namespace Dialogue
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
+        [SerializeField] private UnityEvent quitTrigger;
         [SerializeField] private string Name;
         [SerializeField] private GameObject DialogueUi;
         public event Action onConversationUpdated;
@@ -173,6 +176,8 @@ namespace Dialogue
 
         public void Quit()
         {
+            quitTrigger.Invoke();
+            Debug.Log("Quit");
             currentDialogue = null;
             TriggerExitAction();
             currentConversant = null;

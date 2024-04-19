@@ -82,7 +82,7 @@ public class TimeManager : MonoBehaviour
 
         if (nightPanel != null)
         {
-            if (Mathf.FloorToInt(GetHour()) == 22)
+            if (Mathf.FloorToInt(GetHour()) == 17)
             {
 
                 if (anim != null)
@@ -92,7 +92,7 @@ public class TimeManager : MonoBehaviour
 
                 nightPanel.color = new Color(255f, 255f, 255f, GetMinutes() * 0.025f);
             }
-            if (Mathf.FloorToInt(GetHour()) == 4)
+            if (Mathf.FloorToInt(GetHour()) == 18)
             {
 
                 if (anim != null)

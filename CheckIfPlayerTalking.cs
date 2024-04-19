@@ -17,6 +17,7 @@ namespace Dialogue
 
 
 
+
         void Start()
         {
             playerConversant.onConversationUpdated += UpdateAnim;
@@ -36,7 +37,7 @@ namespace Dialogue
             }
             else
             {
-                onPlayerChoosing.Invoke();
+                // onPlayerChoosing.Invoke();
             }
         }
     }
