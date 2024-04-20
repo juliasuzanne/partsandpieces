@@ -34,6 +34,7 @@ public class SaveObject
     public Color shirtColor;
     public Color lipColor;
     public float time;
+    public bool[] floorboards;
 
 
 }

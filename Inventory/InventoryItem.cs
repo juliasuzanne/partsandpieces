@@ -11,6 +11,7 @@ public class InventoryItem : MonoBehaviour
     [SerializeField] UnityEvent onReturnToInventory;
 
     [SerializeField] bool consumable = false;
+
     private int slotNum;
     private Vector2 mousePosition;
     private float offsetX, offsetY;
@@ -34,6 +35,10 @@ public class InventoryItem : MonoBehaviour
             description_object = this.transform.GetChild(0).gameObject;
             description_text = this.transform.GetChild(0).GetComponent<Text>();
         }
+        if (description_object != null)
+        {
+            description_object.SetActive(false);
+        }
 
     }
 
@@ -41,6 +46,10 @@ public class InventoryItem : MonoBehaviour
     {
         if (this.gameObject == _inventoryController.GetCurrentItem())
         {
+            if (description_object != null)
+            {
+                description_object.SetActive(true);
+            }
             if (currentTransform != null)
             {
                 Debug.Log("current Transform" + currentTransform.name);
@@ -77,7 +86,10 @@ public class InventoryItem : MonoBehaviour
                             }
 
                         }
+
                         ReturnToInventory();
+
+
 
 
 
@@ -88,7 +100,7 @@ public class InventoryItem : MonoBehaviour
             {
                 if (description_object != null)
                 {
-                    description_object.SetActive(true);
+                    description_object.SetActive(false);
                 }
 
             }
@@ -103,6 +115,7 @@ public class InventoryItem : MonoBehaviour
     public void RemoveThisItem()
     {
         _inventory.RemoveItemFromInventory(slotNum);
+        _inventoryController.MakeItemNull();
         Destroy(this.gameObject);
     }
 

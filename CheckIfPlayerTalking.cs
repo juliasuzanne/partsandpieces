@@ -14,6 +14,8 @@ namespace Dialogue
         // Start is called before the first frame update
         [SerializeField] UnityEvent onPlayerChoosing;
         [SerializeField] UnityEvent onPlayerListening;
+        [SerializeField] UnityEvent onDefault;
+
 
 
 
@@ -37,7 +39,7 @@ namespace Dialogue
             }
             else
             {
-                // onPlayerChoosing.Invoke();
+                onDefault.Invoke();
             }
         }
     }
