@@ -189,6 +189,7 @@ public class CaveSaveSettings : MonoBehaviour
 
     public void MakeExtraArms()
     {
+        so.stateOfLab = "growArms";
         so.hasExtraArms = true;
         ChangeWindowDrawingState("hasArms");
 

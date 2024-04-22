@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 namespace Dialogue
 {
@@ -12,6 +14,8 @@ namespace Dialogue
         [SerializeField] private string currentState;
         [SerializeField] private GameObject _mazeSetup;
         [SerializeField] private GameObject _citySetup;
+        [SerializeField] private Dialogue dialogueGrowArms;
+        [SerializeField] private UnityEvent onChangeArms;
 
         [SerializeField] private CaveSaveSettings _saveManager;
         private string stateOfExterior;
@@ -50,6 +54,15 @@ namespace Dialogue
             else if (currentState == "falling")
             {
                 _conversant.ChangeDialogue(dialogueFalling);
+                // playSongPanel.SetActive(true);
+                // _heartAudioSource.clip = _heartAndSoulClip;
+                // _heartAudioSource.Play();
+            }
+            else if (currentState == "growArms")
+            {
+
+                _conversant.ChangeDialogue(dialogueGrowArms);
+                onChangeArms.Invoke();
                 // playSongPanel.SetActive(true);
                 // _heartAudioSource.clip = _heartAndSoulClip;
                 // _heartAudioSource.Play();

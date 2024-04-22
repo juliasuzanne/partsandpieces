@@ -11,6 +11,7 @@ public class InventoryItem : MonoBehaviour
     [SerializeField] UnityEvent onReturnToInventory;
 
     [SerializeField] bool consumable = false;
+    [SerializeField] private GameObject prefabPickup;
 
     private int slotNum;
     private Vector2 mousePosition;
@@ -69,6 +70,10 @@ public class InventoryItem : MonoBehaviour
                     {
                         RemoveThisItem();
                     }
+                    else if (hit.Name == "storage drawer")
+                    {
+                        StoreThisItem();
+                    }
                     else
                     {
                         ItemTrigger[] triggers = currentTransform.GetComponentsInChildren<ItemTrigger>();
@@ -123,6 +128,14 @@ public class InventoryItem : MonoBehaviour
         _inventory.RemoveItemFromInventory(slotNum);
         _inventoryController.MakeItemNull();
         Destroy(this.gameObject);
+    }
+    public void StoreThisItem()
+    {
+        Instantiate(prefabPickup, new Vector2(Random.Range(-1f, 3f), Random.Range(-1f, 3f)), Quaternion.identity);
+        _inventory.RemoveItemFromInventory(slotNum);
+        _inventoryController.MakeItemNull();
+        Destroy(this.gameObject);
+
     }
 
     public void SetSlotPos(int num)
