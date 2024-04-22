@@ -187,6 +187,24 @@ public class CaveSaveSettings : MonoBehaviour
         so.totalTime = newTime;
     }
 
+    public void MakeExtraArms()
+    {
+        so.hasExtraArms = true;
+        ChangeWindowDrawingState("hasArms");
+
+    }
+
+    public void RemoveExtraArms()
+    {
+        so.hasExtraArms = false;
+        ChangeWindowDrawingState("noArms");
+    }
+
+    public void ChangeWindowDrawingState(string newState)
+    {
+        so.stateOfWindowDrawing = newState;
+    }
+
 
 
     public void Reset()

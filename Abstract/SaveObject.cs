@@ -25,6 +25,7 @@ public class SaveObject
     public string stateOfMaze;
     public string stateOfFace;
     public string stateOfPiano;
+    public string stateOfWindowDrawing;
     public List<string> floorboardState = new List<string>();
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
