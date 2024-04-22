@@ -23,10 +23,12 @@ public class StartConditions : MonoBehaviour
 
     [SerializeField] Inventory inventory;
     [SerializeField] UnityEvent onTrigger;
+    [SerializeField] private GameObject extraArms;
 
     // Start is called before the first frame update
     void Awake()
     {
+
         _saveSettings.LoadGame();
         _savedObjects = _saveSettings.so.inventoryitems;
         onTrigger.Invoke();
@@ -38,8 +40,6 @@ public class StartConditions : MonoBehaviour
             }
 
         }
-
-
 
         foreach (SpriteRenderer sprite in bootColor)
         {
@@ -81,5 +81,22 @@ public class StartConditions : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void Start()
+    {
+        if (_saveSettings.so.hasExtraArms == true)
+        {
+            if (extraArms != null)
+                extraArms.SetActive(true);
+
+        }
+        else if (_saveSettings.so.hasExtraArms == false)
+        {
+            if (extraArms != null)
+
+                extraArms.SetActive(false);
+
+        }
     }
 }

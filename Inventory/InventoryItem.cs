@@ -21,6 +21,8 @@ public class InventoryItem : MonoBehaviour
     private UIManager _uiManager;
     private INameable hit;
     [SerializeField] string Name;
+    [SerializeField] bool returning = true;
+
     GameObject description_object;
     private Transform currentTransform;
     Text description_text;
@@ -87,7 +89,11 @@ public class InventoryItem : MonoBehaviour
 
                         }
 
-                        ReturnToInventory();
+                        if (returning == true)
+                        {
+                            ReturnToInventory();
+
+                        }
 
 
 

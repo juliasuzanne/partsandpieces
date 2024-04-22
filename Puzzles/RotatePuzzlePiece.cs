@@ -24,6 +24,10 @@ public class RotatePuzzlePiece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("x"))
+        {
+            currentPiece = null;
+        }
 
         if (currentPiece != null)
         {

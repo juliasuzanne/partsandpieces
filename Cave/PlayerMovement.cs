@@ -13,8 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded = false;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sp;
-    [SerializeField] Transform frontTransform;
-    [SerializeField] Transform sideTransform;
+
+    // [SerializeField] Transform frontTransform;
+    // [SerializeField] Transform sideTransform;
 
     private Animator _animator;
     // [SerializeField] private GameObject _umbrella;

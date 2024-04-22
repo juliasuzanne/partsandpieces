@@ -17,7 +17,7 @@ public class SaveObject
     public string currentQuest;
     public float time;
     public float totalTime;
-
+    public bool hasExtraArms;
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;

@@ -192,6 +192,7 @@ public class CaveSaveSettings : MonoBehaviour
     public void Reset()
     {
         so.stateOfLab = "entry";
+        so.hasExtraArms = false;
         so.stateOfMaze = "entry";
         so.stateOfFace = "entry";
         so.exteriorLoc = "maze";

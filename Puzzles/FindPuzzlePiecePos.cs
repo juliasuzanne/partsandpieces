@@ -11,8 +11,12 @@ public class FindPuzzlePiecePos : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("IDENTIFIER: " + puzzleIdentifier);
+        Debug.Log("ROTATION: " + Mathf.Abs(this.transform.parent.rotation.z));
         if (hit != null)
         {
+            Debug.Log("PUZZLE ID: " + hit.puzzleID);
+
             CheckPlacement();
         }
     }
