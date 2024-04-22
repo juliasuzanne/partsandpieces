@@ -31,6 +31,11 @@ public class SwitchScene : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void LoadSceneNoSave(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
     public void LoadSceneWithDelay(int scene)
     {
         StartCoroutine(LoadSceneCoRoutine(scene));

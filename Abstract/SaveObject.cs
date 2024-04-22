@@ -15,6 +15,7 @@ public class SaveObject
     public string rockName;
     public string sadThing;
     public string currentQuest;
+    public float time;
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;
@@ -22,6 +23,7 @@ public class SaveObject
     public string stateOfMaze;
     public string stateOfFace;
     public string stateOfPiano;
+    public List<string> floorboardState = new List<string>();
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
     public List<string> windowsillitems = new List<string>();
@@ -33,8 +35,7 @@ public class SaveObject
     public Color skirtColor;
     public Color shirtColor;
     public Color lipColor;
-    public float time;
-    public bool[] floorboards;
+
 
 
 }

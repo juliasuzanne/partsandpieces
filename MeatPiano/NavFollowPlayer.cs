@@ -8,6 +8,7 @@ public class NavFollowPlayer : MonoBehaviour
     private Vector3 target;
     [SerializeField] private Transform followPlayer;
     [SerializeField] private Animator _anim;
+    [SerializeField] private AudioSource audioSource;
     private Transform thisAgent;
     NavMeshAgent agent;
     private float xInput, yInput, xControl, yControl;
@@ -27,6 +28,27 @@ public class NavFollowPlayer : MonoBehaviour
     {
         SetTargetPosition();
         SetAgentPosition();
+
+        if (audioSource != null)
+        {
+            float distance = Vector3.Distance(thisAgent.position, followPlayer.transform.position);
+            float newPitch = (distance / 10);
+            if (newPitch > 3)
+            {
+                newPitch = 3f;
+            }
+            else if (newPitch < 0.1)
+            {
+                newPitch = 0.1f;
+            }
+            else
+            {
+                newPitch = (distance / 10);
+            }
+            audioSource.pitch = newPitch;
+
+        }
+
         if (_anim != null)
         {
             xInput = followPlayer.position.x - thisAgent.position.x;
@@ -56,6 +78,11 @@ public class NavFollowPlayer : MonoBehaviour
                 xControl = 0;
                 yControl = yInput;
 
+            }
+            else
+            {
+                yControl = 0;
+                xControl = 0;
             }
 
 

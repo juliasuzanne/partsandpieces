@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class GoodOrBad : MonoBehaviour
 {
     [SerializeField] private Text text;
     private int count;
+    [SerializeField] private UnityEvent good;
+    [SerializeField] private UnityEvent bad;
+
     private int goodLimit;
     private int badLimit;
     // Start is called before the first frame update
@@ -28,6 +32,7 @@ public class GoodOrBad : MonoBehaviour
         if (count == goodLimit)
         {
             text.text = "good!";
+            good.Invoke();
         }
 
     }
@@ -39,6 +44,7 @@ public class GoodOrBad : MonoBehaviour
         if (count == badLimit)
         {
             text.text = "bad!";
+            bad.Invoke();
         }
 
     }

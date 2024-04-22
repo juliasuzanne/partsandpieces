@@ -1,0 +1,366 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8039708043322578107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1630b4a5-d29d-40b1-829b-4cb6648b2d19
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Huh?
+  children:
+  - 01549169-48ee-48b7-b532-80d20a31cd4e
+  rect:
+    serializedVersion: 2
+    x: -25
+    y: 242
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7471567238462842156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d0d53728-c15f-4fdd-bcec-19a9cb40ab30
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Not one?
+  children:
+  - 3edd1687-485c-49b1-adcd-1c744a65edaf
+  rect:
+    serializedVersion: 2
+    x: 595
+    y: 162
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5177877289274206334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e608a2bf-3b55-4170-8dcb-557510aaafdd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can I see the book?
+  children:
+  - 60be442a-4de3-43d0-88e8-3a7a2b971a5d
+  rect:
+    serializedVersion: 2
+    x: 1013
+    y: 219
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4828489467680928149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 118b5548-aa45-416b-a5f9-9a23ca3d10c2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Okay, nice chatting with you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 993
+    y: 313
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-340640361819802681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ac7ebcb1-01ad-4356-8e5a-a17446af3ee6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, my life is bummer enough already.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1031
+    y: -4
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: BabyInStair
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4715428725853262989}
+  - {fileID: 1363230905540402130}
+  - {fileID: 7350158220519512322}
+  - {fileID: 4217210864903895049}
+  - {fileID: -7471567238462842156}
+  - {fileID: 4524443016692871800}
+  - {fileID: 4953367502106231199}
+  - {fileID: 7370682663798640942}
+  - {fileID: -340640361819802681}
+  - {fileID: -5177877289274206334}
+  - {fileID: -4828489467680928149}
+  - {fileID: 5461039022102946657}
+  - {fileID: 4843969669011183608}
+  - {fileID: -8039708043322578107}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1363230905540402130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8a2051e5-8298-49af-9cf9-74e6e398fca1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'm a friend
+  children:
+  - 3217e7ee-64c2-4df8-888b-9330218d6c45
+  rect:
+    serializedVersion: 2
+    x: 201
+    y: 54
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4217210864903895049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 424e3137-dc12-490c-b465-f49c411bffb7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: That's very sad.
+  children:
+  - 8c49dff7-98dd-4693-80ed-8769b8b5ddb2
+  rect:
+    serializedVersion: 2
+    x: 603
+    y: 26
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4524443016692871800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3edd1687-485c-49b1-adcd-1c744a65edaf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No, only the ants in the stairs and this book that I have.
+  children:
+  - e608a2bf-3b55-4170-8dcb-557510aaafdd
+  - 118b5548-aa45-416b-a5f9-9a23ca3d10c2
+  rect:
+    serializedVersion: 2
+    x: 795
+    y: 162
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4715428725853262989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 01549169-48ee-48b7-b532-80d20a31cd4e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hello, who is there?
+  children:
+  - 8a2051e5-8298-49af-9cf9-74e6e398fca1
+  - 20296d17-83be-4182-9efc-593d4ff728b8
+  rect:
+    serializedVersion: 2
+    x: 1
+    y: 54
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4843969669011183608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 20296d17-83be-4182-9efc-593d4ff728b8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: It's me.
+  children:
+  - 1630b4a5-d29d-40b1-829b-4cb6648b2d19
+  rect:
+    serializedVersion: 2
+    x: 254
+    y: 197
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4953367502106231199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8c49dff7-98dd-4693-80ed-8769b8b5ddb2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Do you want to read about my life?
+  children:
+  - 72955acc-8052-4fa1-a537-f877542aeb72
+  - ac7ebcb1-01ad-4356-8e5a-a17446af3ee6
+  rect:
+    serializedVersion: 2
+    x: 803
+    y: 26
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5461039022102946657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 60be442a-4de3-43d0-88e8-3a7a2b971a5d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1213
+    y: 219
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: book
+--- !u!114 &7350158220519512322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3217e7ee-64c2-4df8-888b-9330218d6c45
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I don't have any friends. I have been here my whole life.
+  children:
+  - 424e3137-dc12-490c-b465-f49c411bffb7
+  - d0d53728-c15f-4fdd-bcec-19a9cb40ab30
+  rect:
+    serializedVersion: 2
+    x: 401
+    y: 54
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7370682663798640942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 72955acc-8052-4fa1-a537-f877542aeb72
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes, please.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1017
+    y: 108
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: book

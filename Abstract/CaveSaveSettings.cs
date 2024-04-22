@@ -47,6 +47,7 @@ public class CaveSaveSettings : MonoBehaviour
         SaveManager.Save(so);
     }
 
+
     public void SaveGameNoTime()
     {
         timeManager.Setup();
@@ -195,6 +196,7 @@ public class CaveSaveSettings : MonoBehaviour
         so.skinColor = Color.white;
         so.inventoryitems = new List<string>();
         so.windowsillitems = new List<string>();
+        so.floorboardState = new List<string>();
         so.mazeitems = new List<string>();
         so.playerName = "Self";
         so.stateOfMeatPiano = "entry";
