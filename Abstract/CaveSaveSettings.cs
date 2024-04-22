@@ -52,6 +52,7 @@ public class CaveSaveSettings : MonoBehaviour
     {
         timeManager.Setup();
         so.time = 0f;
+        so.totalTime = 0f;
         SaveManager.Save(so);
     }
 
@@ -180,6 +181,12 @@ public class CaveSaveSettings : MonoBehaviour
     {
         so.time = newTime;
     }
+
+    public void ChangeTotalTime(float newTime)
+    {
+        so.totalTime = newTime;
+    }
+
 
 
     public void Reset()

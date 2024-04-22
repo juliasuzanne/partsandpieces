@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrowingPlant : MonoBehaviour, IGrowable
 {
+
     [SerializeField] private CaveSaveSettings saveSettings;
     [SerializeField] private TimeManager tm;
 
@@ -12,18 +13,50 @@ public class GrowingPlant : MonoBehaviour, IGrowable
     public Sprite[] sprites { get; set; }
     public float growingTime { get; set; }
     public bool growing { get; set; }
+    public int id { get; set; }
+
 
     [SerializeField] private float j_startingTime;
-    [SerializeField] public SpriteRenderer j_sp;
-    [SerializeField] public Sprite[] j_sprites;
-    [SerializeField] public float j_growingTime = 0;
-    public bool j_growing = false;
+    [SerializeField] private SpriteRenderer j_sp;
+    [SerializeField] private Sprite[] j_sprites;
+    [SerializeField] private int j_id;
+    [SerializeField] private float j_growingTime = 0;
+    private bool j_growing = false;
 
+    public int GetID()
+    {
+        return j_id;
+    }
+    public float GetStartTime()
+    {
+        return j_startingTime;
+    }
 
+    public void ChangeStartTime(float newTime)
+    {
+        j_startingTime = newTime;
+    }
+    public float GetGrowTime()
+    {
+        return j_growingTime;
+    }
+
+    public void ChangeGrowTime(float newTime)
+    {
+        j_growingTime = newTime;
+    }
+    public void ChangeGrowing()
+    {
+        j_growing = true;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        id = j_id;
+        j_startingTime = 0;
+        j_growing = true;
+        j_growingTime = 0;
         j_sp = GetComponent<SpriteRenderer>();
         startingTime = j_startingTime;
         sp = j_sp;
@@ -34,7 +67,7 @@ public class GrowingPlant : MonoBehaviour, IGrowable
         tm = FindObjectOfType<TimeManager>();
         if (growing == true)
         {
-            growingTime = saveSettings.so.time - startingTime;
+            growingTime = tm.GetTime() - startingTime;
 
         }
     }
@@ -44,7 +77,8 @@ public class GrowingPlant : MonoBehaviour, IGrowable
     {
         if (j_growing == true)
         {
-            j_growingTime = j_growingTime += Time.deltaTime;
+            j_growingTime = j_growingTime - j_startingTime;
+            j_growingTime = j_growingTime += tm.GetTotalTime();
             if (j_growingTime > 40)
             {
                 if (j_sprites[1] != null)
@@ -70,9 +104,9 @@ public class GrowingPlant : MonoBehaviour, IGrowable
 
     public void SetStartingTime()
     {
-        j_startingTime = tm.GetTime();
-        BoxCollider2D starter = GetComponent<BoxCollider2D>();
-        starter.enabled = false;
+        j_startingTime = tm.GetTotalTime();
+        // BoxCollider2D starter = GetComponent<BoxCollider2D>();
+        // starter.enabled = false;
         j_growing = true;
 
     }

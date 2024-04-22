@@ -9,7 +9,7 @@ public interface IGrowable
     public Sprite[] sprites { get; set; }
     public float growingTime { get; set; }
     public bool growing { get; set; }
-
+    public int id { get; set; }
     public void SetStartingTime();
 
 }

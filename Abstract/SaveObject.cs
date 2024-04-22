@@ -16,6 +16,8 @@ public class SaveObject
     public string sadThing;
     public string currentQuest;
     public float time;
+    public float totalTime;
+
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;
@@ -26,6 +28,7 @@ public class SaveObject
     public List<string> floorboardState = new List<string>();
     public List<string> inventoryitems = new List<string>();
     public List<string> mazeitems = new List<string>();
+    public float[] mazePlantStartTime;
     public List<string> windowsillitems = new List<string>();
     public List<string> wishes = new List<string>();
     public string exteriorLoc;

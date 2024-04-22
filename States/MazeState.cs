@@ -14,12 +14,33 @@ public class MazeState : MonoBehaviour
     [SerializeField] private CaveSaveSettings saveManager;
     [SerializeField] private UnityEvent onPorch;
     [SerializeField] private UnityEvent onPiano;
+    [SerializeField] private GrowingPlant[] poppy;
+    [SerializeField] private float[] startingTime;
+    [SerializeField] private float[] localStartingTime;
+
+
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        // if (saveManager.so.mazePlantStartTime == null)
+        // {
+        //     saveManager.so.mazePlantStartTime = localStartingTime;
+
+        // }
+        // else
+        // {
+        //     int count = 0;
+        //     foreach (float newTime in saveManager.so.mazePlantStartTime)
+        //     {
+        //         poppy[count].ChangeStartTime(newTime);
+        //         count = count + 1;
+
+        //     }
+        // }
+
 
         currentStateOfMaze = saveManager.so.stateOfMaze;
 
@@ -40,6 +61,17 @@ public class MazeState : MonoBehaviour
 
 
 
+    }
+
+    public void ChangeLocalStartingTime(GrowingPlant updatedPlant)
+    {
+        localStartingTime[updatedPlant.GetID()] = updatedPlant.GetStartTime();
+        SaveStartingTime();
+    }
+
+    public void SaveStartingTime()
+    {
+        saveManager.so.mazePlantStartTime = localStartingTime;
     }
 
 

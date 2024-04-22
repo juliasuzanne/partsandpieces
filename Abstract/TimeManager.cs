@@ -28,6 +28,7 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
+        saveSettings = FindObjectOfType<CaveSaveSettings>();
         Debug.Log("before equation " + currentTime);
         if (saveSettings.so.time != null)
         {
@@ -44,6 +45,11 @@ public class TimeManager : MonoBehaviour
     public void SaveTime()
     {
         saveSettings.ChangeTime(GetTime());
+    }
+
+    public void SaveTotalTime()
+    {
+        saveSettings.ChangeTotalTime(totalTime);
     }
 
     public void Setup()
@@ -67,6 +73,7 @@ public class TimeManager : MonoBehaviour
             ChangeMonth();
         }
         totalTime += Time.deltaTime;
+
 
         currentTime = totalTime % dayDuration;
 
@@ -147,6 +154,12 @@ public class TimeManager : MonoBehaviour
     {
         return currentTime;
     }
+
+    public float GetTotalTime()
+    {
+        return totalTime;
+    }
+
 
 
 
