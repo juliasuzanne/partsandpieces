@@ -22,6 +22,7 @@ public class InventoryItem : MonoBehaviour
     private UIManager _uiManager;
     private INameable hit;
     [SerializeField] string Name;
+    private StorageSlots storage;
     [SerializeField] bool returning = true;
 
     GameObject description_object;
@@ -30,7 +31,13 @@ public class InventoryItem : MonoBehaviour
 
     void Start()
     {
+        if (FindObjectOfType<StorageSlots>() != null)
+        {
+            storage = FindObjectOfType<StorageSlots>();
+
+        }
         _uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+
         _inventoryController = GameObject.Find("InventoryController").GetComponent<InventoryController>();
         _inventory = GameObject.Find("Player").transform.GetComponent<Inventory>();
         if (this.transform.GetChild(0) != null)
@@ -131,7 +138,8 @@ public class InventoryItem : MonoBehaviour
     }
     public void StoreThisItem()
     {
-        Instantiate(prefabPickup, new Vector2(Random.Range(-1f, 3f), Random.Range(-1f, 3f)), Quaternion.identity);
+        // Instantiate(prefabPickup, new Vector2(Random.Range(-1f, 3f), Random.Range(-1f, 3f)), Quaternion.identity);
+        storage.AddItemToStorage(prefabPickup);
         _inventory.RemoveItemFromInventory(slotNum);
         _inventoryController.MakeItemNull();
         Destroy(this.gameObject);

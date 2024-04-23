@@ -5,9 +5,12 @@ using UnityEngine;
 public class FallingItem : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
+    [SerializeField] private StorageSlots storageManager;
     [SerializeField] private Inventory _inventory;
+    [SerializeField] private int slotPos;
     [SerializeField] private CaveSaveSettings _saveSettings;
     [SerializeField] private PlayerSpeech _playerSpeech;
+    [SerializeField] private bool storage = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,10 @@ public class FallingItem : MonoBehaviour
         _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
         _saveSettings = FindObjectOfType<CaveSaveSettings>();
         _playerSpeech = FindObjectOfType<PlayerSpeech>();
+        if (FindObjectOfType<StorageSlots>() != null)
+        {
+            storageManager = FindObjectOfType<StorageSlots>();
+        }
 
     }
 
@@ -24,6 +31,13 @@ public class FallingItem : MonoBehaviour
         if (!_saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
         {
             _inventory.AddItemToInventory(prefab);
+            if (storage == true)
+            {
+                _saveSettings.so.storageitems.Remove(prefab.GetComponent<InventoryItem>().GetName());
+                storageManager.RemoveItemFromSlot(this.gameObject);
+
+            }
+
             Destroy(this.gameObject);
         }
         else
@@ -32,6 +46,27 @@ public class FallingItem : MonoBehaviour
         }
 
     }
+
+    public string GetName()
+    {
+        return prefab.GetComponent<InventoryItem>().GetName();
+    }
+
+    public void SetStorage(bool state)
+    {
+        storage = state;
+    }
+
+    public void SetSlotNum(int slotId)
+    {
+        slotPos = slotId;
+    }
+
+    public int GetSlotNum()
+    {
+        return slotPos;
+    }
+
 
     public void GiveItem()
     {

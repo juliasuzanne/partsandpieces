@@ -107,6 +107,16 @@ public class CaveSaveSettings : MonoBehaviour
         LoadGame();
         return so.stateOfMeatPiano;
     }
+    public void AddItemToStorage(string newItem)
+    {
+        so.storageitems.Add(newItem);
+    }
+
+
+    public void RemoveItemFromStorage(string itemName)
+    {
+        so.storageitems.Remove(itemName);
+    }
 
     public void AddItemToWindowSill(string newItem)
     {
@@ -119,7 +129,6 @@ public class CaveSaveSettings : MonoBehaviour
         }
 
     }
-
 
     public void RemoveItemFromWindowSill(string itemName)
     {
@@ -221,6 +230,7 @@ public class CaveSaveSettings : MonoBehaviour
         so.gloveColor = Color.white;
         so.skirtColor = Color.white;
         so.skinColor = Color.white;
+        so.storageitems = new List<string>();
         so.inventoryitems = new List<string>();
         so.windowsillitems = new List<string>();
         so.floorboardState = new List<string>();
