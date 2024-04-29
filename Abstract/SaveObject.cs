@@ -8,6 +8,7 @@ using UnityEngine;
 public class SaveObject
 {
     public bool hasBaby;
+    public bool cutOffExtraArms;
     public bool hasTicket;
     public int coinCount;
     public int enteredCoinsCount;

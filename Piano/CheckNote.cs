@@ -189,11 +189,14 @@ public class CheckNote : MonoBehaviour
         if (wasPlayed == true)
         {
             successfulNotes++;
+            hit.SuccessNote();
         }
         else if (wasPlayed == false)
         {
             hit.AfterExit();
+            hit.WrongNote();
             successfulNotes--;
+
         }
         wasPlayed = false;
         currentKey = null;

@@ -12,6 +12,10 @@ public class StartConditions : MonoBehaviour
     [SerializeField] List<SpriteRenderer> skirtColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> skinColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> gloveColor = new List<SpriteRenderer>();
+    [SerializeField] List<Image> gloveImageColor = new List<Image>();
+    [SerializeField] List<Image> shirtImageColor = new List<Image>();
+
+
     [SerializeField] List<SpriteRenderer> lipColor = new List<SpriteRenderer>();
     private List<string> _savedObjects = new List<string>();
     private int count;
@@ -23,6 +27,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] private GameObject baby;
     [SerializeField] private GameObject ticketButton;
     [SerializeField] private GameObject torso;
+    [SerializeField] private GameObject cutOffArms;
 
 
     // Start is called before the first frame update
@@ -44,6 +49,16 @@ public class StartConditions : MonoBehaviour
         foreach (SpriteRenderer sprite in bootColor)
         {
             sprite.color = _saveSettings.so.bootColor;
+        }
+
+        foreach (Image image in gloveImageColor)
+        {
+            image.color = _saveSettings.so.gloveColor;
+        }
+
+        foreach (Image image in shirtImageColor)
+        {
+            image.color = _saveSettings.so.shirtColor;
         }
 
         foreach (SpriteRenderer sprite in lipColor)
@@ -89,6 +104,12 @@ public class StartConditions : MonoBehaviour
         {
             baby.SetActive(_saveSettings.so.hasBaby);
         }
+
+        if (cutOffArms != null)
+        {
+            cutOffArms.SetActive(_saveSettings.so.cutOffExtraArms);
+        }
+
         if (ticketButton != null)
         {
             ticketButton.SetActive(_saveSettings.so.hasTicket);

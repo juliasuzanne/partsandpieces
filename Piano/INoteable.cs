@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface INoteable
 {
+
   public string GetNote();
   public void SuccessNote();
   public void WrongNote();

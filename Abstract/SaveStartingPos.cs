@@ -8,12 +8,12 @@ public class SaveStartingPos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startingPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-
+        startingPos = new Vector3(transform.position.x, transform.position.y, 0f);
     }
 
     public void ReturnToStartingPos()
     {
-        transform.position = new Vector3(startingPos.x, startingPos.y, startingPos.z);
+        transform.position = new Vector3(startingPos.x, startingPos.y, 0f);
+
     }
 }

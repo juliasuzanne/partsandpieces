@@ -231,10 +231,48 @@ public class CaveSaveSettings : MonoBehaviour
 
     }
 
+    public void CutOffArms()
+    {
+        so.cutOffExtraArms = true;
+    }
+
+    public void UseExtraCutOffArms()
+    {
+        so.cutOffExtraArms = false;
+
+    }
+
+    public void GetBaby()
+    {
+        so.hasBaby = true;
+
+    }
+
+    public void GetTorso()
+    {
+        so.hasTorso = true;
+    }
+
+    public void GetTicket()
+    {
+        so.hasTicket = true;
+    }
+
+    public void LoseBaby()
+    {
+        so.hasBaby = false;
+    }
+
+    public void UseTorso()
+    {
+        so.hasTorso = false;
+    }
+
 
     public void Reset()
     {
         so.rain = false;
+        so.cutOffExtraArms = false;
         so.hasTorso = false;
         so.hasBaby = false;
         so.hasTicket = false;

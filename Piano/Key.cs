@@ -8,13 +8,13 @@ public class Key : MonoBehaviour, INoteable
     [SerializeField] private bool _endingNote;
     [SerializeField] private AudioClip _note;
     [SerializeField] private float yOffset;
-
-
+    private SpriteRenderer sp;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        sp = GetComponent<SpriteRenderer>();
     }
 
 
@@ -33,11 +33,14 @@ public class Key : MonoBehaviour, INoteable
     }
     public void SuccessNote()
     {
+        sp.color = Color.green;
         Debug.Log("SUCCESS");
     }
     public void WrongNote()
     {
         Debug.Log("WRONG");
+        sp.color = Color.red;
+
 
     }
 

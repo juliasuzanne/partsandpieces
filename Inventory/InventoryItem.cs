@@ -9,6 +9,7 @@ public class InventoryItem : MonoBehaviour
 
 {
     [SerializeField] UnityEvent onReturnToInventory;
+    [SerializeField] private bool removeable;
 
     [SerializeField] bool consumable = false;
     [SerializeField] private GameObject prefabPickup;
@@ -140,9 +141,13 @@ public class InventoryItem : MonoBehaviour
 
     public void RemoveThisItem()
     {
-        _inventory.RemoveItemFromInventory(slotNum);
-        _inventoryController.MakeItemNull();
-        Destroy(this.gameObject);
+        if (removeable == true)
+        {
+            _inventory.RemoveItemFromInventory(slotNum);
+            _inventoryController.MakeItemNull();
+            Destroy(this.gameObject);
+        }
+
     }
     public void StoreThisItem()
     {

@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider != null)
         {
             grounded = true;
-            Debug.Log(hit.collider.name);
+            // Debug.Log(hit.collider.name);
 
         }
         else
