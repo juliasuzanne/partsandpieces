@@ -1,0 +1,592 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8989298434792710809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8694a01f-eac1-401d-801f-b69897dd3422
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Thank you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1431
+    y: 2
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8469615642934286264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 49ac7ae2-66a1-4ee1-baf6-01ddd981bdb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I don't have one.
+  children:
+  - 06ce57fd-2d61-4f3e-be47-35e5d80b0d78
+  rect:
+    serializedVersion: 2
+    x: 369
+    y: 113
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8346267697421556006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 06ce57fd-2d61-4f3e-be47-35e5d80b0d78
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Best be on your way, then.
+  children:
+  - fc267958-d979-4c5c-b74a-778b7f4013da
+  - 9e5a1b64-e10b-4c3f-ac70-90fc504fa681
+  rect:
+    serializedVersion: 2
+    x: 651
+    y: 73
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8332288294107078224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f42d3438-28fc-4f41-bf23-c096de0734ff
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: It pays the bills. I get to travel. Always on schedule. Yes, I like it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1096
+    y: 372
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7161043897092477280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 82e1b773-9236-4643-990e-68a77aac8310
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Do you like your job?
+  children:
+  - f42d3438-28fc-4f41-bf23-c096de0734ff
+  rect:
+    serializedVersion: 2
+    x: 896
+    y: 372
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4873131561175991638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 31efda75-5014-4fea-9bea-9ec861d30081
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Nope. Just me and the train in this business.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1961
+    y: 291
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4232898969234631433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 70dbfa6c-bb9e-4e36-a71a-68196bb89331
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: All the way up to 12 coins now. Yes, ma'am.
+  children:
+  - e135d1b4-cf77-40da-a687-ed62b5dda1c3
+  - 3e258a6a-6810-4973-92d1-00c967e97bbd
+  - b852fd96-dd57-4806-aa93-3842e62a1f67
+  rect:
+    serializedVersion: 2
+    x: 1132
+    y: 131
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3499026173661128210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 46b909bd-dd30-4296-a2dd-628120536933
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How do I get one?
+  children:
+  - f5dbc40c-6f74-40b1-a56a-bbf6352955d5
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: 254
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2325459972622367413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 190aebca-03ab-445b-9e0e-a34d6b157e47
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Thank you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 895
+    y: 267
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2117525353206229250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fc267958-d979-4c5c-b74a-778b7f4013da
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How often do the trains come?
+  children:
+  - bee22946-0c40-48be-934a-5c324407a2f4
+  rect:
+    serializedVersion: 2
+    x: 982
+    y: -3
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-864686757156255830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 415b7589-068e-45b0-b1bc-c8972827f647
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Are you hiring?
+  children:
+  - 31efda75-5014-4fea-9bea-9ec861d30081
+  rect:
+    serializedVersion: 2
+    x: 1761
+    y: 291
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: TrainStation
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5011808165432525253}
+  - {fileID: -8469615642934286264}
+  - {fileID: -3499026173661128210}
+  - {fileID: -8346267697421556006}
+  - {fileID: 5085759067566637773}
+  - {fileID: 414564180360932318}
+  - {fileID: -2325459972622367413}
+  - {fileID: -7161043897092477280}
+  - {fileID: -8332288294107078224}
+  - {fileID: -4232898969234631433}
+  - {fileID: 1673502570954245693}
+  - {fileID: 6618244005052889642}
+  - {fileID: 6866972373845053311}
+  - {fileID: 1404314988466636509}
+  - {fileID: 98723220260479931}
+  - {fileID: -864686757156255830}
+  - {fileID: -4873131561175991638}
+  - {fileID: 7400945018710222115}
+  - {fileID: -2117525353206229250}
+  - {fileID: 2882445617242461902}
+  - {fileID: 3903094726670785753}
+  - {fileID: -8989298434792710809}
+  - {fileID: 2100119315173156155}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &98723220260479931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 83b3cff7-b2b0-49f9-aa76-19e17bf170ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Thank you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1761
+    y: 175
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &414564180360932318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5da2bb3e-dd80-416b-a6d0-edd978dcfd02
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How much does it cost?
+  children:
+  - 70dbfa6c-bb9e-4e36-a71a-68196bb89331
+  rect:
+    serializedVersion: 2
+    x: 898
+    y: 166
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1404314988466636509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 77e80ab0-9ae2-4189-b307-d02fd0ce7d89
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Please, I need to get out of here.
+  children:
+  - 6ab93d72-21f1-41e1-9c0d-5a8f760fc683
+  rect:
+    serializedVersion: 2
+    x: 1755
+    y: 64
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1673502570954245693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e135d1b4-cf77-40da-a687-ed62b5dda1c3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I don't have that.
+  children:
+  - 7e1a4d4d-6bb4-4862-8ab3-93df752cffd9
+  rect:
+    serializedVersion: 2
+    x: 1356
+    y: 60
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2100119315173156155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b852fd96-dd57-4806-aa93-3842e62a1f67
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How often do the trains come?
+  children:
+  - bee22946-0c40-48be-934a-5c324407a2f4
+  rect:
+    serializedVersion: 2
+    x: 1357
+    y: 272
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2882445617242461902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 9e5a1b64-e10b-4c3f-ac70-90fc504fa681
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Bye.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 851
+    y: 73
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3903094726670785753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bee22946-0c40-48be-934a-5c324407a2f4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 5AM, 11 AM, 3 o'clock, 6 o'clock, and 9 o'clock.
+  children:
+  - 8694a01f-eac1-401d-801f-b69897dd3422
+  rect:
+    serializedVersion: 2
+    x: 1231
+    y: 2
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5011808165432525253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 443b1ead-42cc-4320-b600-4330dd9cdc9e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Ticket?
+  children:
+  - 49ac7ae2-66a1-4ee1-baf6-01ddd981bdb6
+  - 46b909bd-dd30-4296-a2dd-628120536933
+  rect:
+    serializedVersion: 2
+    x: 98
+    y: 178
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5085759067566637773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f5dbc40c-6f74-40b1-a56a-bbf6352955d5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: There's a machine right by the stop.
+  children:
+  - 5da2bb3e-dd80-416b-a6d0-edd978dcfd02
+  - 190aebca-03ab-445b-9e0e-a34d6b157e47
+  - 82e1b773-9236-4643-990e-68a77aac8310
+  rect:
+    serializedVersion: 2
+    x: 650
+    y: 203
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6618244005052889642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3e258a6a-6810-4973-92d1-00c967e97bbd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Thank you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1354
+    y: 171
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6866972373845053311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7e1a4d4d-6bb4-4862-8ab3-93df752cffd9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Well, I'm sure you can find a way to get some, if you really want a ride
+    on the train.
+  children:
+  - 77e80ab0-9ae2-4189-b307-d02fd0ce7d89
+  - 83b3cff7-b2b0-49f9-aa76-19e17bf170ea
+  - 415b7589-068e-45b0-b1bc-c8972827f647
+  rect:
+    serializedVersion: 2
+    x: 1554
+    y: 64
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7400945018710222115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 6ab93d72-21f1-41e1-9c0d-5a8f760fc683
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What do I look like? This is a business.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1955
+    y: 64
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

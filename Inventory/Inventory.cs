@@ -58,6 +58,19 @@ public class Inventory : MonoBehaviour
       }
    }
 
+   public int CheckEmptySlots()
+   {
+      int numSlotsEmpty = 0;
+      foreach (bool full in isFull)
+      {
+         if (full == false)
+         {
+            numSlotsEmpty = numSlotsEmpty + 1;
+         }
+      }
+      return numSlotsEmpty;
+   }
+
    public void CheckItemLocation()
    {
       count = 0;
@@ -76,11 +89,20 @@ public class Inventory : MonoBehaviour
 
    public void RemoveItemFromInventory(int slotNum)
    {
-      isFull[slotNum] = false;
-      items[slotNum] = null;
-      saveSettings.RemoveItemInInventory(slots[slotNum].transform.GetChild(0).GetComponent<InventoryItem>().GetName());
-      Destroy(slots[slotNum].transform.GetChild(0).gameObject);
-      saveSettings.SaveGame();
+      if (slotNum == 100)
+      {
+         saveSettings.so.hasBaby = false;
+
+      }
+      else
+      {
+         isFull[slotNum] = false;
+         items[slotNum] = null;
+         saveSettings.RemoveItemInInventory(slots[slotNum].transform.GetChild(0).GetComponent<InventoryItem>().GetName());
+         Destroy(slots[slotNum].transform.GetChild(0).gameObject);
+         saveSettings.SaveGame();
+      }
+
    }
 
 

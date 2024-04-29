@@ -12,6 +12,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private CaveSaveSettings saveSettings;
     [SerializeField] private RawImage nightPanel;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject rainObject;
     public float dayDuration = 30f;
 
     public Text message;
@@ -62,6 +63,33 @@ public class TimeManager : MonoBehaviour
 
     }
 
+    public void CheckRain()
+    {
+
+        int rain = UnityEngine.Random.Range(0, 100);
+        if (rain > 80)
+        {
+            saveSettings.so.rain = true;
+            saveSettings.SaveGame();
+            if (rainObject != null)
+            {
+                rainObject.SetActive(true);
+
+
+            }
+        }
+        else
+        {
+            saveSettings.so.rain = false;
+            saveSettings.SaveGame();
+
+            if (rainObject != null)
+            {
+                rainObject.SetActive(false);
+
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -89,8 +117,9 @@ public class TimeManager : MonoBehaviour
 
         if (nightPanel != null)
         {
-            if (Mathf.FloorToInt(GetHour()) == 17)
+            if (Mathf.FloorToInt(GetHour()) == 20)
             {
+                CheckRain();
 
                 if (anim != null)
                 {
@@ -99,7 +128,7 @@ public class TimeManager : MonoBehaviour
 
                 nightPanel.color = new Color(255f, 255f, 255f, GetMinutes() * 0.025f);
             }
-            if (Mathf.FloorToInt(GetHour()) == 18)
+            if (Mathf.FloorToInt(GetHour()) == 26)
             {
 
                 if (anim != null)

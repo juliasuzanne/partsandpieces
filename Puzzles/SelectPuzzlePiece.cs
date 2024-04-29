@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SelectPuzzlePiece : MonoBehaviour
 {
-    private RotatePuzzlePiece puzzleScript;
+    [SerializeField] private RotatePuzzlePiece puzzleScript;
 
 
     void Start()
     {
-        puzzleScript = transform.parent.GetComponent<RotatePuzzlePiece>();
+        // puzzleScript = transform.parent.GetComponent<RotatePuzzlePiece>();
     }
 
 

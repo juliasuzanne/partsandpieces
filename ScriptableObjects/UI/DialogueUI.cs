@@ -53,12 +53,17 @@ namespace UI
             if (playerConversant.IsChoosing())
             {
                 BuildChoiceList();
+                nextButton.gameObject.SetActive(false);
+
             }
             else
             {
                 AIText.text = playerConversant.GetText();
                 nextButton.gameObject.SetActive(playerConversant.HasNext());
             }
+            quitButton.gameObject.SetActive(!playerConversant.HasNext());
+
+
 
         }
 

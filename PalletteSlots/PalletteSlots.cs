@@ -24,10 +24,9 @@ public class PalletteSlots : MonoBehaviour
 
         foreach (GameObject item in prefabs)
         {
-
             if (item.GetComponent<ChangeColorOnThis>().GetName() != null)
             {
-                if (palletteItems.Contains(item.GetComponent<ChangeColorOnThis>().GetName()))
+                if (palletteItems.Contains(item.GetComponent<ChangeColorOnThis>().name))
                 {
                     AddItemToPallette(item);
                 }

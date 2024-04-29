@@ -42,7 +42,11 @@ public class FallingItem : MonoBehaviour
         }
         else
         {
-            _playerSpeech.PlayerTalkingForSeconds("I already have one of those.");
+            if (_playerSpeech != null)
+            {
+                _playerSpeech.PlayerTalkingForSeconds("I already have one of those.");
+
+            }
         }
 
     }

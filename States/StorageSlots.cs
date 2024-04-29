@@ -55,8 +55,7 @@ public class StorageSlots : MonoBehaviour
                 }
                 else
                 {
-                    _dialog.SetActive(true);
-                    _playerText.text = "I already have one of those";
+                    StartCoroutine("PlayerSays");
                     break;
                 }
                 if (!saveSettings.so.storageitems.Contains(prefab.GetComponent<ChangeColorOnThis>().name))
@@ -79,6 +78,16 @@ public class StorageSlots : MonoBehaviour
             }
             count = count + 1;
         }
+    }
+
+    IEnumerator PlayerSays()
+    {
+        _dialog.SetActive(true);
+        _playerText.text = "I already have one of those";
+        yield return new WaitForSeconds(3f);
+        _dialog.SetActive(false);
+
+
     }
     // else
     // {

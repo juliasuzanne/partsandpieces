@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class SaveObject
 {
+    public bool hasBaby;
+    public bool hasTicket;
+    public int coinCount;
+    public int enteredCoinsCount;
+    public bool hasTorso;
     public string playerName;
     public int playerLevel;
     public float red;
@@ -16,11 +21,13 @@ public class SaveObject
     public string sadThing;
     public string currentQuest;
     public float time;
+    public bool rain;
     public float totalTime;
     public bool hasExtraArms;
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;
+    public string stateOfExteriorScene;
     public string stateOfLab;
     public string stateOfMaze;
     public string stateOfFace;

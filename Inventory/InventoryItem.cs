@@ -49,6 +49,14 @@ public class InventoryItem : MonoBehaviour
         {
             description_object.SetActive(false);
         }
+        if (Name == "baby")
+        {
+            SetSlotPos(100);
+        }
+        if (Name == "torso")
+        {
+            SetSlotPos(110);
+        }
 
     }
 
@@ -138,11 +146,15 @@ public class InventoryItem : MonoBehaviour
     }
     public void StoreThisItem()
     {
+        if (prefabPickup != null)
+        {
+            storage.AddItemToStorage(prefabPickup);
+            _inventory.RemoveItemFromInventory(slotNum);
+            _inventoryController.MakeItemNull();
+            Destroy(this);
+        }
+
         // Instantiate(prefabPickup, new Vector2(Random.Range(-1f, 3f), Random.Range(-1f, 3f)), Quaternion.identity);
-        storage.AddItemToStorage(prefabPickup);
-        _inventory.RemoveItemFromInventory(slotNum);
-        _inventoryController.MakeItemNull();
-        Destroy(this.gameObject);
 
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SongCreator : MonoBehaviour
 {
+    [SerializeField] private CheckNote _checkNote;
     [SerializeField] private GameObject[] notes;
     [SerializeField] private int playerNum = 0;
     private int[] currentSongArray;
@@ -19,6 +20,7 @@ public class SongCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _checkNote = FindObjectOfType<CheckNote>();
         playerNum = 0;
         _saveSettings.LoadGame();
         if (_saveSettings.GetSong().Length > 1)
@@ -69,11 +71,13 @@ public class SongCreator : MonoBehaviour
 
     public void SwitchToPlayerSong()
     {
+        _checkNote.ChangeSuccessfulNotes();
         currentSongArray = playerOrder;
     }
 
     public void SwitchToHeartAndSoul()
     {
+        _checkNote.ChangeSuccessfulNotes();
         currentSongArray = order;
     }
 

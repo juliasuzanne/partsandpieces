@@ -175,6 +175,12 @@ public class CaveSaveSettings : MonoBehaviour
         SaveGame();
     }
 
+    public void ChangeExteriorSceneState(string newState)
+    {
+        so.stateOfExteriorScene = newState;
+        SaveGame();
+    }
+
     public void ChangePianoState(string newState)
     {
         so.stateOfPiano = newState;
@@ -215,15 +221,31 @@ public class CaveSaveSettings : MonoBehaviour
         so.stateOfWindowDrawing = newState;
     }
 
+    public void RemoveCoin()
+    {
+        so.coinCount = so.coinCount - 1;
+    }
+    public void AddCoin()
+    {
+        so.coinCount = so.coinCount + 1;
+
+    }
 
 
     public void Reset()
     {
+        so.rain = false;
+        so.hasTorso = false;
+        so.hasBaby = false;
+        so.hasTicket = false;
+        so.coinCount = 0;
+        so.enteredCoinsCount = 0;
         so.stateOfLab = "entry";
         so.hasExtraArms = false;
         so.stateOfMaze = "entry";
         so.stateOfFace = "entry";
         so.exteriorLoc = "maze";
+        so.stateOfExteriorScene = "entry";
         so.bootColor = Color.white;
         so.lipColor = Color.white;
         so.shirtColor = Color.white;

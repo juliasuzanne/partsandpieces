@@ -23,7 +23,7 @@ public class FindPuzzlePiecePos : MonoBehaviour
 
     void CheckPlacement()
     {
-        if (hit.puzzleID == puzzleIdentifier && Mathf.Abs(this.transform.parent.rotation.z) < 0.1f)
+        if (hit.puzzleID == puzzleIdentifier && (this.transform.parent.rotation.z) < 0.33f && (this.transform.parent.rotation.z) > 0.26f)
         {
             placedPiece.SetActive(true);
             checkPuzzle.AdjustTrue(puzzleIdentifier);
