@@ -101,13 +101,13 @@ public class CheckNote : MonoBehaviour
                 isSongPlaying = false;
                 if (successfulNotes > totalNotes - 3)
                 {
-                    _saveManager.ChangeStateOfMeatPiano("successful" + currentSong);
+                    _saveManager.ChangeMazeState("successpiano");
                 }
                 else
                 {
-                    _saveManager.ChangeStateOfMeatPiano("failed");
+                    _saveManager.ChangeMazeState("failpiano");
                 }
-                _switchScene.LoadScene(12);
+                _switchScene.LoadScene(7);
             }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();

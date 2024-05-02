@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DrinkTheFountainWater : MonoBehaviour
 {
     [SerializeField] private RawImage drinkFilterPanel;
+    [SerializeField] private CaveSaveSettings _saveManager;
     private TimeManager tm;
     private float timePassed = 0;
     private float timeDown = 5;
@@ -15,11 +16,16 @@ public class DrinkTheFountainWater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (_saveManager == null)
+        {
+            _saveManager = FindObjectOfType<CaveSaveSettings>();
 
+        }
     }
 
     public void SetDrinkTrue()
     {
+        _saveManager.YesWaterFilter();
         drink = true;
         timePassed = 0;
         timeDown = 5f;
@@ -41,8 +47,9 @@ public class DrinkTheFountainWater : MonoBehaviour
         timeDown -= Time.deltaTime / 5;
         Debug.Log("TIME DOWN" + timeDown);
         drinkFilterPanel.color = new Color(255f, 255f, 255f, timeDown);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         drink = false;
+        _saveManager.NoWaterFilter();
     }
 
 

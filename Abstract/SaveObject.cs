@@ -7,8 +7,11 @@ using UnityEngine;
 
 public class SaveObject
 {
+    public bool drankFountainWater;
     public bool hasBaby;
     public bool cutOffExtraArms;
+    public bool connectedTorso;
+    public bool connectedLegs;
     public bool hasTicket;
     public int coinCount;
     public int enteredCoinsCount;
@@ -29,6 +32,7 @@ public class SaveObject
     public string sandwichpath1;
     public string stateOfMeatPiano;
     public string stateOfExteriorScene;
+    public List<string> stateOfExteriorSceneList = new List<string>();
     public string stateOfLab;
     public string stateOfMaze;
     public string stateOfFace;

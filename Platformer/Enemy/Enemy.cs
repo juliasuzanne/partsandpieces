@@ -120,7 +120,7 @@ public abstract class Enemy : MonoBehaviour
         if (distance > 5)
         {
             isHit = false;
-            animator.SetBool("InCombat", false);
+            // animator.SetBool("InCombat", false);
         }
 
 

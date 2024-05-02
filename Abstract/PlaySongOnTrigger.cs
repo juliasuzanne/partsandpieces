@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlaySongOnTrigger : MonoBehaviour
 {
     [SerializeField] private AudioSource _defaultAudio;
+
+    public void PlaySound()
+    {
+        _defaultAudio.Play();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
 

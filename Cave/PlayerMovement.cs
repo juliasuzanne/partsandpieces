@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float _moveSpeed = 2f;
+    [SerializeField] private Vector2 cornerPos;
+    [SerializeField] private bool moveToCorner;
     [SerializeField] private bool moveVertical;
     [SerializeField] private bool moveable = true;
     [SerializeField]
@@ -24,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     float xInput, yInput;
 
+
+    public bool GetMoveable()
+    {
+        return moveable;
+    }
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -33,12 +40,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // xInput = Input.GetAxis("Horizontal");
-        // yInput = Input.GetAxis("Vertical");
-        if (moveable == true)
+
+        if (moveable == true && moveToCorner == false)
         {
+            xInput = Input.GetAxis("Horizontal");
+            yInput = Input.GetAxis("Vertical");
             PlatformerMove();
             PlayerJump();
+        }
+        else if (moveToCorner == true)
+        {
+            MoveToPosCornerLab();
         }
 
     }
@@ -94,6 +106,29 @@ public class PlayerMovement : MonoBehaviour
     public void ChangePos(Transform transformPos)
     {
         transform.position = new Vector2(transformPos.position.x, transformPos.position.y);
+    }
+
+    public void MoveToPosCornerLab()
+    {
+        var step = _moveSpeed * Time.deltaTime; // calculate distance to move
+        _animator.SetFloat("xInput", 1);
+        _animator.SetBool("Flip", false);
+        transform.position = Vector2.MoveTowards(transform.position, cornerPos, step);
+        if (transform.position.x == cornerPos.x)
+        {
+            moveToCorner = false;
+            _animator.SetFloat("xInput", 0);
+            _animator.SetBool("Flip", true);
+            moveable = true;
+
+
+        }
+    }
+
+    public void MoveToCornerTrue()
+    {
+        moveToCorner = true;
+
     }
 
     public void MoveableFalse()

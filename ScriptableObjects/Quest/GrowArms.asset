@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8284424038203445261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c4ddd670-b4da-46e8-8fad-b68c0afb47a4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hmph, must be nice.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 539
+    y: 1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6529586354522000553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0917f4c3-0f0a-4c60-9f16-5f016582a769
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: You really can't tell?
+  children:
+  - a105ec35-c367-4230-afbd-da89bb651b4a
+  rect:
+    serializedVersion: 2
+    x: 311
+    y: 117
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: GrowArms
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1693161507352956317}
+  - {fileID: 6390651749880113670}
+  - {fileID: -6529586354522000553}
+  - {fileID: 6270349967896536143}
+  - {fileID: -8284424038203445261}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1693161507352956317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 90a6be28-e96d-4341-8396-4277385b0364
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Something looks different about you.
+  children:
+  - a1a0ebdd-530b-4ecb-b9b0-13630e27b878
+  - 0917f4c3-0f0a-4c60-9f16-5f016582a769
+  rect:
+    serializedVersion: 2
+    x: 108
+    y: 10
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6270349967896536143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a105ec35-c367-4230-afbd-da89bb651b4a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Don't speak to me that way!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 512
+    y: 117
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6390651749880113670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a1a0ebdd-530b-4ecb-b9b0-13630e27b878
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I've grown.
+  children:
+  - c4ddd670-b4da-46e8-8fad-b68c0afb47a4
+  rect:
+    serializedVersion: 2
+    x: 339
+    y: 1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

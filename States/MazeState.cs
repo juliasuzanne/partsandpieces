@@ -8,12 +8,16 @@ public class MazeState : MonoBehaviour
 {
     [SerializeField] private Transform pianoPos;
     [SerializeField] private Transform porchPos;
+    [SerializeField] private GameObject torso;
 
     private string currentStateOfMaze;
     [SerializeField] private Transform player;
     [SerializeField] private CaveSaveSettings saveManager;
     [SerializeField] private UnityEvent onPorch;
     [SerializeField] private UnityEvent onPiano;
+    [SerializeField] private UnityEvent onPianoSuccess;
+    [SerializeField] private UnityEvent onPianoSuccessFirst;
+
     [SerializeField] private GrowingPlant[] poppy;
     [SerializeField] private float[] startingTime;
     [SerializeField] private float[] localStartingTime;
@@ -51,13 +55,29 @@ public class MazeState : MonoBehaviour
 
         }
 
-        else if (currentStateOfMaze == "returnfrompiano")
+        else if (currentStateOfMaze == "piano")
+        {
+            // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
+            onPianoSuccess.Invoke();
+
+
+        }
+
+        else if (currentStateOfMaze == "failpiano")
         {
             // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
             onPiano.Invoke();
 
 
         }
+
+        else if (currentStateOfMaze == "successpiano")
+        {
+            onPianoSuccessFirst.Invoke();
+            saveManager.ChangeMazeState("piano");
+        }
+
+
 
 
 

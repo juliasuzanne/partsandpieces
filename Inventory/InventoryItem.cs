@@ -50,14 +50,23 @@ public class InventoryItem : MonoBehaviour
         {
             description_object.SetActive(false);
         }
-        if (Name == "baby")
-        {
-            SetSlotPos(100);
-        }
         if (Name == "torso")
         {
             SetSlotPos(110);
         }
+        if (Name == "baby")
+        {
+            SetSlotPos(100);
+        }
+        if (Name == "cut off arms")
+        {
+            SetSlotPos(120);
+        }
+        if (Name == "ticket")
+        {
+            SetSlotPos(130);
+        }
+
 
     }
 
@@ -104,7 +113,11 @@ public class InventoryItem : MonoBehaviour
                             if (consumable == true && trigger.CheckMatch(Name) == true)
                             {
                                 Debug.Log("CheckMatch is true");
-                                _inventory.RemoveItemFromInventory(slotNum);
+                                if (slotNum < 90)
+                                {
+                                    _inventory.RemoveItemFromInventory(slotNum);
+
+                                }
                                 Destroy(this.gameObject);
                             }
 
@@ -115,9 +128,6 @@ public class InventoryItem : MonoBehaviour
                             ReturnToInventory();
 
                         }
-
-
-
 
 
                     }

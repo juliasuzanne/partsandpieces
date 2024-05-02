@@ -192,6 +192,15 @@ public class CaveSaveSettings : MonoBehaviour
         so.wishes.Add(newWish.text);
     }
 
+    public void AddItemToExteriorScene(string newItem)
+    {
+        so.stateOfExteriorSceneList.Add(newItem);
+    }
+    public void RemoveItemFromExteriorScene(string newItem)
+    {
+        so.stateOfExteriorSceneList.Remove(newItem);
+    }
+
     public void ChangeTime(float newTime)
     {
         so.time = newTime;
@@ -239,12 +248,25 @@ public class CaveSaveSettings : MonoBehaviour
     public void UseExtraCutOffArms()
     {
         so.cutOffExtraArms = false;
+        so.connectedTorso = true;
 
     }
 
     public void GetBaby()
     {
         so.hasBaby = true;
+
+    }
+
+    public void YesWaterFilter()
+    {
+        so.drankFountainWater = true;
+
+    }
+
+    public void NoWaterFilter()
+    {
+        so.drankFountainWater = false;
 
     }
 
@@ -266,12 +288,16 @@ public class CaveSaveSettings : MonoBehaviour
     public void UseTorso()
     {
         so.hasTorso = false;
+        so.connectedTorso = true;
     }
+
 
 
     public void Reset()
     {
         so.rain = false;
+        so.connectedTorso = false;
+        so.connectedLegs = false;
         so.cutOffExtraArms = false;
         so.hasTorso = false;
         so.hasBaby = false;
@@ -284,6 +310,8 @@ public class CaveSaveSettings : MonoBehaviour
         so.stateOfFace = "entry";
         so.exteriorLoc = "maze";
         so.stateOfExteriorScene = "entry";
+        so.stateOfExteriorSceneList = new List<string>();
+        so.stateOfWindowDrawing = "entry";
         so.bootColor = Color.white;
         so.lipColor = Color.white;
         so.shirtColor = Color.white;

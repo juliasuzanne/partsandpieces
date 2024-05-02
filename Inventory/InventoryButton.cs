@@ -33,13 +33,13 @@ public class InventoryButton : MonoBehaviour
   public void HidingInventory()
   {
     _sp.sprite = CloseInventory;
-    playerMovement.MoveableFalse();
+    // playerMovement.MoveableFalse();
 
   }
   public void ShowingInventory()
   {
     _sp.sprite = OpenInventory;
-    playerMovement.MoveableTrue();
+    // playerMovement.MoveableTrue();
 
 
   }

@@ -11,13 +11,14 @@ public class Inventory : MonoBehaviour
    public GameObject[] items; // 
    private int count = 0;
    [SerializeField] private Text _playerText;
-   private GameObject _dialog;
+   [SerializeField] private GameObject _dialog;
    [SerializeField] private CaveSaveSettings saveSettings;
 
 
    void Start()
    {
-      _dialog = transform.GetChild(0).GetChild(0).gameObject;
+      if (_dialog == null)
+      { _dialog = transform.GetChild(0).GetChild(0).gameObject; }
       _dialog.SetActive(false);
 
    }
@@ -92,6 +93,21 @@ public class Inventory : MonoBehaviour
       if (slotNum == 100)
       {
          saveSettings.so.hasBaby = false;
+
+      }
+      else if (slotNum == 110)
+      {
+         saveSettings.so.hasTorso = false;
+
+      }
+      else if (slotNum == 120)
+      {
+         saveSettings.so.cutOffExtraArms = false;
+
+      }
+      else if (slotNum == 130)
+      {
+         saveSettings.so.hasTicket = false;
 
       }
       else

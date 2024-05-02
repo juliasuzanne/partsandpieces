@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaySoundOnMovement : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private PlayerMovement playerMovement;
     private bool walking;
     // Start is called before the first frame update
     void Start()
@@ -49,7 +50,10 @@ public class PlaySoundOnMovement : MonoBehaviour
 
     public void StartWalking()
     {
-        _audioSource.Play();
+        if (playerMovement.GetMoveable())
+        {
+            _audioSource.Play();
+        }
     }
 
     public void StopWalking()

@@ -111,8 +111,11 @@ public class TimeManager : MonoBehaviour
             Debug.Log("HOUR CHANGED");
         }
 
+        if (message != null)
+        {
+            message.text = Mathf.FloorToInt(GetHour()).ToString();
 
-        message.text = Mathf.FloorToInt(GetHour()).ToString();
+        }
 
 
         if (nightPanel != null)

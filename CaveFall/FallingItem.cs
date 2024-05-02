@@ -17,7 +17,10 @@ public class FallingItem : MonoBehaviour
     {
 
         _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
-        _saveSettings = FindObjectOfType<CaveSaveSettings>();
+        if (_saveSettings == null)
+        {
+            _saveSettings = FindObjectOfType<CaveSaveSettings>();
+        }
         _playerSpeech = FindObjectOfType<PlayerSpeech>();
         if (FindObjectOfType<StorageSlots>() != null)
         {
