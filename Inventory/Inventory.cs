@@ -32,11 +32,11 @@ public class Inventory : MonoBehaviour
          if (full == false)
          {
             Vector3 slotPos = new Vector3(slots[count].transform.position.x, slots[count].transform.position.y, 79f);
-            Debug.Log(count + " is FALSE");
+            // Debug.Log(count + " is FALSE");
             items[count] = prefab;
             isFull[count] = true;
-            Instantiate(prefab, slotPos, Quaternion.identity, slots[count].transform);
-            prefab.GetComponent<InventoryItem>().SetSlotPos(count);
+            GameObject newItem = Instantiate(prefab, slotPos, Quaternion.identity, slots[count].transform);
+            newItem.GetComponent<InventoryItem>().SetSlotPos(count);
             if (!saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
             {
                saveSettings.SaveItemInInventory(prefab.GetComponent<InventoryItem>().GetName());
@@ -52,6 +52,7 @@ public class Inventory : MonoBehaviour
                _dialog.SetActive(true);
                _playerText.text = "I guess I need to get rid of something";
                StartCoroutine("PlayerSays");
+
                break;
             }
          }

@@ -18,7 +18,7 @@ public class UnearthSpawner : MonoBehaviour
     void OnMouseDown()
     {
         _sp.sprite = _clickedSprite;
-        posToSpawn = new Vector2(transform.position.x + 2f, transform.position.y);
+        posToSpawn = new Vector2(transform.position.x, transform.position.y);
         GameObject newItem = Instantiate(_items[Random.Range(0, _items.Length)], posToSpawn, Quaternion.identity);
 
     }

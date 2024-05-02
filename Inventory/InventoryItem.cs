@@ -14,7 +14,7 @@ public class InventoryItem : MonoBehaviour
     [SerializeField] bool consumable = false;
     [SerializeField] private GameObject prefabPickup;
 
-    private int slotNum;
+    [SerializeField] private int slotNum;
     private Vector2 mousePosition;
     private float offsetX, offsetY;
     public static bool mouseButtonReleased = false;
@@ -155,7 +155,7 @@ public class InventoryItem : MonoBehaviour
         {
             _inventory.RemoveItemFromInventory(slotNum);
             _inventoryController.MakeItemNull();
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
         }
 
     }

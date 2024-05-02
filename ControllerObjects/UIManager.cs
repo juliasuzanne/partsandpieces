@@ -6,8 +6,10 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject _pausePanel;
+    [SerializeField] private float scaleChange;
     [SerializeField]
     private GameObject _inventoryPanel;
+    private Animator _inventoryButtonAnimator;
     private PlayerMovement _playerMovement;
     [SerializeField]
     private GameObject _inventoryButtonObject;
@@ -16,7 +18,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-
+        _inventoryButtonAnimator = _inventoryButtonObject.GetComponent<Animator>();
         _playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
 
     }
@@ -45,6 +47,12 @@ public class UIManager : MonoBehaviour
         _pausePanel.SetActive(false);
         // _playerMovement.MoveableTrue();
     }
+
+    public void PulseInventoryButton()
+    {
+        _inventoryButtonAnimator.SetTrigger("Pulse");
+    }
+
 
 
     public void HideInventory()

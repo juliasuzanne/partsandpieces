@@ -21,6 +21,9 @@ public class MazeState : MonoBehaviour
     [SerializeField] private GrowingPlant[] poppy;
     [SerializeField] private float[] startingTime;
     [SerializeField] private float[] localStartingTime;
+    [SerializeField] private GameObject thisPerson;
+    private List<string> sceneList = new List<string>();
+
 
 
 
@@ -45,6 +48,7 @@ public class MazeState : MonoBehaviour
         //     }
         // }
 
+        sceneList = saveManager.so.stateOfExteriorSceneList;
 
         currentStateOfMaze = saveManager.so.stateOfMaze;
 
@@ -78,6 +82,7 @@ public class MazeState : MonoBehaviour
         }
 
 
+        thisPerson.SetActive(sceneList.Contains("thisPerson"));
 
 
 

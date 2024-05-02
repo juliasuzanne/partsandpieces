@@ -7,6 +7,7 @@ public class FallingItem : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private StorageSlots storageManager;
     [SerializeField] private Inventory _inventory;
+    [SerializeField] private UIManager _uiManager;
     [SerializeField] private int slotPos;
     [SerializeField] private CaveSaveSettings _saveSettings;
     [SerializeField] private PlayerSpeech _playerSpeech;
@@ -15,6 +16,7 @@ public class FallingItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _uiManager = FindObjectOfType<UIManager>();
 
         _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
         if (_saveSettings == null)
@@ -34,13 +36,14 @@ public class FallingItem : MonoBehaviour
         if (!_saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
         {
             _inventory.AddItemToInventory(prefab);
+
             if (storage == true)
             {
                 _saveSettings.so.storageitems.Remove(prefab.GetComponent<InventoryItem>().GetName());
                 storageManager.RemoveItemFromSlot(this.gameObject);
 
             }
-
+            _uiManager.PulseInventoryButton();
             Destroy(this.gameObject);
         }
         else
@@ -53,6 +56,8 @@ public class FallingItem : MonoBehaviour
         }
 
     }
+
+
 
     public string GetName()
     {
