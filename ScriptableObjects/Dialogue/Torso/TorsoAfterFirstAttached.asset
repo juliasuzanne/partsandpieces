@@ -1,0 +1,395 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7249809917681739514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b2c57aaa-59a6-43df-aa04-25bcf49624dc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No, I think they're gone. But if you could find me some other limbs, I
+    think I could figure out how to attach them.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 848
+    y: 156
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5793754101221986272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 23d431d4-242f-42b4-9e26-c2ff29d0ad83
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I'm not sure what you do around here, but I'm sure you can work it into
+    your process somehow.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 650
+    y: -8
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5654507644243998708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7364acd1-9002-402a-a6a5-db427921f2c7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hello.
+  children:
+  - e3ee539c-05ae-4beb-b81f-bd6d82cfe258
+  - 0d01b8fa-263e-4c03-93e0-64f7a810332e
+  - e2db593a-02ee-4f22-97ff-dd1384ab93f2
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5362603805777671106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bd0e10d4-d554-416d-9df8-344ef982080d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Do you remember where they are?
+  children:
+  - b2c57aaa-59a6-43df-aa04-25bcf49624dc
+  rect:
+    serializedVersion: 2
+    x: 648
+    y: 156
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5190783045365801447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8c5606e4-5849-4303-a3d9-f9b2b54a59ce
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 'Oh yes, that''s a very special pencil. I have created many worlds and
+    impossible things with that. '
+  children:
+  - 23d431d4-242f-42b4-9e26-c2ff29d0ad83
+  rect:
+    serializedVersion: 2
+    x: 447
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4449016017709797636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d7ab05a4-b2bc-419f-9e79-15fe631a1208
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I don't know, and I don't think she wants us to know. I do have a vague
+    memory of her though... I think I have written down some notes about her somewhere
+    around the property.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 856
+    y: 245
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1406464971115404600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ac9e4414-bc38-4e19-8e6a-817fe0f458bf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I don't remember who I am or how I got here, but she acts like I should.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 656
+    y: 341
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1093709064782098872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e2db593a-02ee-4f22-97ff-dd1384ab93f2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Who is that person with the mask?
+  children:
+  - cd495c51-6728-434a-b57b-c24547d71fc0
+  rect:
+    serializedVersion: 2
+    x: 248
+    y: 194
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-856498444205818371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1806a309-8c5f-4be1-aad0-f0d0e312f5d4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes, but who is she?
+  children:
+  - d7ab05a4-b2bc-419f-9e79-15fe631a1208
+  rect:
+    serializedVersion: 2
+    x: 656
+    y: 245
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: TorsoAfterFirstAttached
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5654507644243998708}
+  - {fileID: 7885083990933466708}
+  - {fileID: 1974128411621236953}
+  - {fileID: -5190783045365801447}
+  - {fileID: -1093709064782098872}
+  - {fileID: 7878851865771886268}
+  - {fileID: -856498444205818371}
+  - {fileID: -1406464971115404600}
+  - {fileID: 3663812293615084132}
+  - {fileID: 6437173885314616362}
+  - {fileID: -5362603805777671106}
+  - {fileID: -7249809917681739514}
+  - {fileID: 3971186371596508588}
+  - {fileID: -5793754101221986272}
+  - {fileID: -4449016017709797636}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1974128411621236953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0d01b8fa-263e-4c03-93e0-64f7a810332e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: You want to get out of here, right? How do we do that?
+  children:
+  - 55486bc6-4ee5-49f5-ae4f-5b8efc624762
+  rect:
+    serializedVersion: 2
+    x: 247
+    y: 95
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3663812293615084132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 55486bc6-4ee5-49f5-ae4f-5b8efc624762
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I could show you, if I had some legs.
+  children:
+  - 2415c23c-d8f1-4512-8c94-9739c2399fe6
+  - bd0e10d4-d554-416d-9df8-344ef982080d
+  rect:
+    serializedVersion: 2
+    x: 447
+    y: 95
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3971186371596508588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 428085c6-4f61-476f-a813-9aa8934188ac
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes, but with all the weight of my thoughts, I think it would kill me now.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 845
+    y: 80
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6437173885314616362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2415c23c-d8f1-4512-8c94-9739c2399fe6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: You walked around before.
+  children:
+  - 428085c6-4f61-476f-a813-9aa8934188ac
+  rect:
+    serializedVersion: 2
+    x: 645
+    y: 80
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7878851865771886268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: cd495c51-6728-434a-b57b-c24547d71fc0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Oh yes, she's very mean.
+  children:
+  - 1806a309-8c5f-4be1-aad0-f0d0e312f5d4
+  - ac9e4414-bc38-4e19-8e6a-817fe0f458bf
+  rect:
+    serializedVersion: 2
+    x: 446
+    y: 202
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7885083990933466708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e3ee539c-05ae-4beb-b81f-bd6d82cfe258
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Does this pencil do anything special?
+  children:
+  - 8c5606e4-5849-4303-a3d9-f9b2b54a59ce
+  rect:
+    serializedVersion: 2
+    x: 247
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

@@ -1,0 +1,851 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9103768985681783552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 202e01a5-d9aa-4e06-8dd1-515e0f06f89d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I need help.
+  children:
+  - 7aae4456-3d8d-4715-86e7-8f32a89d661b
+  rect:
+    serializedVersion: 2
+    x: 1007
+    y: 312
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8737610311634981587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 60097153-d67f-4234-8c52-4e919579d1bf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Not very becoming. But, I'll see what I can do.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1206
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: CheckCoin
+--- !u!114 &-8301411190153204985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2d56cf38-b1aa-4802-a9e0-915eff299b85
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can you grant me a wish?
+  children:
+  - f7c10486-c8f7-4936-997c-5bcd8ba62b37
+  rect:
+    serializedVersion: 2
+    x: 1442
+    y: 211
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7961217215503759445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f7c10486-c8f7-4936-997c-5bcd8ba62b37
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I can, but it'll cost you.
+  children:
+  - 1d2c68a9-73c6-48fe-82e4-9b68f64d3a66
+  - 12ea06b8-b67d-41df-a94e-f110ce48b243
+  rect:
+    serializedVersion: 2
+    x: 403
+    y: 105
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7154932242541399689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 580cfd33-9a36-4700-9423-5c80f0425497
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hm. I'll try, but I'm not going to give it my all. I think you'll have
+    a 50% chance of getting it. What is it you want so badly, then?
+  children:
+  - e943cbab-bd4e-4c26-a1e1-823a853231e6
+  - 202e01a5-d9aa-4e06-8dd1-515e0f06f89d
+  - c27af56a-19ef-4823-8708-9eb57582b4e3
+  - 8b40fb05-348c-478b-a8ef-59379b51f759
+  rect:
+    serializedVersion: 2
+    x: 806
+    y: 282
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6958896171335525715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7aae4456-3d8d-4715-86e7-8f32a89d661b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Well, why didn't you say so? That won't cost you anything. What do you
+    need help with, honey?
+  children:
+  - 5ad819d2-cad5-48e5-8aed-e6b395ab9068
+  - 8f565aa8-280c-4ced-8682-9a9f503ae4c5
+  rect:
+    serializedVersion: 2
+    x: 1207
+    y: 312
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6924464644760787397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a9581b2f-0cba-4bdc-b03b-38793921f527
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The fish that lives here. I have everything that I could ever want, yes,
+    I'm very lucky.
+  children:
+  - c21e5701-0572-4f76-959c-ced1267a730e
+  rect:
+    serializedVersion: 2
+    x: 399
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6409209620293443461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5ad819d2-cad5-48e5-8aed-e6b395ab9068
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'm so lost, I don't know what I'm doing.
+  children:
+  - 255dbcab-77bd-401e-bfc2-acef4d607f37
+  rect:
+    serializedVersion: 2
+    x: 1407
+    y: 313
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6271440219105848564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c56feede-6ff8-4cc3-81fb-3c5774fe1f0c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Oh, the water has many special properties. I suspect it does something
+    different for everyone. Would you like to try it?
+  children:
+  - 8940b5c1-81f1-4494-8988-0af03fdf5946
+  - 327f5512-5a81-435e-a528-5acca198b457
+  rect:
+    serializedVersion: 2
+    x: 1022
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5746749089200807727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7f2b2021-fc73-4a73-ab17-fec39f6baa16
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I'll see what I can do.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1207
+    y: 408
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: CheckRain
+--- !u!114 &-5465665357000425325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8b40fb05-348c-478b-a8ef-59379b51f759
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Something else.
+  children:
+  - b053d499-81a6-4be1-a702-7e4029dfdde8
+  rect:
+    serializedVersion: 2
+    x: 1007
+    y: 507
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5459583640301743420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c27af56a-19ef-4823-8708-9eb57582b4e3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Change the weather.
+  children:
+  - 7f2b2021-fc73-4a73-ab17-fec39f6baa16
+  rect:
+    serializedVersion: 2
+    x: 1007
+    y: 408
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4971335186386494554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1aff9a5d-f77f-46b3-a3f7-f9c1ca57dbcf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: My wife and I love hard candies. If you could just drop some in the water,
+    it'd make our day. I'd be happy to help you with anything for that.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 804
+    y: 171
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4919854596534041089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8940b5c1-81f1-4494-8988-0af03fdf5946
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes, please.
+  children:
+  - 7ee8512f-356e-4964-9583-578f7739c5d2
+  rect:
+    serializedVersion: 2
+    x: 1223
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3298659092198923260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1d2c68a9-73c6-48fe-82e4-9b68f64d3a66
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What do you want?
+  children:
+  - 1aff9a5d-f77f-46b3-a3f7-f9c1ca57dbcf
+  rect:
+    serializedVersion: 2
+    x: 602
+    y: 105
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2924814336146445252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d5e7c332-17f0-4a97-98bf-c9d317e45e8c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1661
+    y: 97
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1264062916946562239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 27a8ea90-a19b-46ba-9465-362270c13965
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes, I can grant wishes, if you'd like. Or partake in some fountain water,
+    it might be the best water you've ever had.
+  children:
+  - 6dfba548-f6ae-4616-8e1d-4083214c807a
+  - 2d56cf38-b1aa-4802-a9e0-915eff299b85
+  rect:
+    serializedVersion: 2
+    x: 1033
+    y: 98
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1004771273649257944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e943cbab-bd4e-4c26-a1e1-823a853231e6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I want money.
+  children:
+  - 60097153-d67f-4234-8c52-4e919579d1bf
+  rect:
+    serializedVersion: 2
+    x: 1006
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-675445432293538571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8f565aa8-280c-4ced-8682-9a9f503ae4c5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I've got to get out of here.
+  children:
+  - 42756a6e-8862-45b2-a437-115e5931ceac
+  rect:
+    serializedVersion: 2
+    x: 1417
+    y: 409
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-385974117180960898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2c8c4947-add4-4bd2-9cf1-aa8a1785ffb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Good to see you.
+  children:
+  - c6f4b321-bfef-408b-a8af-6c09c9b829fb
+  - 3c85a9ea-95f1-4232-b86d-fbd8787057cb
+  rect:
+    serializedVersion: 2
+    x: -1
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-328621603181823138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c21e5701-0572-4f76-959c-ced1267a730e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I've got the love of my life here with me, plenty of food, even some entertainment.
+    I hope that you should experience what I feel someday.
+  children:
+  - 169aa968-d924-4b05-b1e8-8141f9fa375f
+  - c892c12a-757f-46c5-8399-5ae4cd2388d3
+  rect:
+    serializedVersion: 2
+    x: 600
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-288070405122473384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3c85a9ea-95f1-4232-b86d-fbd8787057cb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can you grant me a wish?
+  children:
+  - f7c10486-c8f7-4936-997c-5bcd8ba62b37
+  rect:
+    serializedVersion: 2
+    x: 202
+    y: 104
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: WishFish
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -385974117180960898}
+  - {fileID: 2563905153606664399}
+  - {fileID: -288070405122473384}
+  - {fileID: -7961217215503759445}
+  - {fileID: -3298659092198923260}
+  - {fileID: 3395860661145651893}
+  - {fileID: -7154932242541399689}
+  - {fileID: -1004771273649257944}
+  - {fileID: -9103768985681783552}
+  - {fileID: -5459583640301743420}
+  - {fileID: -8737610311634981587}
+  - {fileID: -6958896171335525715}
+  - {fileID: -6409209620293443461}
+  - {fileID: -5746749089200807727}
+  - {fileID: 2507913337591986087}
+  - {fileID: -675445432293538571}
+  - {fileID: 1163426027123523470}
+  - {fileID: -6924464644760787397}
+  - {fileID: -328621603181823138}
+  - {fileID: 3043704629099029622}
+  - {fileID: -4971335186386494554}
+  - {fileID: -6271440219105848564}
+  - {fileID: 5809616730601581958}
+  - {fileID: -1264062916946562239}
+  - {fileID: -5465665357000425325}
+  - {fileID: 1923158062307119691}
+  - {fileID: 5166861683856918349}
+  - {fileID: -8301411190153204985}
+  - {fileID: -4919854596534041089}
+  - {fileID: 7755749885461422619}
+  - {fileID: -2924814336146445252}
+  - {fileID: 1072490941973082911}
+  - {fileID: 5663638964960302294}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1072490941973082911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7ee8512f-356e-4964-9583-578f7739c5d2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, here you go. Drink up.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1501
+    y: -20
+    width: 200
+    height: 100
+  onEnterAction: GiveWater
+  onExitAction: 
+--- !u!114 &1163426027123523470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 42756a6e-8862-45b2-a437-115e5931ceac
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: There's a train station south of here.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1617
+    y: 409
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1923158062307119691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b053d499-81a6-4be1-a702-7e4029dfdde8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, just write it down on this piece of paper, and I'll see what I can
+    do.
+  children:
+  - 99fc8b60-2f3d-4d26-8873-9d3147f69b14
+  rect:
+    serializedVersion: 2
+    x: 1207
+    y: 507
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2507913337591986087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 255dbcab-77bd-401e-bfc2-acef4d607f37
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: My advice is simple. Don't leave any stone unturned. Be curious. And don't
+    forget to relax, and enjoy the time you have here. You might miss it someday.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1607
+    y: 313
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2563905153606664399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c6f4b321-bfef-408b-a8af-6c09c9b829fb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Hello, who are you?
+  children:
+  - a9581b2f-0cba-4bdc-b03b-38793921f527
+  rect:
+    serializedVersion: 2
+    x: 199
+    y: -2
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3043704629099029622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 169aa968-d924-4b05-b1e8-8141f9fa375f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What's so special about this fountain?
+  children:
+  - c56feede-6ff8-4cc3-81fb-3c5774fe1f0c
+  rect:
+    serializedVersion: 2
+    x: 823
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3395860661145651893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 12ea06b8-b67d-41df-a94e-f110ce48b243
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Please? What do you have to lose?
+  children:
+  - 580cfd33-9a36-4700-9423-5c80f0425497
+  rect:
+    serializedVersion: 2
+    x: 606
+    y: 208
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5166861683856918349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 6dfba548-f6ae-4616-8e1d-4083214c807a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'll take some water.
+  children:
+  - 7ee8512f-356e-4964-9583-578f7739c5d2
+  rect:
+    serializedVersion: 2
+    x: 1230
+    y: 126
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5663638964960302294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 99fc8b60-2f3d-4d26-8873-9d3147f69b14
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Okay, I will.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1406
+    y: 507
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: MakeWish
+--- !u!114 &5809616730601581958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c892c12a-757f-46c5-8399-5ae4cd2388d3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How come you can talk? Are you magic?
+  children:
+  - 27a8ea90-a19b-46ba-9465-362270c13965
+  rect:
+    serializedVersion: 2
+    x: 826
+    y: 64
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7755749885461422619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 327f5512-5a81-435e-a528-5acca198b457
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, thank you.
+  children:
+  - d5e7c332-17f0-4a97-98bf-c9d317e45e8c
+  rect:
+    serializedVersion: 2
+    x: 1456
+    y: 94
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

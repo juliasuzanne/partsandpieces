@@ -37,6 +37,21 @@ public class AdjustCoinCount : MonoBehaviour
 
     }
 
+    public void AddCoinWithOdds()
+    {
+        int randomNum = UnityEngine.Random.Range(0, 100);
+        if (randomNum > 50)
+        {
+            _saveManager.AddCoin();
+            coinText.text = _saveManager.so.coinCount.ToString();
+            _audioSource.clip = getClip;
+            _audioSource.Play();
+
+        }
+
+
+    }
+
 
     public void RemoveCoin()
     {

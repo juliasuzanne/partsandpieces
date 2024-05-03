@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9204114559221052421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bed21cf8-a029-4e82-b2fa-7bb6668764dc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Something else.
+  children:
+  - c66b8942-aae6-40b3-9d8d-b578c2c8f71c
+  rect:
+    serializedVersion: 2
+    x: 308
+    y: 317
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8312433825482039709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2bcf35df-5eb2-43c1-bfd9-c75d2baf3299
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yes! Thank you, this is perfect.
+  children:
+  - 31481e6d-f50d-4942-9bbe-b71968b4b105
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6102905309022084100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 10df4479-b1a6-4c6d-9906-99f2ec93ee18
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: That's it? Of course, here you go.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 600
+    y: 1
+    width: 200
+    height: 100
+  onEnterAction: ChangeDialogue
+  onExitAction: GiveWater
+--- !u!114 &-5685895226418579214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 31481e6d-f50d-4942-9bbe-b71968b4b105
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What can I do for you in return?
+  children:
+  - d74d4dc8-f749-4453-a861-ef1d36bd2fe6
+  - 6d4a10b3-d23a-48c6-9e45-f9805e74c167
+  - f7b4ed13-325e-4e69-88ea-a37c2e42449d
+  - bed21cf8-a029-4e82-b2fa-7bb6668764dc
+  rect:
+    serializedVersion: 2
+    x: 200
+    y: 1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4166897873046338378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d74d4dc8-f749-4453-a861-ef1d36bd2fe6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can I have some of that fountain water?
+  children:
+  - 10df4479-b1a6-4c6d-9906-99f2ec93ee18
+  rect:
+    serializedVersion: 2
+    x: 400
+    y: 1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-582868551193669893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c66b8942-aae6-40b3-9d8d-b578c2c8f71c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Sure, just write down what you're wishing for on this piece of paper. Then
+    I'll do my best to see to it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 615
+    y: 315
+    width: 200
+    height: 100
+  onEnterAction: ChangeDialogue
+  onExitAction: MakeWish
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: CandyFish
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8312433825482039709}
+  - {fileID: -5685895226418579214}
+  - {fileID: -4166897873046338378}
+  - {fileID: -6102905309022084100}
+  - {fileID: 5884885675026095489}
+  - {fileID: 2383203776358988814}
+  - {fileID: 8826242330092737313}
+  - {fileID: 4832290443958119275}
+  - {fileID: -9204114559221052421}
+  - {fileID: -582868551193669893}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &2383203776358988814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c7fae530-a65e-4a62-9304-bc164174bba7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Sure, no problem.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 603
+    y: 107
+    width: 200
+    height: 100
+  onEnterAction: ChangeDialogue
+  onExitAction: ChangeWeather
+--- !u!114 &4832290443958119275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8b61c165-80bf-4338-80d2-003e1851d73b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I think I can rustle up some coins from down here.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 606
+    y: 213
+    width: 200
+    height: 100
+  onEnterAction: ChangeDialogue
+  onExitAction: GiveCoin
+--- !u!114 &5884885675026095489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 6d4a10b3-d23a-48c6-9e45-f9805e74c167
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can you change the weather?
+  children:
+  - c7fae530-a65e-4a62-9304-bc164174bba7
+  rect:
+    serializedVersion: 2
+    x: 402
+    y: 108
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8826242330092737313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f7b4ed13-325e-4e69-88ea-a37c2e42449d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I need some money.
+  children:
+  - 8b61c165-80bf-4338-80d2-003e1851d73b
+  rect:
+    serializedVersion: 2
+    x: 406
+    y: 213
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

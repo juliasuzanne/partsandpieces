@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavFollowPlayer : MonoBehaviour
+public class NavShowPlayer : MonoBehaviour
 {
     private Vector3 target;
     [SerializeField] private Transform followPlayer;
+    [SerializeField] private Transform waitForPlayer;
+
     [SerializeField] private Animator _anim;
     [SerializeField] private AudioSource audioSource;
     private Transform thisAgent;
@@ -23,9 +25,24 @@ public class NavFollowPlayer : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
+    public void ChangeTargetDestination(Transform newTarget)
+    {
+        followPlayer = newTarget;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("CORNER0: " + agent.path.corners[0]);
+        if (agent.path.corners.Length > 1)
+        {
+            Debug.Log("CORNER1: " + agent.path.corners[1]);
+            Debug.Log("DIRECTION?: " + Vector3.Distance(agent.path.corners[0], agent.path.corners[1]));
+
+        }
+
+        // Vector3.Distance(agent.path.corners[0], agent.path.corners[1])
+
         SetTargetPosition();
         SetAgentPosition();
 
@@ -51,8 +68,16 @@ public class NavFollowPlayer : MonoBehaviour
 
         if (_anim != null)
         {
-            xInput = followPlayer.position.x - thisAgent.position.x;
-            yInput = followPlayer.position.y - thisAgent.position.y;
+
+            // xInput = followPlayer.position.x - thisAgent.position.x;
+            // yInput = followPlayer.position.y - thisAgent.position.y;
+            if (agent.path.corners.Length > 1)
+            {
+                xInput = agent.path.corners[1].x - agent.path.corners[0].x;
+                yInput = agent.path.corners[1].y - agent.path.corners[0].y;
+            }
+
+
             Debug.Log("X: " + xInput + " Y: " + yInput);
             _anim.SetFloat("yInput", yControl);
             _anim.SetFloat("xInput", Mathf.Abs(xControl));
@@ -99,7 +124,20 @@ public class NavFollowPlayer : MonoBehaviour
 
     void SetTargetPosition()
     {
-        target = new Vector3(followPlayer.position.x, followPlayer.position.y, followPlayer.position.z);
+        float distanceToPlayer = Vector3.Distance(thisAgent.position, waitForPlayer.transform.position);
+        if (distanceToPlayer < 10f)
+        {
+            target = new Vector3(followPlayer.position.x, followPlayer.position.y, followPlayer.position.z);
+
+        }
+        else
+        {
+            target = new Vector3(thisAgent.position.x, thisAgent.position.y, thisAgent.position.z);
+            yControl = 0;
+            xControl = 0;
+
+        }
+
     }
 
     void SetAgentPosition()

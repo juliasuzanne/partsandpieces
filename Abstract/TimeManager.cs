@@ -90,6 +90,58 @@ public class TimeManager : MonoBehaviour
             }
         }
     }
+
+    public void CheckRainWithOdds()
+    {
+
+        int rain = UnityEngine.Random.Range(0, 100);
+        if (rain > 50)
+        {
+            saveSettings.so.rain = true;
+            saveSettings.SaveGame();
+            if (rainObject != null)
+            {
+                rainObject.SetActive(true);
+
+
+            }
+        }
+        else
+        {
+            saveSettings.so.rain = false;
+            saveSettings.SaveGame();
+
+            if (rainObject != null)
+            {
+                rainObject.SetActive(false);
+
+            }
+        }
+    }
+
+    public void ChangeRain()
+    {
+        if (saveSettings.so.rain == true)
+        {
+            saveSettings.so.rain = false;
+            saveSettings.SaveGame();
+            if (rainObject != null)
+            {
+                rainObject.SetActive(false);
+            }
+        }
+        else
+        {
+            saveSettings.so.rain = true;
+            saveSettings.SaveGame();
+            if (rainObject != null)
+            {
+                rainObject.SetActive(true);
+
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

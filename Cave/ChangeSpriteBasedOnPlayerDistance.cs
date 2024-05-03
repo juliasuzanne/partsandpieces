@@ -30,7 +30,7 @@ public class ChangeSpriteBasedOnPlayerDistance : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if (debug == true)
         {
-            Debug.Log("distance is " + distance + " from " + transform.name);
+            // Debug.Log("distance is " + distance + " from " + transform.name);
 
         }
         if (distance < spritedistances[3])
