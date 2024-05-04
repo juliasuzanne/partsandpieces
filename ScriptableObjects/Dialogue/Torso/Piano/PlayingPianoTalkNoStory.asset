@@ -1,0 +1,369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7843505835622535942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 42e3b9f0-bbe9-4368-9853-419bd98c8c98
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How do I know if it's meaningful?
+  children:
+  - ab139ff5-3479-4452-90f0-076860f36d54
+  rect:
+    serializedVersion: 2
+    x: 1201
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7236799587283703236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b7e7282c-954a-4d0f-9e54-cef8e9e6d884
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'm doing you a favor, here.
+  children:
+  - 78b01a19-344e-46ed-8217-d993a5d9a597
+  rect:
+    serializedVersion: 2
+    x: 763
+    y: 118
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5724832037519264167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b49f5638-b5e5-4022-acad-fd1f02b1913c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Because only someone trustworthy can relay a story with the important details.
+    Other people don't pay attention to the right things.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1476
+    y: 177
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5595269881740714590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 267a3c6f-dbf3-4d40-b221-fbeea0becfbd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Ever since you played that song for me, I've been able to remember and
+    play it for myself. Thank you again.
+  children:
+  - bd1fc547-5b43-4f89-b48b-06f33b8df4bb
+  - fb6185c0-7fe7-4676-a6f3-96235599fd38
+  rect:
+    serializedVersion: 2
+    x: -15
+    y: 11
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4109456463895817741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3e11e48e-eb68-4c36-8927-3b7da8b58cf3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Why should that make you trust me?
+  children:
+  - b49f5638-b5e5-4022-acad-fd1f02b1913c
+  rect:
+    serializedVersion: 2
+    x: 1241
+    y: 115
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3650656475137130900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 99dac20a-af89-4f7b-8421-e34e432c576d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Tell me a meaningful story.
+  children:
+  - 42e3b9f0-bbe9-4368-9853-419bd98c8c98
+  - 3e11e48e-eb68-4c36-8927-3b7da8b58cf3
+  rect:
+    serializedVersion: 2
+    x: 956
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2157501661592251323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d84ceeb3-3ae2-4716-aee3-0fd456aa84d7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I told you, something meaningful. You'll know it when you hear it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 504
+    y: 226
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2108672644344313190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 78b01a19-344e-46ed-8217-d993a5d9a597
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I know. I'm sorry, I just can't risk it.
+  children:
+  - 7cce7445-9f04-4694-a0f1-0d777116be15
+  rect:
+    serializedVersion: 2
+    x: 962
+    y: 181
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-367691823921862959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7cce7445-9f04-4694-a0f1-0d777116be15
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What do you want again?
+  children:
+  - 99dac20a-af89-4f7b-8421-e34e432c576d
+  rect:
+    serializedVersion: 2
+    x: 1182
+    y: 224
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: PlayingPianoTalkNoStory
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5595269881740714590}
+  - {fileID: 310742079978702614}
+  - {fileID: 3901208091988698791}
+  - {fileID: 7686525935555898927}
+  - {fileID: 7211721497721401303}
+  - {fileID: -7236799587283703236}
+  - {fileID: -2108672644344313190}
+  - {fileID: -3650656475137130900}
+  - {fileID: -367691823921862959}
+  - {fileID: -7843505835622535942}
+  - {fileID: -4109456463895817741}
+  - {fileID: -5724832037519264167}
+  - {fileID: 7451490756147394489}
+  - {fileID: -2157501661592251323}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &310742079978702614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bd1fc547-5b43-4f89-b48b-06f33b8df4bb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Is that not enough for you to trust me? Will you please come with me so
+    I can reattach you to your head?
+  children:
+  - 92134ef4-d7e1-4cbb-8610-fec56e2b4085
+  rect:
+    serializedVersion: 2
+    x: 256
+    y: 23
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3901208091988698791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 92134ef4-d7e1-4cbb-8610-fec56e2b4085
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No, I really want you to tell me a story.
+  children:
+  - e05f6380-2e13-4005-a7a6-8cd411a0215b
+  - b7e7282c-954a-4d0f-9e54-cef8e9e6d884
+  rect:
+    serializedVersion: 2
+    x: 505
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7211721497721401303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e05f6380-2e13-4005-a7a6-8cd411a0215b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What kind of story?
+  children:
+  - 99dac20a-af89-4f7b-8421-e34e432c576d
+  rect:
+    serializedVersion: 2
+    x: 705
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7451490756147394489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ab139ff5-3479-4452-90f0-076860f36d54
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: If you're trustworthy, you'll know.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1450
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7686525935555898927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fb6185c0-7fe7-4676-a6f3-96235599fd38
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I have a bunch of stories, but I'm feeling lost as to what you want.
+  children:
+  - d84ceeb3-3ae2-4716-aee3-0fd456aa84d7
+  rect:
+    serializedVersion: 2
+    x: 265
+    y: 147
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

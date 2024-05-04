@@ -29,6 +29,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] private GameObject torso;
     [SerializeField] private GameObject cutOffArms;
     [SerializeField] private GameObject waterFilter;
+    [SerializeField] private GameObject thisPerson;
 
 
     // Start is called before the first frame update
@@ -105,6 +106,10 @@ public class StartConditions : MonoBehaviour
         {
             baby.SetActive(_saveSettings.so.hasBaby);
         }
+        if (thisPerson != null)
+        {
+            thisPerson.SetActive(_saveSettings.so.didFrankenstein);
+        }
         if (waterFilter != null)
         {
             if (_saveSettings.so.drankFountainWater)
@@ -112,6 +117,7 @@ public class StartConditions : MonoBehaviour
                 waterFilter.GetComponent<DrinkTheFountainWater>().SetDrinkTrue();
             }
         }
+
 
         if (cutOffArms != null)
         {

@@ -3,101 +3,146 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-public class MazeState : MonoBehaviour
+namespace Dialogue
 {
-    [SerializeField] private Transform pianoPos;
-    [SerializeField] private Transform porchPos;
-    [SerializeField] private GameObject torso;
-
-    private string currentStateOfMaze;
-    [SerializeField] private Transform player;
-    [SerializeField] private CaveSaveSettings saveManager;
-    [SerializeField] private UnityEvent onPorch;
-    [SerializeField] private UnityEvent onPiano;
-    [SerializeField] private UnityEvent onPianoSuccess;
-    [SerializeField] private UnityEvent onPianoSuccessFirst;
-
-    [SerializeField] private GrowingPlant[] poppy;
-    [SerializeField] private float[] startingTime;
-    [SerializeField] private float[] localStartingTime;
-    [SerializeField] private GameObject thisPerson;
-    private List<string> sceneList = new List<string>();
-
-
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class MazeState : MonoBehaviour
     {
-        // if (saveManager.so.mazePlantStartTime == null)
-        // {
-        //     saveManager.so.mazePlantStartTime = localStartingTime;
+        [SerializeField] private Transform pianoPos;
+        [SerializeField] private Transform porchPos;
+        [SerializeField] private GameObject torso;
+        private string currentStateOfMaze;
+        [SerializeField] private Dialogue pianoFirstSuccessNoHeard;
+        [SerializeField] private Dialogue pianoFirstSuccessYesHeard;
+        [SerializeField] private Dialogue pianoReturnNoHeard;
+        [SerializeField] private Dialogue pianoReturnYesHeard;
+        [SerializeField] private Transform player;
+        [SerializeField] private AIConversant conversant;
+        [SerializeField] private CaveSaveSettings saveManager;
+        [SerializeField] private UnityEvent onPorch;
+        [SerializeField] private UnityEvent onPiano;
+        [SerializeField] private UnityEvent onPianoReturnOnly;
 
-        // }
-        // else
-        // {
-        //     int count = 0;
-        //     foreach (float newTime in saveManager.so.mazePlantStartTime)
-        //     {
-        //         poppy[count].ChangeStartTime(newTime);
-        //         count = count + 1;
+        [SerializeField] private UnityEvent onPianoSuccess;
+        [SerializeField] private UnityEvent onPianoSuccessFirst;
+        [SerializeField] private MoveTowards _torsoIdleMovement;
 
-        //     }
-        // }
+        [SerializeField] private GrowingPlant[] poppy;
+        [SerializeField] private float[] startingTime;
+        [SerializeField] private float[] localStartingTime;
+        [SerializeField] private GameObject thisPerson;
+        private List<string> sceneList = new List<string>();
 
-        sceneList = saveManager.so.stateOfExteriorSceneList;
 
-        currentStateOfMaze = saveManager.so.stateOfMaze;
 
-        if (currentStateOfMaze == "enterfromhouse")
+
+
+
+        // Start is called before the first frame update
+        void Start()
         {
-            player.position = new Vector2(porchPos.position.x, porchPos.position.y);
-            onPorch.Invoke();
+            // if (saveManager.so.mazePlantStartTime == null)
+            // {
+            //     saveManager.so.mazePlantStartTime = localStartingTime;
+
+            // }
+            // else
+            // {
+            //     int count = 0;
+            //     foreach (float newTime in saveManager.so.mazePlantStartTime)
+            //     {
+            //         poppy[count].ChangeStartTime(newTime);
+            //         count = count + 1;
+
+            //     }
+            // }
+
+            sceneList = saveManager.so.stateOfExteriorSceneList;
+
+            currentStateOfMaze = saveManager.so.stateOfMaze;
+
+            if (currentStateOfMaze == "enterfromhouse" || currentStateOfMaze == "entry")
+            {
+                player.position = new Vector2(porchPos.position.x, porchPos.position.y);
+                onPorch.Invoke();
+                _torsoIdleMovement.IdlingTrue();
+
+            }
+
+            else if (currentStateOfMaze == "piano")
+            {
+                player.position = new Vector2(porchPos.position.x, porchPos.position.y);
+                onPorch.Invoke();
+                // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
+                onPianoSuccess.Invoke();
+                if (saveManager.so.heardStory == true)
+                {
+                    conversant.ChangeDialogue(pianoReturnYesHeard);
+                }
+                else
+                {
+                    conversant.ChangeDialogue(pianoReturnNoHeard);
+                }
+
+
+            }
+
+            else if (currentStateOfMaze == "failpiano")
+            {
+                // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
+                onPiano.Invoke();
+
+
+            }
+
+            else if (currentStateOfMaze == "successpiano")
+            {
+                onPianoSuccessFirst.Invoke();
+                saveManager.ChangeMazeState("piano");
+                if (saveManager.so.heardStory == true)
+                {
+                    conversant.ChangeDialogue(pianoFirstSuccessYesHeard);
+                }
+                else
+                {
+                    conversant.ChangeDialogue(pianoFirstSuccessNoHeard);
+                }
+
+            }
+
+            else if (currentStateOfMaze == "returnfrompiano")
+            {
+                player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
+                onPianoReturnOnly.Invoke();
+
+            }
+
+            else if (currentStateOfMaze == "gottorso")
+            {
+                player.position = new Vector2(porchPos.position.x, porchPos.position.y);
+                onPorch.Invoke();
+                torso.SetActive(false);
+
+            }
+
+
+
+            thisPerson.SetActive(sceneList.Contains("thisPerson"));
+
+
 
         }
 
-        else if (currentStateOfMaze == "piano")
+        public void ChangeLocalStartingTime(GrowingPlant updatedPlant)
         {
-            // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
-            onPianoSuccess.Invoke();
-
-
+            localStartingTime[updatedPlant.GetID()] = updatedPlant.GetStartTime();
+            SaveStartingTime();
         }
 
-        else if (currentStateOfMaze == "failpiano")
+        public void SaveStartingTime()
         {
-            // player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
-            onPiano.Invoke();
-
-
+            saveManager.so.mazePlantStartTime = localStartingTime;
         }
-
-        else if (currentStateOfMaze == "successpiano")
-        {
-            onPianoSuccessFirst.Invoke();
-            saveManager.ChangeMazeState("piano");
-        }
-
-
-        thisPerson.SetActive(sceneList.Contains("thisPerson"));
-
 
 
     }
-
-    public void ChangeLocalStartingTime(GrowingPlant updatedPlant)
-    {
-        localStartingTime[updatedPlant.GetID()] = updatedPlant.GetStartTime();
-        SaveStartingTime();
-    }
-
-    public void SaveStartingTime()
-    {
-        saveManager.so.mazePlantStartTime = localStartingTime;
-    }
-
-
 }

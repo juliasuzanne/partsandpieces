@@ -37,6 +37,11 @@ public class MoveToPos : MonoBehaviour
         move = true;
     }
 
+    public void JumpToMove()
+    {
+        transform.position = new Vector2(moveToPos.x, moveToPos.y);
+    }
+
 
     private void MoveIntoPosition()
     {

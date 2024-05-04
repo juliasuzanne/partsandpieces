@@ -26,8 +26,10 @@ public class SaveObject
     public string currentQuest;
     public float time;
     public bool rain;
+    public bool heardStory;
     public float totalTime;
     public bool hasExtraArms;
+    public bool didFrankenstein;
     public int[] playerSong;
     public string sandwichpath1;
     public string stateOfMeatPiano;
@@ -37,6 +39,8 @@ public class SaveObject
     public string stateOfMaze;
     public string stateOfFace;
     public string stateOfPiano;
+    public string stateOfFalling;
+
     public string stateOfWindowDrawing;
     public List<string> floorboardState = new List<string>();
     public List<string> inventoryitems = new List<string>();

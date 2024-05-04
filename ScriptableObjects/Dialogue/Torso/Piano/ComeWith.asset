@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3032663333776040172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a420c065-7b9e-4cca-bcb7-7892fbaf331d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I'm going to climb in your bag now. Take me to my head.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 428
+    y: 5
+    width: 200
+    height: 100
+  onEnterAction: GetTorso
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: ComeWith
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5231447806505562063}
+  - {fileID: 425414571034091499}
+  - {fileID: -3032663333776040172}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &425414571034091499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d0444201-db0c-4c3e-8138-90218c6a5a70
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Thank you for the story.
+  children:
+  - a420c065-7b9e-4cca-bcb7-7892fbaf331d
+  rect:
+    serializedVersion: 2
+    x: 199
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5231447806505562063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3c9b3add-a82c-4de6-9a60-0706f6f5a322
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 'Okay, I have decided you are trustworthy. '
+  children:
+  - d0444201-db0c-4c3e-8138-90218c6a5a70
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

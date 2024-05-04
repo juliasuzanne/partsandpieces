@@ -230,6 +230,11 @@ public class CaveSaveSettings : MonoBehaviour
         so.stateOfWindowDrawing = newState;
     }
 
+    public void ChangeFallingState(string newState)
+    {
+        so.stateOfFalling = newState;
+    }
+
     public void RemoveCoin()
     {
         so.coinCount = so.coinCount - 1;
@@ -291,21 +296,34 @@ public class CaveSaveSettings : MonoBehaviour
         so.connectedTorso = true;
     }
 
+    public void ThisPersonDidFrankenstein()
+    {
+        so.didFrankenstein = true;
+    }
+
+    public void HeardStory()
+    {
+        so.heardStory = true;
+    }
+
 
 
     public void Reset()
     {
         so.rain = false;
+        so.stateOfPiano = "entry";
         so.connectedTorso = false;
         so.connectedLegs = false;
         so.cutOffExtraArms = false;
         so.hasTorso = false;
         so.hasBaby = false;
         so.hasTicket = false;
+        so.heardStory = false;
         so.coinCount = 0;
         so.enteredCoinsCount = 0;
         so.stateOfLab = "entry";
         so.hasExtraArms = false;
+        so.stateOfFalling = "entry";
         so.stateOfMaze = "entry";
         so.stateOfFace = "entry";
         so.exteriorLoc = "maze";
@@ -324,6 +342,7 @@ public class CaveSaveSettings : MonoBehaviour
         so.floorboardState = new List<string>();
         so.mazeitems = new List<string>();
         so.playerName = "Self";
+        so.didFrankenstein = false;
         so.stateOfMeatPiano = "entry";
         SaveGameNoTime();
         LoadGame();
