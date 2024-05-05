@@ -31,6 +31,8 @@ namespace Dialogue
         [SerializeField] private float[] startingTime;
         [SerializeField] private float[] localStartingTime;
         [SerializeField] private GameObject thisPerson;
+        [SerializeField] private GameObject pianoCollider;
+
         private List<string> sceneList = new List<string>();
 
 
@@ -130,6 +132,7 @@ namespace Dialogue
 
 
             thisPerson.SetActive(sceneList.Contains("thisPerson"));
+            pianoCollider.SetActive(sceneList.Contains("thisPerson"));
 
 
         }
