@@ -19,12 +19,22 @@ public class FloorboardState : MonoBehaviour
     [SerializeField] private GameObject butterFloorboardsCollider;
     [SerializeField] private GameObject bearFloorboardsCollider;
     [SerializeField] private GameObject flashlightFloorboardsCollider;
+    [SerializeField] private GameObject spinachCandy;
+    [SerializeField] private GameObject babyCoin;
+    [SerializeField] private GameObject strawBerryCandy;
+    [SerializeField] private GameObject babyKey;
+    [SerializeField] private GameObject babyButterscotch;
+    [SerializeField] private GameObject babyPaint;
+
 
 
 
 
     void Start()
     {
+        spinachCandy.SetActive(!saveSettings.so.floorboardState.Contains("spinachCandy"));
+        strawBerryCandy.SetActive(!saveSettings.so.floorboardState.Contains("strawberryCandy"));
+        pickaxe.SetActive(!saveSettings.so.floorboardState.Contains("pickaxe"));
 
 
         if (saveSettings.so.floorboardState.Contains("baby"))
@@ -45,6 +55,7 @@ public class FloorboardState : MonoBehaviour
         {
             flashlightFloorboards.SetActive(false);
             flashlightFloorboardsCollider.SetActive(true);
+            babyCoin.SetActive(!saveSettings.so.floorboardState.Contains("babyCoin"));
 
         }
         else
@@ -55,6 +66,7 @@ public class FloorboardState : MonoBehaviour
         }
         if (saveSettings.so.floorboardState.Contains("key"))
         {
+            babyKey.SetActive(!saveSettings.so.floorboardState.Contains("babyKey"));
             keyFloorboards.SetActive(false);
             keyFloorboardsCollider.SetActive(true);
 
@@ -67,6 +79,7 @@ public class FloorboardState : MonoBehaviour
         }
         if (saveSettings.so.floorboardState.Contains("bear"))
         {
+            babyButterscotch.SetActive(!saveSettings.so.floorboardState.Contains("babyButterscotch"));
             bearFloorboards.SetActive(false);
             bearFloorboardsCollider.SetActive(true);
 
@@ -79,6 +92,7 @@ public class FloorboardState : MonoBehaviour
         }
         if (saveSettings.so.floorboardState.Contains("butterscotch"))
         {
+            babyPaint.SetActive(!saveSettings.so.floorboardState.Contains("babyPaint"));
             butterFloorboards.SetActive(false);
             butterFloorboardsCollider.SetActive(true);
 
@@ -89,14 +103,7 @@ public class FloorboardState : MonoBehaviour
             butterFloorboardsCollider.SetActive(false);
 
         }
-        if (saveSettings.so.floorboardState.Contains("pickaxe"))
-        {
-            pickaxe.SetActive(false);
-        }
-        else
-        {
-            pickaxe.SetActive(true);
-        }
+
 
     }
 
