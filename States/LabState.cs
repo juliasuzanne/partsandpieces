@@ -9,6 +9,16 @@ namespace Dialogue
     public class LabState : MonoBehaviour
     {
         [SerializeField] private AIConversant _conversant;
+        [SerializeField] private AIConversant _torsoConversant;
+        [SerializeField] private Dialogue dialogueTorsoFrankenstein;
+        [SerializeField] private Dialogue dialogueTorsoGrowArms;
+        [SerializeField] private Dialogue dialogueTorsoFirst;
+        [SerializeField] private Dialogue dialogueTorsoSecond;
+        [SerializeField] private Dialogue dialogueMentorHasArms;
+        [SerializeField] private Dialogue dialogueTorsoHasArms;
+
+        [SerializeField] private Dialogue dialogueFrankenstein;
+
         [SerializeField] private Dialogue dialogueEntry;
         [SerializeField] private Dialogue dialogueFalling;
         [SerializeField] private string currentState;
@@ -20,6 +30,8 @@ namespace Dialogue
         [SerializeField] private GameObject sleepingHead;
 
         [SerializeField] private UnityEvent onChangeArms;
+        [SerializeField] private UnityEvent onThisPerson;
+
 
         [SerializeField] private CaveSaveSettings _saveManager;
         private string stateOfExterior;
@@ -78,8 +90,11 @@ namespace Dialogue
             {
 
                 _conversant.ChangeDialogue(dialogueGrowArms);
+                _torsoConversant.ChangeDialogue(dialogueTorsoGrowArms);
                 onChangeArms.Invoke();
                 _saveManager.ChangeStateOfLab("grewArms");
+
+
                 // playSongPanel.SetActive(true);
                 // _heartAudioSource.clip = _heartAndSoulClip;
                 // _heartAudioSource.Play();
@@ -89,12 +104,42 @@ namespace Dialogue
                 torsoHead.SetActive(true);
                 sleepingHead.SetActive(false);
                 _conversant.ChangeDialogue(dialogueMentorAttachTorso);
+                _torsoConversant.ChangeDialogue(dialogueTorsoFirst);
+                _torsoConversant.StartConversation();
+                _saveManager.so.stateOfLab = "AttachedTorsoReturn";
+                _saveManager.SaveGame();
+            }
+
+            else if (currentState == "AttachedTorsoReturn")
+            {
+                torsoHead.SetActive(true);
+                sleepingHead.SetActive(false);
+                _conversant.ChangeDialogue(dialogueMentorAttachTorso);
+                _torsoConversant.ChangeDialogue(dialogueTorsoSecond);
+            }
+
+            else if (currentState == "justGotLegs")
+            {
+                _conversant.ChangeDialogue(dialogueFrankenstein);
+                _torsoConversant.ChangeDialogue(dialogueTorsoFrankenstein);
+                onThisPerson.Invoke();
+
             }
 
             else if (currentState == "grewArms")
             {
-                _conversant.ChangeDialogue(dialogueGrowArms);
+                if (_saveManager.so.cutOffExtraArms == false)
+                {
+                    _conversant.ChangeDialogue(dialogueGrowArms);
+                    _torsoConversant.ChangeDialogue(dialogueTorsoGrowArms);
+                }
+                else
+                {
+                    _conversant.ChangeDialogue(dialogueMentorHasArms);
+                    _torsoConversant.ChangeDialogue(dialogueTorsoHasArms);
+                }
             }
+
             else
             {
                 _conversant.ChangeDialogue(dialogueEntry);

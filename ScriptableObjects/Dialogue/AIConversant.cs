@@ -12,8 +12,11 @@ namespace Dialogue
         [SerializeField] private string objectThatTriggers;
         [SerializeField] private Sprite conversantImage;
 
+        [SerializeField] private Dialogue startingDialogue;
+
         void Start()
         {
+            startingDialogue = dialogue;
             // _nameObject.onNameUpdated += UpdateName();
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
         }
@@ -21,6 +24,11 @@ namespace Dialogue
         public void ChangeDialogue(Dialogue newDialogue)
         {
             dialogue = newDialogue;
+        }
+
+        public void GoBackToStartingDialogue()
+        {
+            ChangeDialogue(startingDialogue);
         }
 
         public void UpdateName(string name)

@@ -1,5 +1,78 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4116262775877664457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 26b4668c-4c93-498a-8b2a-eb57b6c0f821
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Not bad, I'm impressed.
+  children:
+  - 341add72-0703-4b75-b8af-948a9617d666
+  rect:
+    serializedVersion: 2
+    x: 205
+    y: 107
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3957235605265737740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b301185c-b7c6-4e37-8bfe-307923a37b5b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hey, look at that. Some basic reasoning skills, a little persuasion and
+    field work...
+  children:
+  - 26b4668c-4c93-498a-8b2a-eb57b6c0f821
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1082122012707001536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 341add72-0703-4b75-b8af-948a9617d666
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I don't think your efforts will pay off for me, unfortunately.
+  children:
+  - 961dbddd-382a-4115-a970-3c908089e0f7
+  rect:
+    serializedVersion: 2
+    x: 400
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,16 +83,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
-  m_Name: TicketTrainStation
+  m_Name: MaskTorsoAttached
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 512667827622343554}
-  - {fileID: 4019155712252929040}
-  - {fileID: 6761266410901187224}
-  - {fileID: 2120510941286214100}
-  - {fileID: 364150233312720440}
+  - {fileID: -3957235605265737740}
+  - {fileID: -4116262775877664457}
+  - {fileID: -1082122012707001536}
+  - {fileID: 2010980501690011324}
   newNodeOffset: {x: 200, y: 0}
---- !u!114 &364150233312720440
+--- !u!114 &2010980501690011324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,111 +101,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 43a12e0b-a347-49b9-9776-470a1a998f39
+  m_Name: 961dbddd-382a-4115-a970-3c908089e0f7
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: You're funny. Up you go.
+  speech: Time will tell.
   children: []
   rect:
     serializedVersion: 2
-    x: 575
-    y: 122
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: LeaveThisPlace
---- !u!114 &512667827622343554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 3b50276d-2227-49b2-8022-4627f85dea95
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Great! You got a ticket.
-  children:
-  - fa58136e-fee2-4af6-bf28-16aa6fcb0a6c
-  - 8d7477e7-ecbd-4689-8c86-37e11ccb17ac
-  rect:
-    serializedVersion: 2
-    x: 63
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &2120510941286214100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 4d4a56c7-691a-48e1-8704-74d519204f97
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Okay, go on in then.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 589
-    y: 16
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: LeaveThisPlace
---- !u!114 &4019155712252929040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: fa58136e-fee2-4af6-bf28-16aa6fcb0a6c
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Yes, and I'm ready to go.
-  children:
-  - 4d4a56c7-691a-48e1-8704-74d519204f97
-  rect:
-    serializedVersion: 2
-    x: 349
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &6761266410901187224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 8d7477e7-ecbd-4689-8c86-37e11ccb17ac
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I did - where are we going?
-  children:
-  - 43a12e0b-a347-49b9-9776-470a1a998f39
-  rect:
-    serializedVersion: 2
-    x: 329
-    y: 120
+    x: 609
+    y: 99
     width: 200
     height: 100
   onEnterAction: 

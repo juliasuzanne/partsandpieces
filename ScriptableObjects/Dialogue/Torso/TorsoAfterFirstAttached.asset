@@ -42,7 +42,7 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 650
+    x: 667
     y: -8
     width: 200
     height: 100

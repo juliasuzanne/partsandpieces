@@ -47,7 +47,8 @@ namespace Dialogue
 
             else
             {
-
+                _heartAndSoul.SetActive(false);
+                _blankSheet.SetActive(false);
 
             }
 

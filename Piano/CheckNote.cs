@@ -102,6 +102,8 @@ public class CheckNote : MonoBehaviour
                 if (successfulNotes > totalNotes - 3)
                 {
                     _saveManager.ChangeMazeState("successpiano");
+                    _saveManager.ChangePianoState("entry");
+
                 }
                 else
                 {

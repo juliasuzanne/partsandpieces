@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class SlideEmptyPiece : MonoBehaviour
 {
     [SerializeField] private Vector2 emptyPos = new Vector2(2, -2);
     [SerializeField] private bool[] correctPieces;
+    [SerializeField] UnityEvent onCorrect;
+
     private bool correct = false;
     void Start()
     {
@@ -48,6 +52,7 @@ public class SlideEmptyPiece : MonoBehaviour
         if (correct == true)
         {
             Debug.Log("CORRECT!");
+            onCorrect.Invoke();
         }
     }
 }

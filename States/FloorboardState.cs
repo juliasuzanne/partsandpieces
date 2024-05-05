@@ -14,7 +14,6 @@ public class FloorboardState : MonoBehaviour
     [SerializeField] private GameObject pickaxe;
     [SerializeField] private BoxCollider2D babyCollider;
 
-
     [SerializeField] private GameObject babyFloorboardsCollider;
     [SerializeField] private GameObject keyFloorboardsCollider;
     [SerializeField] private GameObject butterFloorboardsCollider;
@@ -26,6 +25,8 @@ public class FloorboardState : MonoBehaviour
 
     void Start()
     {
+
+
         if (saveSettings.so.floorboardState.Contains("baby"))
         {
             babyFloorboards.SetActive(false);

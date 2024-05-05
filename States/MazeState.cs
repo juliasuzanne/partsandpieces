@@ -11,6 +11,7 @@ namespace Dialogue
         [SerializeField] private Transform porchPos;
         [SerializeField] private GameObject torso;
         private string currentStateOfMaze;
+
         [SerializeField] private Dialogue pianoFirstSuccessNoHeard;
         [SerializeField] private Dialogue pianoFirstSuccessYesHeard;
         [SerializeField] private Dialogue pianoReturnNoHeard;
@@ -57,6 +58,8 @@ namespace Dialogue
             // }
 
             sceneList = saveManager.so.stateOfExteriorSceneList;
+
+
 
             currentStateOfMaze = saveManager.so.stateOfMaze;
 
@@ -129,7 +132,6 @@ namespace Dialogue
             thisPerson.SetActive(sceneList.Contains("thisPerson"));
 
 
-
         }
 
         public void ChangeLocalStartingTime(GrowingPlant updatedPlant)
@@ -145,4 +147,6 @@ namespace Dialogue
 
 
     }
+
+
 }

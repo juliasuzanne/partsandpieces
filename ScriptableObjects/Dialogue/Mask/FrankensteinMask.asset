@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8913440038042951538
+--- !u!114 &-9053365472323130410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,22 +10,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 223da372-332a-456d-9d43-c4482acedba2
+  m_Name: 4958504f-b380-4937-a8ae-e3ffa4f44d64
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What did you study?
+  children:
+  - f6b92f8a-16c6-42c6-a432-0560299030d5
+  rect:
+    serializedVersion: 2
+    x: 685
+    y: 281
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8727282335178542492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: eefe4220-6196-4b8a-ac3f-e5fb2c7b05c2
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: This sounds promising.
+  speech: Oh, yes. Some of my best work yet.
   children:
-  - 7cc1eaa8-d6ee-4f2f-aed5-4539dad46fc0
-  - 4fd80d1b-9798-4c73-a25a-25c4ad331603
+  - c452500e-1554-4c3f-9221-8a559f38655b
   rect:
     serializedVersion: 2
-    x: 1034
-    y: 429
+    x: 988
+    y: 521
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &-8092498748780700393
+--- !u!114 &-8141196709725308614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,148 +58,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: a84451b9-de0a-44ee-9d9e-6f9090e81099
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: The ghost was selfish, and wanted to keep me in the room.
-  children:
-  - 1389843e-72eb-417c-b0be-f6ff8094ccba
-  - 71f6648e-c02c-4f21-b712-a9b79283040d
-  - a10da248-a2f9-4ddc-af04-66ae835e518f
-  rect:
-    serializedVersion: 2
-    x: 2192
-    y: 863
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-7843505835622535942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 42e3b9f0-bbe9-4368-9853-419bd98c8c98
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: How do I know if it's meaningful?
-  children:
-  - ab139ff5-3479-4452-90f0-076860f36d54
-  rect:
-    serializedVersion: 2
-    x: 1201
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-7700972306083516277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: a10da248-a2f9-4ddc-af04-66ae835e518f
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I decided to try to live my life more fully.
-  children:
-  - e7366514-d385-42f6-b7bf-116f71966e1a
-  - 797f4ad4-f9a7-45d1-b93e-9832c1f3f7f3
-  - a5703024-bf06-4e5b-8fae-23e3fc7b7906
-  rect:
-    serializedVersion: 2
-    x: 2492
-    y: 783
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-7236799587283703236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: b7e7282c-954a-4d0f-9e54-cef8e9e6d884
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I'm doing you a favor, here.
-  children:
-  - 78b01a19-344e-46ed-8217-d993a5d9a597
-  rect:
-    serializedVersion: 2
-    x: 763
-    y: 118
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-5856774111065711485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 318ef7e7-da22-4f82-8c97-d51260e6c19f
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: While life was once scary, it had now become dull.
-  children:
-  - a84451b9-de0a-44ee-9d9e-6f9090e81099
-  - eed14d9b-4a55-41aa-b443-df82cc09f409
-  - a7e33bee-8659-488a-9069-c5711170fa07
-  - 00bf8aaf-0f89-458c-9fc1-f01569826389
-  rect:
-    serializedVersion: 2
-    x: 1928
-    y: 766
-    width: 200
-    height: 100
-  onEnterAction: bad
-  onExitAction: 
---- !u!114 &-5724832037519264167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: b49f5638-b5e5-4022-acad-fd1f02b1913c
+  m_Name: 51106bfb-924e-4118-9a0c-757083c9efe1
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: Because only someone trustworthy can relay a story with the important details.
-    Other people don't pay attention to the right things.
+  speech: I'm a doctor. Well, more of a scientist.
+  children:
+  - 4958504f-b380-4937-a8ae-e3ffa4f44d64
+  - 327ee818-9cce-4288-aea6-adca1f98250f
+  - 3152e671-758c-40da-87e0-4d58c290fcdf
+  rect:
+    serializedVersion: 2
+    x: 479
+    y: 212
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8112585492628085951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fb08784d-1317-4ca3-8e04-fe78969e7de3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes, and we're onto you.
+  children:
+  - a7b36e31-9350-4417-a6d2-6c18f6d25379
+  rect:
+    serializedVersion: 2
+    x: 989
+    y: 141
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7359289816265624448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8bedc4b1-d6c4-469c-be19-fca062d886fe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You know the one.
   children: []
   rect:
     serializedVersion: 2
-    x: 1476
-    y: 177
+    x: 656
+    y: 611
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &-5595269881740714590
+--- !u!114 &-6799313398704178977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,269 +131,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 267a3c6f-dbf3-4d40-b221-fbeea0becfbd
+  m_Name: 398b5e61-89f3-4e24-92b0-5939f727c9d5
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: Ever since you played that song for me, I've been able to remember and
-    play it for myself. Thank you again.
-  children:
-  - bd1fc547-5b43-4f89-b48b-06f33b8df4bb
-  - fb6185c0-7fe7-4676-a6f3-96235599fd38
-  rect:
-    serializedVersion: 2
-    x: -15
-    y: 11
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-5417527908108338096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 00bf8aaf-0f89-458c-9fc1-f01569826389
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: The ghost encouraged me to continue to shut the world out.
-  children:
-  - 1389843e-72eb-417c-b0be-f6ff8094ccba
-  - 71f6648e-c02c-4f21-b712-a9b79283040d
-  - a10da248-a2f9-4ddc-af04-66ae835e518f
-  rect:
-    serializedVersion: 2
-    x: 2190
-    y: 546
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &-4811305282239863213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: d951c68a-a774-4971-96ad-665130c304c2
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: When I was a little girl, I had my own room. Also, there was a ghost.
-  children:
-  - 2f312858-6d77-4af2-8c3f-5a0a4bdfbccc
-  rect:
-    serializedVersion: 2
-    x: 759
-    y: 296
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-4109456463895817741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 3e11e48e-eb68-4c36-8927-3b7da8b58cf3
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Why should that make you trust me?
-  children:
-  - b49f5638-b5e5-4022-acad-fd1f02b1913c
-  rect:
-    serializedVersion: 2
-    x: 1241
-    y: 115
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-3650656475137130900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 99dac20a-af89-4f7b-8421-e34e432c576d
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Tell me a meaningful story.
-  children:
-  - 42e3b9f0-bbe9-4368-9853-419bd98c8c98
-  - 3e11e48e-eb68-4c36-8927-3b7da8b58cf3
-  rect:
-    serializedVersion: 2
-    x: 956
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-2739010249129926987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 604e6fed-c227-4aef-aa30-1440afc1fed7
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: When I was a girl, I lived in a room with two windows and a ghost.
-  children:
-  - 223da372-332a-456d-9d43-c4482acedba2
-  rect:
-    serializedVersion: 2
-    x: 766
-    y: 392
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &-2139521463643699477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 81bb9eb7-b7cc-4698-bdca-f831d2840eab
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: When I was little, I lived in a room with a ghost.
-  children:
-  - 223da372-332a-456d-9d43-c4482acedba2
-  rect:
-    serializedVersion: 2
-    x: 767
-    y: 486
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &-2108672644344313190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 78b01a19-344e-46ed-8217-d993a5d9a597
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: I know. I'm sorry, I just can't risk it.
-  children:
-  - 7cce7445-9f04-4694-a0f1-0d777116be15
-  rect:
-    serializedVersion: 2
-    x: 962
-    y: 181
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &-1990047311752376430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 1389843e-72eb-417c-b0be-f6ff8094ccba
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I decided forgetting was not a solution.
-  children:
-  - e7366514-d385-42f6-b7bf-116f71966e1a
-  - 797f4ad4-f9a7-45d1-b93e-9832c1f3f7f3
-  - a5703024-bf06-4e5b-8fae-23e3fc7b7906
-  rect:
-    serializedVersion: 2
-    x: 2463
-    y: 553
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &-1912962283493745783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 794abf8f-4f9d-4470-981c-a68cca66540f
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Thank you.
+  speech: The bad thoughts.
   children: []
   rect:
     serializedVersion: 2
-    x: 3089
-    y: 652
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: EvaluateBadGood
---- !u!114 &-1568880285372123372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: b7359a00-7763-47be-a869-7a25484c4473
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: We lived to look out the window together.
-  children:
-  - 4e39f8fe-f594-425e-8bfc-3cf5387e35ec
-  - 279abf02-244a-47be-9e9e-cfb982534025
-  - 318ef7e7-da22-4f82-8c97-d51260e6c19f
-  rect:
-    serializedVersion: 2
-    x: 1641
-    y: 680
+    x: 1908
+    y: 466
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &-367691823921862959
+--- !u!114 &-6387523707704111672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -458,16 +154,279 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 7cce7445-9f04-4694-a0f1-0d777116be15
+  m_Name: a7b36e31-9350-4417-a6d2-6c18f6d25379
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: What do you want again?
-  children:
-  - 99dac20a-af89-4f7b-8421-e34e432c576d
+  isPlayerSpeaking: 0
+  speech: Bah! Who needs you.
+  children: []
   rect:
     serializedVersion: 2
-    x: 1182
-    y: 224
+    x: 1209
+    y: 137
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5855215645221783656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 67da3d83-ba30-45f9-867b-9a6d846323db
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The way that I feel.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1904
+    y: 367
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5747752214842197203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f6b92f8a-16c6-42c6-a432-0560299030d5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Dreams and psychology.
+  children:
+  - 37467447-19d6-48f0-8b6d-77329c7b8c1d
+  - cb844e6f-878b-48e2-a261-e0366e380ac4
+  rect:
+    serializedVersion: 2
+    x: 903
+    y: 375
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5459135620170943665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 795a207b-ef50-49b9-ab3b-21f9a5ab1574
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: You're very cold and unsympathetic.
+  children:
+  - d0489c24-d63c-4198-8336-976042928535
+  rect:
+    serializedVersion: 2
+    x: 1630
+    y: 576
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5195270714934295407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fdf38d26-6179-47e3-89ab-b03be275a25b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Revenge for what?
+  children:
+  - 67da3d83-ba30-45f9-867b-9a6d846323db
+  rect:
+    serializedVersion: 2
+    x: 1638
+    y: 420
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4953004143625194064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 96607253-88f9-4c38-b243-40ce6adcc28e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Ask them yourself.
+  children:
+  - 192bf7e2-d03e-4517-9392-15f5b9f34161
+  rect:
+    serializedVersion: 2
+    x: 976
+    y: 49
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4649022061212351426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0a40efce-f29c-40ae-ab04-4e8127388314
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No thanks.
+  children:
+  - 5c805180-ba7e-4001-bfc2-5b5ac0434445
+  rect:
+    serializedVersion: 2
+    x: 1426
+    y: 331
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4342810803877330243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ea35e7b6-98b6-4cfe-bef6-e7579a94978a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: That ugly thing, I would not say turned out well. But, if it works, it
+    works.
+  children:
+  - 128018c2-a100-442e-9f41-b35f8555f712
+  rect:
+    serializedVersion: 2
+    x: 530
+    y: 60
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4116820528103242748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c452500e-1554-4c3f-9221-8a559f38655b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What is it about?
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1189
+    y: 521
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3208455785869121605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3152e671-758c-40da-87e0-4d58c290fcdf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Are you conducting any experiments right now?
+  children:
+  - eefe4220-6196-4b8a-ac3f-e5fb2c7b05c2
+  rect:
+    serializedVersion: 2
+    x: 748
+    y: 494
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1836001848149049932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: aa774db4-052e-4830-93e2-bc42280cae7c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Don't call me a freak.
+  children:
+  - 4a7bce64-bc47-4d76-a43b-a0fcdbbeabfa
+  rect:
+    serializedVersion: 2
+    x: 419
+    y: 573
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-877201483485867727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1d78e39e-b522-48e4-b163-0e208f1e5053
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No reason.
+  children:
+  - 7ef80402-a156-46c2-9ddb-79d67bb84b60
+  rect:
+    serializedVersion: 2
+    x: 1611
+    y: 675
     width: 200
     height: 100
   onEnterAction: 
@@ -482,49 +441,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
-  m_Name: PlayingPianoTalkYesStory
+  m_Name: FrankensteinMask
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -5595269881740714590}
-  - {fileID: 310742079978702614}
-  - {fileID: 3901208091988698791}
-  - {fileID: 7686525935555898927}
-  - {fileID: 5630086874432221640}
-  - {fileID: 7211721497721401303}
-  - {fileID: -7236799587283703236}
-  - {fileID: -2108672644344313190}
-  - {fileID: -3650656475137130900}
-  - {fileID: -367691823921862959}
-  - {fileID: -7843505835622535942}
-  - {fileID: -4109456463895817741}
-  - {fileID: -5724832037519264167}
-  - {fileID: 7451490756147394489}
-  - {fileID: -4811305282239863213}
-  - {fileID: -2739010249129926987}
-  - {fileID: -2139521463643699477}
-  - {fileID: -8913440038042951538}
-  - {fileID: 4582568097724079001}
-  - {fileID: 6399155146820319455}
-  - {fileID: 818846177247283679}
-  - {fileID: 5107654853189182769}
-  - {fileID: 7476312180563402287}
-  - {fileID: -1568880285372123372}
-  - {fileID: 4295098575644451441}
-  - {fileID: 861399554888671352}
-  - {fileID: -5856774111065711485}
-  - {fileID: -5417527908108338096}
-  - {fileID: 1434121454747211465}
-  - {fileID: 8407642435597700162}
-  - {fileID: -8092498748780700393}
-  - {fileID: -1990047311752376430}
-  - {fileID: 2313466236619977514}
-  - {fileID: -7700972306083516277}
-  - {fileID: 7659227759536680185}
-  - {fileID: 6396191333756292896}
-  - {fileID: 1989355780426030442}
-  - {fileID: -1912962283493745783}
+  - {fileID: 7305343785841309873}
+  - {fileID: 4201839838337366787}
+  - {fileID: 8882419856745275609}
+  - {fileID: 7234596942087864061}
+  - {fileID: -4342810803877330243}
+  - {fileID: 5234033280049711121}
+  - {fileID: -8141196709725308614}
+  - {fileID: -9053365472323130410}
+  - {fileID: -5747752214842197203}
+  - {fileID: 2305232876636858298}
+  - {fileID: -4953004143625194064}
+  - {fileID: -8112585492628085951}
+  - {fileID: -6387523707704111672}
+  - {fileID: 4475425088617942547}
+  - {fileID: 154837212277524729}
+  - {fileID: 5383289712927411372}
+  - {fileID: -4649022061212351426}
+  - {fileID: 4690175007023946694}
+  - {fileID: 6882255740621245992}
+  - {fileID: 1786351279813056479}
+  - {fileID: 9107618588312972215}
+  - {fileID: -3208455785869121605}
+  - {fileID: -8727282335178542492}
+  - {fileID: -4116820528103242748}
+  - {fileID: 5263133349407621746}
+  - {fileID: 4110371672837773416}
+  - {fileID: 3211201571773116417}
+  - {fileID: -5459135620170943665}
+  - {fileID: -877201483485867727}
+  - {fileID: 7814697318997978557}
+  - {fileID: 5432765859116112016}
+  - {fileID: 2867600728733645425}
+  - {fileID: -5195270714934295407}
+  - {fileID: 4241770443766177021}
+  - {fileID: -5855215645221783656}
+  - {fileID: -6799313398704178977}
+  - {fileID: 4482777009742613490}
+  - {fileID: -1836001848149049932}
+  - {fileID: 203771572684604272}
+  - {fileID: -7359289816265624448}
   newNodeOffset: {x: 200, y: 0}
---- !u!114 &310742079978702614
+--- !u!114 &154837212277524729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,176 +495,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: bd1fc547-5b43-4f89-b48b-06f33b8df4bb
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Is that not enough for you to trust me? Will you please come with me so
-    I can reattach you to your head?
-  children:
-  - 92134ef4-d7e1-4cbb-8610-fec56e2b4085
-  rect:
-    serializedVersion: 2
-    x: 256
-    y: 23
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &818846177247283679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 4fd80d1b-9798-4c73-a25a-25c4ad331603
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Life was scary for me, and the ghost taught me how to shut the world out.
-  children:
-  - 3f899cff-eab4-4d8f-b2f1-61e05a6aecad
-  - d58a8f8e-68c6-4ced-9a24-5579ec952219
-  - b7359a00-7763-47be-a869-7a25484c4473
-  rect:
-    serializedVersion: 2
-    x: 1322
-    y: 519
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &861399554888671352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 279abf02-244a-47be-9e9e-cfb982534025
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: My life became all about looking out the window.
-  children:
-  - 00bf8aaf-0f89-458c-9fc1-f01569826389
-  - a7e33bee-8659-488a-9069-c5711170fa07
-  - eed14d9b-4a55-41aa-b443-df82cc09f409
-  - a84451b9-de0a-44ee-9d9e-6f9090e81099
-  rect:
-    serializedVersion: 2
-    x: 1936
-    y: 646
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &1434121454747211465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: a7e33bee-8659-488a-9069-c5711170fa07
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: The ghost told me I wouldn't survive if I stopped.
-  children:
-  - 1389843e-72eb-417c-b0be-f6ff8094ccba
-  - 71f6648e-c02c-4f21-b712-a9b79283040d
-  - a10da248-a2f9-4ddc-af04-66ae835e518f
-  rect:
-    serializedVersion: 2
-    x: 2191
-    y: 652
-    width: 200
-    height: 100
-  onEnterAction: bad
-  onExitAction: 
---- !u!114 &1989355780426030442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: a5703024-bf06-4e5b-8fae-23e3fc7b7906
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I miss the ghost, and wish I had just stayed in the room.
-  children:
-  - 794abf8f-4f9d-4470-981c-a68cca66540f
-  rect:
-    serializedVersion: 2
-    x: 2763
-    y: 756
-    width: 200
-    height: 100
-  onEnterAction: bad
-  onExitAction: 
---- !u!114 &2313466236619977514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 71f6648e-c02c-4f21-b712-a9b79283040d
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I decided to run away.
-  children:
-  - e7366514-d385-42f6-b7bf-116f71966e1a
-  - 797f4ad4-f9a7-45d1-b93e-9832c1f3f7f3
-  - a5703024-bf06-4e5b-8fae-23e3fc7b7906
-  rect:
-    serializedVersion: 2
-    x: 2495
-    y: 644
-    width: 200
-    height: 100
-  onEnterAction: bad
-  onExitAction: 
---- !u!114 &3901208091988698791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 92134ef4-d7e1-4cbb-8610-fec56e2b4085
+  m_Name: 440033c2-9fc1-4da2-8904-e538ee14d348
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: No, I really want you to tell me a story.
+  speech: Well, maybe you'd like for us all to have a cup of tea sometime.
   children:
-  - e05f6380-2e13-4005-a7a6-8cd411a0215b
-  - b7e7282c-954a-4d0f-9e54-cef8e9e6d884
+  - f6ad304e-1629-4041-86a4-292038db50e7
+  - 0a40efce-f29c-40ae-ab04-4e8127388314
   rect:
     serializedVersion: 2
-    x: 505
-    y: 18
+    x: 1221
+    y: 235
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &4295098575644451441
+--- !u!114 &203771572684604272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -713,198 +520,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 4e39f8fe-f594-425e-8bfc-3cf5387e35ec
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: My life became all about living in this room.
-  children:
-  - 00bf8aaf-0f89-458c-9fc1-f01569826389
-  - a7e33bee-8659-488a-9069-c5711170fa07
-  - eed14d9b-4a55-41aa-b443-df82cc09f409
-  - a84451b9-de0a-44ee-9d9e-6f9090e81099
-  rect:
-    serializedVersion: 2
-    x: 1935
-    y: 544
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &4582568097724079001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 2f312858-6d77-4af2-8c3f-5a0a4bdfbccc
+  m_Name: 4a7bce64-bc47-4d76-a43b-a0fcdbbeabfa
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: Okay.
-  children:
-  - 7cc1eaa8-d6ee-4f2f-aed5-4539dad46fc0
-  - 4fd80d1b-9798-4c73-a25a-25c4ad331603
-  rect:
-    serializedVersion: 2
-    x: 1032
-    y: 303
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &5107654853189182769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 3f899cff-eab4-4d8f-b2f1-61e05a6aecad
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I shut the world out so completely that I forgot everything.
-  children:
-  - 4e39f8fe-f594-425e-8bfc-3cf5387e35ec
-  - 279abf02-244a-47be-9e9e-cfb982534025
-  - 318ef7e7-da22-4f82-8c97-d51260e6c19f
-  rect:
-    serializedVersion: 2
-    x: 1638
-    y: 486
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &5630086874432221640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 26a2e21d-373f-43df-9a29-1279f95df95c
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Please go ahead.
-  children:
-  - d951c68a-a774-4971-96ad-665130c304c2
-  - 604e6fed-c227-4aef-aa30-1440afc1fed7
-  - 81bb9eb7-b7cc-4698-bdca-f831d2840eab
-  rect:
-    serializedVersion: 2
-    x: 502
-    y: 200
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &6396191333756292896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 797f4ad4-f9a7-45d1-b93e-9832c1f3f7f3
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I am still trying, but sometimes I feel like I am still in the room.
-  children:
-  - 794abf8f-4f9d-4470-981c-a68cca66540f
-  rect:
-    serializedVersion: 2
-    x: 2761
-    y: 653
-    width: 200
-    height: 100
-  onEnterAction: good
-  onExitAction: 
---- !u!114 &6399155146820319455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 7cc1eaa8-d6ee-4f2f-aed5-4539dad46fc0
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: The ghost was my friend and protector.
-  children:
-  - 3f899cff-eab4-4d8f-b2f1-61e05a6aecad
-  - d58a8f8e-68c6-4ced-9a24-5579ec952219
-  - b7359a00-7763-47be-a869-7a25484c4473
-  rect:
-    serializedVersion: 2
-    x: 1317
-    y: 416
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &7211721497721401303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: e05f6380-2e13-4005-a7a6-8cd411a0215b
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: What kind of story?
-  children:
-  - 99dac20a-af89-4f7b-8421-e34e432c576d
-  rect:
-    serializedVersion: 2
-    x: 705
-    y: 18
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: 
---- !u!114 &7451490756147394489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: ab139ff5-3479-4452-90f0-076860f36d54
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: If you're trustworthy, you'll know.
+  speech: Sorry, kid. I call it like I see it.
   children: []
   rect:
     serializedVersion: 2
-    x: 1450
-    y: 27
+    x: 656
+    y: 703
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &7476312180563402287
+--- !u!114 &1786351279813056479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -914,23 +543,336 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: d58a8f8e-68c6-4ced-9a24-5579ec952219
+  m_Name: 37467447-19d6-48f0-8b6d-77329c7b8c1d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  speech: I shut the world out so completely that I all I knew was the room at night.
+  speech: What made you want to study that?
   children:
-  - 4e39f8fe-f594-425e-8bfc-3cf5387e35ec
-  - 279abf02-244a-47be-9e9e-cfb982534025
-  - 318ef7e7-da22-4f82-8c97-d51260e6c19f
+  - fdba5c1e-bca5-43cd-b0e6-5ce935ed4138
   rect:
     serializedVersion: 2
-    x: 1642
+    x: 1128
+    y: 339
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2305232876636858298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 128018c2-a100-442e-9f41-b35f8555f712
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Say - they haven't really, remembered anything? Have they? Have they said
+    much?
+  children:
+  - 96607253-88f9-4c38-b243-40ce6adcc28e
+  - fb08784d-1317-4ca3-8e04-fe78969e7de3
+  - 8d28958b-1108-43e5-96d5-863fb79d841f
+  rect:
+    serializedVersion: 2
+    x: 776
+    y: 49
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2867600728733645425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: fdba5c1e-bca5-43cd-b0e6-5ce935ed4138
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: A desire for control over others and myself. A revenge on god, if you will.
+  children:
+  - fdf38d26-6179-47e3-89ab-b03be275a25b
+  - 368e3c8a-7899-4f70-81e3-67d483737356
+  rect:
+    serializedVersion: 2
+    x: 1401
+    y: 418
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3211201571773116417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8fb7aae9-0f2a-4656-b78f-53a712d7a8c6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Why is that?
+  children:
+  - 795a207b-ef50-49b9-ab3b-21f9a5ab1574
+  - 1d78e39e-b522-48e4-b163-0e208f1e5053
+  rect:
+    serializedVersion: 2
+    x: 1411
+    y: 508
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4110371672837773416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: cb844e6f-878b-48e2-a261-e0366e380ac4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Hm. That's hard to believe?
+  children:
+  - 8fb7aae9-0f2a-4656-b78f-53a712d7a8c6
+  rect:
+    serializedVersion: 2
+    x: 1158
+    y: 428
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4201839838337366787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b006c257-b78e-41aa-be2b-6af05702b13f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Thanks, I think it worked out well.
+  children:
+  - ea35e7b6-98b6-4cfe-bef6-e7579a94978a
+  rect:
+    serializedVersion: 2
+    x: 282
+    y: 67
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4241770443766177021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 368e3c8a-7899-4f70-81e3-67d483737356
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Control over what?
+  children:
+  - 398b5e61-89f3-4e24-92b0-5939f727c9d5
+  rect:
+    serializedVersion: 2
+    x: 1658
+    y: 489
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4475425088617942547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8d28958b-1108-43e5-96d5-863fb79d841f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, they can't remember anything.
+  children:
+  - 440033c2-9fc1-4da2-8904-e538ee14d348
+  rect:
+    serializedVersion: 2
+    x: 990
+    y: 232
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4482777009742613490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8721bdd8-fbd9-4951-be8d-639c6c2139df
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What graveyard?
+  children:
+  - 8bedc4b1-d6c4-469c-be19-fca062d886fe
+  rect:
+    serializedVersion: 2
+    x: 424
+    y: 466
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4690175007023946694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5c805180-ba7e-4001-bfc2-5b5ac0434445
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Screw you, then.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1626
+    y: 331
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5234033280049711121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 81129a79-e8cd-44c9-830b-53cd8f78eb3f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The same place I found you. In the graveyard. I'm the only reason you freaks
+    are walking around right now.
+  children:
+  - 8721bdd8-fbd9-4951-be8d-639c6c2139df
+  - aa774db4-052e-4830-93e2-bc42280cae7c
+  rect:
+    serializedVersion: 2
+    x: 206
+    y: 408
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5263133349407621746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 31a6129e-0d39-4a03-986e-94ca431db445
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Absolutely. Undeniably. Now get lost.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 954
+    y: 445
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5383289712927411372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f6ad304e-1629-4041-86a4-292038db50e7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: That sounds great, thank you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1421
+    y: 235
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5432765859116112016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d0489c24-d63c-4198-8336-976042928535
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Interesting. I didn't know I came across that way.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1852
     y: 581
     width: 200
     height: 100
-  onEnterAction: good
+  onEnterAction: 
   onExitAction: 
---- !u!114 &7659227759536680185
+--- !u!114 &6882255740621245992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -940,45 +882,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: e7366514-d385-42f6-b7bf-116f71966e1a
+  m_Name: 192bf7e2-d03e-4517-9392-15f5b9f34161
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I did not succeed.
-  children:
-  - 794abf8f-4f9d-4470-981c-a68cca66540f
+  isPlayerSpeaking: 0
+  speech: I can't. That horrible face...
+  children: []
   rect:
     serializedVersion: 2
-    x: 2734
-    y: 554
-    width: 200
-    height: 100
-  onEnterAction: bad
-  onExitAction: 
---- !u!114 &7686525935555898927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: fb6185c0-7fe7-4676-a6f3-96235599fd38
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I have a story to tell you.
-  children:
-  - 26a2e21d-373f-43df-9a29-1279f95df95c
-  rect:
-    serializedVersion: 2
-    x: 264
-    y: 147
+    x: 1215
+    y: 28
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &8407642435597700162
+--- !u!114 &7234596942087864061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -988,19 +905,114 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: eed14d9b-4a55-41aa-b443-df82cc09f409
+  m_Name: 03190d00-ef92-4188-a459-16940fd72f3b
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  speech: The ghost was worried about me.
+  speech: Where did you find that head in the first place, anyway?
   children:
-  - 1389843e-72eb-417c-b0be-f6ff8094ccba
-  - 71f6648e-c02c-4f21-b712-a9b79283040d
-  - a10da248-a2f9-4ddc-af04-66ae835e518f
+  - 81129a79-e8cd-44c9-830b-53cd8f78eb3f
   rect:
     serializedVersion: 2
-    x: 2192
-    y: 754
+    x: 176
+    y: 295
     width: 200
     height: 100
-  onEnterAction: bad
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7305343785841309873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e776422c-8e35-41d8-819f-6ed24d51175a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You're a regular doctor, eh?
+  children:
+  - b006c257-b78e-41aa-be2b-6af05702b13f
+  - 6f72004e-298b-4d43-a217-b8a3d52fc0b5
+  - 03190d00-ef92-4188-a459-16940fd72f3b
+  rect:
+    serializedVersion: 2
+    x: 54
+    y: 109
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7814697318997978557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7ef80402-a156-46c2-9ddb-79d67bb84b60
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay. Best be on your way now.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1811
+    y: 675
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8882419856745275609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 6f72004e-298b-4d43-a217-b8a3d52fc0b5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What is it to you?
+  children:
+  - 51106bfb-924e-4118-9a0c-757083c9efe1
+  rect:
+    serializedVersion: 2
+    x: 272
+    y: 195
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &9107618588312972215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 327ee818-9cce-4288-aea6-adca1f98250f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Are you sure?
+  children:
+  - 31a6129e-0d39-4a03-986e-94ca431db445
+  rect:
+    serializedVersion: 2
+    x: 701
+    y: 399
+    width: 200
+    height: 100
+  onEnterAction: 
   onExitAction: 
