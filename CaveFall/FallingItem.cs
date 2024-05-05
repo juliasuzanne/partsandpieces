@@ -33,27 +33,39 @@ public class FallingItem : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!_saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
+        if (_inventory.CheckEmptySlots() > 0)
         {
-            _inventory.AddItemToInventory(prefab);
-
-            if (storage == true)
+            if (!_saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
             {
-                _saveSettings.so.storageitems.Remove(prefab.GetComponent<InventoryItem>().GetName());
-                storageManager.RemoveItemFromSlot(this.gameObject);
+                _inventory.AddItemToInventory(prefab);
+                if (storage == true)
+                {
+                    _saveSettings.so.storageitems.Remove(prefab.GetComponent<InventoryItem>().GetName());
+                    storageManager.RemoveItemFromSlot(this.gameObject);
 
+                }
             }
+            else
+            {
+                if (_playerSpeech != null)
+                {
+                    _playerSpeech.PlayerTalkingForSeconds("I already have one of those.");
+
+                }
+            }
+
             _uiManager.PulseInventoryButton();
             Destroy(this.gameObject);
+
         }
         else
         {
-            if (_playerSpeech != null)
-            {
-                _playerSpeech.PlayerTalkingForSeconds("I already have one of those.");
+            _playerSpeech.PlayerTalkingForSeconds("I guess I need to get rid of something.");
 
-            }
         }
+
+
+
 
     }
 

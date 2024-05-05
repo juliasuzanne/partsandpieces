@@ -10,16 +10,16 @@ public class Inventory : MonoBehaviour
    public GameObject[] slots; // this to place items in the center of each slot, or drop
    public GameObject[] items; // 
    private int count = 0;
-   [SerializeField] private Text _playerText;
-   [SerializeField] private GameObject _dialog;
+   // [SerializeField] private Text _playerText;
+   // [SerializeField] private GameObject _dialog;
    [SerializeField] private CaveSaveSettings saveSettings;
 
 
    void Start()
    {
-      if (_dialog == null)
-      { _dialog = transform.GetChild(0).GetChild(0).gameObject; }
-      _dialog.SetActive(false);
+      // if (_dialog == null)
+      // { _dialog = transform.GetChild(0).GetChild(0).gameObject; }
+      // _dialog.SetActive(false);
 
    }
 
@@ -49,9 +49,9 @@ public class Inventory : MonoBehaviour
          {
             if (count == slots.Length - 1)
             {
-               _dialog.SetActive(true);
-               _playerText.text = "I guess I need to get rid of something";
-               StartCoroutine("PlayerSays");
+               // _dialog.SetActive(true);
+               // _playerText.text = "I guess I need to get rid of something";
+               // StartCoroutine("PlayerSays");
 
                break;
             }
@@ -123,12 +123,12 @@ public class Inventory : MonoBehaviour
    }
 
 
-   IEnumerator PlayerSays()
-   {
-      yield return new WaitForSeconds(3f);
-      _dialog.SetActive(false);
+   // IEnumerator PlayerSays()
+   // {
+   //    yield return new WaitForSeconds(3f);
+   //    _dialog.SetActive(false);
 
-   }
+   // }
 
 }
 
