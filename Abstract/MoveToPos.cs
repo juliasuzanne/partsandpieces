@@ -6,6 +6,8 @@ public class MoveToPos : MonoBehaviour
 {
     [SerializeField] private Vector2 moveToPos;
     [SerializeField] private bool move;
+    [SerializeField] private bool usingY;
+
     [SerializeField] private float speed;
     [SerializeField] private Animator anim;
 
@@ -43,14 +45,28 @@ public class MoveToPos : MonoBehaviour
     }
 
 
+
     private void MoveIntoPosition()
     {
+
+        Debug.Log(transform.position);
         var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector2.MoveTowards(transform.position, moveToPos, step);
-        if (transform.position.x == moveToPos.x)
+        if (usingY == true)
         {
-            move = false;
+            if (transform.position.y > 33f)
+            {
+                move = false;
+            }
         }
+        else
+        {
+            if (transform.position.x == moveToPos.x)
+            {
+                move = false;
+            }
+        }
+
 
     }
 }

@@ -27,6 +27,7 @@ public class InventoryItem : MonoBehaviour
     [SerializeField] bool returning = true;
 
     GameObject description_object;
+
     private Transform currentTransform;
     Text description_text;
 
@@ -108,6 +109,12 @@ public class InventoryItem : MonoBehaviour
                         {
 
                             trigger.TriggerItem(this.Name);
+
+                            if (this.Name == "knife")
+                            {
+                                _inventory.RemoveItemFromInventory(slotNum);
+                                _inventory.AddBloodyKnife();
+                            }
 
 
                             if (consumable == true && trigger.CheckMatch(Name) == true)

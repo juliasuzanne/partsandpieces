@@ -13,8 +13,10 @@ public class StartConditions : MonoBehaviour
     [SerializeField] List<SpriteRenderer> skinColor = new List<SpriteRenderer>();
     [SerializeField] List<SpriteRenderer> gloveColor = new List<SpriteRenderer>();
     [SerializeField] List<Image> gloveImageColor = new List<Image>();
-    [SerializeField] List<Image> shirtImageColor = new List<Image>();
+    [SerializeField] List<Image> skinImageColor = new List<Image>();
 
+    [SerializeField] List<Image> shirtImageColor = new List<Image>();
+    private TimeManager tm;
 
     [SerializeField] List<SpriteRenderer> lipColor = new List<SpriteRenderer>();
     private List<string> _savedObjects = new List<string>();
@@ -30,6 +32,7 @@ public class StartConditions : MonoBehaviour
     [SerializeField] private GameObject cutOffArms;
     [SerializeField] private GameObject waterFilter;
     [SerializeField] private GameObject thisPerson;
+    [SerializeField] private UnityEvent onNightTime;
 
 
     // Start is called before the first frame update
@@ -37,8 +40,14 @@ public class StartConditions : MonoBehaviour
     {
 
         _saveSettings.LoadGame();
+        tm = FindObjectOfType<TimeManager>();
         _savedObjects = _saveSettings.so.inventoryitems;
         onTrigger.Invoke();
+        if (_saveSettings.so.nighttime == true)
+        {
+            tm.MakeNightTime();
+            onNightTime.Invoke();
+        }
         foreach (GameObject item in prefabs)
         {
             if (_savedObjects.Contains(item.GetComponent<InventoryItem>().GetName()))
@@ -52,16 +61,30 @@ public class StartConditions : MonoBehaviour
         {
             sprite.color = _saveSettings.so.bootColor;
         }
-
-        foreach (Image image in gloveImageColor)
+        if (gloveImageColor.Count > 0)
         {
-            image.color = _saveSettings.so.gloveColor;
+            foreach (Image image in gloveImageColor)
+            {
+                image.color = _saveSettings.so.gloveColor;
+            }
         }
 
-        foreach (Image image in shirtImageColor)
+        if (shirtImageColor.Count > 0)
         {
-            image.color = _saveSettings.so.shirtColor;
+            foreach (Image image in shirtImageColor)
+            {
+                image.color = _saveSettings.so.shirtColor;
+            }
         }
+
+        if (skinImageColor.Count > 0)
+        {
+            foreach (Image image in skinImageColor)
+            {
+                image.color = _saveSettings.so.skinColor;
+            }
+        }
+
 
         foreach (SpriteRenderer sprite in lipColor)
         {

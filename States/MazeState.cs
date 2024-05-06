@@ -10,6 +10,12 @@ namespace Dialogue
         [SerializeField] private Transform pianoPos;
         [SerializeField] private Transform porchPos;
         [SerializeField] private GameObject torso;
+        [SerializeField] private GameObject coin1;
+        [SerializeField] private GameObject coin2;
+        [SerializeField] private GameObject coin3;
+
+
+
         private string currentStateOfMaze;
 
         [SerializeField] private Dialogue pianoFirstSuccessNoHeard;
@@ -32,6 +38,8 @@ namespace Dialogue
         [SerializeField] private float[] localStartingTime;
         [SerializeField] private GameObject thisPerson;
         [SerializeField] private GameObject pianoCollider;
+
+
 
         private List<string> sceneList = new List<string>();
 
@@ -60,6 +68,10 @@ namespace Dialogue
             // }
 
             sceneList = saveManager.so.stateOfExteriorSceneList;
+            coin1.SetActive(!saveManager.so.mazeitems.Contains("coin1"));
+            coin2.SetActive(!saveManager.so.mazeitems.Contains("coin2"));
+            coin3.SetActive(!saveManager.so.mazeitems.Contains("coin3"));
+
 
 
 

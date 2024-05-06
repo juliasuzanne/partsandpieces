@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
    public bool[] isFull; // use to check if there is already an item in each slot
    public GameObject[] slots; // this to place items in the center of each slot, or drop
    public GameObject[] items; // 
+   [SerializeField] private GameObject bloodyKnife;
+
    private int count = 0;
    // [SerializeField] private Text _playerText;
    // [SerializeField] private GameObject _dialog;
@@ -71,6 +73,11 @@ public class Inventory : MonoBehaviour
          }
       }
       return numSlotsEmpty;
+   }
+
+   public void AddBloodyKnife()
+   {
+      AddItemToInventory(bloodyKnife);
    }
 
    public void CheckItemLocation()

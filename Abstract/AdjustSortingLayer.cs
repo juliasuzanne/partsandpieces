@@ -8,6 +8,7 @@ public class AdjustSortingLayer : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private int inFrontOrderNum;
     [SerializeField] private int inBackOrderNum;
+    [SerializeField] private float offsetY;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class AdjustSortingLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > playerTransform.position.y)
+        if (transform.position.y + offsetY > playerTransform.position.y)
         {
             sp.sortingOrder = inBackOrderNum;
 

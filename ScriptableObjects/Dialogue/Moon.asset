@@ -1,0 +1,2356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9187173955359257553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7cdb6d39-76cf-49b7-92f7-eb6fdc1e019f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Monkey lived in that house the rest of her life. She died smiling and looking
+    at her painting.
+  children:
+  - 0da459c9-ada9-4ef6-90de-50d759682bf2
+  rect:
+    serializedVersion: 2
+    x: 3759
+    y: 761
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-9058240171238639259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: dde86965-a38b-4bf7-8d34-009e7f61c3d1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yeah, it was really good. Thanks. I have to go now, though.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 3671
+    y: 974
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8897650351531124415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f42be26b-8099-4170-b421-5531ba1e9219
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Well, what did you think? Was that helpful or interesting at all?
+  children:
+  - 3ff69f9a-64a7-45e4-b0f6-fb0aba5350c0
+  - 9d8ca248-980a-4bfb-922c-bf773e82cb82
+  rect:
+    serializedVersion: 2
+    x: 3357
+    y: 1383
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8562477512403140672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 92c5848f-cf80-456b-8b33-5cb581c6d2f1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, that's it.
+  children:
+  - 62529396-4258-47cd-986f-02be18de333c
+  rect:
+    serializedVersion: 2
+    x: 3156
+    y: 1056
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8451686876018024992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1f32d1d4-89c8-4c74-9db3-5f8b2503e197
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What kind of plants are there? Any smells?
+  children:
+  - b53043a7-46c8-4663-8e85-a70565da7d5f
+  rect:
+    serializedVersion: 2
+    x: 2382
+    y: 783
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-8220435807818383207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5affe684-961a-4d27-8e5a-da78dd423bbe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No, but I sense that you are behind a screen, in another world.
+  children:
+  - b1c43e4e-8814-45a1-af25-cbe495064086
+  - 125a2cb8-53a2-4c32-97be-da07c4482e6c
+  rect:
+    serializedVersion: 2
+    x: 549
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7991747732475261544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ed422cf0-06fc-4008-b7b0-edf0ba9e0e32
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: One day however, as we all eventually do, Monkey decided enough was enough.
+  children:
+  - 8ef69cb0-58c5-4dd0-82d6-664cc40254ce
+  rect:
+    serializedVersion: 2
+    x: 3572
+    y: 661
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7401479880609336405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 487f0bfb-cf66-474a-818b-db5f51a15742
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay. The garden represents your current situation. How you're feeling
+    about the everyday.
+  children:
+  - 07115bce-7443-4dc7-9630-3a22587d08f0
+  rect:
+    serializedVersion: 2
+    x: 2951
+    y: 1181
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7242229885893283690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ae9921bb-cb54-4028-ac7c-0dcab9454543
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 'The wall was in someone''s house. '
+  children:
+  - 21b561c2-c736-40ac-a8f6-68cfe38a5b8e
+  rect:
+    serializedVersion: 2
+    x: 1998
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-7150304781020113768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b3937a64-c9bf-418d-9342-f3424b840bbd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I've watched many people in my time. I don't think it's spying. Do you
+    want to listen to a song?
+  children:
+  - 81f9565b-9f2d-4c50-87b3-2612b8b925ec
+  - b14b4977-714f-408f-89b5-9b36b8420f29
+  rect:
+    serializedVersion: 2
+    x: 3358
+    y: 1084
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6984407770394140210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 964fb049-0baa-4c8c-9dc5-2b349c0f9514
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 'Well, it''s psychologically revealing. '
+  children:
+  - d22fe363-031e-4b8d-b616-fa8357ef7374
+  - a64f38b7-e5a2-44a8-9e0b-5be7424025a7
+  rect:
+    serializedVersion: 2
+    x: 2066
+    y: 1051
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6964600719409173883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 125a2cb8-53a2-4c32-97be-da07c4482e6c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How do you sense that?
+  children:
+  - 38f35e78-8379-4c5f-aa1d-813687ecec4a
+  rect:
+    serializedVersion: 2
+    x: 761
+    y: 140
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6832043388472050410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bf53dbdf-9db1-464b-ab6b-9a8fbd62b405
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Monkey had never put anything on the wall because she felt like once she
+    put something there, it would lose its potential.
+  children:
+  - df4435de-20c1-4a92-b43c-6d22039e4d32
+  rect:
+    serializedVersion: 2
+    x: 3398
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6748393181775630402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e7600c47-c8cc-4da5-96e6-1061a485570d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: But sometimes you feel so sick inside there's nothing to do but wait for
+    it to pass. Just know... I've felt that, too. Just keep holding on, please, I
+    would miss you so much.
+  children:
+  - 96ddc8fc-b346-4c67-ac24-49f4ccc936d1
+  rect:
+    serializedVersion: 2
+    x: 1906
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6533727846314031227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a11b41e1-264c-4e6e-9121-f7a5b0fda1c7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I've been writing some insight tools. Do you want to try it?
+  children:
+  - 8c846d57-4ac6-424f-88f8-559ccdd9f907
+  - eb86dd1d-1fdb-4b1a-a3dc-fb14ff0ba125
+  rect:
+    serializedVersion: 2
+    x: 1560
+    y: 788
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6405045828481339882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 349ed4a6-8067-40fd-8cdd-1b3fb424d23e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Yeah... I'm going to put on a song. I think you'll like this one.
+  children:
+  - cbda07f6-6195-4bca-83e2-27657f343424
+  rect:
+    serializedVersion: 2
+    x: 1058
+    y: 823
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-6378088505207618827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 58cdbbc7-131c-4976-9c7c-c0ce20516b1c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Ah well, it's not for everybody I guess. Sorry you didn't enjoy it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 3763
+    y: 1474
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5906941816635931988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: eb86dd1d-1fdb-4b1a-a3dc-fb14ff0ba125
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, thank you.
+  children:
+  - dc22520d-c783-4905-be27-091918994419
+  rect:
+    serializedVersion: 2
+    x: 1790
+    y: 878
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5813388762770798537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 38f35e78-8379-4c5f-aa1d-813687ecec4a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I know many things I cannot explain.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 961
+    y: 140
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5799086265140261322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8c846d57-4ac6-424f-88f8-559ccdd9f907
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Sure.
+  children:
+  - 26bb1d0e-25e7-4781-9a48-664514351b0e
+  rect:
+    serializedVersion: 2
+    x: 1762
+    y: 789
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5741956116011258268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 48463eb7-c098-4344-9799-2cd316d20ec1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The pocket item disappears behind the closing elevator doors. How do you
+    feel if you never get that item back?
+  children:
+  - f68a9595-59fa-475d-89dd-76c9c2731d17
+  rect:
+    serializedVersion: 2
+    x: 2941
+    y: 940
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-5641406635687710441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 81f9565b-9f2d-4c50-87b3-2612b8b925ec
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Sure.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 3558
+    y: 1084
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: PlaySong
+--- !u!114 &-5032171143950376725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b14b4977-714f-408f-89b5-9b36b8420f29
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, thanks.
+  children:
+  - b52381f3-9f96-44a7-bc9d-6241d645a835
+  rect:
+    serializedVersion: 2
+    x: 3558
+    y: 1173
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4583380642816303255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d4eac8e9-278a-449e-8812-5e439b93c7d6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Thanks for saying that.
+  children:
+  - 2bf4d168-36f2-4c3e-8860-ce8c925dbc4b
+  - 76e88537-a7bc-4ff5-90d2-806d7b2a86b5
+  rect:
+    serializedVersion: 2
+    x: 668
+    y: 618
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-4159026743322516263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 436a19df-b056-44d8-94b2-f79899c9270d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'll hear it again.
+  children:
+  - 26bb1d0e-25e7-4781-9a48-664514351b0e
+  rect:
+    serializedVersion: 2
+    x: 2530
+    y: 1232
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3797241628189197072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 62529396-4258-47cd-986f-02be18de333c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: That's it? What does it mean?
+  children:
+  - 964fb049-0baa-4c8c-9dc5-2b349c0f9514
+  rect:
+    serializedVersion: 2
+    x: 1831
+    y: 1042
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-3513368422586650112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: adf2b477-9220-4e38-8701-201ee90e2267
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Monkey stared at the wall day after day. It was so blank, it was almost
+    invisible.
+  children:
+  - 87447c16-18e7-4a3c-8a8d-6c3684c45dbb
+  rect:
+    serializedVersion: 2
+    x: 2398
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2822735687656717891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7107c39d-805d-44f5-975c-b824b960ad74
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Yes, please.
+  children:
+  - 5c374d8a-8e01-4e3c-a2a2-8b06a8aba769
+  rect:
+    serializedVersion: 2
+    x: 2998
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2617114439820339684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 27938c49-ac3f-4aba-a0be-ec183ffb8e23
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You surprise yourself by saying that you're getting out. You step out and
+    drop something out of your pocket before you leave.
+  children:
+  - 4aaa8ec5-3e16-4e4a-8c49-eddc09be65e6
+  rect:
+    serializedVersion: 2
+    x: 2541
+    y: 940
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2515771055403619069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c1e239e6-d77a-4c62-87b0-f40aa0200e12
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: No, I think I'd remember.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 949
+    y: 26
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2352617508891046985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0da459c9-ada9-4ef6-90de-50d759682bf2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Did you like that story?
+  children:
+  - febdbb77-5b98-467e-b8a0-d2410b4e5432
+  - dde86965-a38b-4bf7-8d34-009e7f61c3d1
+  rect:
+    serializedVersion: 2
+    x: 3593
+    y: 861
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2286362971430325353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3ff69f9a-64a7-45e4-b0f6-fb0aba5350c0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I loved it.
+  children:
+  - 1e269613-1181-43c0-b5ba-2c2cdb4a0b04
+  rect:
+    serializedVersion: 2
+    x: 3557
+    y: 1383
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2115662380653827039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a3ac1cf1-428b-417e-b8b3-f6eacc923b1f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What is the mechanism you used to open the door? What was your reaction
+    to discovering it?
+  children:
+  - c01a6fef-597a-4c96-8407-8fdf96d60aa5
+  rect:
+    serializedVersion: 2
+    x: 2782
+    y: 783
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1656796204567226873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7c6362af-c128-43ca-b743-a5b8f612c85f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You are in a beautiful garden, but you are starting to get antsy. You want
+    to move around and stretch your legs, but you can't find your way out of the
+    garden.
+  children:
+  - 1f32d1d4-89c8-4c74-9db3-5f8b2503e197
+  rect:
+    serializedVersion: 2
+    x: 2182
+    y: 783
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1577209094255325063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 8ef69cb0-58c5-4dd0-82d6-664cc40254ce
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: She painted a big mural of small flowers and wild animals running through
+    paths made of silk and thorns all with speech bubbles. There was no real thread
+    running through the words and sentences inside the speech bubbles.
+  children:
+  - 0eb155ba-6e8e-416c-9b75-ef112ac0cac0
+  rect:
+    serializedVersion: 2
+    x: 3772
+    y: 661
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1340685925455225334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 4aaa8ec5-3e16-4e4a-8c49-eddc09be65e6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What did you drop? The elevator door closes. What does the person do? Are
+    they looking at you? Not paying attention?
+  children:
+  - 48463eb7-c098-4344-9799-2cd316d20ec1
+  rect:
+    serializedVersion: 2
+    x: 2741
+    y: 940
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1142905491399801549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: ddd9fa87-77b9-4575-9a81-d827f761a6d8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: It's a friend.
+  children:
+  - f9741515-b681-464a-8aaa-0493e037ccd9
+  rect:
+    serializedVersion: 2
+    x: 81
+    y: 350
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1013326218356920221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b53043a7-46c8-4663-8e85-a70565da7d5f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Now, as you are walking around you hear a strange sound. You move some
+    leaves and brush aside to find a trap door. You open it.
+  children:
+  - a3ac1cf1-428b-417e-b8b3-f6eacc923b1f
+  rect:
+    serializedVersion: 2
+    x: 2582
+    y: 783
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-820551205266168038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5c374d8a-8e01-4e3c-a2a2-8b06a8aba769
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay.
+  children:
+  - bf53dbdf-9db1-464b-ab6b-9a8fbd62b405
+  rect:
+    serializedVersion: 2
+    x: 3198
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-211472090783626680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: df4435de-20c1-4a92-b43c-6d22039e4d32
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Like she knew she was going to ruin it somehow.
+  children:
+  - ed422cf0-06fc-4008-b7b0-edf0ba9e0e32
+  rect:
+    serializedVersion: 2
+    x: 3598
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-193107579791080876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 26bb1d0e-25e7-4781-9a48-664514351b0e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, just imagine this scenario and bear with me.
+  children:
+  - 7c6362af-c128-43ca-b743-a5b8f612c85f
+  rect:
+    serializedVersion: 2
+    x: 1982
+    y: 783
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
+  m_Name: Moon
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 7867980480068860959}
+  - {fileID: 8468282833798051878}
+  - {fileID: -1142905491399801549}
+  - {fileID: 6490196502173502472}
+  - {fileID: 3514469990538463499}
+  - {fileID: 8364788284887869117}
+  - {fileID: 9017483873778509940}
+  - {fileID: 9124394393865010126}
+  - {fileID: 8235106480741781201}
+  - {fileID: 9200043068917264100}
+  - {fileID: 1444786352156690052}
+  - {fileID: 7552883802673155764}
+  - {fileID: 8102608699177427902}
+  - {fileID: 1435162748117930638}
+  - {fileID: -7242229885893283690}
+  - {fileID: 5331146304796637517}
+  - {fileID: -3513368422586650112}
+  - {fileID: 8860084872890031403}
+  - {fileID: 1131489156620440582}
+  - {fileID: -2822735687656717891}
+  - {fileID: 8928579704251127940}
+  - {fileID: 240258844575321355}
+  - {fileID: -820551205266168038}
+  - {fileID: -6832043388472050410}
+  - {fileID: -211472090783626680}
+  - {fileID: -7991747732475261544}
+  - {fileID: -1577209094255325063}
+  - {fileID: 2566359348442881724}
+  - {fileID: -9187173955359257553}
+  - {fileID: -2352617508891046985}
+  - {fileID: 2418818537977112573}
+  - {fileID: -9058240171238639259}
+  - {fileID: -7150304781020113768}
+  - {fileID: -5641406635687710441}
+  - {fileID: -5032171143950376725}
+  - {fileID: 2811236960909703928}
+  - {fileID: 8192084076716860828}
+  - {fileID: -4583380642816303255}
+  - {fileID: 6158030590586620905}
+  - {fileID: 3943001199769210385}
+  - {fileID: 7389808065046082261}
+  - {fileID: -6405045828481339882}
+  - {fileID: 4156525932141576821}
+  - {fileID: 5461213157976769479}
+  - {fileID: 2007355606175085708}
+  - {fileID: -6533727846314031227}
+  - {fileID: -5799086265140261322}
+  - {fileID: -5906941816635931988}
+  - {fileID: 4329712210692995330}
+  - {fileID: -193107579791080876}
+  - {fileID: 3572684380535654599}
+  - {fileID: 61166132328195726}
+  - {fileID: 1530442312860887392}
+  - {fileID: 9067846799433160543}
+  - {fileID: 4765079539039128176}
+  - {fileID: -6748393181775630402}
+  - {fileID: -8220435807818383207}
+  - {fileID: 8376638720797053869}
+  - {fileID: -6964600719409173883}
+  - {fileID: -2515771055403619069}
+  - {fileID: -5813388762770798537}
+  - {fileID: 4701232123107764863}
+  - {fileID: -1656796204567226873}
+  - {fileID: -8451686876018024992}
+  - {fileID: -1013326218356920221}
+  - {fileID: -2115662380653827039}
+  - {fileID: 8847314829360466711}
+  - {fileID: 5954175319302420500}
+  - {fileID: -2617114439820339684}
+  - {fileID: -1340685925455225334}
+  - {fileID: -5741956116011258268}
+  - {fileID: 1184263559610485959}
+  - {fileID: -8562477512403140672}
+  - {fileID: -3797241628189197072}
+  - {fileID: -6984407770394140210}
+  - {fileID: 2093567298287280121}
+  - {fileID: 3053156827101404372}
+  - {fileID: 5740513931602688999}
+  - {fileID: 1993397721886846937}
+  - {fileID: -4159026743322516263}
+  - {fileID: -7401479880609336405}
+  - {fileID: 1687528054547578466}
+  - {fileID: 6935510067138073545}
+  - {fileID: 4793738579272687973}
+  - {fileID: 7788340849434757566}
+  - {fileID: 1002595276927418328}
+  - {fileID: 2416767061741573137}
+  - {fileID: -8897650351531124415}
+  - {fileID: -2286362971430325353}
+  - {fileID: 589523421987553902}
+  - {fileID: -6378088505207618827}
+  - {fileID: 7544715058841756932}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &61166132328195726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 159eac89-fd97-4101-9fa0-9e289d98aa0a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You know, people like to say that feelings are something inside, something
+    you can't see. But I don't think that's true.
+  children:
+  - 0a95084c-44c7-499d-beec-c57c9a22cc6a
+  rect:
+    serializedVersion: 2
+    x: 1107
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &240258844575321355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7894b60e-96c5-4ffb-b4ef-e5b476501066
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay. Do you want to listen to some music?
+  children:
+  - f3dc71eb-b7e7-4035-9880-e8bf2852451c
+  - 4655c139-5109-4a30-925c-0a32ed751dca
+  rect:
+    serializedVersion: 2
+    x: 3215
+    y: 730
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &589523421987553902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 9d8ca248-980a-4bfb-922c-bf773e82cb82
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I think it's baloney.
+  children:
+  - 58cdbbc7-131c-4976-9c7c-c0ce20516b1c
+  rect:
+    serializedVersion: 2
+    x: 3563
+    y: 1474
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1002595276927418328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a4315519-59fb-4a7a-a439-2bbaca9b5ba3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The pocket item you left in the elevator is something you take for granted
+    that you could lose if you handle this decision wrongly.
+  children:
+  - 781b59c0-56e3-4fc5-b3d5-2919f056f3fe
+  rect:
+    serializedVersion: 2
+    x: 2956
+    y: 1383
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1131489156620440582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: da37384b-2669-4ef5-8464-67a70f8a372a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Should I keep going?
+  children:
+  - 7107c39d-805d-44f5-975c-b824b960ad74
+  - c6e82f56-f88f-49b4-88d9-404789f50045
+  rect:
+    serializedVersion: 2
+    x: 2797
+    y: 546
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1184263559610485959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f68a9595-59fa-475d-89dd-76c9c2731d17
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You turn around and take in the scene around you. What does it look like?
+  children:
+  - 92c5848f-cf80-456b-8b33-5cb581c6d2f1
+  rect:
+    serializedVersion: 2
+    x: 3141
+    y: 940
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1435162748117930638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 951d1010-900e-4b90-9181-065991f7e253
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Once upon a time... there was a blank wall.
+  children:
+  - ae9921bb-cb54-4028-ac7c-0dcab9454543
+  rect:
+    serializedVersion: 2
+    x: 1798
+    y: 544
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1444786352156690052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: acd2d5b2-e977-44a6-8491-f4bf1a5ea6ff
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Tell me a story, please.
+  children:
+  - 165d0711-5c66-42e4-a027-736e2020108d
+  rect:
+    serializedVersion: 2
+    x: 1398
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1530442312860887392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0a95084c-44c7-499d-beec-c57c9a22cc6a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I find that visualization helps me. Sometimes when I'm feeling really sad,
+    I like to pour some darkness into the ocean.
+  children:
+  - 71ec12c5-c535-4a5d-844a-de94c9612f99
+  rect:
+    serializedVersion: 2
+    x: 1307
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1687528054547578466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 07115bce-7443-4dc7-9630-3a22587d08f0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Was it full and busy? Was it summer, winter? These are all clues as to
+    your current relationship to reality.
+  children:
+  - d28814b4-c3d0-489a-99ef-55bbcf712ed1
+  rect:
+    serializedVersion: 2
+    x: 3151
+    y: 1181
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &1993397721886846937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 74809d36-c46a-4eae-80f7-2d16391c7c2b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I'm ready for the key.
+  children:
+  - 487f0bfb-cf66-474a-818b-db5f51a15742
+  rect:
+    serializedVersion: 2
+    x: 2749
+    y: 1096
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2007355606175085708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3f8cb3d2-d609-43c2-bc49-2ef681f8acb8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: That sounds exciting.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1366
+    y: 880
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2093567298287280121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d22fe363-031e-4b8d-b616-fa8357ef7374
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: How so?
+  children:
+  - d93e87ee-1c52-4967-b4dd-8afe62b78142
+  rect:
+    serializedVersion: 2
+    x: 2265
+    y: 1050
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2416767061741573137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 781b59c0-56e3-4fc5-b3d5-2919f056f3fe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The room you get to next is your vision of the future, and represents how
+    you see yourself. Was it fantastical and beautiful? Luxurious but simple? Maybe
+    dirty, disappointing? You don't have to share, just think about it.
+  children:
+  - f42be26b-8099-4170-b421-5531ba1e9219
+  rect:
+    serializedVersion: 2
+    x: 3156
+    y: 1383
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2418818537977112573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: febdbb77-5b98-467e-b8a0-d2410b4e5432
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Who's Monkey?
+  children:
+  - b3937a64-c9bf-418d-9342-f3424b840bbd
+  rect:
+    serializedVersion: 2
+    x: 3462
+    y: 976
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2566359348442881724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 0eb155ba-6e8e-416c-9b75-ef112ac0cac0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The words just kind of came to her, day by day.
+  children:
+  - 7cdb6d39-76cf-49b7-92f7-eb6fdc1e019f
+  rect:
+    serializedVersion: 2
+    x: 3559
+    y: 761
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &2811236960909703928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b52381f3-9f96-44a7-bc9d-6241d645a835
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Thanks for talking with me. It really means a lot. Come back whenever you
+    want.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 3758
+    y: 1173
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3053156827101404372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a64f38b7-e5a2-44a8-9e0b-5be7424025a7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I don't believe you.
+  children:
+  - d93e87ee-1c52-4967-b4dd-8afe62b78142
+  rect:
+    serializedVersion: 2
+    x: 2273
+    y: 1137
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3514469990538463499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b8963121-9f33-42b7-8c42-2dcd2e7b3c51
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I need help.
+  children:
+  - bbed286b-5511-4fd4-a376-227664910a01
+  rect:
+    serializedVersion: 2
+    x: 457
+    y: 480
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3572684380535654599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 3885cec3-f468-46f8-87c9-9eaa8d4021c0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I've been feeling emotionally unwell. I thought you might have some advice.
+  children:
+  - 159eac89-fd97-4101-9fa0-9e289d98aa0a
+  rect:
+    serializedVersion: 2
+    x: 897
+    y: 388
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &3943001199769210385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 76e88537-a7bc-4ff5-90d2-806d7b2a86b5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Do you want to hang out a while?
+  children:
+  - 349ed4a6-8067-40fd-8cdd-1b3fb424d23e
+  rect:
+    serializedVersion: 2
+    x: 874
+    y: 706
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4156525932141576821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: cbda07f6-6195-4bca-83e2-27657f343424
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: And thanks for visiting me.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1216
+    y: 934
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: PlaySecondSong
+--- !u!114 &4329712210692995330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: dc22520d-c783-4905-be27-091918994419
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, let me know if you change your mind.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2020
+    y: 905
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4701232123107764863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 96ddc8fc-b346-4c67-ac24-49f4ccc936d1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: You know, I used to think that I was born to be alone, but talking with
+    someone like you makes me feel... more connected, even though we're far away.
+    I don't know if that makes any sense.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2106
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4765079539039128176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 4b5949e4-8172-4cf3-96c7-4c82b551c410
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Maybe you could try something like that. But you know, on your scale. Drop
+    some ink into a bowl of water.
+  children:
+  - e7600c47-c8cc-4da5-96e6-1061a485570d
+  rect:
+    serializedVersion: 2
+    x: 1706
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4793738579272687973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c6982456-bea3-4273-9bec-7a656fcc2eee
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The way you reacted to the elevator reflects how you handle change.
+  children:
+  - f63d861e-961b-4352-b29c-e382e79e34f3
+  rect:
+    serializedVersion: 2
+    x: 3093
+    y: 1283
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5331146304796637517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 21b561c2-c736-40ac-a8f6-68cfe38a5b8e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: This person's name was Monkey.
+  children:
+  - adf2b477-9220-4e38-8701-201ee90e2267
+  rect:
+    serializedVersion: 2
+    x: 2198
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5461213157976769479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2ab2d895-6568-4447-b6d5-234b5143c7c9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: What kind of discoveries?
+  children:
+  - a11b41e1-264c-4e6e-9121-f7a5b0fda1c7
+  rect:
+    serializedVersion: 2
+    x: 1361
+    y: 789
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5740513931602688999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d93e87ee-1c52-4967-b4dd-8afe62b78142
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I'll give you the key, if you're ready. Do you remember your answers?
+  children:
+  - 74809d36-c46a-4eae-80f7-2d16391c7c2b
+  - 436a19df-b056-44d8-94b2-f79899c9270d
+  rect:
+    serializedVersion: 2
+    x: 2549
+    y: 1096
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5954175319302420500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 95d1a8ae-365e-4b89-b260-c55b16081bf4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: It's somebody you know. They mutter something. Is it intelligible? Who
+    is it? How do you feel about seeing them?
+  children:
+  - 27938c49-ac3f-4aba-a0be-ec183ffb8e23
+  rect:
+    serializedVersion: 2
+    x: 2293
+    y: 899
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6158030590586620905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2bf4d168-36f2-4c3e-8860-ce8c925dbc4b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: So what's new with you?
+  children:
+  - a686dadd-b99e-4320-9e40-d64f8203551b
+  rect:
+    serializedVersion: 2
+    x: 868
+    y: 618
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6490196502173502472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f9741515-b681-464a-8aaa-0493e037ccd9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: A friend? That's nice. But what are you doing here?
+  children:
+  - b8963121-9f33-42b7-8c42-2dcd2e7b3c51
+  - f047c3c4-6de2-4c07-9e7d-ca87af566666
+  rect:
+    serializedVersion: 2
+    x: 224
+    y: 496
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &6935510067138073545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d28814b4-c3d0-489a-99ef-55bbcf712ed1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: The mechanism of the trap door is a clue towards a skill or motif you should
+    pay attention to, that will create a shift in your present day situation, a change
+    to things that you're not feeling fulfilled by.
+  children:
+  - c6982456-bea3-4273-9bec-7a656fcc2eee
+  rect:
+    serializedVersion: 2
+    x: 2893
+    y: 1283
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7389808065046082261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: a686dadd-b99e-4320-9e40-d64f8203551b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I think I might be on the verge of some discoveries.
+  children:
+  - 2ab2d895-6568-4447-b6d5-234b5143c7c9
+  - 3f8cb3d2-d609-43c2-bc49-2ef681f8acb8
+  rect:
+    serializedVersion: 2
+    x: 1068
+    y: 619
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7544715058841756932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1e269613-1181-43c0-b5ba-2c2cdb4a0b04
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Really? Oh, that makes me so happy. I worked really hard on it. I hope
+    you found it helpful.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 3757
+    y: 1384
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7552883802673155764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 4655c139-5109-4a30-925c-0a32ed751dca
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Let's just sit a while.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1395
+    y: 660
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7788340849434757566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f63d861e-961b-4352-b29c-e382e79e34f3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: 'The person who came in the elevator represents a part of yourself or an
+    area of your life you''ve been neglecting. It''s time to take some action on
+    this neglect: cut it loose, or recommit.'
+  children:
+  - a4315519-59fb-4a7a-a439-2bbaca9b5ba3
+  rect:
+    serializedVersion: 2
+    x: 3323
+    y: 1268
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7867980480068860959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: d5ea5f03-50b1-4997-8a2b-8b8a8fe319de
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Hello, who is that?
+  children:
+  - 7d0fc368-5aa8-405f-b8ef-34e0ebf80ea3
+  - ddd9fa87-77b9-4575-9a81-d827f761a6d8
+  rect:
+    serializedVersion: 2
+    x: 105
+    y: 77
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8102608699177427902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 165d0711-5c66-42e4-a027-736e2020108d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, I'm thinking of a story.
+  children:
+  - 951d1010-900e-4b90-9181-065991f7e253
+  rect:
+    serializedVersion: 2
+    x: 1598
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8192084076716860828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 1d29d0c6-5d63-4e13-9f3f-7ae0bb2876f1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1587
+    y: 435
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: PlaySong
+--- !u!114 &8235106480741781201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 2a358509-c1c0-491e-9347-a91ae47a8460
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Okay, do you want to do something together? I could tell you a story. Or
+    we could listen to some music. Or if you want to just sit together for a while
+    we could do that too...
+  children:
+  - f3dc71eb-b7e7-4035-9880-e8bf2852451c
+  - acd2d5b2-e977-44a6-8491-f4bf1a5ea6ff
+  - 4655c139-5109-4a30-925c-0a32ed751dca
+  rect:
+    serializedVersion: 2
+    x: 1152
+    y: 484
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8364788284887869117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f047c3c4-6de2-4c07-9e7d-ca87af566666
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I missed you.
+  children:
+  - d4eac8e9-278a-449e-8812-5e439b93c7d6
+  rect:
+    serializedVersion: 2
+    x: 433
+    y: 585
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8376638720797053869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: b1c43e4e-8814-45a1-af25-cbe495064086
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: We've met before!
+  children:
+  - c1e239e6-d77a-4c62-87b0-f40aa0200e12
+  rect:
+    serializedVersion: 2
+    x: 749
+    y: 26
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8468282833798051878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 7d0fc368-5aa8-405f-b8ef-34e0ebf80ea3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Can't you see me?
+  children:
+  - 5affe684-961a-4d27-8e5a-da78dd423bbe
+  rect:
+    serializedVersion: 2
+    x: 349
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8847314829360466711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c01a6fef-597a-4c96-8407-8fdf96d60aa5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: When you drop down the door, you realize it is an elevator. Before you
+    can glance at the button options, the elevator stops and somebody walks in.
+  children:
+  - 95d1a8ae-365e-4b89-b260-c55b16081bf4
+  rect:
+    serializedVersion: 2
+    x: 2998
+    y: 853
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8860084872890031403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 87447c16-18e7-4a3c-8a8d-6c3684c45dbb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: This made Monkey excited when she first moved into the house with the wall,
+    but after a while it felt like... something lost, or left unclaimed.
+  children:
+  - da37384b-2669-4ef5-8464-67a70f8a372a
+  rect:
+    serializedVersion: 2
+    x: 2598
+    y: 545
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &8928579704251127940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: c6e82f56-f88f-49b4-88d9-404789f50045
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: No, let's do something else.
+  children:
+  - 7894b60e-96c5-4ffb-b4ef-e5b476501066
+  rect:
+    serializedVersion: 2
+    x: 3008
+    y: 643
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &9017483873778509940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: bbed286b-5511-4fd4-a376-227664910a01
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: What do you need help with?
+  children:
+  - 5e0ef188-e00a-4563-805e-05c5b8158e11
+  - 3885cec3-f468-46f8-87c9-9eaa8d4021c0
+  rect:
+    serializedVersion: 2
+    x: 692
+    y: 497
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &9067846799433160543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 71ec12c5-c535-4a5d-844a-de94c9612f99
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: I look at the way it spills into the ocean like a good oil spill. That
+    makes me feel better.
+  children:
+  - 4b5949e4-8172-4cf3-96c7-4c82b551c410
+  rect:
+    serializedVersion: 2
+    x: 1506
+    y: 327
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &9124394393865010126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 5e0ef188-e00a-4563-805e-05c5b8158e11
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: I need a distraction.
+  children:
+  - 2a358509-c1c0-491e-9347-a91ae47a8460
+  rect:
+    serializedVersion: 2
+    x: 952
+    y: 483
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &9200043068917264100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f3dc71eb-b7e7-4035-9880-e8bf2852451c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Let's listen to some music.
+  children:
+  - 1d29d0c6-5d63-4e13-9f3f-7ae0bb2876f1
+  rect:
+    serializedVersion: 2
+    x: 1387
+    y: 435
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

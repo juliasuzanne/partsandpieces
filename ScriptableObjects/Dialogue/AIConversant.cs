@@ -21,8 +21,14 @@ namespace Dialogue
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
         }
 
+        public void SetCurrentDialogue()
+        {
+            startingDialogue = dialogue;
+        }
+
         public void ChangeDialogue(Dialogue newDialogue)
         {
+            SetCurrentDialogue();
             dialogue = newDialogue;
         }
 

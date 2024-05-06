@@ -40,6 +40,7 @@ public class SaveObject
     public string stateOfFace;
     public string stateOfPiano;
     public string stateOfFalling;
+    public bool nighttime;
 
     public string stateOfWindowDrawing;
     public List<string> floorboardState = new List<string>();

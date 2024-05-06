@@ -192,6 +192,10 @@ public class CaveSaveSettings : MonoBehaviour
         so.wishes.Add(newWish.text);
     }
 
+    public void AddItemToMaze(string newItem)
+    {
+        so.mazeitems.Add(newItem);
+    }
     public void AddItemToExteriorScene(string newItem)
     {
         so.stateOfExteriorSceneList.Add(newItem);
@@ -313,6 +317,7 @@ public class CaveSaveSettings : MonoBehaviour
     {
         so.rain = false;
         so.stateOfPiano = "entry";
+        so.nighttime = false;
         so.connectedTorso = false;
         so.connectedLegs = false;
         so.cutOffExtraArms = false;

@@ -20,6 +20,7 @@ public class UnearthSpawner : MonoBehaviour
         _sp.sprite = _clickedSprite;
         posToSpawn = new Vector2(transform.position.x, transform.position.y);
         GameObject newItem = Instantiate(_items[Random.Range(0, _items.Length)], posToSpawn, Quaternion.identity);
+        newItem.GetComponent<SpriteRenderer>().sortingOrder = 65;
 
     }
 

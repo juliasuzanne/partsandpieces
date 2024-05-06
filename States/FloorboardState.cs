@@ -23,6 +23,8 @@ public class FloorboardState : MonoBehaviour
     [SerializeField] private GameObject babyCoin;
     [SerializeField] private GameObject strawBerryCandy;
     [SerializeField] private GameObject babyKey;
+    [SerializeField] private GameObject babyBaby;
+
     [SerializeField] private GameObject babyButterscotch;
     [SerializeField] private GameObject babyPaint;
 
@@ -39,8 +41,9 @@ public class FloorboardState : MonoBehaviour
 
         if (saveSettings.so.floorboardState.Contains("baby"))
         {
+            babyButterscotch.SetActive(!saveSettings.so.floorboardState.Contains("babyBaby"));
             babyFloorboards.SetActive(false);
-            babyFloorboardsCollider.SetActive(true);
+            babyFloorboardsCollider.SetActive(!saveSettings.so.floorboardState.Contains("babyBaby"));
             babyCollider.enabled = true;
         }
         else

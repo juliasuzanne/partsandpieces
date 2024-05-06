@@ -10,6 +10,7 @@ namespace Dialogue
         [SerializeField] private GameObject _mazeSetup;
         [SerializeField] private GameObject _citySetup;
         [SerializeField] private Sprite _mazeDrawing;
+        [SerializeField] private GameObject yellowPaint;
         [SerializeField] private Sprite _cityDrawing;
         [SerializeField] private SpriteRenderer sp_panel;
         [SerializeField] private SpriteRenderer sp_wall;
@@ -26,6 +27,7 @@ namespace Dialogue
             _saveManager.LoadGame();
             SetUpState();
 
+
         }
 
         public void StopPlaying()
@@ -41,8 +43,10 @@ namespace Dialogue
 
         public void SetUpState()
         {
+
             stateOfExterior = _saveManager.so.exteriorLoc;
             windowsillitems = _saveManager.so.windowsillitems;
+            yellowPaint.SetActive(!_saveManager.so.mazeitems.Contains("yellowPaint"));
 
             if (stateOfExterior == "city")
             {

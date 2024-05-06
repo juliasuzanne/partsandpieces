@@ -27,7 +27,12 @@ public class StorageSlots : MonoBehaviour
         {
             if (item.GetComponent<FallingItem>().GetName() != null)
             {
-                AddItemToStorage(item);
+                if (storageItems.Contains(item.GetComponent<FallingItem>().GetName()))
+                {
+                    AddItemToStorage(item);
+
+                }
+
             }
 
         }
@@ -51,6 +56,11 @@ public class StorageSlots : MonoBehaviour
                     newPrefab.GetComponent<FallingItem>().SetSlotNum(count);
                     newPrefab.GetComponent<FallingItem>().SetStorage(true);
                     itemsInStorage.Add(prefab.GetComponent<FallingItem>().GetName());
+                    if (!saveSettings.so.storageitems.Contains(prefab.GetComponent<FallingItem>().GetName()))
+                    {
+                        saveSettings.AddItemToStorage(prefab.GetComponent<FallingItem>().GetName());
+
+                    }
                     break;
                 }
                 else
@@ -58,10 +68,7 @@ public class StorageSlots : MonoBehaviour
                     StartCoroutine("PlayerSays");
                     break;
                 }
-                if (!saveSettings.so.storageitems.Contains(prefab.GetComponent<ChangeColorOnThis>().name))
-                {
-                    saveSettings.AddItemToStorage(prefab.GetComponent<FallingItem>().GetName());
-                }
+
 
                 break;
             }

@@ -14,6 +14,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject rainObject;
     public float dayDuration = 30f;
+    private bool nighttime;
 
     public Text message;
     public event Action onHourChanged;
@@ -170,11 +171,15 @@ public class TimeManager : MonoBehaviour
         }
 
 
+
         if (nightPanel != null)
         {
             if (Mathf.FloorToInt(GetHour()) == 20)
             {
                 CheckRain();
+                nighttime = true;
+                saveSettings.so.nighttime = true;
+                saveSettings.SaveGame();
 
                 if (anim != null)
                 {
@@ -183,8 +188,11 @@ public class TimeManager : MonoBehaviour
 
                 nightPanel.color = new Color(255f, 255f, 255f, GetMinutes() * 0.025f);
             }
-            if (Mathf.FloorToInt(GetHour()) == 26)
+            if (Mathf.FloorToInt(GetHour()) == 2)
             {
+                nighttime = false;
+                saveSettings.so.nighttime = false;
+                saveSettings.SaveGame();
 
                 if (anim != null)
                 {
@@ -218,6 +226,13 @@ public class TimeManager : MonoBehaviour
         }
     }
 
+    public void MakeNightTime()
+    {
+        if (nightPanel != null)
+        {
+            nightPanel.color = new Color(255f, 255f, 255f, ((60f - GetMinutes()) * 0.025f));
+        }
+    }
 
     public int GetDay()
     {
