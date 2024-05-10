@@ -118,8 +118,8 @@ MonoBehaviour:
   - 8b40fb05-348c-478b-a8ef-59379b51f759
   rect:
     serializedVersion: 2
-    x: 730
-    y: 370
+    x: 735
+    y: 314
     width: 200
     height: 100
   onEnterAction: 
@@ -799,8 +799,8 @@ MonoBehaviour:
     y: 508
     width: 200
     height: 100
-  onEnterAction: MakeWish
-  onExitAction: 
+  onEnterAction: 
+  onExitAction: MakeWish
 --- !u!114 &5809616730601581958
 MonoBehaviour:
   m_ObjectHideFlags: 0

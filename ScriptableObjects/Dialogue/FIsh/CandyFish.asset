@@ -19,7 +19,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 308
-    y: 317
+    y: 318
     width: 200
     height: 100
   onEnterAction: ChangeDialogue
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 316
     width: 200
     height: 100
-  onEnterAction: MakeWish
-  onExitAction: 
+  onEnterAction: 
+  onExitAction: MakeWish
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

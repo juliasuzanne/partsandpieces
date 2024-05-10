@@ -51,13 +51,12 @@ public class SaveObject
     public List<string> storageitems = new List<string>();
     public List<string> wishes = new List<string>();
     public string exteriorLoc;
-    public Color bootColor;
-    public Color gloveColor;
-    public Color skinColor;
-    public Color skirtColor;
-    public Color shirtColor;
-    public Color lipColor;
-
+    public Color bootColor = new Color(.2f, .22f, .3f);
+    public Color gloveColor = new Color(.3f, .78f, .57f);
+    public Color skinColor = new Color(.65f, .52f, .4f);
+    public Color skirtColor = new Color(.3f, .32f, .55f);
+    public Color shirtColor = new Color(.47f, .34f, .52f);
+    public Color lipColor = new Color(.77f, .51f, .68f);
 
 
 }
