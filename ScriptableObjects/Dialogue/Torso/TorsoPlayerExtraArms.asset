@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 6251c769-6f2b-4a92-8261-b0266e985259
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  speech: How ar eyou feeling?
+  speech: How are you feeling?
   children:
   - 70220e22-e99a-4904-9201-fd85d8a851c9
   rect:

@@ -13,11 +13,17 @@ namespace Dialogue
         [SerializeField] private GameObject coin1;
         [SerializeField] private GameObject coin2;
         [SerializeField] private GameObject coin3;
-
-
+        [SerializeField] private GameObject treasureSpot1;
+        [SerializeField] private GameObject treasureSpot2;
+        [SerializeField] private GameObject treasureSpot3;
+        [SerializeField] private GameObject treasureSpot4;
+        [SerializeField] private GameObject treasureSpot5;
+        [SerializeField] private GameObject treasureSpot6;
+        [SerializeField] private GameObject treasureSpot7;
+        [SerializeField] private GameObject treasureSpot8;
+        [SerializeField] private GameObject treasureSpot9;
 
         private string currentStateOfMaze;
-
         [SerializeField] private Dialogue pianoFirstSuccessNoHeard;
         [SerializeField] private Dialogue pianoFirstSuccessYesHeard;
         [SerializeField] private Dialogue pianoReturnNoHeard;
@@ -37,7 +43,7 @@ namespace Dialogue
         [SerializeField] private float[] startingTime;
         [SerializeField] private float[] localStartingTime;
         [SerializeField] private GameObject thisPerson;
-        [SerializeField] private GameObject pianoCollider;
+        [SerializeField] private GameObject sheetMusic;
 
 
 
@@ -72,6 +78,18 @@ namespace Dialogue
             coin2.SetActive(!saveManager.so.mazeitems.Contains("coin2"));
             coin3.SetActive(!saveManager.so.mazeitems.Contains("coin3"));
 
+            sheetMusic.SetActive(saveManager.so.stateOfPiano == "heartandsoul");
+
+            treasureSpot1.SetActive(!saveManager.so.mazeitems.Contains("treasure1"));
+            treasureSpot2.SetActive(!saveManager.so.mazeitems.Contains("treasure2"));
+            treasureSpot3.SetActive(!saveManager.so.mazeitems.Contains("treasure3"));
+            treasureSpot4.SetActive(!saveManager.so.mazeitems.Contains("treasure4"));
+            treasureSpot5.SetActive(!saveManager.so.mazeitems.Contains("treasure5"));
+            treasureSpot6.SetActive(!saveManager.so.mazeitems.Contains("treasure6"));
+            treasureSpot7.SetActive(!saveManager.so.mazeitems.Contains("treasure7"));
+            treasureSpot8.SetActive(!saveManager.so.mazeitems.Contains("treasure8"));
+            treasureSpot9.SetActive(!saveManager.so.mazeitems.Contains("treasure9"));
+
 
 
 
@@ -81,7 +99,16 @@ namespace Dialogue
             {
                 player.position = new Vector2(porchPos.position.x, porchPos.position.y);
                 onPorch.Invoke();
-                _torsoIdleMovement.IdlingTrue();
+                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.didFrankenstein == false && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfPiano == "heartandsoul") && !(saveManager.so.stateOfLab == "AttachedTorsoReturn"))
+                {
+                    torso.SetActive(true);
+                    _torsoIdleMovement.IdlingTrue();
+                }
+                else
+                {
+                    torso.SetActive(false);
+
+                }
 
             }
 
@@ -114,7 +141,9 @@ namespace Dialogue
             else if (currentStateOfMaze == "successpiano")
             {
                 onPianoSuccessFirst.Invoke();
+                saveManager.ChangePianoState("success");
                 saveManager.ChangeMazeState("piano");
+                saveManager.SaveGame();
                 if (saveManager.so.heardStory == true)
                 {
                     conversant.ChangeDialogue(pianoFirstSuccessYesHeard);
@@ -130,6 +159,16 @@ namespace Dialogue
             {
                 player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
                 onPianoReturnOnly.Invoke();
+                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfPiano == "heartandsoul"))
+                {
+                    torso.SetActive(true);
+                    _torsoIdleMovement.IdlingTrue();
+                }
+                else
+                {
+                    torso.SetActive(false);
+
+                }
 
             }
 
@@ -144,7 +183,6 @@ namespace Dialogue
 
 
             thisPerson.SetActive(sceneList.Contains("thisPerson"));
-            pianoCollider.SetActive(sceneList.Contains("thisPerson"));
 
 
         }

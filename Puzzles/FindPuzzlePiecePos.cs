@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class FindPuzzlePiecePos : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class FindPuzzlePiecePos : MonoBehaviour
     [SerializeField] private int puzzleIdentifier;
     [SerializeField] private GameObject placedPiece;
     [SerializeField] private CheckPuzzleComplete checkPuzzle;
+    [SerializeField] private UnityEvent onPlaced;
 
     void Update()
     {
@@ -25,6 +28,7 @@ public class FindPuzzlePiecePos : MonoBehaviour
     {
         if (hit.puzzleID == puzzleIdentifier && (this.transform.parent.rotation.z) < 0.33f && (this.transform.parent.rotation.z) > 0.26f)
         {
+            onPlaced.Invoke();
             placedPiece.SetActive(true);
             checkPuzzle.AdjustTrue(puzzleIdentifier);
             Destroy(this.transform.parent.gameObject);

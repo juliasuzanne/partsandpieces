@@ -12,7 +12,11 @@ public class CaveSaveSettings : MonoBehaviour
 
     void Start()
     {
-        timeManager = FindObjectOfType<TimeManager>();
+        if (timeManager == null)
+        {
+            timeManager = FindObjectOfType<TimeManager>();
+
+        }
 
     }
 
@@ -234,6 +238,19 @@ public class CaveSaveSettings : MonoBehaviour
         so.stateOfWindowDrawing = newState;
     }
 
+    public void CheckMazeStateForReEntry()
+    {
+        if (so.stateOfMaze == "returnfrompiano" || so.stateOfMaze == "failpiano")
+        {
+            so.stateOfMaze = "enterfromhouse";
+        }
+        else
+        {
+
+        }
+
+    }
+
     public void ChangeFallingState(string newState)
     {
         so.stateOfFalling = newState;
@@ -241,6 +258,7 @@ public class CaveSaveSettings : MonoBehaviour
 
     public void RemoveCoin()
     {
+        so.enteredCoinsCount = so.enteredCoinsCount + 1;
         so.coinCount = so.coinCount - 1;
     }
     public void AddCoin()
@@ -251,6 +269,7 @@ public class CaveSaveSettings : MonoBehaviour
 
     public void CutOffArms()
     {
+        so.hasExtraArms = false;
         so.cutOffExtraArms = true;
     }
 
@@ -258,6 +277,8 @@ public class CaveSaveSettings : MonoBehaviour
     {
         so.cutOffExtraArms = false;
         so.connectedTorso = true;
+        so.didFrankenstein = true;
+        SaveGame();
 
     }
 
@@ -292,6 +313,7 @@ public class CaveSaveSettings : MonoBehaviour
     public void LoseBaby()
     {
         so.hasBaby = false;
+
     }
 
     public void UseTorso()
@@ -327,6 +349,7 @@ public class CaveSaveSettings : MonoBehaviour
         so.heardStory = false;
         so.coinCount = 0;
         so.enteredCoinsCount = 0;
+        so.drankFountainWater = false;
         so.stateOfLab = "entry";
         so.hasExtraArms = false;
         so.stateOfFalling = "entry";

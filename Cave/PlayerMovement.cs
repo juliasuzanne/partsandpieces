@@ -119,9 +119,7 @@ public class PlayerMovement : MonoBehaviour
             moveToCorner = false;
             _animator.SetFloat("xInput", 0);
             _animator.SetBool("Flip", true);
-            moveable = true;
-
-
+            // moveable = true;
         }
     }
 

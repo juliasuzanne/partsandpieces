@@ -6,6 +6,7 @@ namespace Dialogue
 {
     public class AIConversant : MonoBehaviour
     {
+        [SerializeField] private bool freezeOnTalk;
         [SerializeField] Dialogue dialogue = null;
         [SerializeField] private PlayerConversant playerConversant;
         [SerializeField] private string Name;
@@ -19,6 +20,11 @@ namespace Dialogue
             startingDialogue = dialogue;
             // _nameObject.onNameUpdated += UpdateName();
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
+        }
+
+        public bool FreezeOnTalk()
+        {
+            return freezeOnTalk;
         }
 
         public void SetCurrentDialogue()
@@ -74,9 +80,15 @@ namespace Dialogue
             {
                 Debug.Log("AI Conversant dialogue is NULL");
             }
+            else if (this == null)
+            {
+                Debug.Log("THIS IS NULL");
+            }
 
             else
             {
+                Debug.Log("THIS" + this);
+                Debug.Log("DIALOGUE" + dialogue);
                 playerConversant.StartDialogue(this, dialogue);
             }
         }

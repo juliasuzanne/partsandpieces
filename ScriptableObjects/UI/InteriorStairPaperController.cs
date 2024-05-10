@@ -18,6 +18,10 @@ public class InteriorStairPaperController : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (_audioClip != null)
+        {
+            _audioSource.clip = _audioClip;
+        }
         _audioSource.Play();
         sp.sortingOrder = frontSortNum;
 
@@ -30,6 +34,10 @@ public class InteriorStairPaperController : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (_audioClip != null)
+        {
+            _audioSource.clip = _audioClip;
+        }
         _audioSource.Play();
         _panel.SetActive(true);
         sp.enabled = false;

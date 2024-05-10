@@ -11,8 +11,14 @@ public class ExteriorState : MonoBehaviour
     [SerializeField] private UnityEvent setAnimUnlocked;
     private List<string> sceneList = new List<string>();
     [SerializeField] private GameObject thisPerson;
+    [SerializeField] private GameObject _treasureHelp;
 
     private string currentState;
+
+    void Awake()
+    {
+        thisPerson.GetComponent<Animator>().SetBool("ExteriorPorch", true);
+    }
     void Start()
     {
         _saveManager = FindObjectOfType<CaveSaveSettings>();
@@ -28,6 +34,11 @@ public class ExteriorState : MonoBehaviour
         if (currentState == "entry")
         {
             EnterDoor.SetActive(false);
+            if (!_saveManager.so.floorboardState.Contains("babyKey") && _saveManager.so.connectedTorso == true && !_saveManager.so.stateOfExteriorSceneList.Contains("keyHelp"))
+            {
+                _treasureHelp.SetActive(true);
+            }
+
 
         }
         else if (currentState == "unlocked")

@@ -41,9 +41,9 @@ public class FloorboardState : MonoBehaviour
 
         if (saveSettings.so.floorboardState.Contains("baby"))
         {
-            babyButterscotch.SetActive(!saveSettings.so.floorboardState.Contains("babyBaby"));
             babyFloorboards.SetActive(false);
             babyFloorboardsCollider.SetActive(!saveSettings.so.floorboardState.Contains("babyBaby"));
+            babyBaby.SetActive(!saveSettings.so.floorboardState.Contains("babyBaby"));
             babyCollider.enabled = true;
         }
         else

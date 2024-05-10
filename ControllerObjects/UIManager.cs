@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     private PlayerMovement _playerMovement;
     [SerializeField]
     private GameObject _inventoryButtonObject;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _defaultItemClip;
+
     [SerializeField] private InventoryButton _inventoryButton;
 
 
@@ -20,6 +23,10 @@ public class UIManager : MonoBehaviour
     {
         _inventoryButtonAnimator = _inventoryButtonObject.GetComponent<Animator>();
         _playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        if (_audioSource == null)
+        {
+            GetComponent<AudioSource>();
+        }
 
     }
     void Update()
@@ -52,6 +59,21 @@ public class UIManager : MonoBehaviour
     {
         _inventoryButtonAnimator.SetTrigger("Pulse");
     }
+
+    public void PlayObjectSound(AudioClip newClip)
+    {
+        _audioSource.clip = newClip;
+        _audioSource.Play();
+
+    }
+
+    public void PlayDefaultSound()
+    {
+        _audioSource.clip = _defaultItemClip;
+        _audioSource.Play();
+
+    }
+
 
 
 

@@ -6,6 +6,8 @@ public class FallingItem : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     [SerializeField] private StorageSlots storageManager;
+    [SerializeField] private bool hasSound;
+    [SerializeField] private AudioClip _itemClip;
     [SerializeField] private Inventory _inventory;
     [SerializeField] private UIManager _uiManager;
     [SerializeField] private int slotPos;
@@ -17,6 +19,7 @@ public class FallingItem : MonoBehaviour
     void Start()
     {
         _uiManager = FindObjectOfType<UIManager>();
+
 
         _inventory = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Inventory>();
         if (_saveSettings == null)
@@ -31,12 +34,29 @@ public class FallingItem : MonoBehaviour
 
     }
 
+    public bool HasSound()
+    {
+        return hasSound;
+    }
+
+    public AudioClip GetClip()
+    {
+        return _itemClip;
+    }
     void OnMouseDown()
     {
         if (_inventory.CheckEmptySlots() > 0)
         {
             if (!_saveSettings.so.inventoryitems.Contains(prefab.GetComponent<InventoryItem>().GetName()))
             {
+                if (hasSound == true)
+                {
+                    _uiManager.PlayObjectSound(_itemClip);
+                }
+                else
+                {
+                    _uiManager.PlayDefaultSound();
+                }
                 _inventory.AddItemToInventory(prefab);
                 if (storage == true)
                 {

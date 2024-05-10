@@ -58,7 +58,6 @@ public class AdjustCoinCount : MonoBehaviour
         if (_saveManager.so.coinCount > 0)
         {
             _saveManager.RemoveCoin();
-            _saveManager.so.enteredCoinsCount = _saveManager.so.enteredCoinsCount + 1;
             _animateCoinDrop.SetAnimTrigger("DropCoin");
             coinText.text = _saveManager.so.coinCount.ToString();
             enteredCoinsText.text = "Coins Entered: " + _saveManager.so.enteredCoinsCount.ToString() + "/12";

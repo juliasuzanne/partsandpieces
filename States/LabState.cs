@@ -8,6 +8,8 @@ namespace Dialogue
 {
     public class LabState : MonoBehaviour
     {
+        [SerializeField] private GameObject _book;
+
         [SerializeField] private AIConversant _conversant;
         [SerializeField] private AIConversant _torsoConversant;
         [SerializeField] private Dialogue dialogueTorsoFrankenstein;
@@ -57,6 +59,8 @@ namespace Dialogue
 
             }
 
+            _book.SetActive(!_saveManager.so.stateOfExteriorSceneList.Contains("pegbook"));
+
         }
 
         public void StopPlaying()
@@ -82,6 +86,9 @@ namespace Dialogue
             else if (currentState == "falling")
             {
                 _conversant.ChangeDialogue(dialogueFalling);
+                _saveManager.so.stateOfLab = "entry";
+                _saveManager.SaveGame();
+
                 // playSongPanel.SetActive(true);
                 // _heartAudioSource.clip = _heartAndSoulClip;
                 // _heartAudioSource.Play();
@@ -101,13 +108,15 @@ namespace Dialogue
             }
             else if (currentState == "AttachedTorso")
             {
+
                 torsoHead.SetActive(true);
                 sleepingHead.SetActive(false);
                 _conversant.ChangeDialogue(dialogueMentorAttachTorso);
+                // _saveManager.so.stateOfLab = "AttachedTorsoReturn";
+                // _saveManager.SaveGame();
                 _torsoConversant.ChangeDialogue(dialogueTorsoFirst);
                 _torsoConversant.StartConversation();
-                _saveManager.so.stateOfLab = "AttachedTorsoReturn";
-                _saveManager.SaveGame();
+
             }
 
             else if (currentState == "AttachedTorsoReturn")
@@ -122,7 +131,7 @@ namespace Dialogue
             {
                 _conversant.ChangeDialogue(dialogueFrankenstein);
                 _torsoConversant.ChangeDialogue(dialogueTorsoFrankenstein);
-                onThisPerson.Invoke();
+                torsoHead.GetComponent<Animator>().SetTrigger("LegsHere");
 
             }
 

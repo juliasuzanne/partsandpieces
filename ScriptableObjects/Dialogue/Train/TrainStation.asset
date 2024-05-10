@@ -455,13 +455,13 @@ MonoBehaviour:
   m_Name: bee22946-0c40-48be-934a-5c324407a2f4
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: 5AM, 11 AM, 3 o'clock, 6 o'clock, and 9 o'clock.
+  speech: 5AM, 9AM, 11 AM, 3 o'clock, 6 o'clock, and 9 o'clock.
   children:
   - 8694a01f-eac1-401d-801f-b69897dd3422
   rect:
     serializedVersion: 2
-    x: 1231
-    y: 2
+    x: 1229
+    y: -1
     width: 200
     height: 100
   onEnterAction: 

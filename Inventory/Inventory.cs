@@ -19,11 +19,14 @@ public class Inventory : MonoBehaviour
 
    void Start()
    {
+
       // if (_dialog == null)
       // { _dialog = transform.GetChild(0).GetChild(0).gameObject; }
       // _dialog.SetActive(false);
 
    }
+
+
 
    public void AddItemToInventory(GameObject prefab)
    {
@@ -73,6 +76,14 @@ public class Inventory : MonoBehaviour
          }
       }
       return numSlotsEmpty;
+   }
+
+   public void RemoveItemIfInventoryFull()
+   {
+      if (CheckEmptySlots() == 0)
+      {
+         RemoveItemFromInventory(5);
+      }
    }
 
    public void AddBloodyKnife()

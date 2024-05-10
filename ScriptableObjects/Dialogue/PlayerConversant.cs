@@ -12,15 +12,17 @@ namespace Dialogue
 
     public class PlayerConversant : MonoBehaviour
     {
-        Dialogue currentDialogue;
+        [SerializeField] private PlayerMovement playerMovement;
+        [SerializeField] Dialogue currentDialogue;
         private string debugMessage;
-        AIConversant currentConversant = null;
+        [SerializeField] AIConversant currentConversant = null;
         [SerializeField] private Sprite myImage;
         [SerializeField] Dialogue testDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
+        bool changedMoveable;
         [SerializeField] private UnityEvent quitTrigger;
-        [SerializeField] private string Name;
+        private string Name;
         [SerializeField] private GameObject DialogueUi;
         public event Action onConversationUpdated;
 
@@ -33,14 +35,35 @@ namespace Dialogue
         //     yield return new WaitForSeconds(2f);
         //     StartDialogue(testDialogue);
         // }
+        void Start()
+        {
+            playerMovement = GetComponent<PlayerMovement>();
+        }
 
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            Debug.Log("NEW" + newConversant + "DIALOGUE" + newDialogue);
             currentConversant = newConversant;
+            Name = "you";
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
             TriggerEnterAction();
             onConversationUpdated();
+            if (playerMovement != null)
+            {
+                if (playerMovement.GetMoveable() == true && currentConversant.FreezeOnTalk() == true)
+                {
+                    changedMoveable = true;
+                    playerMovement.MoveableFalse();
+                }
+            }
+
+        }
+
+        public void MakeChangedMoveableFalse()
+        {
+            changedMoveable = false;
+
         }
 
         public bool IsActive()
@@ -176,6 +199,10 @@ namespace Dialogue
 
         public void Quit()
         {
+            if (changedMoveable = true)
+            {
+                playerMovement.MoveableTrue();
+            }
             quitTrigger.Invoke();
             Debug.Log("Quit");
             currentDialogue = null;

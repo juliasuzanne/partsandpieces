@@ -6,6 +6,7 @@ public class RotatePuzzlePiece : MonoBehaviour
 {
     private float xRotate;
     private float yRotate;
+    [SerializeField] private GameObject text;
     [SerializeField] private Transform currentPiece;
     [SerializeField] private float _rotateSpeed;
     // Start is called before the first frame update
@@ -24,6 +25,8 @@ public class RotatePuzzlePiece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        text.SetActive(currentPiece != null);
+
         if (Input.GetKeyDown("x"))
         {
             currentPiece = null;

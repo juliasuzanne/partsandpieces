@@ -41,12 +41,12 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1206
-    y: 210
+    x: 1231
+    y: 204
     width: 200
     height: 100
-  onEnterAction: 
-  onExitAction: CheckCoin
+  onEnterAction: CheckCoin
+  onExitAction: 
 --- !u!114 &-8301411190153204985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,8 +65,8 @@ MonoBehaviour:
   - f7c10486-c8f7-4936-997c-5bcd8ba62b37
   rect:
     serializedVersion: 2
-    x: 1442
-    y: 211
+    x: 1472
+    y: 205
     width: 200
     height: 100
   onEnterAction: 
@@ -90,8 +90,8 @@ MonoBehaviour:
   - 12ea06b8-b67d-41df-a94e-f110ce48b243
   rect:
     serializedVersion: 2
-    x: 403
-    y: 105
+    x: 313
+    y: 225
     width: 200
     height: 100
   onEnterAction: 
@@ -118,8 +118,8 @@ MonoBehaviour:
   - 8b40fb05-348c-478b-a8ef-59379b51f759
   rect:
     serializedVersion: 2
-    x: 806
-    y: 282
+    x: 730
+    y: 370
     width: 200
     height: 100
   onEnterAction: 
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 408
     width: 200
     height: 100
-  onEnterAction: 
-  onExitAction: CheckRain
+  onEnterAction: CheckRain
+  onExitAction: 
 --- !u!114 &-5465665357000425325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1006
-    y: 210
+    y: 187
     width: 200
     height: 100
   onEnterAction: 
@@ -605,7 +605,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1501
-    y: -20
+    y: -21
     width: 200
     height: 100
   onEnterAction: GiveWater
@@ -748,8 +748,8 @@ MonoBehaviour:
   - 580cfd33-9a36-4700-9423-5c80f0425497
   rect:
     serializedVersion: 2
-    x: 606
-    y: 208
+    x: 481
+    y: 355
     width: 200
     height: 100
   onEnterAction: 
@@ -796,11 +796,11 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1406
-    y: 507
+    y: 508
     width: 200
     height: 100
-  onEnterAction: 
-  onExitAction: MakeWish
+  onEnterAction: MakeWish
+  onExitAction: 
 --- !u!114 &5809616730601581958
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9204114559221052421
+--- !u!114 &-8019865330269226680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,45 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: bed21cf8-a029-4e82-b2fa-7bb6668764dc
+  m_Name: 112fa995-a631-4d74-ae8f-d8e5c5f4f33e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  speech: Something else.
+  speech: I love it.
   children:
-  - c66b8942-aae6-40b3-9d8d-b578c2c8f71c
+  - 733afb24-6cb9-4c8e-bf46-c7216789f798
   rect:
     serializedVersion: 2
-    x: 308
-    y: 317
-    width: 200
-    height: 100
-  onEnterAction: ChangeDialogue
-  onExitAction: 
---- !u!114 &-8312433825482039709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 2bcf35df-5eb2-43c1-bfd9-c75d2baf3299
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Yes! Thank you, this is perfect.
-  children:
-  - 31481e6d-f50d-4942-9bbe-b71968b4b105
-  rect:
-    serializedVersion: 2
-    x: 0
-    y: 0
+    x: 203
+    y: 104
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &-6102905309022084100
+--- !u!114 &-7131045135079409024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,20 +34,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 10df4479-b1a6-4c6d-9906-99f2ec93ee18
+  m_Name: c6e727a2-ac95-461e-900b-fe06d4e0f5f5
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: That's it? Of course, here you go.
+  speech: I'll be here.
   children: []
   rect:
     serializedVersion: 2
-    x: 601
-    y: 2
+    x: 906
+    y: 49
     width: 200
     height: 100
-  onEnterAction: GiveWater
-  onExitAction: 
---- !u!114 &-5685895226418579214
+  onEnterAction: 
+  onExitAction: ReturnToPosition
+--- !u!114 &-7019245250096597954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,24 +57,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 31481e6d-f50d-4942-9bbe-b71968b4b105
+  m_Name: 15454223-a85f-4118-86f3-cee9b67e299e
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: What can I do for you in return?
+  isPlayerSpeaking: 1
+  speech: It's odd.
   children:
-  - d74d4dc8-f749-4453-a861-ef1d36bd2fe6
-  - 6d4a10b3-d23a-48c6-9e45-f9805e74c167
-  - f7b4ed13-325e-4e69-88ea-a37c2e42449d
-  - bed21cf8-a029-4e82-b2fa-7bb6668764dc
+  - 733afb24-6cb9-4c8e-bf46-c7216789f798
   rect:
     serializedVersion: 2
     x: 200
-    y: 1
+    y: 2
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
---- !u!114 &-4166897873046338378
+--- !u!114 &-3256141976646241761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,21 +81,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: d74d4dc8-f749-4453-a861-ef1d36bd2fe6
+  m_Name: 2e0f5821-8245-4b2f-ad07-08feb7ab9deb
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  speech: Can I have some of that fountain water?
+  speech: Thanks, I'll let you know.
   children:
-  - 10df4479-b1a6-4c6d-9906-99f2ec93ee18
+  - c6e727a2-ac95-461e-900b-fe06d4e0f5f5
   rect:
     serializedVersion: 2
-    x: 400
-    y: 1
+    x: 655
+    y: 93
     width: 200
     height: 100
-  onEnterAction: ChangeDIalogue
+  onEnterAction: 
   onExitAction: 
---- !u!114 &-582868551193669893
+--- !u!114 &-2834059908575790188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,19 +105,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: c66b8942-aae6-40b3-9d8d-b578c2c8f71c
+  m_Name: 2b3158b4-f9e8-4532-b6d5-6360bdad3322
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Sure, just write down what you're wishing for on this piece of paper. Then
-    I'll do my best to see to it.
-  children: []
+  isPlayerSpeaking: 1
+  speech: Do you know where the graveyard is?
+  children:
+  - e315d050-676c-45bf-ac6e-ce2648a0a218
   rect:
     serializedVersion: 2
-    x: 615
-    y: 316
+    x: 668
+    y: 198
     width: 200
     height: 100
-  onEnterAction: MakeWish
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1339489221185929834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: 733afb24-6cb9-4c8e-bf46-c7216789f798
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Anything else I can show you?
+  children:
+  - 92a51712-4d12-47b7-9439-677b70e127c3
+  - 2e0f5821-8245-4b2f-ad07-08feb7ab9deb
+  - 2b3158b4-f9e8-4532-b6d5-6360bdad3322
+  rect:
+    serializedVersion: 2
+    x: 423
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 
   onExitAction: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -156,21 +155,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f0528c622a04052b58944d595a4865, type: 3}
-  m_Name: CandyFish
+  m_Name: OfferToGuideFromGarden
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -8312433825482039709}
-  - {fileID: -5685895226418579214}
-  - {fileID: -4166897873046338378}
-  - {fileID: -6102905309022084100}
-  - {fileID: 5884885675026095489}
-  - {fileID: 2383203776358988814}
-  - {fileID: 8826242330092737313}
-  - {fileID: 4832290443958119275}
-  - {fileID: -9204114559221052421}
-  - {fileID: -582868551193669893}
+  - {fileID: 3814826649248973476}
+  - {fileID: 30860709112184474}
+  - {fileID: -3256141976646241761}
+  - {fileID: -7131045135079409024}
+  - {fileID: -7019245250096597954}
+  - {fileID: -8019865330269226680}
+  - {fileID: -1339489221185929834}
+  - {fileID: -2834059908575790188}
+  - {fileID: 7612406222576741480}
   newNodeOffset: {x: 200, y: 0}
---- !u!114 &2383203776358988814
+--- !u!114 &30860709112184474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,20 +178,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: c7fae530-a65e-4a62-9304-bc164174bba7
+  m_Name: 92a51712-4d12-47b7-9439-677b70e127c3
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  speech: Sure, no problem.
+  isPlayerSpeaking: 1
+  speech: Where is the train station?
   children: []
   rect:
     serializedVersion: 2
-    x: 603
-    y: 107
+    x: 650
+    y: -4
     width: 200
     height: 100
-  onEnterAction: ChangeWeather
+  onEnterAction: GuideToTrain
   onExitAction: 
---- !u!114 &4832290443958119275
+--- !u!114 &3814826649248973476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,64 +201,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 8b61c165-80bf-4338-80d2-003e1851d73b
+  m_Name: 1d022214-150d-4f80-8e83-d258865ca5b4
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  speech: I think I can rustle up some coins from down here.
+  speech: This is beautiful, isn't it?
+  children:
+  - 15454223-a85f-4118-86f3-cee9b67e299e
+  - 112fa995-a631-4d74-ae8f-d8e5c5f4f33e
+  rect:
+    serializedVersion: 2
+    x: -1
+    y: 2
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &7612406222576741480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: e315d050-676c-45bf-ac6e-ce2648a0a218
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  speech: Sorry, I don't think so.
   children: []
   rect:
     serializedVersion: 2
-    x: 606
-    y: 212
+    x: 919
+    y: 154
     width: 200
     height: 100
-  onEnterAction: GiveCoin
-  onExitAction: 
---- !u!114 &5884885675026095489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: 6d4a10b3-d23a-48c6-9e45-f9805e74c167
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: Can you change the weather?
-  children:
-  - c7fae530-a65e-4a62-9304-bc164174bba7
-  rect:
-    serializedVersion: 2
-    x: 402
-    y: 108
-    width: 200
-    height: 100
-  onEnterAction: ChangeDialogue
-  onExitAction: 
---- !u!114 &8826242330092737313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
-  m_Name: f7b4ed13-325e-4e69-88ea-a37c2e42449d
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  speech: I need some money.
-  children:
-  - 8b61c165-80bf-4338-80d2-003e1851d73b
-  rect:
-    serializedVersion: 2
-    x: 406
-    y: 213
-    width: 200
-    height: 100
-  onEnterAction: ChangeDialogue
+  onEnterAction: 
   onExitAction: 

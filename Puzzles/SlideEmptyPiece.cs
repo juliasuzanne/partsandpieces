@@ -9,6 +9,12 @@ public class SlideEmptyPiece : MonoBehaviour
     [SerializeField] private Vector2 emptyPos = new Vector2(2, -2);
     [SerializeField] private bool[] correctPieces;
     [SerializeField] UnityEvent onCorrect;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _yesMove;
+    [SerializeField] private AudioClip _noMove;
+
+
+
 
     private bool correct = false;
     void Start()
@@ -20,10 +26,17 @@ public class SlideEmptyPiece : MonoBehaviour
     {
         if (Mathf.Abs(currentPiece.position.x - emptyPos.x) <= 1 * transform.localScale.x && Mathf.Abs(currentPiece.position.y - emptyPos.y) == 0 || Mathf.Abs(currentPiece.position.x - emptyPos.x) == 0 && Mathf.Abs(currentPiece.position.y - emptyPos.y) <= 1 * transform.localScale.y)
         {
+            _audioSource.clip = _yesMove;
+            _audioSource.Play();
             Vector2 newPos = currentPiece.position;
             currentPiece.position = emptyPos;
             emptyPos = newPos;
             currentPiece.GetComponent<SlidePuzzlePiece>().CheckPosition();
+        }
+        else
+        {
+            _audioSource.clip = _noMove;
+            _audioSource.Play();
         }
 
     }

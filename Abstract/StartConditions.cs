@@ -33,6 +33,8 @@ public class StartConditions : MonoBehaviour
     [SerializeField] private GameObject waterFilter;
     [SerializeField] private GameObject thisPerson;
     [SerializeField] private UnityEvent onNightTime;
+    [SerializeField] private UnityEvent onDayTime;
+
 
 
     // Start is called before the first frame update
@@ -47,6 +49,10 @@ public class StartConditions : MonoBehaviour
         {
             tm.MakeNightTime();
             onNightTime.Invoke();
+        }
+        else
+        {
+            onDayTime.Invoke();
         }
         foreach (GameObject item in prefabs)
         {
@@ -137,7 +143,7 @@ public class StartConditions : MonoBehaviour
         {
             if (_saveSettings.so.drankFountainWater)
             {
-                waterFilter.GetComponent<DrinkTheFountainWater>().SetDrinkTrue();
+                waterFilter.GetComponent<DrinkTheFountainWater>().ContinueFilter();
             }
         }
 

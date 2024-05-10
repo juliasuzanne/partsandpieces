@@ -13,6 +13,10 @@ public class AdjustSortingLayer : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindWithTag("Player").transform;
+        }
 
     }
 

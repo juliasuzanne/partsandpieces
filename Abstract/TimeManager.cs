@@ -10,6 +10,9 @@ public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
     [SerializeField] private CaveSaveSettings saveSettings;
+    private float timeChangeDay = 255f;
+    private float timeChangeNight = -255f;
+    private bool checkedRain;
     [SerializeField] private RawImage nightPanel;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject rainObject;
@@ -68,6 +71,7 @@ public class TimeManager : MonoBehaviour
     {
 
         int rain = UnityEngine.Random.Range(0, 100);
+        Debug.Log("Rain odds result:" + rain);
         if (rain > 80)
         {
             saveSettings.so.rain = true;
@@ -75,8 +79,6 @@ public class TimeManager : MonoBehaviour
             if (rainObject != null)
             {
                 rainObject.SetActive(true);
-
-
             }
         }
         else
@@ -96,34 +98,21 @@ public class TimeManager : MonoBehaviour
     {
 
         int rain = UnityEngine.Random.Range(0, 100);
+        Debug.Log("Rain odds result:" + rain);
         if (rain > 50)
         {
-            saveSettings.so.rain = true;
-            saveSettings.SaveGame();
-            if (rainObject != null)
-            {
-                rainObject.SetActive(true);
-
-
-            }
+            ChangeRain();
         }
-        else
-        {
-            saveSettings.so.rain = false;
-            saveSettings.SaveGame();
 
-            if (rainObject != null)
-            {
-                rainObject.SetActive(false);
-
-            }
-        }
     }
 
     public void ChangeRain()
     {
-        if (saveSettings.so.rain == true)
+        Debug.Log("CHANGE RAIN");
+        if (rainObject.activeSelf)
         {
+            Debug.Log("RAIN TO FALSE");
+
             saveSettings.so.rain = false;
             saveSettings.SaveGame();
             if (rainObject != null)
@@ -174,23 +163,35 @@ public class TimeManager : MonoBehaviour
 
         if (nightPanel != null)
         {
-            if (Mathf.FloorToInt(GetHour()) == 20)
+            if (Mathf.FloorToInt(GetHour()) == 16)
             {
-                CheckRain();
-                nighttime = true;
                 saveSettings.so.nighttime = true;
                 saveSettings.SaveGame();
+                checkedRain = false;
 
                 if (anim != null)
                 {
                     anim.SetBool("Night", true);
                 }
-
-                nightPanel.color = new Color(255f, 255f, 255f, GetMinutes() * 0.025f);
+                nightPanel.color = new Color(255f, 255f, 255f, (GetMinutes() * 0.025f));
             }
-            if (Mathf.FloorToInt(GetHour()) == 2)
+            if (Mathf.FloorToInt(GetHour()) == 17)
+            {
+                if (checkedRain == false)
+                {
+                    checkedRain = true;
+                    CheckRain();
+                    nighttime = true;
+                }
+
+            }
+            if (Mathf.FloorToInt(GetHour()) == 5)
             {
                 nighttime = false;
+
+            }
+            if (Mathf.FloorToInt(GetHour()) == 4)
+            {
                 saveSettings.so.nighttime = false;
                 saveSettings.SaveGame();
 
@@ -198,6 +199,7 @@ public class TimeManager : MonoBehaviour
                 {
                     anim.SetBool("Night", false);
                 }
+
                 nightPanel.color = new Color(255f, 255f, 255f, ((60f - GetMinutes()) * 0.025f));
             }
         }
