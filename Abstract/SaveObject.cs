@@ -36,7 +36,7 @@ public class SaveObject
     public string stateOfExteriorScene;
     public List<string> stateOfExteriorSceneList = new List<string>();
     public string stateOfLab;
-    public string stateOfMaze;
+    public string stateOfMaze = "entry";
     public string stateOfFace;
     public string stateOfPiano;
     public string stateOfFalling;

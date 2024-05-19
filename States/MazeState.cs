@@ -99,7 +99,7 @@ namespace Dialogue
             {
                 player.position = new Vector2(porchPos.position.x, porchPos.position.y);
                 onPorch.Invoke();
-                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.didFrankenstein == false && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfPiano == "heartandsoul") && !(saveManager.so.stateOfLab == "AttachedTorsoReturn"))
+                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.didFrankenstein == false && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfLab == "AttachedTorsoReturn"))
                 {
                     torso.SetActive(true);
                     _torsoIdleMovement.IdlingTrue();
@@ -159,7 +159,7 @@ namespace Dialogue
             {
                 player.position = new Vector2(pianoPos.position.x, pianoPos.position.y);
                 onPianoReturnOnly.Invoke();
-                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfPiano == "heartandsoul"))
+                if (saveManager.so.hasTorso == false && !sceneList.Contains("thisPerson") && saveManager.so.connectedTorso == false && !(saveManager.so.stateOfPiano == "heartandsoul") && !saveManager.so.inventoryitems.Contains("sheet music"))
                 {
                     torso.SetActive(true);
                     _torsoIdleMovement.IdlingTrue();

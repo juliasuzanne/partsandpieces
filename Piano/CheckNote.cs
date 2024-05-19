@@ -109,7 +109,7 @@ public class CheckNote : MonoBehaviour
                 {
                     _saveManager.ChangeMazeState("failpiano");
                 }
-                _switchScene.LoadScene(7);
+                _switchScene.LoadSceneViaString("maze");
             }
             _defaultAudio.clip = hit.GetClip();
             _defaultAudio.Play();

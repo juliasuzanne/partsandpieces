@@ -33,6 +33,10 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
+        if (month == "")
+        {
+            month = "Fall";
+        }
         saveSettings = FindObjectOfType<CaveSaveSettings>();
         Debug.Log("before equation " + currentTime);
         if (saveSettings.so.time != null)

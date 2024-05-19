@@ -188,10 +188,11 @@ public class InventoryItem : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         hit = other.GetComponent<INameable>();
-        currentTransform = other.transform;
+
 
         if (hit != null)
         {
+            currentTransform = other.transform;
             Debug.Log("HIT: " + hit.Name);
 
             if (description_text != null)

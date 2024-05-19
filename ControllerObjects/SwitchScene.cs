@@ -31,6 +31,97 @@ public class SwitchScene : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void LoadSceneViaString(string scene)
+    {
+        _saver.SaveGame();
+        _saver.LoadGame();
+
+        switch (scene)
+        {
+            case "lab":
+                {
+                    SceneManager.LoadScene(3);
+                    break;
+                }
+            case "maze":
+                {
+                    SceneManager.LoadScene(4);
+                    break;
+                }
+            case "face":
+                {
+                    SceneManager.LoadScene(2);
+                    break;
+                }
+            case "exterior":
+                {
+                    SceneManager.LoadScene(7);
+                    break;
+                }
+            case "lookoutwindow":
+                {
+                    SceneManager.LoadScene(5);
+                    break;
+                }
+            case "stair":
+                {
+                    SceneManager.LoadScene(9);
+                    break;
+                }
+            case "drawing":
+                {
+                    SceneManager.LoadScene(13);
+                    break;
+                }
+            case "cave":
+                {
+                    SceneManager.LoadScene(8);
+                    break;
+                }
+            case "babymind":
+                {
+                    SceneManager.LoadScene(10);
+                    break;
+                }
+            case "exteriorwindow":
+                {
+                    SceneManager.LoadScene(6);
+                    break;
+                }
+            case "piano":
+                {
+                    SceneManager.LoadScene(1);
+                    break;
+                }
+            case "torsopuzzle":
+                {
+                    SceneManager.LoadScene(11);
+                    break;
+                }
+            case "train":
+                {
+                    SceneManager.LoadScene(12);
+                    break;
+                }
+            case "storage":
+                {
+                    SceneManager.LoadScene(14);
+                    break;
+                }
+            case "ending":
+                {
+                    SceneManager.LoadScene(15);
+                    break;
+                }
+            case "credits":
+                {
+                    SceneManager.LoadScene(16);
+                    break;
+                }
+
+        }
+    }
+
     public void LoadSceneNoSave(int scene)
     {
         SceneManager.LoadScene(scene);
