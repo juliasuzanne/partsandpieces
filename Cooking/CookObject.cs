@@ -156,7 +156,7 @@ public class CookObject : MonoBehaviour, IDishable
         if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
         {
           Debug.Log("MATCH");
-          hit.Match(this.gameObject);
+          hit.Match(_dishController.GetCurrentItem());
           hit = null;
           // Destroy(this.gameObject);
         }

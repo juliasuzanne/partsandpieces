@@ -64,6 +64,7 @@ public class DishController : MonoBehaviour
         _currentDish = item;
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
         _currentDish.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
+        _currentDish.transform.parent.GetComponent<BoxCollider2D>().enabled = true;
         _currentDish.transform.SetParent(player.transform);
 
     }

@@ -55,9 +55,12 @@ public class CookRequest : MonoBehaviour, ICookable
 
   public void NoMatch()
   {
-    Debug.Log("NOT GOOD REQUESTOR");
-    requestSuccessManager.NoSuccess();
+    if (this.enabled)
+    {
+      Debug.Log("NOT GOOD REQUESTOR");
+      requestSuccessManager.NoSuccess();
+
+    }
 
   }
-
 }
