@@ -5,10 +5,13 @@ using UnityEngine;
 public class CookSuccessManager : MonoBehaviour
 {
     private SpriteRenderer sp;
+    private IRequestable _cookRequest;
+    [SerializeField] private GameObject nextRequestor;
     [SerializeField] private float timeToWait = .2f;
     private void Start()
     {
-        sp = GetComponent<SpriteRenderer>();
+        sp = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _cookRequest = this.transform.GetChild(0).GetChild(0).GetComponent<IRequestable>();
     }
     // Start is called before the first frame update
     public void Success()
@@ -29,9 +32,14 @@ public class CookSuccessManager : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         sp.color = Color.green;
         yield return new WaitForSeconds(timeToWait);
+        sp.color = new Color(0f, 0f, 0f, 0f);
+        this.transform.GetChild(0).gameObject.SetActive(false);
+        _cookRequest.ResetChoice();
+        yield return new WaitForSeconds(Random.Range(0.2f, 7f));
         sp.color = Color.white;
-        yield return new WaitForSeconds(timeToWait);
-        Destroy(this.gameObject);
+        this.transform.GetChild(0).gameObject.SetActive(true);
+
+
 
 
     }

@@ -6,6 +6,7 @@ public interface IDishable
 {
     Transform TargetPos { get; set; }
     string DishName { get; set; }
+    public GameObject ObjectToStack { get; set; }
 
 
 

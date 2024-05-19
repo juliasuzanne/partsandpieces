@@ -7,10 +7,12 @@ public interface ICookable
     string Name { get; set; }
     string SecondName { get; set; }
     string ThirdName { get; set; }
+    int requestId { get; set; }
 
+    void SetRequestorId(int newId);
 
     string Type { get; set; }
-    void Match();
+    void Match(GameObject currentObj);
     void NoMatch();
 
 

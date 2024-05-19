@@ -9,6 +9,8 @@ public class CookObject : MonoBehaviour, IDishable
 
 {
   public string DishName { get; set; }
+  public GameObject ObjectToStack { get; set; }
+
 
   [SerializeField] private string dishName;
   [SerializeField] private string dishSecondName;
@@ -36,6 +38,7 @@ public class CookObject : MonoBehaviour, IDishable
 
   void Start()
   {
+    ObjectToStack = dishObjectToStack;
     TargetPos = stackPos;
     DishName = dishName;
     _dishController = FindObjectOfType<DishController>();
@@ -102,8 +105,8 @@ public class CookObject : MonoBehaviour, IDishable
       if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
       {
         Debug.Log("MATCH");
-        hit.Match();
-        Destroy(this.gameObject);
+        hit.Match(this.gameObject);
+        // Destroy(this.gameObject);
       }
       else
       {
@@ -117,7 +120,7 @@ public class CookObject : MonoBehaviour, IDishable
       if (targetDish.Stacked() == false)
       {
         targetDish.ChangeStacked();
-        targetDish.SpawnStack(_dishController.GetCurrentItem());
+        targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
         targetDish.ChangeSecondName(dishName);
         Destroy(this.gameObject);
 
@@ -125,7 +128,7 @@ public class CookObject : MonoBehaviour, IDishable
       else if (targetDish.SecondStacked() == false)
       {
         targetDish.ChangeSecondStacked();
-        targetDish.SpawnThirdStack(_dishController.GetCurrentItem());
+        targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
         Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
         Debug.Log("DISH NAME" + dishName);
         targetDish.ChangeThirdName(dishName);
@@ -148,8 +151,7 @@ public class CookObject : MonoBehaviour, IDishable
 
   public void SpawnThirdStack(GameObject prefab)
   {
-    Debug.Log("SECONDSTACK TARGET" + secondStackedObject.transform.GetChild(0));
-    Instantiate(prefab, new Vector3(secondStackedObject.GetComponent<IDishable>().GetStackPos().position.x, secondStackedObject.GetComponent<IDishable>().GetStackPos().position.y, 0f), Quaternion.identity, secondStackedObject.transform.GetChild(0));
+    Instantiate(prefab, new Vector3(secondStackedObject.transform.GetChild(0).position.x, secondStackedObject.transform.GetChild(0).position.y, 0f), Quaternion.identity, secondStackedObject.transform.GetChild(0));
   }
 
 

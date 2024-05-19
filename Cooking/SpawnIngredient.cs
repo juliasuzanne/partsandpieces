@@ -9,6 +9,7 @@ public class SpawnIngredient : MonoBehaviour
     private GameObject ingredient;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +25,16 @@ public class SpawnIngredient : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (_dishController.GetCurrentItem() == null)
+        if (this.enabled)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
-            ingredient = Instantiate(ingredientToSpawn, moveToPos, Quaternion.identity);
-            _dishController.ChangeItem(ingredient);
+            if (_dishController.GetCurrentItem() == null)
+            {
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
+                ingredient = Instantiate(ingredientToSpawn, moveToPos, Quaternion.identity);
+                _dishController.ChangeItem(ingredient);
+            }
         }
+
     }
 }
