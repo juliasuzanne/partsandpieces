@@ -7,24 +7,27 @@ using TMPro;
 public class DishController : MonoBehaviour
 {
     private Vector3 _startingPos;
+    private GameObject player;
     private Vector3 _moveToPos;
     private GameObject _currentDish;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("CURRENTDISH:" + _currentDish);
 
         if (_currentDish != null)
         {
 
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
-            _currentDish.transform.position = moveToPos;
+            // Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
+            // _currentDish.transform.position = moveToPos;
 
         }
         else
@@ -56,12 +59,28 @@ public class DishController : MonoBehaviour
 
     }
 
+    public void GiveItemToPlayer(GameObject item)
+    {
+        _currentDish = item;
+        Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+        _currentDish.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
+        _currentDish.transform.SetParent(player.transform);
+
+    }
+
     public void DropItem()
     {
         _currentDish = null;
-
-
     }
+
+    public void DropItemToLocation(Transform location)
+    {
+        Vector2 posToMove = new Vector2(location.position.x, location.position.y);
+        _currentDish.transform.position = posToMove;
+        _currentDish.transform.SetParent(location);
+        _currentDish = null;
+    }
+
 
     public void MakeItemNull()
     {

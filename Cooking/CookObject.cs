@@ -8,7 +8,12 @@ using UnityEngine.Events;
 public class CookObject : MonoBehaviour, IDishable
 
 {
+
   public string DishName { get; set; }
+  public string SecondDishName { get; set; }
+
+  public string ThirdDishName { get; set; }
+
   public GameObject ObjectToStack { get; set; }
 
 
@@ -34,6 +39,10 @@ public class CookObject : MonoBehaviour, IDishable
     return TargetPos;
   }
 
+  public GameObject GetGameObject()
+  {
+    return gameObject;
+  }
 
 
   void Start()
@@ -41,6 +50,8 @@ public class CookObject : MonoBehaviour, IDishable
     ObjectToStack = dishObjectToStack;
     TargetPos = stackPos;
     DishName = dishName;
+    SecondDishName = dishSecondName;
+    ThirdDishName = dishThirdName;
     _dishController = FindObjectOfType<DishController>();
 
   }
@@ -56,8 +67,111 @@ public class CookObject : MonoBehaviour, IDishable
   }
   void Update()
   {
+    if (Input.GetMouseButtonDown(0))
+    {
+      CheckForHit();
+      CheckForStack();
+    }
 
   }
+
+
+
+
+  public void CheckForStack()
+  {
+
+    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+    RaycastHit2D raycast = Physics2D.Raycast(mousePos2D, Vector2.zero);
+    if (raycast.collider != null)
+    {
+      if (raycast.collider.gameObject.GetComponent<IDishable>() != null)
+      {
+        targetDish = raycast.collider.gameObject.GetComponent<IDishable>();
+      }
+    }
+
+    if (targetDish != null && _dishController.GetCurrentItem() != null)
+    {
+      if (targetDish.Stacked() == false)
+      {
+        targetDish.ChangeStacked();
+        targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+        targetDish.ChangeSecondName(dishName);
+        targetDish = null;
+        Destroy(_dishController.GetCurrentItem());
+
+      }
+      else if (targetDish.SecondStacked() == false)
+      {
+        targetDish.ChangeSecondStacked();
+        Debug.Log("Current item stack item: " + _dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+        targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+        Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
+        Debug.Log("DISH NAME" + dishName);
+        targetDish.ChangeThirdName(dishName);
+        targetDish = null;
+        Destroy(_dishController.GetCurrentItem());
+
+      }
+
+      else
+      {
+        targetDish = null;
+        Debug.Log("StackFull");
+      }
+
+    }
+    else if (targetDish != null && _dishController.GetCurrentItem() == null)
+    {
+      Debug.Log("GET OBJECT FROM PLATE");
+      Debug.Log("TARGET DISH: " + targetDish);
+      Debug.Log("TARGET DISH: " + targetDish.GetGameObject());
+      _dishController.GiveItemToPlayer(targetDish.GetGameObject());
+      targetDish = null;
+    }
+  }
+
+
+  public void CheckForHit()
+  {
+    if (hit == null)
+    {
+      Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+      RaycastHit2D raycast = Physics2D.Raycast(mousePos2D, Vector2.zero);
+      if (raycast.collider != null)
+      {
+
+
+        if (raycast.collider.gameObject.GetComponent<ICookable>() != null)
+        {
+          hit = raycast.collider.gameObject.GetComponent<ICookable>();
+        }
+      }
+      Debug.Log("RAYCAST" + hit);
+      if (hit != null)
+      {
+        if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
+        {
+          Debug.Log("MATCH");
+          hit.Match(this.gameObject);
+          hit = null;
+          // Destroy(this.gameObject);
+        }
+        else
+        {
+          Debug.Log("WRONG MATCH");
+          hit.NoMatch();
+          hit = null;
+        }
+      }
+
+    }
+  }
+
+
   public bool Stacked()
   {
     return stacked;
@@ -92,56 +206,56 @@ public class CookObject : MonoBehaviour, IDishable
 
   void OnMouseDown()
   {
-    if (_dishController.GetCurrentItem() == null)
-    {
-      _dishController.ChangeItem(this.gameObject);
-    }
+    // if (_dishController.GetCurrentItem() == null)
+    // {
+    //   _dishController.ChangeItem(this.gameObject);
+    // }
 
-    Debug.Log("HIT!" + hit);
-    if (hit != null)
-    {
-      Debug.Log("HIT: " + hit.Name);
 
-      if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
-      {
-        Debug.Log("MATCH");
-        hit.Match(this.gameObject);
-        // Destroy(this.gameObject);
-      }
-      else
-      {
-        hit.NoMatch();
-        Debug.Log("WRONG MATCH");
-      }
+    // Debug.Log("HIT!" + hit);
+    // else if (hit != null)
+    // {
+    //   Debug.Log("HIT: " + hit.Name);
 
-    }
-    else if (targetDish != null)
-    {
-      if (targetDish.Stacked() == false)
-      {
-        targetDish.ChangeStacked();
-        targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
-        targetDish.ChangeSecondName(dishName);
-        Destroy(this.gameObject);
+    //   if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
+    //   {
+    //     Debug.Log("MATCH");
+    //     hit.Match(this.gameObject);
+    //     // Destroy(this.gameObject);
+    //   }
+    //   else
+    //   {
+    //     hit.NoMatch();
+    //     Debug.Log("WRONG MATCH");
+    //   }
+    // }
+    // else if (targetDish != null)
+    // {
+    //   if (targetDish.Stacked() == false)
+    //   {
+    //     targetDish.ChangeStacked();
+    //     targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+    //     targetDish.ChangeSecondName(dishName);
+    //     Destroy(this.gameObject);
 
-      }
-      else if (targetDish.SecondStacked() == false)
-      {
-        targetDish.ChangeSecondStacked();
-        targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
-        Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
-        Debug.Log("DISH NAME" + dishName);
-        targetDish.ChangeThirdName(dishName);
-        Destroy(this.gameObject);
+    //   }
+    //   else if (targetDish.SecondStacked() == false)
+    //   {
+    //     targetDish.ChangeSecondStacked();
+    //     targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+    //     Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
+    //     Debug.Log("DISH NAME" + dishName);
+    //     targetDish.ChangeThirdName(dishName);
+    //     Destroy(this.gameObject);
 
-      }
+    //   }
 
-      else
-      {
+    //   else
+    //   {
 
-        Debug.Log("StackFull");
-      }
-    }
+    //     Debug.Log("StackFull");
+    //   }
+    // }
   }
 
   public void SpawnStack(GameObject prefab)
@@ -157,31 +271,31 @@ public class CookObject : MonoBehaviour, IDishable
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    hit = other.GetComponent<ICookable>();
-    Debug.Log(hit);
-    if (_dishController.GetCurrentItem() != null)
-    {
-      if (_dishController.GetCurrentItem() != other.gameObject && _dishController.GetCurrentItem().GetComponent<IDishable>().Stacked() == false)
-      {
-        targetDish = other.GetComponent<IDishable>();
-      }
-    }
+    // hit = other.GetComponent<ICookable>();
+    // Debug.Log(hit);
+    // if (_dishController.GetCurrentItem() != null)
+    // {
+    //   if (_dishController.GetCurrentItem() != other.gameObject && _dishController.GetCurrentItem().GetComponent<IDishable>().Stacked() == false)
+    //   {
+    //     targetDish = other.GetComponent<IDishable>();
+    //   }
+    // }
 
 
   }
 
   void OnTriggerExit2D(Collider2D other)
   {
-    if (other.GetComponent<ICookable>() == hit)
-    {
-      hit = null;
-      Debug.Log("exit");
-    }
-    if (other.GetComponent<IDishable>() == targetDish)
-    {
-      targetDish = null;
-      Debug.Log("exit trigger");
-    }
+    // if (other.GetComponent<ICookable>() == hit)
+    // {
+    //   hit = null;
+    //   Debug.Log("exit");
+    // }
+    // if (other.GetComponent<IDishable>() == targetDish)
+    // {
+    //   targetDish = null;
+    //   Debug.Log("exit trigger");
+    // }
 
 
   }

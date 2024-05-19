@@ -7,6 +7,7 @@ public class SpawnIngredient : MonoBehaviour
     [SerializeField] private GameObject ingredientToSpawn;
     private DishController _dishController;
     private GameObject ingredient;
+    private GameObject player;
 
 
 
@@ -14,6 +15,7 @@ public class SpawnIngredient : MonoBehaviour
     void Start()
     {
         _dishController = FindObjectOfType<DishController>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
@@ -29,9 +31,8 @@ public class SpawnIngredient : MonoBehaviour
         {
             if (_dishController.GetCurrentItem() == null)
             {
-                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 moveToPos = new Vector3(mousePosition.x, mousePosition.y);
-                ingredient = Instantiate(ingredientToSpawn, moveToPos, Quaternion.identity);
+                Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+                ingredient = Instantiate(ingredientToSpawn, playerPos, Quaternion.identity, player.transform);
                 _dishController.ChangeItem(ingredient);
             }
         }
