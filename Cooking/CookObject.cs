@@ -153,7 +153,7 @@ public class CookObject : MonoBehaviour, IDishable
       Debug.Log("RAYCAST" + hit);
       if (hit != null)
       {
-        if (hit.Name == dishName && hit.SecondName == dishSecondName && hit.ThirdName == dishThirdName)
+        if (hit.Name == _dishController.GetCurrentItem().GetComponent<IDishable>().DishName && hit.SecondName == _dishController.GetCurrentItem().GetComponent<IDishable>().SecondDishName && hit.ThirdName == _dishController.GetCurrentItem().GetComponent<IDishable>().ThirdDishName)
         {
           Debug.Log("MATCH");
           hit.Match(_dishController.GetCurrentItem());
