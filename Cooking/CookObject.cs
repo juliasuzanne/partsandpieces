@@ -58,12 +58,12 @@ public class CookObject : MonoBehaviour, IDishable
 
   public void ChangeSecondName(string newName)
   {
-    dishSecondName = newName;
+    SecondDishName = newName;
   }
 
   public void ChangeThirdName(string thirdName)
   {
-    dishThirdName = thirdName;
+    ThirdDishName = thirdName;
   }
   void Update()
   {
@@ -98,7 +98,7 @@ public class CookObject : MonoBehaviour, IDishable
       {
         targetDish.ChangeStacked();
         targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
-        targetDish.ChangeSecondName(dishName);
+        targetDish.ChangeSecondName(_dishController.GetCurrentItem().GetComponent<IDishable>().DishName);
         targetDish = null;
         Destroy(_dishController.GetCurrentItem());
 
@@ -110,7 +110,7 @@ public class CookObject : MonoBehaviour, IDishable
         targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
         Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
         Debug.Log("DISH NAME" + dishName);
-        targetDish.ChangeThirdName(dishName);
+        targetDish.ChangeThirdName(_dishController.GetCurrentItem().GetComponent<IDishable>().DishName);
         targetDish = null;
         Destroy(_dishController.GetCurrentItem());
 
@@ -155,6 +155,9 @@ public class CookObject : MonoBehaviour, IDishable
       {
         if (hit.Name == _dishController.GetCurrentItem().GetComponent<IDishable>().DishName && hit.SecondName == _dishController.GetCurrentItem().GetComponent<IDishable>().SecondDishName && hit.ThirdName == _dishController.GetCurrentItem().GetComponent<IDishable>().ThirdDishName)
         {
+          Debug.Log("FIRST: " + _dishController.GetCurrentItem().GetComponent<IDishable>().DishName + "AND " + hit.Name);
+          Debug.Log("SECOND: " + _dishController.GetCurrentItem().GetComponent<IDishable>().SecondDishName + "AND " + hit.SecondName);
+          Debug.Log("THIRD: " + _dishController.GetCurrentItem().GetComponent<IDishable>().ThirdDishName + "AND " + hit.ThirdName);
           Debug.Log("MATCH");
           hit.Match(_dishController.GetCurrentItem());
           hit = null;
