@@ -82,6 +82,15 @@ public class DishController : MonoBehaviour
         _currentDish = null;
     }
 
+    public void ThrowOutItem()
+    {
+        if (_currentDish != null)
+        {
+            Destroy(_currentDish);
+            _currentDish = null;
+        }
+    }
+
 
     public void MakeItemNull()
     {

@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class CookObject : MonoBehaviour, IDishable
 
 {
-
   public string DishName { get; set; }
   public string SecondDishName { get; set; }
 
@@ -91,11 +90,15 @@ public class CookObject : MonoBehaviour, IDishable
         targetDish = raycast.collider.gameObject.GetComponent<IDishable>();
       }
     }
-
-    if (targetDish != null && _dishController.GetCurrentItem() != null)
+    if (targetDish != null && _dishController.GetCurrentItem() != null && targetDish == this.GetComponent<IDishable>())
     {
+
+      Debug.Log("CALL THIS SCRIPT from " + this.GetGameObject());
+
+
       if (targetDish.Stacked() == false)
       {
+        // Debug.Log("TRIGGERED OBJ FIRST" + targetDish.DishName);
         targetDish.ChangeStacked();
         targetDish.SpawnStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
         targetDish.ChangeSecondName(_dishController.GetCurrentItem().GetComponent<IDishable>().DishName);
@@ -103,13 +106,13 @@ public class CookObject : MonoBehaviour, IDishable
         Destroy(_dishController.GetCurrentItem());
 
       }
-      else if (targetDish.SecondStacked() == false)
+      else if (targetDish.SecondStacked() == false && targetDish.Stacked() == true)
       {
         targetDish.ChangeSecondStacked();
-        Debug.Log("Current item stack item: " + _dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
+        // Debug.Log("Current item stack item: " + _dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
         targetDish.SpawnThirdStack(_dishController.GetCurrentItem().GetComponent<IDishable>().ObjectToStack);
-        Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
-        Debug.Log("DISH NAME" + dishName);
+        // Debug.Log("TRIGGERED OBJ" + targetDish.DishName);
+        // Debug.Log("DISH NAME" + dishName);
         targetDish.ChangeThirdName(_dishController.GetCurrentItem().GetComponent<IDishable>().DishName);
         targetDish = null;
         Destroy(_dishController.GetCurrentItem());
@@ -131,6 +134,7 @@ public class CookObject : MonoBehaviour, IDishable
       _dishController.GiveItemToPlayer(targetDish.GetGameObject());
       targetDish = null;
     }
+
   }
 
 
