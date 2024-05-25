@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Linq;
 using System;
@@ -8,6 +9,9 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onNightTime;
+    [SerializeField] private UnityEvent onDayTime;
+
     public const int hoursInDay = 24, minutesInHour = 60;
     [SerializeField] private CaveSaveSettings saveSettings;
     private float timeChangeDay = 255f;
@@ -169,8 +173,7 @@ public class TimeManager : MonoBehaviour
         {
             if (Mathf.FloorToInt(GetHour()) == 16)
             {
-                saveSettings.so.nighttime = true;
-                saveSettings.SaveGame();
+
                 checkedRain = false;
 
                 if (anim != null)
@@ -181,24 +184,41 @@ public class TimeManager : MonoBehaviour
             }
             if (Mathf.FloorToInt(GetHour()) == 17)
             {
-                if (checkedRain == false)
+                if (saveSettings.so.nighttime == false)
                 {
-                    checkedRain = true;
-                    CheckRain();
+                    Debug.Log("MAKING NIGHT");
+                    saveSettings.so.nighttime = true;
+                    saveSettings.SaveGame();
                     nighttime = true;
+                    CheckRain();
+                    onNightTime.Invoke();
+
+                }
+                else
+                {
+                    Debug.Log("HOUR IS 17 BUT NIGHT TIME IS TRUE");
                 }
 
             }
             if (Mathf.FloorToInt(GetHour()) == 5)
             {
-                nighttime = false;
-
+                if (saveSettings.so.nighttime == true)
+                {
+                    Debug.Log("MAKING DAY");
+                    saveSettings.so.nighttime = false;
+                    saveSettings.SaveGame();
+                    nighttime = false;
+                    onDayTime.Invoke();
+                }
+                else
+                {
+                    Debug.Log("HOUR IS 5 BUT NIGHT TIME IS FALSE");
+                }
             }
             if (Mathf.FloorToInt(GetHour()) == 4)
             {
-                saveSettings.so.nighttime = false;
-                saveSettings.SaveGame();
-
+                // saveSettings.so.nighttime = false;
+                // saveSettings.SaveGame();
                 if (anim != null)
                 {
                     anim.SetBool("Night", false);
@@ -236,7 +256,9 @@ public class TimeManager : MonoBehaviour
     {
         if (nightPanel != null)
         {
-            nightPanel.color = new Color(255f, 255f, 255f, ((60f - GetMinutes()) * 0.025f));
+            nightPanel.color = new Color(255f, 255f, 255f, 1f);
+            onNightTime.Invoke();
+
         }
     }
 

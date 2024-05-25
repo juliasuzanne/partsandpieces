@@ -52,6 +52,15 @@ public class AdjustCoinCount : MonoBehaviour
 
     }
 
+    public void SubtractCoin()
+    {
+        _saveManager.RemoveCoin();
+        coinText.text = _saveManager.so.coinCount.ToString();
+        _audioSource.clip = getClip;
+        _audioSource.Play();
+
+    }
+
 
     public void RemoveCoin()
     {

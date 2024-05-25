@@ -48,11 +48,11 @@ public class StartConditions : MonoBehaviour
         if (_saveSettings.so.nighttime == true)
         {
             tm.MakeNightTime();
-            onNightTime.Invoke();
+            // onNightTime.Invoke();
         }
         else
         {
-            onDayTime.Invoke();
+            // onDayTime.Invoke();
         }
         foreach (GameObject item in prefabs)
         {

@@ -11,7 +11,7 @@ public class PalletteSlots : MonoBehaviour
     [SerializeField] List<string> itemsInPallette = new List<string>();
     [SerializeField] bool[] isFull;
     private int slotNum;
-    [SerializeField] private GameObject _dialog;
+    [SerializeField] private PlayerSpeech _saySomething;
     [SerializeField] private Text _playerText;
 
     private int count;
@@ -53,8 +53,7 @@ public class PalletteSlots : MonoBehaviour
                 }
                 else
                 {
-                    _dialog.SetActive(true);
-                    _playerText.text = "I already have one of those";
+                    _saySomething.PlayerTalkingForSeconds("I already have one of those.");
                     break;
                 }
                 if (!saveSettings.so.windowsillitems.Contains(prefab.GetComponent<ChangeColorOnThis>().name))
@@ -69,8 +68,7 @@ public class PalletteSlots : MonoBehaviour
             {
                 if (count == slots.Length - 1)
                 {
-                    _dialog.SetActive(true);
-                    _playerText.text = "I guess I need to get rid of something";
+                    _saySomething.PlayerTalkingForSeconds("The pallette is too full.");
                     // StartCoroutine("PlayerSays");
                     break;
                 }

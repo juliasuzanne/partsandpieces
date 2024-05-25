@@ -46,6 +46,7 @@ public class Inventory : MonoBehaviour
             {
                saveSettings.SaveItemInInventory(prefab.GetComponent<InventoryItem>().GetName());
             }
+            saveSettings.SaveGame();
 
             break;
          }
@@ -149,5 +150,4 @@ public class Inventory : MonoBehaviour
    // }
 
 }
-
 

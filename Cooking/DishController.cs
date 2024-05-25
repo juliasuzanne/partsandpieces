@@ -22,6 +22,7 @@ public class DishController : MonoBehaviour
     {
         Debug.Log("CURRENTDISH:" + _currentDish);
 
+
         if (_currentDish != null)
         {
 
@@ -34,12 +35,12 @@ public class DishController : MonoBehaviour
         {
 
         }
-        if (Input.GetKeyDown("x"))
-        {
-            Debug.Log("X key was pressed");
-            DropItem();
+        // if (Input.GetKeyDown("x"))
+        // {
+        //     Debug.Log("X key was pressed");
+        //     DropItem();
 
-        }
+        // }
 
 
 
@@ -76,10 +77,15 @@ public class DishController : MonoBehaviour
 
     public void DropItemToLocation(Transform location)
     {
-        Vector2 posToMove = new Vector2(location.position.x, location.position.y);
-        _currentDish.transform.position = posToMove;
-        _currentDish.transform.SetParent(location);
-        _currentDish = null;
+        if (_currentDish != null)
+        {
+            Vector2 posToMove = new Vector2(location.position.x, location.position.y);
+            _currentDish.transform.position = posToMove;
+            _currentDish.transform.SetParent(location);
+            location.GetComponent<BoxCollider2D>().enabled = false;
+            _currentDish = null;
+        }
+
     }
 
     public void ThrowOutItem()

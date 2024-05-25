@@ -166,6 +166,17 @@ public class InventoryItem : MonoBehaviour
         }
 
     }
+
+
+
+    public void TriggerRemoveThisItem()
+    {
+        _inventory.RemoveItemFromInventory(slotNum);
+        _inventoryController.MakeItemNull();
+
+
+    }
+
     public void StoreThisItem()
     {
         if (prefabPickup != null)

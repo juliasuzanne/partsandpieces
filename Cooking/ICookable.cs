@@ -9,6 +9,8 @@ public interface ICookable
     string ThirdName { get; set; }
     int requestId { get; set; }
 
+    bool GetEnabled();
+
     void SetRequestorId(int newId);
 
     string Type { get; set; }

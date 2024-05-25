@@ -13,6 +13,7 @@ public class ColoredPencil : MonoBehaviour
   void Start()
   {
     selfSp = GetComponent<SpriteRenderer>();
+    updateColor = Color.white;
 
   }
 

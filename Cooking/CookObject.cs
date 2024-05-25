@@ -40,7 +40,20 @@ public class CookObject : MonoBehaviour, IDishable
 
   public GameObject GetGameObject()
   {
-    return gameObject;
+    if (gameObject != null)
+    {
+      return gameObject;
+    }
+    else
+    {
+      return null;
+    }
+  }
+
+  public void ResetIDishable()
+  {
+    hit = null;
+    targetDish = null;
   }
 
 
@@ -66,8 +79,11 @@ public class CookObject : MonoBehaviour, IDishable
   }
   void Update()
   {
+    Debug.Log("UPDATE HIT: " + hit);
+
     if (Input.GetMouseButtonDown(0))
     {
+      ResetIDishable();
       CheckForHit();
       CheckForStack();
     }
@@ -79,7 +95,6 @@ public class CookObject : MonoBehaviour, IDishable
 
   public void CheckForStack()
   {
-
     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
     RaycastHit2D raycast = Physics2D.Raycast(mousePos2D, Vector2.zero);
@@ -126,7 +141,7 @@ public class CookObject : MonoBehaviour, IDishable
       }
 
     }
-    else if (targetDish != null && _dishController.GetCurrentItem() == null)
+    else if (targetDish != null && _dishController.GetCurrentItem() == null && targetDish == this.GetComponent<IDishable>())
     {
       Debug.Log("GET OBJECT FROM PLATE");
       Debug.Log("TARGET DISH: " + targetDish);
@@ -140,6 +155,11 @@ public class CookObject : MonoBehaviour, IDishable
 
   public void CheckForHit()
   {
+    if (_dishController.GetCurrentItem() == this.GetGameObject())
+    {
+      Debug.Log("HIT" + hit);
+
+    }
     if (hit == null)
     {
       Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -147,15 +167,13 @@ public class CookObject : MonoBehaviour, IDishable
       RaycastHit2D raycast = Physics2D.Raycast(mousePos2D, Vector2.zero);
       if (raycast.collider != null)
       {
-
-
         if (raycast.collider.gameObject.GetComponent<ICookable>() != null)
         {
           hit = raycast.collider.gameObject.GetComponent<ICookable>();
         }
       }
       Debug.Log("RAYCAST" + hit);
-      if (hit != null)
+      if (hit != null && _dishController.GetCurrentItem() != null)
       {
         if (hit.Name == _dishController.GetCurrentItem().GetComponent<IDishable>().DishName && hit.SecondName == _dishController.GetCurrentItem().GetComponent<IDishable>().SecondDishName && hit.ThirdName == _dishController.GetCurrentItem().GetComponent<IDishable>().ThirdDishName)
         {
@@ -163,8 +181,13 @@ public class CookObject : MonoBehaviour, IDishable
           Debug.Log("SECOND: " + _dishController.GetCurrentItem().GetComponent<IDishable>().SecondDishName + "AND " + hit.SecondName);
           Debug.Log("THIRD: " + _dishController.GetCurrentItem().GetComponent<IDishable>().ThirdDishName + "AND " + hit.ThirdName);
           Debug.Log("MATCH");
-          hit.Match(_dishController.GetCurrentItem());
+          if (_dishController.GetCurrentItem() != null)
+          {
+            hit.Match(_dishController.GetCurrentItem());
+          }
           hit = null;
+
+
           // Destroy(this.gameObject);
         }
         else

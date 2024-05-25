@@ -15,6 +15,8 @@ public class CookRequest : MonoBehaviour, ICookable
   [SerializeField] private string _secondName;
   [SerializeField] private string _thirdName;
   [SerializeField] private int requestorId;
+  private DishController _dishController;
+
 
 
   [SerializeField] private string _type;
@@ -29,8 +31,15 @@ public class CookRequest : MonoBehaviour, ICookable
     Name = _name;
     Type = _type;
     requestSuccessManager = this.transform.parent.parent.parent.GetComponent<CookSuccessManager>();
+    _dishController = FindObjectOfType<DishController>();
 
 
+
+  }
+
+  public bool GetEnabled()
+  {
+    return this.enabled;
   }
 
   public void SetRequestorId(int newId)
@@ -48,7 +57,7 @@ public class CookRequest : MonoBehaviour, ICookable
     {
       Debug.Log("SUCCESS FROM REQUESTOR");
       requestSuccessManager.Success();
-      Destroy(currentObj);
+      Destroy(_dishController.GetCurrentItem());
     }
 
   }

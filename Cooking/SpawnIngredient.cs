@@ -31,8 +31,8 @@ public class SpawnIngredient : MonoBehaviour
         {
             if (_dishController.GetCurrentItem() == null)
             {
-                Vector2 playerPos = new Vector2(player.transform.GetChild(7).position.x, player.transform.GetChild(7).position.y);
-                ingredient = Instantiate(ingredientToSpawn, playerPos, Quaternion.identity, player.transform.GetChild(7));
+                Vector2 playerPos = new Vector2(player.transform.GetChild(6).position.x, player.transform.GetChild(6).position.y);
+                ingredient = Instantiate(ingredientToSpawn, playerPos, Quaternion.identity, player.transform.GetChild(6));
                 _dishController.ChangeItem(ingredient);
             }
         }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class CookSuccessManager : MonoBehaviour
 {
     private SpriteRenderer sp;
     private IRequestable _cookRequest;
+    [SerializeField] private UnityEvent onTrigger;
     [SerializeField] private GameObject nextRequestor;
     [SerializeField] private float timeToWait = .2f;
     private void Start()
@@ -16,6 +19,7 @@ public class CookSuccessManager : MonoBehaviour
     // Start is called before the first frame update
     public void Success()
     {
+        onTrigger.Invoke();
         StartCoroutine("Good");
 
     }
@@ -38,9 +42,6 @@ public class CookSuccessManager : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(0.2f, 7f));
         sp.color = Color.white;
         this.transform.GetChild(0).gameObject.SetActive(true);
-
-
-
 
     }
 
