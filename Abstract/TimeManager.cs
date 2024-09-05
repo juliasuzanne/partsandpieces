@@ -31,24 +31,26 @@ public class TimeManager : MonoBehaviour
     [SerializeField] float totalTime = 0;
     [SerializeField] float currentTime = 0;
 
-    float startTime = 0;
+    float startTime;
 
 
 
-    void Start()
+    void Awake()
     {
+        saveSettings.LoadGame();
         if (month == "")
         {
             month = "Fall";
         }
         saveSettings = FindObjectOfType<CaveSaveSettings>();
         Debug.Log("before equation " + currentTime);
-        if (saveSettings.so.time != null)
-        {
-            startTime = saveSettings.so.time;
-            currentTime = startTime;
-            totalTime = startTime;
-        }
+
+        Debug.Log("Save settings are " + saveSettings.so.time);
+
+        startTime = saveSettings.so.time;
+        currentTime = startTime;
+        totalTime = startTime;
+        Debug.Log("Set time to " + startTime);
 
         Debug.Log("after equation " + currentTime);
 
@@ -58,7 +60,7 @@ public class TimeManager : MonoBehaviour
 
     public void SaveTime()
     {
-        saveSettings.ChangeTime(GetTime());
+        saveSettings.so.time = GetTime();
     }
 
     public void SaveTotalTime()
@@ -158,6 +160,8 @@ public class TimeManager : MonoBehaviour
         if (Mathf.FloorToInt(GetMinutes()) == 0)
         {
             onHourChanged();
+            saveSettings.ChangeTime(GetTime());
+            saveSettings.SaveGame();
             // Debug.Log("HOUR CHANGED TO: " + GetHour());
         }
 

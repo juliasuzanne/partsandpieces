@@ -57,7 +57,6 @@ public class ColoredPencil : MonoBehaviour
 
   void OnTriggerExit2D(Collider2D other)
   {
-    // hit = null;
     if (sp != null && hit != null)
     {
       if (sp.color == hoverColor && !hit.changer)
@@ -65,15 +64,16 @@ public class ColoredPencil : MonoBehaviour
         sp.color = prevColor;
         hoverColor = new Color(1, 1, 1, 1);
       }
-
-
     }
+    sp = null;
+
+
 
   }
 
   void OnMouseDown()
   {
-    if (hit != null)
+    if (hit != null && sp != null)
     {
       if (!hit.changer)
       {

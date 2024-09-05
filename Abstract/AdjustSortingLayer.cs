@@ -26,10 +26,8 @@ public class AdjustSortingLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(sp.name + " " + sp.sortingOrder);
         if (transform.position.y + offsetY > playerTransform.position.y)
         {
-            Debug.Log(sp.name + "putting back");
             sp.sortingOrder = inBackOrderNum;
 
         }

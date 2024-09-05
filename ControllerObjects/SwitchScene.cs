@@ -136,6 +136,7 @@ public class SwitchScene : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         // _saver.LoadGame();
+        _saver.SaveGame();
         SceneManager.LoadScene(scene);
     }
 
