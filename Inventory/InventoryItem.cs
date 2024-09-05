@@ -88,6 +88,10 @@ public class InventoryItem : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    if (hit != null)
+                    {
+                        Debug.Log("HIT: " + hit.Name);
+                    }
                     if (hit == null)
                     {
                         ReturnToInventory();

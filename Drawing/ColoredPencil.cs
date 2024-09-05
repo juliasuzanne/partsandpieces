@@ -9,11 +9,15 @@ public class ColoredPencil : MonoBehaviour
   private SpriteRenderer sp;
   private SpriteRenderer selfSp;
   private Color updateColor;
+  private Color hoverColor;
+  private Color prevColor;
+
+
 
   void Start()
   {
     selfSp = GetComponent<SpriteRenderer>();
-    updateColor = Color.white;
+    updateColor = new Color(244, 244, 244, 255);
 
   }
 
@@ -26,11 +30,26 @@ public class ColoredPencil : MonoBehaviour
   void OnTriggerEnter2D(Collider2D other)
   {
     hit = other.GetComponent<IChangeColor>();
+    if (sp)
+    {
+      if (sp.color == hoverColor)
+      {
+        sp.color = prevColor;
+        hoverColor = new Color(1, 1, 1, 1);
+      }
+    }
 
-    if (hit != null)
+    if (hit != null && !hit.changer)
     {
       sp = other.GetComponent<SpriteRenderer>();
+      prevColor = new Color(sp.color.r, sp.color.g, sp.color.b, 1);
+      hoverColor = new Color(selfSp.color.r, selfSp.color.g, selfSp.color.b, 1);
+      sp.color = hoverColor;
       Debug.Log("hit" + hit);
+    }
+    else if (hit != null && hit.changer)
+    {
+      sp = other.GetComponent<SpriteRenderer>();
 
     }
 
@@ -39,6 +58,16 @@ public class ColoredPencil : MonoBehaviour
   void OnTriggerExit2D(Collider2D other)
   {
     // hit = null;
+    if (sp != null && hit != null)
+    {
+      if (sp.color == hoverColor && !hit.changer)
+      {
+        sp.color = prevColor;
+        hoverColor = new Color(1, 1, 1, 1);
+      }
+
+
+    }
 
   }
 
@@ -48,8 +77,10 @@ public class ColoredPencil : MonoBehaviour
     {
       if (!hit.changer)
       {
+        hoverColor = new Color(1, 1, 1, 1);
         sp.color = updateColor;
         hit.UpdateColor(sp.color.r, sp.color.g, sp.color.b);
+
       }
       else if (hit.changer)
       {

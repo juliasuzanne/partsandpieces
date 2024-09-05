@@ -137,15 +137,16 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   speech: Sure, just write down what you're wishing for on this piece of paper. Then
     I'll do my best to see to it.
-  children: []
+  children:
+  - f626e504-8306-40ff-8190-56989e8eef8a
   rect:
     serializedVersion: 2
-    x: 615
-    y: 316
+    x: 610
+    y: 379
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: MakeWish
+  onExitAction: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +170,7 @@ MonoBehaviour:
   - {fileID: 4832290443958119275}
   - {fileID: -9204114559221052421}
   - {fileID: -582868551193669893}
+  - {fileID: 5058470403786313978}
   newNodeOffset: {x: 200, y: 0}
 --- !u!114 &2383203776358988814
 MonoBehaviour:
@@ -216,6 +218,29 @@ MonoBehaviour:
     height: 100
   onEnterAction: GiveCoin
   onExitAction: 
+--- !u!114 &5058470403786313978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59043502e25534040b6e6e9b466b1ac5, type: 3}
+  m_Name: f626e504-8306-40ff-8190-56989e8eef8a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  speech: Okay, I will.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 811
+    y: 378
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: MakeWish
 --- !u!114 &5884885675026095489
 MonoBehaviour:
   m_ObjectHideFlags: 0

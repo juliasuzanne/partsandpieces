@@ -28,8 +28,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private int day = 1;
     [SerializeField] private string month = "Fall";
 
-    float totalTime = 0;
-    float currentTime = 0;
+    [SerializeField] float totalTime = 0;
+    [SerializeField] float currentTime = 0;
 
     float startTime = 0;
 
@@ -46,6 +46,7 @@ public class TimeManager : MonoBehaviour
         if (saveSettings.so.time != null)
         {
             startTime = saveSettings.so.time;
+            currentTime = startTime;
             totalTime = startTime;
         }
 
@@ -68,7 +69,7 @@ public class TimeManager : MonoBehaviour
     public void Setup()
     {
         month = "Fall";
-        currentTime = 0;
+        currentTime = dayDuration;
         totalTime = dayDuration;
         saveSettings.so.time = 0;
 
@@ -143,7 +144,6 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(currentTime);
         day = Mathf.FloorToInt(totalTime / dayDuration);
         if (day > 29)
         {
@@ -158,7 +158,7 @@ public class TimeManager : MonoBehaviour
         if (Mathf.FloorToInt(GetMinutes()) == 0)
         {
             onHourChanged();
-            Debug.Log("HOUR CHANGED");
+            // Debug.Log("HOUR CHANGED TO: " + GetHour());
         }
 
         if (message != null)
@@ -171,7 +171,7 @@ public class TimeManager : MonoBehaviour
 
         if (nightPanel != null)
         {
-            if (Mathf.FloorToInt(GetHour()) == 16)
+            if (Mathf.FloorToInt(GetHour()) == 9)
             {
 
                 checkedRain = false;
@@ -182,7 +182,7 @@ public class TimeManager : MonoBehaviour
                 }
                 nightPanel.color = new Color(255f, 255f, 255f, (GetMinutes() * 0.025f));
             }
-            if (Mathf.FloorToInt(GetHour()) == 17)
+            if (Mathf.FloorToInt(GetHour()) == 10)
             {
                 if (saveSettings.so.nighttime == false)
                 {
@@ -200,7 +200,7 @@ public class TimeManager : MonoBehaviour
                 }
 
             }
-            if (Mathf.FloorToInt(GetHour()) == 5)
+            if (Mathf.FloorToInt(GetHour()) == 17)
             {
                 if (saveSettings.so.nighttime == true)
                 {
@@ -215,7 +215,7 @@ public class TimeManager : MonoBehaviour
                     Debug.Log("HOUR IS 5 BUT NIGHT TIME IS FALSE");
                 }
             }
-            if (Mathf.FloorToInt(GetHour()) == 4)
+            if (Mathf.FloorToInt(GetHour()) == 16)
             {
                 // saveSettings.so.nighttime = false;
                 // saveSettings.SaveGame();

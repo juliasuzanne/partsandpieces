@@ -20,8 +20,6 @@ public class CaveSaveSettings : MonoBehaviour
 
     }
 
-
-
     public void SaveColor(float Red, float Green, float Blue, float Alpha)
     {
         so.red = Red;
@@ -48,6 +46,7 @@ public class CaveSaveSettings : MonoBehaviour
     public void SaveGame()
     {
         timeManager.SaveTime();
+        timeManager.SaveTotalTime();
         SaveManager.Save(so);
     }
 

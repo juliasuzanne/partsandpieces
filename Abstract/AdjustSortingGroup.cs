@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
-public class AdjustSortingLayer : MonoBehaviour
+
+public class AdjustSortingGroup : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sp;
+    [SerializeField] SortingGroup sp;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private int inFrontOrderNum;
     [SerializeField] private int inBackOrderNum;
@@ -14,7 +16,7 @@ public class AdjustSortingLayer : MonoBehaviour
     {
         if (sp == null)
         {
-            sp = GetComponent<SpriteRenderer>();
+            sp = GetComponent<SortingGroup>();
         }
         if (playerTransform == null)
         {
